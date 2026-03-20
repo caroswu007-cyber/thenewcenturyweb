@@ -1,6 +1,6 @@
-import React from 'react';
 import { siteContent } from '../../content/siteContent';
 import EpisodeItem from './EpisodeItem';
+import { useI18n } from '../../i18n/LocaleProvider';
 
 // Ethereal background images — lightly blurred so shapes remain visible
 const ghostImages = [
@@ -38,11 +38,12 @@ const ghostImages = [
 
 const EpisodeTimeline = () => {
   const { timeline } = siteContent.recordOfSoul;
+  const { t } = useI18n();
 
   return (
     <div
       className="relative text-white py-20 px-4 md:px-8 overflow-hidden"
-      style={{ background: '#1a1610' }}
+      style={{ background: '#14110c' }}
     >
       {/* ── Ghosted ethereal background images ── */}
       {ghostImages.map((img, i) => (
@@ -55,7 +56,7 @@ const EpisodeTimeline = () => {
             backgroundImage: `url(${img.src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: `blur(${img.blur}px) saturate(0.5) brightness(0.75)`,
+            filter: `blur(${img.blur}px) saturate(0.52) brightness(0.68) contrast(1.08)`,
             zIndex: 0,
             borderRadius: '4px',
           }}
@@ -67,7 +68,7 @@ const EpisodeTimeline = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, transparent 15%, rgba(26,22,16,0.4) 100%)',
+            'radial-gradient(ellipse 60% 50% at 50% 50%, transparent 12%, rgba(20,17,12,0.58) 100%)',
           zIndex: 1,
         }}
       />
@@ -78,27 +79,27 @@ const EpisodeTimeline = () => {
           <div
             className="flex-1 h-px"
             style={{
-              background: 'linear-gradient(to right, transparent, rgba(200,150,60,0.55))',
+              background: 'linear-gradient(to right, transparent, rgba(230,185,95,0.7))',
             }}
           />
           <span
-            className="font-mono text-xs tracking-[0.35em] uppercase"
-            style={{ color: '#b08040' }}
+            className="font-mono text-sm tracking-[0.35em] uppercase"
+            style={{ color: '#d8a44a' }}
           >
-            Episode Index
+            {t('common.episodeIndex')}
           </span>
           <div
             className="flex-1 h-px"
             style={{
-              background: 'linear-gradient(to left, transparent, rgba(200,150,60,0.55))',
+              background: 'linear-gradient(to left, transparent, rgba(230,185,95,0.7))',
             }}
           />
         </div>
         <p
           className="text-center font-serif tracking-widest text-sm font-semibold"
-          style={{ color: '#907060' }}
+          style={{ color: '#c9b59a' }}
         >
-          {timeline.length}&nbsp;&nbsp;CLASSIFIED FILES
+          {timeline.length}&nbsp;&nbsp;{t('common.classifiedFiles')}
         </p>
       </div>
 
@@ -111,7 +112,7 @@ const EpisodeTimeline = () => {
             left: '1.25rem',
             width: '1px',
             background:
-              'linear-gradient(to bottom, rgba(200,150,60,0.75), rgba(200,150,60,0.2) 90%, transparent)',
+              'linear-gradient(to bottom, rgba(235,195,110,0.88), rgba(200,150,60,0.35) 88%, transparent)',
           }}
         />
 
@@ -127,14 +128,14 @@ const EpisodeTimeline = () => {
                 width: '1.75rem',
                 height: '1.75rem',
                 borderRadius: '50%',
-                border: '1px solid rgba(200,150,60,0.65)',
-                background: '#1a1610',
+                border: '1px solid rgba(220,175,90,0.8)',
+                background: '#14110c',
                 boxShadow: '0 0 8px rgba(200,150,60,0.15)',
               }}
             >
               <span
                 className="font-mono font-bold"
-                style={{ fontSize: '0.55rem', color: '#c9a84c', lineHeight: 1 }}
+                style={{ fontSize: '0.55rem', color: '#e8c266', lineHeight: 1 }}
               >
                 {String(index + 1).padStart(2, '0')}
               </span>
@@ -153,15 +154,15 @@ const EpisodeTimeline = () => {
             className="w-3 h-3 rounded-full"
             style={{
               marginLeft: '-0.375rem',
-              border: '1px solid rgba(200,150,60,0.6)',
-              background: '#1a1610',
+              border: '1px solid rgba(230,185,95,0.75)',
+              background: '#14110c',
             }}
           />
           <span
-            className="font-mono text-xs uppercase tracking-[0.25em]"
-            style={{ color: '#a07840' }}
+            className="font-mono text-sm uppercase tracking-[0.25em]"
+            style={{ color: '#d4a050' }}
           >
-            End of Archive
+            {t('record.endArchive')}
           </span>
         </div>
       </div>

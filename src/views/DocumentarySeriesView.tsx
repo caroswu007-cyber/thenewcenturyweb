@@ -35,7 +35,7 @@ const DocumentarySeriesView = ({ page }: DocumentarySeriesViewProps) => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="max-w-3xl mx-auto bg-slate-800/60 border border-accent/20 p-5 md:p-6 rounded-xl shadow-2xl backdrop-blur-sm"
         >
-          <p className="text-slate-300 italic text-sm md:text-base leading-relaxed">
+          <p className="text-slate-300 italic text-base md:text-lg leading-relaxed">
             <span className="text-accent font-semibold not-italic">* Note:</span> {note}
           </p>
         </motion.div>

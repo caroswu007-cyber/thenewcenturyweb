@@ -1,6 +1,7 @@
-import React from 'react';
+import { useI18n } from '../../i18n/LocaleProvider';
 
 const SpiritMedicineHero = () => {
+  const { t } = useI18n();
   return (
     <section className="relative flex flex-col justify-center items-center overflow-hidden" style={{ minHeight: '72vh' }}>
       {/* Medical lab background */}
@@ -34,10 +35,10 @@ const SpiritMedicineHero = () => {
         <div className="flex items-center gap-4 mb-8">
           <div className="h-px w-14" style={{ background: 'rgba(103,232,249,0.5)' }} />
           <span
-            className="font-mono text-xs tracking-[0.35em] uppercase"
+            className="font-mono text-sm tracking-[0.35em] uppercase"
             style={{ color: '#67e8f9' }}
           >
-            Medical Documentary · Series II
+            {t('spirit.seriesBadge')}
           </span>
           <div className="h-px w-14" style={{ background: 'rgba(103,232,249,0.5)' }} />
         </div>
@@ -50,14 +51,14 @@ const SpiritMedicineHero = () => {
             textShadow: '0 2px 40px rgba(0,200,255,0.25)',
           }}
         >
-          Woos{' '}
+          {t('spirit.hero.titleBefore')}{' '}
           <span
             style={{
               borderBottom: '3px solid #f59e0b',
               paddingBottom: '4px',
             }}
           >
-            Spirit Medicine
+            {t('spirit.hero.titleHighlight')}
           </span>
         </h1>
 
@@ -79,9 +80,7 @@ const SpiritMedicineHero = () => {
           className="text-base md:text-lg leading-relaxed max-w-2xl mb-10"
           style={{ color: 'rgba(255,255,255,0.85)' }}
         >
-          This documentary scientifically reveals the Human Spirit (Soul) Medicine —
-          organs, physiological systems, and basic pathology of the Spirit (Soul), along with
-          the evidence and pathogenesis of Spirit (Ghost) harm to the human host after death.
+          {t('spirit.hero.body')}
         </p>
 
         {/* Stats bar */}
@@ -90,9 +89,9 @@ const SpiritMedicineHero = () => {
           style={{ border: '1px solid rgba(255,255,255,0.2)' }}
         >
           {[
-            { value: '5', label: 'Files' },
-            { value: '11', label: 'Sub-chapters' },
-            { value: '2025', label: 'Series' },
+            { value: '5', label: t('common.files') },
+            { value: '11', label: t('common.subChapters') },
+            { value: '2025', label: t('common.series') },
           ].map((stat, i, arr) => (
             <div
               key={stat.label}
@@ -106,7 +105,7 @@ const SpiritMedicineHero = () => {
                 {stat.value}
               </p>
               <p
-                className="font-mono text-xs uppercase tracking-[0.2em]"
+                className="font-mono text-sm uppercase tracking-[0.2em]"
                 style={{ color: 'rgba(255,255,255,0.5)' }}
               >
                 {stat.label}

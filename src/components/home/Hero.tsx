@@ -1,92 +1,93 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { siteContent } from '../../content/siteContent';
-import GalaxyBackground from '../common/GalaxyBackground';
+import { useLocalizedSiteContent } from '../../content/useLocalizedSiteContent';
+import { useI18n } from '../../i18n/LocaleProvider';
 
+const gatherEase = [0.16, 1, 0.3, 1] as const;
+
+/** Hero text & CTAs only — shared galaxy lives in HomeView so it can extend into Introduction. */
 const Hero = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const { heroTitle, heroSubtitle, heroCta } = siteContent.home;
+  const { home } = useLocalizedSiteContent();
+  const { heroTitle, heroSubtitle, heroCta } = home;
+  const { t } = useI18n();
 
   return (
-    <section 
-      id="home" 
-      className="hero-bg min-h-[92vh] md:h-screen flex items-center justify-center text-center relative px-4 overflow-hidden cursor-crosshair"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <section
+      id="home"
+      className="relative z-10 min-h-[92vh] md:h-screen flex items-center justify-center text-center px-4 overflow-hidden bg-transparent"
     >
-      {/* Background 1: Universe (Galaxy animation) */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ 
-          opacity: isHovered ? 0 : 1,
+      {/* Light readability veils — keep canvas galaxy visible */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 88% 72% at 50% 40%, rgba(15,23,42,0.22) 0%, transparent 58%), radial-gradient(ellipse 120% 70% at 50% 92%, rgba(5,8,15,0.55) 0%, transparent 52%)',
         }}
-        transition={{
-          opacity: { duration: isHovered ? 0.1 : 2, ease: "easeOut" },
-        }}
-        className="absolute inset-0 bg-black pointer-events-none"
-      >
-        <GalaxyBackground />
-      </motion.div>
-
-      {/* Background 2: Spirit Realm (Sudden entrance on hover) */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 1.1, filter: "hue-rotate(0deg) contrast(1) brightness(1)" }}
-        animate={{ 
-          opacity: isHovered ? 0.8 : 0, 
-          scale: isHovered ? 1 : 1.1,
-          filter: isHovered ? "hue-rotate(120deg) contrast(1.8) brightness(1.5)" : "hue-rotate(0deg) contrast(1) brightness(1)"
-        }}
-        transition={{ 
-          duration: isHovered ? 0.1 : 1, // '一下子' means very fast entry (0.1s)
-          ease: isHovered ? "linear" : "easeOut" 
-        }}
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-screen pointer-events-none"
-      />
-      
-      {/* Dim overlay for text readability, darkens slightly when entering spirit realm to make colors pop */}
-      <div 
-        className="absolute inset-0 bg-slate-900 pointer-events-none transition-opacity duration-300" 
-        style={{ opacity: isHovered ? 0.7 : 0.4 }} 
       />
 
-      <motion.div 
-        initial={{ opacity: 0, y: 30 }}
+      <div className="absolute inset-0 bg-slate-900/22 pointer-events-none" aria-hidden />
+
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-36 md:h-48"
+        style={{
+          background:
+            'linear-gradient(to top, rgba(5,8,15,0.75) 0%, rgba(5,8,15,0.28) 38%, rgba(5,8,15,0.06) 68%, transparent 100%)',
+        }}
+        aria-hidden
+      />
+
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="relative z-10 transition-transform duration-300"
-        style={{ transform: isHovered ? "scale(1.02)" : "scale(1)" }}
+        transition={{ duration: 0.9, delay: 0.35, ease: gatherEase }}
+        className="relative z-10"
       >
-        {/* Pre-title badge */}
-        <p
-          className="font-cinzel text-xs uppercase tracking-[0.45em] mb-5"
-          style={{ color: 'rgba(251,191,36,0.55)' }}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: gatherEase }}
+          className="font-cinzel text-sm sm:text-base uppercase tracking-[0.4em] mb-5"
+          style={{ color: 'rgba(251,191,36,0.7)' }}
         >
           {heroSubtitle}
-        </p>
+        </motion.p>
 
-        <h1
-          className="font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-br from-white via-amber-200 to-accent mb-3 drop-shadow-2xl transition-all duration-300 tracking-tight"
+        <motion.h1
+          className="font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-br from-white via-amber-200 to-accent mb-3 drop-shadow-2xl"
           style={{
-            fontSize: 'clamp(1.8rem, 6vw, 5.5rem)',
-            lineHeight: 1.1,
-            textShadow: isHovered ? "0 0 60px rgba(251,191,36,0.8)" : "none",
-            WebkitTextFillColor: isHovered ? 'transparent' : undefined,
+            fontSize: 'clamp(2rem, 6.5vw, 5.75rem)',
+            lineHeight: 1.08,
+            willChange: 'transform, opacity, letter-spacing, filter',
+          }}
+          initial={{
+            opacity: 0,
+            scale: 0.88,
+            letterSpacing: '0.42em',
+            filter: 'blur(14px)',
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            letterSpacing: '0.02em',
+            filter: 'blur(0px)',
+          }}
+          transition={{
+            duration: 2.45,
+            delay: 0.15,
+            ease: gatherEase,
           }}
         >
           {heroTitle}
-        </h1>
+        </motion.h1>
 
-        <p
-          className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.35em] mb-10 md:mb-14"
-          style={{ color: 'rgba(251,191,36,0.45)' }}
+        <motion.div
+          className="flex flex-col sm:flex-row items-center gap-4 justify-center"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.85, delay: 1.55, ease: gatherEase }}
         >
-          Umma New Century Organization
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
           <a
             href="#introduction"
-            className="inline-block font-cinzel font-bold uppercase tracking-widest py-3 md:py-4 px-8 md:px-12 rounded-full transition-transform hover:-translate-y-1 shadow-lg text-sm md:text-base"
+            className="inline-block font-cinzel font-bold uppercase tracking-widest py-3.5 md:py-4 px-9 md:px-14 rounded-full transition-transform hover:-translate-y-1 shadow-lg text-base md:text-lg"
             style={{
               background: 'linear-gradient(135deg, #92610a, #fbbf24, #d97706)',
               color: '#0f0a00',
@@ -97,16 +98,16 @@ const Hero = () => {
           </a>
           <a
             href="/about"
-            className="inline-block font-cinzel font-bold uppercase tracking-widest py-3 md:py-4 px-8 md:px-12 rounded-full transition-all hover:-translate-y-1 text-sm md:text-base"
+            className="inline-block font-cinzel font-bold uppercase tracking-widest py-3.5 md:py-4 px-9 md:px-14 rounded-full transition-all hover:-translate-y-1 text-base md:text-lg"
             style={{
               border: '1px solid rgba(251,191,36,0.35)',
               color: '#fbbf24',
               background: 'rgba(251,191,36,0.05)',
             }}
           >
-            About ASra
+            {t('hero.aboutCta')}
           </a>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

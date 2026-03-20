@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { aboutContent } from '../content/siteContent';
+import { getAboutContent } from '../content/getAboutContent';
+import { useI18n } from '../i18n/LocaleProvider';
 
 /* ─── Reusable small helpers ─── */
 
@@ -13,13 +14,16 @@ const OrnamLine = ({ flip = false }: { flip?: boolean }) => (
 );
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-cinzel text-xs uppercase tracking-[0.4em] mt-4" style={{ color: 'rgba(251,191,36,0.35)' }}>
+  <p className="font-cinzel text-sm uppercase tracking-[0.4em] mt-4" style={{ color: 'rgba(251,191,36,0.35)' }}>
     {children}
   </p>
 );
 
 /* ─── 1. Hero ─── */
-const AboutHero = () => (
+const AboutHero = () => {
+  const { locale, t } = useI18n();
+  const about = useMemo(() => getAboutContent(locale), [locale]);
+  return (
   <section className="relative flex flex-col items-center justify-center text-center overflow-hidden" style={{ minHeight: '88vh' }}>
     <div
       className="absolute inset-0 bg-cover bg-center scale-105"
@@ -37,8 +41,8 @@ const AboutHero = () => (
       {/* Org badge */}
       <div className="flex items-center gap-3 mb-8">
         <div className="h-px w-14" style={{ background: 'rgba(251,191,36,0.4)' }} />
-        <span className="font-cinzel text-xs tracking-[0.4em] uppercase" style={{ color: '#c9a84c' }}>
-          Umma New Century Organization
+        <span className="font-cinzel text-sm tracking-[0.4em] uppercase" style={{ color: '#c9a84c' }}>
+          {about.orgName}
         </span>
         <div className="h-px w-14" style={{ background: 'rgba(251,191,36,0.4)' }} />
       </div>
@@ -46,22 +50,22 @@ const AboutHero = () => (
       {/* Main title */}
       <h1
         className="cosmic-title font-bold leading-tight mb-5"
-        style={{ fontSize: 'clamp(2rem, 5.5vw, 4.5rem)' }}
+        style={{ fontSize: 'clamp(2.2rem, 5.75vw, 4.85rem)' }}
       >
-        Association of Spirit<br />Realm's Ambassador
+        {t('about.hero.titleLine1')}<br />{t('about.hero.titleLine2')}
       </h1>
 
       {/* Abbr badge row */}
       <div className="flex items-center gap-5 mb-8">
         <span
-          className="font-cinzel font-bold text-sm tracking-[0.3em] px-4 py-1.5 rounded-full"
+          className="font-cinzel font-bold text-base tracking-[0.3em] px-4 py-1.5 rounded-full"
           style={{ border: '1px solid rgba(251,191,36,0.5)', color: '#fbbf24', background: 'rgba(251,191,36,0.07)' }}
         >
           ASra
         </span>
         <span style={{ color: 'rgba(251,191,36,0.3)', fontSize: '1.2rem' }}>·</span>
         <span
-          className="font-cinzel font-bold text-sm tracking-[0.3em] px-4 py-1.5 rounded-full"
+          className="font-cinzel font-bold text-base tracking-[0.3em] px-4 py-1.5 rounded-full"
           style={{ border: '1px solid rgba(167,139,250,0.5)', color: '#a78bfa', background: 'rgba(167,139,250,0.07)' }}
         >
           SMSC
@@ -72,36 +76,40 @@ const AboutHero = () => (
         className="font-serif text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-10"
         style={{ color: 'rgba(248,250,252,0.78)' }}
       >
-        {aboutContent.tagline}
+        {about.tagline}
       </p>
 
       {/* Domain pills */}
       <div className="flex flex-wrap justify-center gap-4">
         <div className="flex items-center gap-2 px-5 py-2.5 rounded-full" style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.2)' }}>
           <div className="w-2 h-2 rounded-full" style={{ background: '#fbbf24' }} />
-          <span className="font-cinzel text-xs tracking-widest uppercase" style={{ color: '#fbbf24' }}>Physical World — ASra</span>
+          <span className="font-cinzel text-sm tracking-widest uppercase" style={{ color: '#fbbf24' }}>{t('about.hero.pillAsra')}</span>
         </div>
         <div className="flex items-center gap-2 px-5 py-2.5 rounded-full" style={{ background: 'rgba(167,139,250,0.08)', border: '1px solid rgba(167,139,250,0.2)' }}>
           <div className="w-2 h-2 rounded-full" style={{ background: '#a78bfa' }} />
-          <span className="font-cinzel text-xs tracking-widest uppercase" style={{ color: '#a78bfa' }}>Spirit Realm — SMSC</span>
+          <span className="font-cinzel text-sm tracking-widest uppercase" style={{ color: '#a78bfa' }}>{t('about.hero.pillSmsc')}</span>
         </div>
       </div>
     </motion.div>
 
     <div className="absolute bottom-0 left-0 w-full h-36 pointer-events-none" style={{ background: 'linear-gradient(to top, #05080f, transparent)' }} />
   </section>
-);
+  );
+};
 
 /* ─── 2. Dual-Domain Structure ─── */
-const DualDomain = () => (
+const DualDomain = () => {
+  const { locale, t } = useI18n();
+  const about = useMemo(() => getAboutContent(locale), [locale]);
+  return (
   <section className="py-28 px-6 md:px-12" style={{ background: 'rgba(5,8,15,0.65)' }}>
     <div className="max-w-6xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
         <OrnamLine />
-        <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>
-          The Dual-Domain Structure
+        <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.95rem, 4.2vw, 3.45rem)' }}>
+          {t('about.dual.title')}
         </h2>
-        <SectionLabel>One Organization · Two Realms</SectionLabel>
+        <SectionLabel>{t('about.dual.label')}</SectionLabel>
       </motion.div>
 
       {/* Umbrella org */}
@@ -110,9 +118,9 @@ const DualDomain = () => (
         className="text-center mb-12 mx-auto max-w-2xl rounded-2xl py-7 px-8"
         style={{ background: 'rgba(251,191,36,0.05)', border: '1px solid rgba(251,191,36,0.2)' }}
       >
-        <p className="font-cinzel text-xs uppercase tracking-[0.35em] mb-3" style={{ color: 'rgba(251,191,36,0.5)' }}>Umbrella Organization</p>
-        <h3 className="font-cinzel font-bold text-white text-xl md:text-2xl tracking-wide">Umma New Century Organization</h3>
-        <p className="font-cinzel text-xs mt-1 tracking-widest" style={{ color: 'rgba(251,191,36,0.4)' }}>New Century of UMMa</p>
+        <p className="font-cinzel text-sm uppercase tracking-[0.35em] mb-3" style={{ color: 'rgba(251,191,36,0.5)' }}>{t('about.dual.umbrellaLabel')}</p>
+        <h3 className="font-cinzel font-bold text-white text-xl md:text-2xl tracking-wide">{about.orgName}</h3>
+        <p className="font-cinzel text-sm mt-1 tracking-widest" style={{ color: 'rgba(251,191,36,0.4)' }}>{about.orgSubtitle}</p>
       </motion.div>
 
       {/* Connecting lines visual */}
@@ -126,14 +134,14 @@ const DualDomain = () => (
           <div className="h-48 bg-cover bg-center relative" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=75)' }}>
             <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.5)' }} />
             <div className="absolute inset-0 flex items-end p-5">
-              <span className="font-cinzel font-bold text-xs tracking-[0.3em] uppercase px-3 py-1 rounded-full" style={{ background: 'rgba(251,191,36,0.15)', border: '1px solid rgba(251,191,36,0.4)', color: '#fbbf24' }}>Physical World</span>
+              <span className="font-cinzel font-bold text-sm tracking-[0.3em] uppercase px-3 py-1 rounded-full" style={{ background: 'rgba(251,191,36,0.15)', border: '1px solid rgba(251,191,36,0.4)', color: '#fbbf24' }}>{t('about.card.physicalLabel')}</span>
             </div>
           </div>
           <div className="p-8">
             <div className="h-0.5 mb-6" style={{ background: 'linear-gradient(to right, rgba(251,191,36,0.5), transparent)' }} />
-            <p className="font-cinzel text-xs uppercase tracking-[0.2em] mb-2" style={{ color: '#fbbf24' }}>ASra</p>
-            <h3 className="font-cinzel font-bold text-white text-lg mb-4 leading-snug">{aboutContent.asra.name}</h3>
-            <p className="text-slate-300 text-sm leading-relaxed">{aboutContent.asra.description}</p>
+            <p className="font-cinzel text-sm uppercase tracking-[0.2em] mb-2" style={{ color: '#fbbf24' }}>ASra</p>
+            <h3 className="font-cinzel font-bold text-white text-lg mb-4 leading-snug">{about.asra.name}</h3>
+            <p className="text-slate-300 text-base leading-relaxed">{about.asra.description}</p>
           </div>
         </motion.div>
 
@@ -142,8 +150,8 @@ const DualDomain = () => (
           <div className="flex-1 w-px md:w-auto md:h-full border-t md:border-t-0 md:border-l border-dashed" style={{ borderColor: 'rgba(251,191,36,0.2)' }} />
           <div className="flex flex-col items-center gap-1 text-center px-4">
             <span style={{ color: 'rgba(251,191,36,0.4)', fontSize: '1.4rem' }}>⇄</span>
-            <span className="font-cinzel font-bold text-xs tracking-wider" style={{ color: 'rgba(251,191,36,0.6)', whiteSpace: 'nowrap' }}>1:1 or 2:1</span>
-            <span className="font-cinzel text-xs" style={{ color: 'rgba(251,191,36,0.35)', whiteSpace: 'nowrap' }}>Partnership</span>
+            <span className="font-cinzel font-bold text-sm tracking-wider" style={{ color: 'rgba(251,191,36,0.6)', whiteSpace: 'nowrap' }}>{t('about.connector.ratio')}</span>
+            <span className="font-cinzel text-sm" style={{ color: 'rgba(251,191,36,0.35)', whiteSpace: 'nowrap' }}>{t('about.connector.partnership')}</span>
           </div>
           <div className="flex-1 w-px md:w-auto md:h-full border-t md:border-t-0 md:border-l border-dashed" style={{ borderColor: 'rgba(251,191,36,0.2)' }} />
         </div>
@@ -157,14 +165,14 @@ const DualDomain = () => (
           <div className="h-48 bg-cover bg-center relative" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=75)' }}>
             <div className="absolute inset-0" style={{ background: 'rgba(30,0,60,0.55)' }} />
             <div className="absolute inset-0 flex items-end p-5">
-              <span className="font-cinzel font-bold text-xs tracking-[0.3em] uppercase px-3 py-1 rounded-full" style={{ background: 'rgba(167,139,250,0.15)', border: '1px solid rgba(167,139,250,0.4)', color: '#a78bfa' }}>Spirit Realm</span>
+              <span className="font-cinzel font-bold text-sm tracking-[0.3em] uppercase px-3 py-1 rounded-full" style={{ background: 'rgba(167,139,250,0.15)', border: '1px solid rgba(167,139,250,0.4)', color: '#a78bfa' }}>{t('about.card.spiritLabel')}</span>
             </div>
           </div>
           <div className="p-8">
             <div className="h-0.5 mb-6" style={{ background: 'linear-gradient(to right, rgba(167,139,250,0.5), transparent)' }} />
-            <p className="font-cinzel text-xs uppercase tracking-[0.2em] mb-2" style={{ color: '#a78bfa' }}>SMSC</p>
-            <h3 className="font-cinzel font-bold text-white text-lg mb-4 leading-snug">{aboutContent.smsc.name}</h3>
-            <p className="text-slate-300 text-sm leading-relaxed">{aboutContent.smsc.description}</p>
+            <p className="font-cinzel text-sm uppercase tracking-[0.2em] mb-2" style={{ color: '#a78bfa' }}>SMSC</p>
+            <h3 className="font-cinzel font-bold text-white text-lg mb-4 leading-snug">{about.smsc.name}</h3>
+            <p className="text-slate-300 text-base leading-relaxed">{about.smsc.description}</p>
           </div>
         </motion.div>
       </div>
@@ -176,36 +184,38 @@ const DualDomain = () => (
         style={{ background: 'rgba(15,23,42,0.6)', border: '1px solid rgba(251,191,36,0.15)' }}
       >
         <span style={{ color: 'rgba(251,191,36,0.3)', fontSize: '2.5rem', lineHeight: 1 }}>"</span>
-        <p className="font-serif text-base md:text-lg text-slate-200 leading-relaxed italic mt-1">
-          {aboutContent.partnership}
+        <p className="font-serif text-lg md:text-xl text-slate-200 leading-relaxed italic mt-1">
+          {about.partnership}
         </p>
       </motion.blockquote>
     </div>
   </section>
-);
+  );
+};
 
 /* ─── 3. How It Works ─── */
 const HowItWorks = () => {
+  const { t } = useI18n();
   const steps = [
     {
       num: '01',
       color: '#a78bfa',
-      title: 'Assignment',
-      body: 'Each ASra human member is assigned 1 or 2 dedicated Master Spirits from the SMSC — forming a direct, ongoing partnership across both realms.',
+      title: t('about.how.step1.title'),
+      body: t('about.how.step1.body'),
       img: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=70',
     },
     {
       num: '02',
       color: '#38bdf8',
-      title: 'Empowerment',
-      body: 'Through this partnership, human members acquire Class-C special abilities: the power to govern attached spirits and to actively improve human health.',
+      title: t('about.how.step2.title'),
+      body: t('about.how.step2.body'),
       img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=70',
     },
     {
       num: '03',
       color: '#fbbf24',
-      title: 'Mission',
-      body: 'Empowered members serve as ambassadors — spreading the truth of the Spirit Realm and spirit life entities to the world, and leading humanity toward the New Century.',
+      title: t('about.how.step3.title'),
+      body: t('about.how.step3.body'),
       img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=70',
     },
   ];
@@ -215,8 +225,8 @@ const HowItWorks = () => {
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <OrnamLine />
-          <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>How It Works</h2>
-          <SectionLabel>The ASra · SMSC Partnership Process</SectionLabel>
+          <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.95rem, 4.2vw, 3.45rem)' }}>{t('about.how.title')}</h2>
+          <SectionLabel>{t('about.how.label')}</SectionLabel>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-7">
@@ -236,7 +246,7 @@ const HowItWorks = () => {
               <div className="p-6">
                 <div className="h-0.5 mb-5" style={{ background: `linear-gradient(to right, ${s.color}80, transparent)` }} />
                 <h3 className="font-cinzel font-bold text-lg text-white mb-3 tracking-wide">{s.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{s.body}</p>
+                <p className="text-slate-400 text-base leading-relaxed">{s.body}</p>
               </div>
             </motion.div>
           ))}
@@ -247,14 +257,17 @@ const HowItWorks = () => {
 };
 
 /* ─── 4. Founders ─── */
-const Founders = () => (
+const Founders = () => {
+  const { locale, t } = useI18n();
+  const about = useMemo(() => getAboutContent(locale), [locale]);
+  return (
   <section className="py-28 px-6 md:px-12 relative overflow-hidden" style={{ background: 'rgba(5,8,15,0.7)' }}>
     <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)' }} />
     <div className="max-w-5xl mx-auto relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <OrnamLine />
-        <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>The Founders</h2>
-        <SectionLabel>Chief Ambassadors & Coordinators</SectionLabel>
+        <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.95rem, 4.2vw, 3.45rem)' }}>{t('about.founders.title')}</h2>
+        <SectionLabel>{t('about.founders.label')}</SectionLabel>
       </motion.div>
 
       <motion.div
@@ -272,37 +285,41 @@ const Founders = () => (
             <div className="w-20 h-20 rounded-full mb-4 flex items-center justify-center" style={{ background: 'rgba(201,168,76,0.12)', border: '2px solid rgba(201,168,76,0.4)' }}>
               <span style={{ fontSize: '2rem' }}>✦</span>
             </div>
-            <p className="font-cinzel font-bold text-xl text-white tracking-wide">The Woos</p>
-            <p className="font-cinzel text-xs uppercase tracking-[0.3em] mt-1" style={{ color: '#c9a84c' }}>Father & Son</p>
+            <p className="font-cinzel font-bold text-xl text-white tracking-wide">{t('about.founders.woos')}</p>
+            <p className="font-cinzel text-sm uppercase tracking-[0.3em] mt-1" style={{ color: '#c9a84c' }}>{t('about.founders.fatherSon')}</p>
           </div>
         </div>
 
         {/* Text side */}
         <div className="p-8 md:p-10" style={{ background: 'rgba(10,18,35,0.85)' }}>
           <div className="h-0.5 mb-7" style={{ background: 'linear-gradient(to right, rgba(201,168,76,0.5), transparent)' }} />
-          <h3 className="font-cinzel font-bold text-white text-xl md:text-2xl mb-2 leading-snug">{aboutContent.founders.title}</h3>
-          <p className="font-cinzel text-xs uppercase tracking-widest mb-6" style={{ color: '#c9a84c' }}>{aboutContent.founders.subtitle}</p>
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed">{aboutContent.founders.description}</p>
+          <h3 className="font-cinzel font-bold text-white text-xl md:text-2xl mb-2 leading-snug">{about.founders.title}</h3>
+          <p className="font-cinzel text-sm uppercase tracking-widest mb-6" style={{ color: '#c9a84c' }}>{about.founders.subtitle}</p>
+          <p className="text-slate-300 text-base md:text-lg leading-relaxed">{about.founders.description}</p>
         </div>
       </motion.div>
     </div>
   </section>
-);
+  );
+};
 
 /* ─── 5. Missions ─── */
-const Missions = () => (
+const Missions = () => {
+  const { locale, t } = useI18n();
+  const about = useMemo(() => getAboutContent(locale), [locale]);
+  return (
   <section className="py-28 px-6 md:px-12">
     <div className="max-w-5xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
         <OrnamLine />
-        <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>
-          Member Mission & Obligations
+        <h2 className="cosmic-title mt-5 mb-2" style={{ fontSize: 'clamp(1.95rem, 4.2vw, 3.45rem)' }}>
+          {t('about.missions.title')}
         </h2>
-        <SectionLabel>ASra Members' Two Sacred Duties</SectionLabel>
+        <SectionLabel>{t('about.missions.label')}</SectionLabel>
       </motion.div>
 
       <div className="space-y-8">
-        {aboutContent.missions.map((m, i) => (
+        {about.missions.map((m, i) => (
           <motion.div
             key={m.number}
             initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
@@ -324,7 +341,7 @@ const Missions = () => (
                 {m.number}
               </span>
               <span
-                className="font-cinzel text-xs uppercase tracking-widest mt-2 text-center"
+                className="font-cinzel text-sm uppercase tracking-widest mt-2 text-center"
                 style={{ color: i === 0 ? 'rgba(56,189,248,0.45)' : 'rgba(251,191,36,0.45)' }}
               >
                 {m.tag}
@@ -340,7 +357,7 @@ const Missions = () => (
                 {m.title}
               </h3>
               {m.description.split('\n\n').map((para, pi) => (
-                <p key={pi} className="text-slate-300 text-sm md:text-base leading-relaxed mb-3 last:mb-0">
+                <p key={pi} className="text-slate-300 text-base md:text-lg leading-relaxed mb-3 last:mb-0">
                   {para}
                 </p>
               ))}
@@ -350,27 +367,22 @@ const Missions = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 /* ─── Main View ─── */
-const AboutView = () => (
-  <div style={{ background: '#05080f' }}>
-    <AboutHero />
-    <DualDomain />
-    <HowItWorks />
-    <Founders />
-    <Missions />
-
-    {/* Footer call-to-action */}
+const AboutCTA = () => {
+  const { t } = useI18n();
+  return (
     <section className="py-24 px-6 text-center relative overflow-hidden" style={{ background: 'rgba(5,8,15,0.8)' }}>
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(251,191,36,0.05) 0%, transparent 70%)' }} />
       <div className="relative z-10 max-w-3xl mx-auto">
         <OrnamLine />
-        <h2 className="cosmic-title mt-6 mb-4" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.8rem)' }}>
-          Ready to Join ASra?
+        <h2 className="cosmic-title mt-6 mb-4" style={{ fontSize: 'clamp(1.65rem, 3.75vw, 3rem)' }}>
+          {t('about.cta.title')}
         </h2>
-        <p className="font-cinzel text-xs uppercase tracking-[0.35em] mb-8" style={{ color: 'rgba(251,191,36,0.4)' }}>
-          Lead Humanity into the New Century
+        <p className="font-cinzel text-sm uppercase tracking-[0.35em] mb-8" style={{ color: 'rgba(251,191,36,0.4)' }}>
+          {t('about.cta.subtitle')}
         </p>
         <a
           href="https://ess-esw.org/"
@@ -379,10 +391,21 @@ const AboutView = () => (
           className="inline-block font-cinzel font-bold uppercase tracking-widest py-4 px-14 rounded-full transition-all hover:-translate-y-1"
           style={{ background: 'linear-gradient(135deg, #92610a, #fbbf24, #d97706)', color: '#0f0a00', boxShadow: '0 4px 30px rgba(251,191,36,0.3)' }}
         >
-          ✦ &nbsp; Visit: Apply to Join &nbsp; ✦
+          {t('about.cta.button')}
         </a>
       </div>
     </section>
+  );
+};
+
+const AboutView = () => (
+  <div style={{ background: '#05080f' }}>
+    <AboutHero />
+    <DualDomain />
+    <HowItWorks />
+    <Founders />
+    <Missions />
+    <AboutCTA />
   </div>
 );
 

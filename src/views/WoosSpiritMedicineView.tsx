@@ -1,4 +1,3 @@
-import React from 'react';
 import SpiritMedicineHero from '../components/spiritMedicine/SpiritMedicineHero';
 import SpiritMedicineContents from '../components/spiritMedicine/SpiritMedicineContents';
 

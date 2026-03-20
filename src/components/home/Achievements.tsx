@@ -1,15 +1,13 @@
 import { motion } from 'framer-motion';
 import { siteContent } from '../../content/siteContent';
+import { useI18n } from '../../i18n/LocaleProvider';
 
 const Achievements = () => {
   const { achievements } = siteContent.links;
+  const { t } = useI18n();
 
   return (
-    <section
-      id="achievements"
-      className="py-28 px-6 md:px-12"
-      style={{ background: 'rgba(5,8,15,0.6)' }}
-    >
+    <section id="achievements" className="home-blur-surface py-28 px-6 md:px-12 relative">
       <div className="max-w-6xl mx-auto">
 
         {/* Section title */}
@@ -28,18 +26,18 @@ const Achievements = () => {
 
           <h2
             className="cosmic-title mb-4"
-            style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)', lineHeight: 1.1 }}
+            style={{ fontSize: 'clamp(2.15rem, 5.2vw, 4.1rem)', lineHeight: 1.1 }}
           >
-            Our Achievements
+            {t('home.achievements.title')}
           </h2>
 
           <div className="flex items-center justify-center gap-4 mt-5">
             <div className="h-px w-24" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.3))' }} />
             <span
-              className="font-cinzel text-xs uppercase tracking-[0.35em]"
+              className="font-cinzel text-sm uppercase tracking-[0.35em]"
               style={{ color: 'rgba(251,191,36,0.35)' }}
             >
-              Discoveries & Documentation
+              {t('home.achievements.subtitle')}
             </span>
             <div className="h-px w-24" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.3))' }} />
           </div>
@@ -62,12 +60,8 @@ const Achievements = () => {
             onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(251,191,36,0.12)'; }}
           >
             <div className="h-px mb-8" style={{ background: 'linear-gradient(to right, rgba(251,191,36,0.4), transparent)' }} />
-            <h3 className="font-cinzel text-xl md:text-2xl text-white mb-6 tracking-wide">
-              Live Room Content Summary
-            </h3>
-            <p className="text-slate-300 leading-loose text-base md:text-lg">
-              Comprehensive overviews and key takeaways from our interactive live sessions. A summary of breakthroughs, patient recoveries, and spiritual revelations discussed with our community.
-            </p>
+            <h3 className="font-cinzel text-xl md:text-2xl text-white mb-6 tracking-wide">{t('home.achievements.card1Title')}</h3>
+            <p className="text-slate-300 leading-loose text-lg md:text-xl">{t('home.achievements.card1Body')}</p>
           </motion.div>
 
           <motion.div
@@ -85,12 +79,8 @@ const Achievements = () => {
             onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(251,191,36,0.12)'; }}
           >
             <div className="h-px mb-8" style={{ background: 'linear-gradient(to right, rgba(251,191,36,0.4), transparent)' }} />
-            <h3 className="font-cinzel text-xl md:text-2xl text-white mb-6 tracking-wide">
-              Sample Display
-            </h3>
-            <p className="text-slate-300 leading-loose text-base md:text-lg">
-              Showcasing the Woos Spirit Management System. Real-world applications, tools, and verified methods utilized by patients and administrators to establish control and harmony.
-            </p>
+            <h3 className="font-cinzel text-xl md:text-2xl text-white mb-6 tracking-wide">{t('home.achievements.card2Title')}</h3>
+            <p className="text-slate-300 leading-loose text-lg md:text-xl">{t('home.achievements.card2Body')}</p>
           </motion.div>
         </div>
 
@@ -100,14 +90,12 @@ const Achievements = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-slate-400 mb-8 text-lg font-light">
-            Explore our achievements network for detailed documentation:
-          </p>
+          <p className="text-slate-400 mb-8 text-xl font-light">{t('home.achievements.ctaIntro')}</p>
           <a
             href={achievements}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-cinzel font-bold uppercase tracking-widest text-sm py-4 px-12 rounded-full transition-all hover:-translate-y-1"
+            className="inline-block font-cinzel font-bold uppercase tracking-widest text-base py-4 px-12 rounded-full transition-all hover:-translate-y-1"
             style={{
               border: '1px solid rgba(251,191,36,0.3)',
               color: '#fbbf24',
@@ -122,7 +110,7 @@ const Achievements = () => {
               (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(251,191,36,0.3)';
             }}
           >
-            ✦ &nbsp; Visit: Our Achievements &nbsp; ✦
+            {t('home.achievements.cta')}
           </a>
         </motion.div>
       </div>

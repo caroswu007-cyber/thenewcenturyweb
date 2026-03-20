@@ -4,6 +4,8 @@ The official website for the **Spirit Ambassador Association (SAA)** — a docum
 
 Live site: [ess-esw.org](https://ess-esw.org)
 
+**更新日志 / Changelog:** [CHANGELOG.md](./CHANGELOG.md)（仅本地维护时可手写日期与条目，不必提交远程）
+
 ---
 
 ## Project Overview

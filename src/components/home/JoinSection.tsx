@@ -1,15 +1,13 @@
 import { motion } from 'framer-motion';
 import { siteContent } from '../../content/siteContent';
+import { useI18n } from '../../i18n/LocaleProvider';
 
 const JoinSection = () => {
   const { join } = siteContent.links;
+  const { t } = useI18n();
 
   return (
-    <section
-      id="join"
-      className="relative py-36 px-6 text-center overflow-hidden"
-      style={{ background: 'rgba(5,8,15,0.75)' }}
-    >
+    <section id="join" className="home-blur-surface relative py-36 px-6 text-center overflow-hidden">
       {/* Ambient glow behind the CTA */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -35,34 +33,30 @@ const JoinSection = () => {
 
         <h2
           className="cosmic-title mb-6"
-          style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)', lineHeight: 1.15 }}
+          style={{ fontSize: 'clamp(2.15rem, 5.2vw, 4.1rem)', lineHeight: 1.15 }}
         >
-          Join & Participate
+          {t('home.join.title')}
         </h2>
 
         {/* Subtitle rule */}
         <div className="flex items-center justify-center gap-4 mb-10">
           <div className="h-px w-20" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.3))' }} />
           <span
-            className="font-cinzel text-xs uppercase tracking-[0.35em]"
+            className="font-cinzel text-sm uppercase tracking-[0.35em]"
             style={{ color: 'rgba(251,191,36,0.35)' }}
           >
-            Your Ethereal Journey Begins
+            {t('home.join.subtitle')}
           </span>
           <div className="h-px w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.3))' }} />
         </div>
 
-        <p className="text-slate-300 text-lg md:text-xl mb-14 leading-relaxed max-w-2xl mx-auto font-light">
-          Become a part of the Spirit Ambassador Association. Whether you seek guidance,
-          wish to share your journey, or want to join our team of administrators —
-          your ethereal life begins here.
-        </p>
+        <p className="text-slate-300 text-xl md:text-2xl mb-14 leading-relaxed max-w-2xl mx-auto font-light">{t('home.join.body')}</p>
 
         <a
           href={join}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block font-cinzel font-bold uppercase tracking-widest text-base md:text-lg py-5 px-16 rounded-full transition-all hover:-translate-y-1"
+          className="inline-block font-cinzel font-bold uppercase tracking-widest text-lg md:text-xl py-5 px-16 rounded-full transition-all hover:-translate-y-1"
           style={{
             background: 'linear-gradient(135deg, #92610a, #fbbf24, #d97706)',
             color: '#0f0a00',
@@ -75,7 +69,7 @@ const JoinSection = () => {
             (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 4px 30px rgba(251,191,36,0.35)';
           }}
         >
-          ✦ &nbsp; Visit: Join Us &nbsp; ✦
+          {t('home.join.cta')}
         </a>
 
         {/* Bottom ornament */}

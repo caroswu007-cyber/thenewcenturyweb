@@ -1,32 +1,29 @@
 import React, { useEffect, useRef } from 'react';
 
 /**
- * GalaxyBackground — Canvas-based spiral galaxy center animation.
- *
- * Visual design:
- *   - Bright golden/white glowing core at center
- *   - Stars distributed across 4 spiral arms, slowly rotating
- *   - Outer nebula haze in deep blue-purple tones
- *   - Full "new century" cosmic aesthetic
- *
- * Tuning:
- *   - `ROTATION_SPEED`  : radians per frame (default 0.0003 ≈ 1 full turn / ~35s)
- *   - `STAR_COUNT`      : total particles per spiral arm
- *   - `CORE_RADIUS`     : px radius of the bright core glow
+ * GalaxyBackground — Canvas spiral galaxy (high-DPI for crisp stars).
  */
 
 const ROTATION_SPEED = 0.0003;
-const STAR_COUNT = 320;
-const CORE_RADIUS = 60;
+const STAR_COUNT = 340;
+const CORE_RADIUS = 64;
 const ARM_COUNT = 4;
 
+/**
+ * Galaxy hub position (fractions of canvas width/height).
+ * Canvas spans Hero + Introduction, so vertical center must sit in the UPPER band (~hero viewport),
+ * not geometric mid of the full tall layer — otherwise the core sits mid-page.
+ */
+const CENTER_X_RATIO = 0.5;
+const CENTER_Y_RATIO = 0.2;
+
 interface Particle {
-  angle: number;       // current angle (radians)
-  radius: number;      // distance from center
+  angle: number;
+  radius: number;
   size: number;
   opacity: number;
   opacityDelta: number;
-  hue: number;         // 40–260 (gold → blue-purple)
+  hue: number;
 }
 
 const GalaxyBackground: React.FC<{ className?: string }> = ({ className }) => {
@@ -41,99 +38,108 @@ const GalaxyBackground: React.FC<{ className?: string }> = ({ className }) => {
     let animationFrameId: number;
     let rotation = 0;
     let particles: Particle[] = [];
+    let cssW = 0;
+    let cssH = 0;
 
     const buildParticles = (w: number, h: number) => {
-      const maxR = Math.min(w, h) * 0.46;
+      const maxR = Math.min(w, h) * 0.48;
       particles = [];
       for (let arm = 0; arm < ARM_COUNT; arm++) {
         const armOffset = (Math.PI * 2 * arm) / ARM_COUNT;
         for (let i = 0; i < STAR_COUNT; i++) {
-          const t = i / STAR_COUNT;                   // 0 → 1
-          const radius = 18 + t * maxR;
+          const t = i / STAR_COUNT;
+          const radius = 16 + t * maxR;
           const spread = (Math.random() - 0.5) * 0.55 * (1 + t);
           const angle = armOffset + t * Math.PI * 3.5 + spread;
-          // gold near core, blue-purple at edges
-          const hue = 45 + t * 215 + (Math.random() - 0.5) * 30;
+          const hue = 42 + t * 218 + (Math.random() - 0.5) * 28;
           particles.push({
             angle,
             radius,
-            size: Math.random() * 1.8 + 0.4,
-            opacity: Math.random() * 0.7 + 0.3,
+            size: Math.random() * 2.1 + 0.45,
+            opacity: Math.random() * 0.45 + 0.55,
             opacityDelta: (Math.random() - 0.5) * 0.012,
             hue,
           });
         }
       }
-      // Extra dense core dust
-      for (let i = 0; i < 120; i++) {
-        const radius = Math.random() * CORE_RADIUS * 0.9;
+      for (let i = 0; i < 140; i++) {
+        const radius = Math.random() * CORE_RADIUS * 0.92;
         const angle = Math.random() * Math.PI * 2;
         particles.push({
-          angle, radius,
-          size: Math.random() * 2.5 + 0.5,
-          opacity: Math.random() * 0.9 + 0.1,
+          angle,
+          radius,
+          size: Math.random() * 2.6 + 0.55,
+          opacity: Math.random() * 0.35 + 0.65,
           opacityDelta: (Math.random() - 0.5) * 0.02,
-          hue: 40 + Math.random() * 40,
+          hue: 38 + Math.random() * 45,
         });
       }
     };
 
-    const resize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      buildParticles(canvas.width, canvas.height);
-    };
-
     const drawCore = (cx: number, cy: number) => {
-      // Outermost soft haze
-      const haze = ctx.createRadialGradient(cx, cy, 0, cx, cy, CORE_RADIUS * 3.5);
-      haze.addColorStop(0, 'rgba(255, 220, 100, 0.18)');
-      haze.addColorStop(0.4, 'rgba(160, 100, 255, 0.08)');
+      const haze = ctx.createRadialGradient(cx, cy, 0, cx, cy, CORE_RADIUS * 3.8);
+      haze.addColorStop(0, 'rgba(255, 235, 160, 0.26)');
+      haze.addColorStop(0.35, 'rgba(140, 180, 255, 0.14)');
       haze.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = haze;
       ctx.beginPath();
-      ctx.arc(cx, cy, CORE_RADIUS * 3.5, 0, Math.PI * 2);
+      ctx.arc(cx, cy, CORE_RADIUS * 3.8, 0, Math.PI * 2);
       ctx.fill();
 
-      // Inner glow
-      const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, CORE_RADIUS);
-      glow.addColorStop(0, 'rgba(255, 255, 220, 0.95)');
-      glow.addColorStop(0.2, 'rgba(255, 210, 80, 0.7)');
-      glow.addColorStop(0.55, 'rgba(180, 120, 255, 0.25)');
+      const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, CORE_RADIUS * 1.05);
+      glow.addColorStop(0, 'rgba(255, 255, 245, 0.98)');
+      glow.addColorStop(0.18, 'rgba(255, 220, 120, 0.82)');
+      glow.addColorStop(0.5, 'rgba(150, 120, 255, 0.32)');
       glow.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = glow;
       ctx.beginPath();
-      ctx.arc(cx, cy, CORE_RADIUS, 0, Math.PI * 2);
+      ctx.arc(cx, cy, CORE_RADIUS * 1.05, 0, Math.PI * 2);
       ctx.fill();
 
-      // Bright pinpoint
       ctx.beginPath();
-      ctx.arc(cx, cy, 3, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.98)';
+      ctx.arc(cx, cy, 3.2, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255, 255, 255, 1)';
       ctx.fill();
     };
 
+    const resize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+      cssW = canvas.offsetWidth;
+      cssH = canvas.offsetHeight;
+      canvas.width = Math.max(1, Math.floor(cssW * dpr));
+      canvas.height = Math.max(1, Math.floor(cssH * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      buildParticles(cssW, cssH);
+    };
+
     const animate = () => {
-      const { width: w, height: h } = canvas;
+      const w = cssW;
+      const h = cssH;
       ctx.clearRect(0, 0, w, h);
 
       rotation += ROTATION_SPEED;
-      const cx = w / 2;
-      const cy = h / 2;
+      const cx = w * CENTER_X_RATIO;
+      const cy = h * CENTER_Y_RATIO;
 
-      // Draw particles
       for (const p of particles) {
         const a = p.angle + rotation;
         const x = cx + Math.cos(a) * p.radius;
-        const y = cy + Math.sin(a) * p.radius * 0.42; // flatten to ellipse (galaxy tilt)
+        const y = cy + Math.sin(a) * p.radius * 0.42;
 
         p.opacity += p.opacityDelta;
-        if (p.opacity > 1) { p.opacity = 1; p.opacityDelta *= -1; }
-        if (p.opacity < 0.1) { p.opacity = 0.1; p.opacityDelta *= -1; }
+        if (p.opacity > 1) {
+          p.opacity = 1;
+          p.opacityDelta *= -1;
+        }
+        if (p.opacity < 0.15) {
+          p.opacity = 0.15;
+          p.opacityDelta *= -1;
+        }
 
+        const light = Math.min(1, p.opacity * 1.08);
         ctx.beginPath();
         ctx.arc(x, y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(${p.hue}, 90%, 80%, ${p.opacity})`;
+        ctx.fillStyle = `hsla(${p.hue}, 88%, 78%, ${light})`;
         ctx.fill();
       }
 

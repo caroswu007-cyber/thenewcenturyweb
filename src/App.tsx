@@ -6,9 +6,11 @@ import AboutView from './views/AboutView';
 import RecordOfSoulView from './views/RecordOfSoulView';
 import WoosSpiritMedicineView from './views/WoosSpiritMedicineView';
 import UniversalMatrixView from './views/UniversalMatrixView';
+import { LocaleProvider } from './i18n/LocaleProvider';
 
 function App() {
   return (
+    <LocaleProvider>
     <Router>
       <div className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         <Navbar />
@@ -25,6 +27,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </LocaleProvider>
   );
 }
 

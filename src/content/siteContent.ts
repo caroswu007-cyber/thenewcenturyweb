@@ -89,6 +89,8 @@ Based on the three documentary series — the Woos Spirit Archive, Woos Spirit M
   ],
 };
 
+export type AboutPageContent = typeof aboutContent;
+
 export const siteContent = {
   brand: 'ASra',
   home: {
@@ -109,18 +111,21 @@ export const siteContent = {
     episodesCount: '11',
     minutes: '942+',
     backgroundImage: 'https://images.unsplash.com/photo-1445264618034-159aa57a1535?auto=format&fit=crop&w=1920&q=80',
+    /** YouTube URLs from https://ess-esw.org/woos-record-of-soul-2/ (same order as on site) */
     timeline: [
       {
         fileNumber: 'FILE 1-1-1',
         title: 'Introduction to Woos Record of Soul',
         abstract: 'An overview of the entire documentary , its methodology, and its revolutionary premise.',
         videoLength: '17mins',
+        youtubeLink: 'https://youtu.be/AaeSiJzgDws',
       },
       {
         fileNumber: 'FILE 1-1-2',
         title: 'Scientifically prove the Existence of Souls through Epilepsy',
         abstract: 'Demonstrating how electromagnetic, thermal, and quantum sensors can detect and record phenomena attributable to spirit presence.',
         videoLength: '6mins',
+        youtubeLink: 'https://youtu.be/Tna3F0rRPGY',
       },
       {
         fileNumber: 'FILE 1-1-3',
@@ -128,6 +133,7 @@ export const siteContent = {
         abstract: 'PSI phenomena — telepathy, psychokinesis, clairvoyance — are the foundational gateway to understanding spiritual forces. Yet their legitimacy has long been dismissed as pseudoscience. This episode reveals groundbreaking research from China’s 507 Institute (China’s equivalent to NASA) — proving that spirit-derived forces are real, measurable, and reproducible.',
         keyFeatures: 'Unprecedented high-speed camera footage and irrefutable PSI experimental data never before shown to the public. The authenticity of these experiments — rigorously controlled, peer-reviewed, and non-fakeable — forms the core of this video.',
         videoLength: '64mins',
+        youtubeLink: 'https://youtu.be/DBAXNiDF8qM',
       },
       {
         fileNumber: 'FILE 1-2-1',
@@ -135,6 +141,7 @@ export const siteContent = {
         abstract: 'Where do human souls come from? Where do they go after death? Do they ascend to heaven, descend to hell, or reincarnate according to religious doctrines?This episode reveals a startling truth: The primary destination of ancestral human spirits is not another realm — but parasitic attachment to living human beings.',
         keyFeatures: 'Drawing on 12 peer-reviewed studies from Western universities and ICD-11 Category 6B6 (Spirit Attachment Disorders), this series maps the global distribution of spirit attachment and demonstrates its direct link to dissociative disorders, identity fragmentation, and unexplained psychological symptoms.',
         videoLength: '154mins',
+        youtubeLink: 'https://youtu.be/RURvSBHvKu0',
       },
       {
         fileNumber: 'FILE 1-2-2',
@@ -142,6 +149,7 @@ export const siteContent = {
         abstract: 'Traditional materialism denies spirit(Ghost) existence by asserting that consciousness is merely an epiphenomenon of the brain — and thus ceases at death. But Chinese PSI research proves otherwise: The ethereal realm possesses an innate, internet-like architecture capable of transmitting conscious information in GIF-like formats via a “blog-style” addressing system.This proves: Consciousness and the soul can exist independently of the physical brain.',
         keyFeatures: 'Four groundbreaking PSI papers by Professor Shao Laisheng of Fudan University and colleagues demonstrate that humans can transmit pure conscious information — without instruments — from Shanghai to Beijing, directly through mental intent.',
         videoLength: '32mins',
+        youtubeLink: 'https://youtu.be/zQ2fzctwkY0',
       },
       {
         fileNumber: 'FILE 1-2-3',
@@ -149,6 +157,7 @@ export const siteContent = {
         abstract: 'In this world, where is it easy to find a spirit(ghost)? In countless patients with dissociative disorder, schizophrenia, epilepsy, depression, somatization disorder and many other diseases. This series of videos will deeply discuss the etiology research and pain brought by spirit(ghost) to mental patients.',
         keyFeatures: 'This series of videos shows the distribution of spiritual body in the world with 15 medical research papers from famous western universities and precious real video materials of spirit(ghost) possession. The statistics of psychiatry are often the distribution data of spirit(ghost).',
         videoLength: '154mins',
+        youtubeLink: 'https://youtu.be/41OSBcImghk',
       },
       {
         fileNumber: 'FILE 1-2-4',
@@ -156,6 +165,7 @@ export const siteContent = {
         abstract: 'The Woos own epilepsy is caused by spirit(ghost) possession — directly contradicting modern neurology’s claim that epilepsy arises solely from abnormal neural firing. This series reveals: spirit(ghost) are material entities capable of emitting electromagnetic charges. These charges induce epileptogenic foci in the human brain, triggering seizures.',
         keyFeatures: 'Supported by 15 peer-reviewed medical papers from global universities and the Wu family’s personal medical records, this series provides irrefutable evidence that spirit-induced illness operates through physical, material mechanisms — not metaphysical mysticism.',
         videoLength: '76mins',
+        youtubeLink: 'https://youtu.be/GtyfFk8O5oA',
       },
       {
         fileNumber: 'FILE 1-2-5',
@@ -163,6 +173,7 @@ export const siteContent = {
         abstract: 'Near-death experiences (NDEs) — tunnels of light, deceased relatives, out-of-body journeys — are widely cited as proof of an afterlife. But this series proves: NDEs are not glimpses of death — they are hallucinations generated by attached spirits(ghosts). Through five analytical dimensions — consistency with other possession phenomena, visual structure, cross-cultural variation, and post-NDE psychic sequelae — this series dismantles the myth of NDEs as evidence of an afterlife.',
         keyFeatures: 'A deep analysis of 34 peer-reviewed NDE studies from top Western universities. Unlike popular media, which cherry-pick romanticized accounts, this series presents the full, unfiltered dataset — revealing NDEs as culturally conditioned, neurobiologically induced illusions orchestrated by spirit entities.',
         videoLength: '74mins',
+        youtubeLink: 'https://youtu.be/9cbr96i2MVg',
       },
       {
         fileNumber: 'FILE 1-2-6',
@@ -170,6 +181,7 @@ export const siteContent = {
         abstract: 'Through the human mind’s “consciousness input port” — particularly the memory system — attached spirits(ghosts) transmit their own life experiences in first-person narrative form. The host misinterprets these as their own past-life memories, leading to the widespread belief in reincarnation. This series demonstrates that reincarnation is a cognitive illusion, not a metaphysical reality.',
         keyFeatures: 'Rigorous logical analysis: The alleged “reincarnated self” has no biological continuity. It lacks a coherent sense of “I” — no unified identity, no persistent consciousness. Memory transfer ≠ identity transfer. This series exposes a fundamental error in spiritual research: mistaking information transfer for soul migration.',
         videoLength: '42mins',
+        youtubeLink: 'https://youtu.be/iB_yNqGJ1Ds',
       },
       {
         fileNumber: 'FILE 1-3',
@@ -177,6 +189,7 @@ export const siteContent = {
         abstract: 'Eyes are a fundamental condition shaping the very nature of spirits(ghost) existence. If spirits(ghost) lack eyes, this fundamentally challenges every cultural, religious, and metaphysical assumption about the afterlife. Across nearly all human cultures, the ethereal realm is depicted as containing hellfires, paradisiacal realms, demons, gods, and other spirits. But how can spirits(ghost) perceive these environments — or each other — without visual organs? How can the imagined existence of spirits(ghost) even be coherent without sight?',
         keyFeatures: 'This series draws upon 19 peer-reviewed academic papers from China’s most prestigious institutions — including the Institute of Physics and Institute of Biophysics (Chinese Academy of Sciences), Peking University, National Taiwan University, Beijing Normal University, and the Shanghai Institute of Laser Technology — combined with the firsthand experiential accounts of the Wu family. Collectively, they provide conclusive evidence: spirits(ghost) do not possess eyes.',
         videoLength: '77mins',
+        youtubeLink: 'https://youtu.be/6haJUyUxrqc',
       },
       {
         fileNumber: 'FILE 1-4',
@@ -184,6 +197,7 @@ export const siteContent = {
         abstract: 'The ethereal body is material in nature. This series represents the first systematic scientific exploration into the physical structure, organ systems, material composition, and energy metabolism of human spirits(soul) after death — marking humanity’s initial step toward understanding the material reality of the ethereal realm.',
         keyFeatures: 'Drawing on 8 international academic studies, the ICD-11 classification (Category 6B6: Spirit Attachment Disorders) from the World Health Organization, and rare archival footage, this series presents the most comprehensive and empirically grounded analysis to date of the spirit body’s anatomical and physiological characteristics..',
         videoLength: '243mins',
+        youtubeLink: 'https://youtu.be/V6ua2xkHpE0',
       },
     ],
   },
