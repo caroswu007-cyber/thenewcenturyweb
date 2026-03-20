@@ -11,9 +11,10 @@
 
 ### 2026-03-20: 网页主页 Hero 封面动态化
 - **改动详情**:
-    - **新增组件**: `src/components/common/StarBackground.tsx`。使用 HTML5 Canvas 实现了一个轻量级的星辰流动动画，支持自适应缩放和简单的闪烁效果。
-    - **Hero 组件更新**: `src/components/home/Hero.tsx`。将原本的 Unsplash 静态宇宙图片背景替换为 `StarBackground` 组件。
+    - **新增组件**: `src/components/common/StarBackground.tsx`。使用 HTML5 Canvas 实现了一个轻量级的星辰流动动画。
+    - **进阶动画**: `src/components/common/GalaxyBackground.tsx` (由远程开发者添加)。实现了一个更加复杂的旋涡星系中心动画，包含 4 条旋臂、明亮的星系核以及深蓝色调的星云效果。
+    - **Hero 组件更新**: `src/components/home/Hero.tsx`。将背景组件由 `StarBackground` 升级为 `GalaxyBackground`，以获得更震撼的视觉效果。
     - **样式优化**: 为 Hero 区域设置了 `bg-black` 作为 Canvas 的底层背景色，并保留了原有的 `isHovered` 交互逻辑。
 - **给 AI 协作者的提示**: 
-    - 如果需要调整星辰数量或移动速度，可直接在 `StarBackground.tsx` 的 `starCount` 和 `speed` 变量中修改。
+    - 如果需要调整星辰数量或移动速度，可直接在 `GalaxyBackground.tsx` 的 `STAR_COUNT` 和 `ROTATION_SPEED` 常量中修改。
     - 确保 `Hero.tsx` 中的 Canvas 容器具有 `pointer-events-none` 属性，以免干扰页面点击。

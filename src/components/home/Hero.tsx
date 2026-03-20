@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { siteContent } from '../../content/siteContent';
-import StarBackground from '../common/StarBackground';
+import GalaxyBackground from '../common/GalaxyBackground';
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +14,7 @@ const Hero = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Background 1: Universe (Star animation) */}
+      {/* Background 1: Universe (Galaxy animation) */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ 
@@ -25,7 +25,7 @@ const Hero = () => {
         }}
         className="absolute inset-0 bg-black pointer-events-none"
       >
-        <StarBackground />
+        <GalaxyBackground />
       </motion.div>
 
       {/* Background 2: Spirit Realm (Sudden entrance on hover) */}
