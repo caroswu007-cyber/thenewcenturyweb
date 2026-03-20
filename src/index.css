@@ -5,11 +5,18 @@
   --color-accent: #fbbf24;
   --font-sans: "Inter", sans-serif;
   --font-serif: "Playfair Display", serif;
+  --font-display: "Cinzel Decorative", serif;
+  --font-cinzel: "Cinzel", serif;
 }
 
 @layer base {
   body {
     background-color: #05080f;
+    /* Fixed starfield visible through all transparent sections */
+    background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=1920&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
     color: #f8fafc;
     line-height: 1.65;
     font-size: 15px;
@@ -27,5 +34,24 @@
 @layer utilities {
   .hero-bg {
     background: radial-gradient(circle at center top, rgba(30,41,59,0.8) 0%, rgba(5,8,15,1) 100%);
+  }
+
+  /* Cinzel Decorative helper classes */
+  .font-display {
+    font-family: "Cinzel Decorative", serif;
+  }
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+
+  /* Cosmic section title style */
+  .cosmic-title {
+    font-family: "Cinzel Decorative", serif;
+    background: linear-gradient(135deg, #ffffff 0%, #fbbf24 50%, #f8e4a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 30px rgba(251,191,36,0.3));
   }
 }

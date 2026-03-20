@@ -5,18 +5,85 @@ const JoinSection = () => {
   const { join } = siteContent.links;
 
   return (
-    <section id="join" className="py-32 bg-black/40 px-6 text-center border-t border-white/5">
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-        className="max-w-4xl mx-auto"
+    <section
+      id="join"
+      className="relative py-36 px-6 text-center overflow-hidden"
+      style={{ background: 'rgba(5,8,15,0.75)' }}
+    >
+      {/* Ambient glow behind the CTA */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(251,191,36,0.06) 0%, transparent 70%)',
+        }}
+      />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="relative z-10 max-w-4xl mx-auto"
       >
-        <h2 className="font-serif text-3xl md:text-5xl text-center text-white mb-8 border-b-2 border-accent/40 pb-4 inline-block">Join & Participate</h2>
-        <p className="text-slate-300 text-lg md:text-xl mb-12 leading-relaxed max-w-2xl mx-auto">
-          Become a part of the Spirit Ambassador Association. Whether you seek guidance, wish to share your journey, or want to join our team of administrators, your ethereal life begins here.
+        {/* Ornament top */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="h-px w-20" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.5))' }} />
+          <span style={{ color: 'rgba(251,191,36,0.5)', fontSize: '0.6rem', letterSpacing: '0.4em' }}>✦ ✦ ✦</span>
+          <div className="h-px w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.5))' }} />
+        </div>
+
+        <h2
+          className="cosmic-title mb-6"
+          style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)', lineHeight: 1.15 }}
+        >
+          Join & Participate
+        </h2>
+
+        {/* Subtitle rule */}
+        <div className="flex items-center justify-center gap-4 mb-10">
+          <div className="h-px w-20" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.3))' }} />
+          <span
+            className="font-cinzel text-xs uppercase tracking-[0.35em]"
+            style={{ color: 'rgba(251,191,36,0.35)' }}
+          >
+            Your Ethereal Journey Begins
+          </span>
+          <div className="h-px w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.3))' }} />
+        </div>
+
+        <p className="text-slate-300 text-lg md:text-xl mb-14 leading-relaxed max-w-2xl mx-auto font-light">
+          Become a part of the Spirit Ambassador Association. Whether you seek guidance,
+          wish to share your journey, or want to join our team of administrators —
+          your ethereal life begins here.
         </p>
-        <a href={join} target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-yellow-600 to-accent hover:from-accent hover:to-yellow-400 text-black font-bold uppercase tracking-widest text-lg md:text-xl py-4 px-16 rounded-full transition-transform hover:-translate-y-1 shadow-lg shadow-accent/20">
-          Visit: Join Us
+
+        <a
+          href={join}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-cinzel font-bold uppercase tracking-widest text-base md:text-lg py-5 px-16 rounded-full transition-all hover:-translate-y-1"
+          style={{
+            background: 'linear-gradient(135deg, #92610a, #fbbf24, #d97706)',
+            color: '#0f0a00',
+            boxShadow: '0 4px 30px rgba(251,191,36,0.35)',
+          }}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 8px 40px rgba(251,191,36,0.55)';
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 4px 30px rgba(251,191,36,0.35)';
+          }}
+        >
+          ✦ &nbsp; Visit: Join Us &nbsp; ✦
         </a>
+
+        {/* Bottom ornament */}
+        <div className="flex items-center justify-center gap-4 mt-16">
+          <div className="h-px w-32" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.2))' }} />
+          <span style={{ color: 'rgba(251,191,36,0.2)', fontSize: '0.9rem' }}>◈</span>
+          <div className="h-px w-32" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.2))' }} />
+        </div>
       </motion.div>
     </section>
   );

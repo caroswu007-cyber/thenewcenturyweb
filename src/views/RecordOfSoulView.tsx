@@ -4,7 +4,7 @@ import EpisodeTimeline from '../components/record/EpisodeTimeline';
 
 const RecordOfSoulView = () => {
   return (
-    <div className="bg-gray-900">
+    <div style={{ background: '#1a1610' }}>
       <RecordOfSoulHero />
       <EpisodeTimeline />
     </div>
