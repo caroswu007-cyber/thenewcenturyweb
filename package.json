@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "export:i18n-csv": "node scripts/export-i18n-csv.mjs",
     "export:site-copy": "tsx scripts/export-all-site-copy.ts",
-    "export:page-xlsx": "tsx scripts/export-page-copy-workbooks.ts"
+    "export:page-xlsx": "tsx scripts/export-page-copy-workbooks.ts",
+    "import:page-copy": "python scripts/generate-page-copy-overrides.py"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

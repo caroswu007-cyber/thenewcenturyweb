@@ -74,7 +74,9 @@ When applying user-edited sheets, map each row’s `block_key` back to the corre
 
 ## 5. Applying edits coming back from spreadsheets
 
-There is **no** automatic import script yet. Intended workflow:
+**Workbook → code (partial):** `npm run import:page-copy` (Python + openpyxl) copies `../01–02,03–06*.xlsx` from the parent of this repo into `docs/page-copy/` when those files exist there, then regenerates `src/i18n/messages/pageCopyWorkbookOverrides.ts`, merged in `translate.ts` and `workbookResolve()` for site content, **including** `founderStory.*` keys and `universalMatrixFiles[…]` / `siteContent.universalMatrix.*`. The founder narrative body and UMMA file index apply **at runtime for `zh`** via `getLocalizedFounderStory` and `getLocalizedUniversalMatrixFiles`. Re-run after editing local sheets under `docs/page-copy/`.
+
+Legacy manual workflow:
 
 1. User fills / corrects `english_源文`, `中文`, `Latin_Latina` in Excel.
 2. User sends files (or CSV) and states which column is **source of truth** for each language.
@@ -93,6 +95,7 @@ There is **no** automatic import script yet. Intended workflow:
 | Script | Role |
 |--------|------|
 | `npm run export:page-xlsx` | Regenerate `docs/page-copy/*.xlsx` from current repo |
+| `npm run import:page-copy` | Rebuild `pageCopyWorkbookOverrides.ts` from `docs/page-copy/01–06`. Set env `PAGE_COPY_PULL_PARENT=1` to copy matching `*.xlsx` from the **parent folder** of the repo into `docs/page-copy/` first (optional). |
 | `npm run export:i18n-csv` | Full i18n CSV: `docs/i18n_trilingual_review.csv` |
 | `npm run export:site-copy` | Broader copy export (`scripts/export-all-site-copy.ts`) |
 

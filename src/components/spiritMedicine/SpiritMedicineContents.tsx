@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
+import { getLocalizedSpiritMedicineFileGroups } from '../../content/getLocalizedSpiritMedicine';
 import {
   formatEpisodeDuration,
   spiritMedicineEpisodeUrl,
-  spiritMedicineFileGroups,
   spiritMedicinePlaylistUrl,
   totalSpiritMedicineEpisodes,
   type SpiritMedicineEpisode,
@@ -61,7 +61,8 @@ const YoutubeEpisodeButton = ({ episode }: { episode: SpiritMedicineEpisode }) =
 };
 
 const SpiritMedicineContents = () => {
-  const { t, tFormat } = useI18n();
+  const { t, tFormat, locale } = useI18n();
+  const spiritMedicineFileGroups = getLocalizedSpiritMedicineFileGroups(locale);
   const fileCount = spiritMedicineFileGroups.length;
   const episodeCount = totalSpiritMedicineEpisodes();
 

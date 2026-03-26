@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { universalMatrixFiles } from '../../content/universalMatrixSeries';
+import { useMemo } from 'react';
+import { getLocalizedUniversalMatrixFiles } from '../../content/getLocalizedUniversalMatrixFiles';
 import { useI18n } from '../../i18n/LocaleProvider';
 
 /** Desaturated blue-gray — distinct from Spirit Medicine (#0a2535 / #38bdf8). */
@@ -50,7 +51,8 @@ const ComingSoonBadge = () => {
 };
 
 const UniversalMatrixContents = () => {
-  const { t, tFormat } = useI18n();
+  const { t, tFormat, locale } = useI18n();
+  const universalMatrixFiles = useMemo(() => getLocalizedUniversalMatrixFiles(locale), [locale]);
   const totalSubs = universalMatrixFiles.reduce((acc, f) => acc + (f.subChapters?.length ?? 0), 0);
 
   return (

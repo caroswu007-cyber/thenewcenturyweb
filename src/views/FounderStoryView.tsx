@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useI18n } from '../i18n/LocaleProvider';
-import {
-  founderStoryIllustrations,
-  founderStoryPage,
-  founderStorySurfaceCopy,
-  founderTimeline,
-  STORYLINE_OF_WOOS_URL,
-} from '../content/founderStory2026Content';
+import { STORYLINE_OF_WOOS_URL } from '../content/founderStory2026Content';
+import { useLocalizedFounderStory } from '../content/useLocalizedFounderStory';
 
 /** Readable width: comfortable on phone; wider on desktop without touching viewport edges */
 const articleShell =
@@ -47,7 +42,15 @@ function RichParagraph({ text, className = '' }: { text: string; className?: str
 }
 
 /** Phase B copy: inline link token for `/our-achievements`. */
-function PhaseBParagraph({ text, className = '' }: { text: string; className?: string }) {
+function PhaseBParagraph({
+  text,
+  achievementsLinkLabel,
+  className = '',
+}: {
+  text: string;
+  achievementsLinkLabel: string;
+  className?: string;
+}) {
   if (!text.includes(ACH_LINK_TOKEN)) {
     return <RichParagraph text={text} className={className} />;
   }
@@ -56,7 +59,7 @@ function PhaseBParagraph({ text, className = '' }: { text: string; className?: s
     <p className={`${bodyProse} ${className}`}>
       <RichText text={a} />
       <Link to="/our-achievements" className="text-amber-200 underline-offset-2 hover:underline font-semibold">
-        {founderStorySurfaceCopy.achievementsFeaturePageLink}
+        {achievementsLinkLabel}
       </Link>
       <RichText text={b} />
     </p>
@@ -241,8 +244,8 @@ function StorylineClipBlock({
 
 const FounderStoryView = () => {
   const { t } = useI18n();
-  const p = founderStoryPage;
-  const ill = founderStoryIllustrations;
+  const { surface: founderStorySurfaceCopy, page: p, timeline: founderTimeline, illustrations: ill } =
+    useLocalizedFounderStory();
   const [phaseAOpen, setPhaseAOpen] = useState(false);
 
   const timelineRowForStage = (stageId: string) =>
@@ -404,7 +407,10 @@ const FounderStoryView = () => {
                 <div className="space-y-0">
                   {p.phaseB.blocks.map((blk, bi) => (
                     <ContentBlock key={bi} title={blk.title} showDivider={bi > 0}>
-                      <PhaseBParagraph text={blk.text} />
+                      <PhaseBParagraph
+                        text={blk.text}
+                        achievementsLinkLabel={founderStorySurfaceCopy.achievementsFeaturePageLink}
+                      />
                     </ContentBlock>
                   ))}
                 </div>

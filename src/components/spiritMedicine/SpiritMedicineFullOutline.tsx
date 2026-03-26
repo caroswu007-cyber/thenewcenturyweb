@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-import { spiritMedicineOfficialOutline } from '../../content/spiritMedicineOfficialOutline';
+import { getLocalizedSpiritMedicineOutline } from '../../content/getLocalizedSpiritMedicine';
 import { useI18n } from '../../i18n/LocaleProvider';
 
 /**
  * Full curriculum tree (ess-esw.org/spirit-medicine style), same teal/cyan visual language as SpiritMedicineContents.
  */
 const SpiritMedicineFullOutline = () => {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const spiritMedicineOfficialOutline = getLocalizedSpiritMedicineOutline(locale);
 
   return (
     <section

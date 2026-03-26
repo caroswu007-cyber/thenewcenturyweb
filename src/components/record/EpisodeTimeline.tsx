@@ -1,4 +1,4 @@
-import { siteContent } from '../../content/siteContent';
+import { useLocalizedSiteContent } from '../../content/useLocalizedSiteContent';
 import EpisodeItem from './EpisodeItem';
 import { useI18n } from '../../i18n/LocaleProvider';
 
@@ -37,7 +37,8 @@ const ghostImages = [
 ];
 
 const EpisodeTimeline = () => {
-  const { timeline } = siteContent.recordOfSoul;
+  const { recordOfSoul } = useLocalizedSiteContent();
+  const { timeline } = recordOfSoul;
   const { t } = useI18n();
 
   return (
