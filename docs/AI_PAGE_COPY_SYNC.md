@@ -38,11 +38,11 @@ When **routes or views change**, update **`src/App.tsx`** (and this table in thi
 |----------|----------------|---------|-------------------------------------|
 | `01-首页.xlsx` | `/` | `src/views/HomeView.tsx`; sections from `src/components/home/*` | i18n: `home.*`, `nav.*`, `footer.*`, `lang.label`, `common.*`; plus `siteContent.home` in `src/content/siteContent.ts` |
 | `02-组织介绍.xlsx` | `/about` | `src/views/AboutView.tsx` | i18n: `about.*` (`src/i18n/messages/en.ts`, `zh.ts`, `es.ts`); long English blocks: `aboutContent` in `src/content/siteContent.ts` (via `getAboutContent`) |
-| `03-创始人故事.xlsx` | `/founder-story` | `src/views/FounderStoryView.tsx` | i18n: `founderStory.*`; narrative: `src/content/founderStory2026Content.ts` (`founderStoryPage`, `founderTimeline`, `founderStoryIllustrations`, etc.) |
+| `03-创始人故事.xlsx` | `/founder-story` | `src/views/FounderStoryView.tsx` | i18n: `founderStory.*`; narrative: `founderStory2026Content.ts` (`founderStoryPage`, `founderTimeline`, `founderStoryIllustrations`); **surface chrome:** `founderStorySurfaceCopy` (names line, back link, legacy link, Phase B achievements link). Exporter splits **CJK-heavy** strings into `中文`, Latin-primary into `english_源文`. |
 | `04-视频目录-灵魂档案.xlsx` | `/record-of-soul` | `src/views/RecordOfSoulView.tsx`; `src/components/record/*` | i18n: `record.*`, `episode.*`; episode list & hero copy: `siteContent.recordOfSoul` in `src/content/siteContent.ts` |
 | `05-视频目录-灵体医学.xlsx` | `/spirit-medicine` | `src/views/WoosSpiritMedicineView.tsx`; `src/components/spiritMedicine/*` | i18n: `spirit.*`; `siteContent.spiritMedicine`; outline: `src/content/spiritMedicineOfficialOutline.ts`; playlist rows: `src/content/spiritMedicineData.ts` (`spiritMedicineFileGroups`) |
-| `06-视频目录-万有元神.xlsx` | `/universal-matrix`, `/universal-matrix-of-meta-awareness` | `src/views/UniversalMatrixView.tsx`; `src/components/universalMatrix/*` | i18n: `matrix.*`; scaffold copy: `siteContent.universalMatrix` in `src/content/siteContent.ts` |
-| `07-我们的成就.xlsx` | `/our-achievements` (and home strip) | `src/views/OurAchievementsView.tsx`; home strip `src/components/home/Achievements.tsx` | Long report: `src/i18n/messages/achievementsReport.i18n.ts` (`achievementsReportEn` / `achievementsReportZh`); marketing/hero strip: `achievementsPage.*` in `en.ts` / `zh.ts` / `es.ts` |
+| `06-视频目录-万有元神.xlsx` | `/universal-matrix`, `/universal-matrix-of-meta-awareness` | `src/views/UniversalMatrixView.tsx`; `src/components/universalMatrix/*` | Hero title/description: `siteContent.universalMatrix`; hero subtitle + stats labels: i18n `matrix.*`, `common.files`, `common.subChapters`, `common.series`, `common.fileIndex`, `common.indexSummary`, `matrix.endSeries`, `common.comingSoon`. **File/subchapter list on page:** `universalMatrixFiles` in `src/content/universalMatrixSeries.ts` (not `siteContent.universalMatrix.volumes`). |
+| `07-我们的成就.xlsx` | `/our-achievements` (and home strip) | `src/views/OurAchievementsView.tsx`; home strip `src/components/home/Achievements.tsx` | Report body: `achievementsReport.*` in `achievementsReport.i18n.ts` (merged in `translate.ts`). Home achievements strip: `home.achievements.*`. Page footers/CTA on `/our-achievements`: `achievementsPage.*`. Closing link labels + hero img alt + carousel slide alts: `src/content/achievements2025Content.ts` (`livestreamLinkPlaceholders`, `reportHeroFigure`, `carouselSlides`). |
 
 **Locale merge:** `src/i18n/translate.ts` merges packs. Spanish often overlays `es.ts` on English; Chinese overlays `messagesZh` + achievements report ZH.
 
@@ -54,7 +54,7 @@ When **routes or views change**, update **`src/App.tsx`** (and this table in thi
 
 - **i18n:** key exactly matches `messagesEn` / `messagesZh` (e.g. `home.intro.title`, `about.hero.titleLine1`).
 - **Achievements report:** key matches `achievementsReport.i18n.ts` (e.g. `achievementsReport.s1.lead`).
-- **Embedded content:** logical paths as in the export script, e.g. `aboutContent.overview`, `founderStoryPage.phaseB.blocks[0].text`, `recordOfSoul.timeline[3].abstract`, `spiritMedicineFileGroups[2].episodes[1].title`.
+- **Embedded content:** logical paths as in the export script, e.g. `aboutContent.overview`, `founderStoryPage.phaseB.blocks[0].text`, `founderStorySurfaceCopy.backToAbout`, `universalMatrixFiles[1].title`, `recordOfSoul.timeline[3].abstract`, `spiritMedicineFileGroups[2].episodes[1].title`.
 
 When applying user-edited sheets, map each row’s `block_key` back to the correct file and property; preserve emphasis markers like `**bold**` where the UI uses `RichText` / `ReportInline`.
 
@@ -109,7 +109,8 @@ There is **no** automatic import script yet. Intended workflow:
 | `src/i18n/messages/achievementsReport.i18n.ts` | EN/ZH long achievements report |
 | `src/i18n/translate.ts` | Locale pack merge |
 | `src/content/siteContent.ts` | `aboutContent`, `recordOfSoul`, documentary pages |
-| `src/content/founderStory2026Content.ts` | Founder narrative |
+| `src/content/founderStory2026Content.ts` | Founder narrative + `founderStorySurfaceCopy` |
+| `src/content/universalMatrixSeries.ts` | UMMA / 万有元神 on-page FILE index |
 | `src/content/spiritMedicineData.ts` | Spirit Medicine episodes |
 | `src/content/spiritMedicineOfficialOutline.ts` | Spirit Medicine outline headings |
 

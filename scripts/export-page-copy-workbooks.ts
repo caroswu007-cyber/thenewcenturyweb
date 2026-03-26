@@ -11,9 +11,20 @@ import { achievementsReportEn, achievementsReportZh } from '../src/i18n/messages
 import { messagesEn } from '../src/i18n/messages/en';
 import { messagesZh } from '../src/i18n/messages/zh';
 import { aboutContent, siteContent } from '../src/content/siteContent';
-import { founderStoryPage, founderTimeline, founderStoryIllustrations } from '../src/content/founderStory2026Content';
+import {
+  founderStoryIllustrations,
+  founderStoryPage,
+  founderStorySurfaceCopy,
+  founderTimeline,
+} from '../src/content/founderStory2026Content';
+import {
+  carouselSlides,
+  livestreamLinkPlaceholders,
+  reportHeroFigure,
+} from '../src/content/achievements2025Content';
 import { spiritMedicineOfficialOutline } from '../src/content/spiritMedicineOfficialOutline';
 import { spiritMedicineFileGroups } from '../src/content/spiritMedicineData';
+import { universalMatrixFiles } from '../src/content/universalMatrixSeries';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -65,6 +76,18 @@ function pickKeys(prefix: string): string[] {
   return Object.keys(messagesEn)
     .filter(k => k.startsWith(prefix))
     .sort();
+}
+
+/** Split into EN vs 中文 columns for proofreading (CJK-heavy → 中文). */
+function proofreadColumns(text: string): { en: string; zh: string } {
+  const s = text.trim();
+  if (!s) return { en: '', zh: '' };
+  const cjk = (s.match(/[\u4e00-\u9fff]/g) ?? []).length;
+  const letters = (s.match(/[A-Za-z]/g) ?? []).length;
+  if (cjk > 0 && (letters === 0 || cjk >= letters * 0.22)) {
+    return { en: '', zh: s };
+  }
+  return { en: s, zh: '' };
 }
 
 function sheetFromRows(rows: CopyRow[], name: string): XLSX.WorkSheet {
@@ -122,13 +145,14 @@ function flattenAboutStatic(): CopyRow[] {
 
 function flattenFounderStory(): CopyRow[] {
   const rows: CopyRow[] = [];
-  const add = (block_key: string, section: string, text: string, kind: string, zhHint = '') => {
+  const add = (block_key: string, section: string, text: string, kind: string) => {
+    const { en, zh } = proofreadColumns(text);
     rows.push({
       block_key,
       section_板块: section,
       kind,
-      english_源文: text,
-      中文: zhHint,
+      english_源文: en,
+      中文: zh,
       Latin_Latina: '',
       notes: 'founderStory2026Content.ts — ** in source = emphasis',
     });
@@ -177,6 +201,33 @@ function flattenFounderStory(): CopyRow[] {
     add(`founderStoryIllustrations[${fi}].alt`, '创始人故事 / 插图说明', fig.alt, 'label');
   });
   return rows;
+}
+
+function flattenFounderSurfaceCopy(): CopyRow[] {
+  const s = founderStorySurfaceCopy;
+  const add = (block_key: string, section: string, text: string, kind: string) => {
+    const { en, zh } = proofreadColumns(text);
+    return {
+      block_key,
+      section_板块: section,
+      kind,
+      english_源文: en,
+      中文: zh,
+      Latin_Latina: '',
+      notes: 'founderStorySurfaceCopy — FounderStoryView chrome',
+    } satisfies CopyRow;
+  };
+  return [
+    add('founderStorySurfaceCopy.heroNamesLine', '创始人故事 / 英雄区副标题', s.heroNamesLine, 'label'),
+    add('founderStorySurfaceCopy.backToAbout', '创始人故事 / 返回', s.backToAbout, 'button / link'),
+    add('founderStorySurfaceCopy.legacyTimelineLink', '创始人故事 / 页脚外链', s.legacyTimelineLink, 'button / link'),
+    add(
+      'founderStorySurfaceCopy.achievementsFeaturePageLink',
+      '创始人故事 / Phase B 内链（替换 {{%ACH%}}）',
+      s.achievementsFeaturePageLink,
+      'button / link',
+    ),
+  ];
 }
 
 function flattenRecordOfSoul(): CopyRow[] {
@@ -257,7 +308,7 @@ function flattenSpiritMedicineExtra(): CopyRow[] {
 function flattenUniversalMatrixExtra(): CopyRow[] {
   const u = siteContent.universalMatrix;
   const rows: CopyRow[] = [];
-  const add = (block_key: string, section: string, text: string, kind: string) => {
+  const add = (block_key: string, section: string, text: string, kind: string, notes: string) => {
     rows.push({
       block_key,
       section_板块: section,
@@ -265,18 +316,92 @@ function flattenUniversalMatrixExtra(): CopyRow[] {
       english_源文: text,
       中文: '',
       Latin_Latina: '',
-      notes: 'siteContent.universalMatrix',
+      notes,
     });
   };
-  add('siteContent.universalMatrix.title', '万有元神 / 英雄区', u.title, 'heading');
-  add('siteContent.universalMatrix.description', '万有元神 / 英雄区', u.description.trim(), 'paragraph / other');
-  add('siteContent.universalMatrix.note', '万有元神 / 注释', u.note.trim(), 'paragraph / other');
-  u.volumes.forEach((vol, vi) => {
-    add(`siteContent.universalMatrix.volumes[${vi}].title`, '万有元神 / 卷', vol.title, 'heading');
-    vol.episodes.forEach((ep, ei) => {
-      add(`siteContent.universalMatrix.volumes[${vi}].episodes[${ei}].fileNumber`, '万有元神 / 剧集', (ep as { fileNumber: string }).fileNumber, 'label');
-      add(`siteContent.universalMatrix.volumes[${vi}].episodes[${ei}].title`, '万有元神 / 剧集', ep.title, 'heading');
-      add(`siteContent.universalMatrix.volumes[${vi}].episodes[${ei}].description`, '万有元神 / 剧集', ep.description.trim(), 'paragraph / other');
+  add('siteContent.universalMatrix.title', '万有元神 / 英雄区 H1', u.title, 'heading', 'siteContent + UniversalMatrixHero');
+  add(
+    'siteContent.universalMatrix.description',
+    '万有元神 / 英雄区导语',
+    u.description.trim(),
+    'paragraph / other',
+    'siteContent — under H2 from i18n matrix.subtitle',
+  );
+  add(
+    'siteContent.universalMatrix.note',
+    '万有元神 / scaffold 注释（非页内主文案）',
+    u.note.trim(),
+    'paragraph / other',
+    'Maintainer note only; not shown as body copy on public page',
+  );
+
+  universalMatrixFiles.forEach((file, fi) => {
+    add(
+      `universalMatrixFiles[${fi}].fileNumber`,
+      '万有元神 / 目录 FILE',
+      file.fileNumber,
+      'label',
+      'src/content/universalMatrixSeries.ts — matches UniversalMatrixContents',
+    );
+    add(
+      `universalMatrixFiles[${fi}].title`,
+      '万有元神 / 目录 FILE 标题',
+      file.title,
+      'heading',
+      'On-page file block title',
+    );
+    file.subChapters?.forEach((sub, si) => {
+      add(
+        `universalMatrixFiles[${fi}].subChapters[${si}].id`,
+        '万有元神 / 子章节编号',
+        sub.id,
+        'label',
+        '',
+      );
+      add(
+        `universalMatrixFiles[${fi}].subChapters[${si}].title`,
+        '万有元神 / 子章节标题',
+        sub.title,
+        sub.indent ? 'label' : 'paragraph / other',
+        sub.indent ? 'indented row on page' : '',
+      );
+    });
+  });
+  return rows;
+}
+
+/** Assets and link labels used on /our-achievements beyond achievementsReport i18n. */
+function flattenOurAchievementsAssets(): CopyRow[] {
+  const rows: CopyRow[] = [];
+  livestreamLinkPlaceholders.forEach((link, i) => {
+    rows.push({
+      block_key: `achievements2025.livestreamLinkPlaceholders[${i}].label`,
+      section_板块: '成就页 / 收束区外链',
+      kind: 'button / link',
+      english_源文: link.label,
+      中文: '',
+      Latin_Latina: '',
+      notes: `achievements2025Content — href: ${link.href}`,
+    });
+  });
+  rows.push({
+    block_key: 'reportHeroFigure.alt',
+    section_板块: '成就页 / 英雄区配图',
+    kind: 'label',
+    english_源文: reportHeroFigure.alt,
+    中文: '',
+    Latin_Latina: '',
+    notes: 'Hero `<img alt>` (caption text = i18n achievementsReport.hero.caption)',
+  });
+  carouselSlides.forEach((slide, i) => {
+    rows.push({
+      block_key: `carouselSlides[${i}].alt`,
+      section_板块: '成就页 / 轮播占位图',
+      kind: 'label',
+      english_源文: slide.alt,
+      中文: '',
+      Latin_Latina: '',
+      notes: 'Decorative stock alts; visible caption = achievementsReport.carouselNote',
     });
   });
   return rows;
@@ -339,7 +464,11 @@ function main() {
     },
     {
       filename: '03-创始人故事.xlsx',
-      rows: [...rowsForKeys(pickKeys('founderStory.'), '创始人故事 / i18n', en, zh), ...flattenFounderStory()],
+      rows: [
+        ...rowsForKeys(pickKeys('founderStory.'), '创始人故事 / i18n', en, zh),
+        ...flattenFounderSurfaceCopy(),
+        ...flattenFounderStory(),
+      ],
     },
     {
       filename: '04-视频目录-灵魂档案.xlsx',
@@ -368,12 +497,17 @@ function main() {
             english_源文: achievementsReportEn[k] ?? '',
             中文: achievementsReportZh[k] ?? '',
             Latin_Latina: '',
-            notes: 'achievementsReport.i18n.ts',
+            notes: 'achievementsReport.i18n.ts — matches translate() merge on site',
           })),
-        ...rowsForKeys(pickKeys('achievementsPage.'), '成就页 Hero+区块 / Achievements.tsx', en, zh).map(r => ({
+        ...rowsForKeys(pickKeys('home.achievements.'), '首页 / 成就摘要条（链到专页）', en, zh).map(r => ({
           ...r,
-          notes: 'components/home/Achievements.tsx 等',
+          notes: `${r.notes}; HomeView → components/home/Achievements.tsx`,
         })),
+        ...rowsForKeys(pickKeys('achievementsPage.'), '成就页页脚与说明文案', en, zh).map(r => ({
+          ...r,
+          notes: 'OurAchievementsView footer / CTA; not home marketing strip',
+        })),
+        ...flattenOurAchievementsAssets(),
       ],
     },
   ];

@@ -20,6 +20,7 @@
 | **2025 achievements report** (long ZH/EN) | `src/i18n/messages/achievementsReport.i18n.ts`; layout `src/views/OurAchievementsView.tsx`; metrics/carousel/hero image `src/content/achievements2025Content.ts`; rich text `src/components/achievements/ReportRichText.tsx` |
 | **Founder story** | `src/content/founderStory2026Content.ts` + `src/views/FounderStoryView.tsx` (most body = English; Phase B + some labels = Chinese in source) |
 | Home hero / series / about chunks | `src/content/siteContent.ts`, components under `src/components/home/` |
+| 万有元神 FILE 目录（页面列表） | `src/content/universalMatrixSeries.ts` (`universalMatrixFiles`) — hero 仍在 `siteContent.universalMatrix` |
 | Theme / typography tokens | `src/index.css` (e.g. `.cosmic-title`, `.report-document`) |
 | Page copy workbooks (generated Excel) | `docs/page-copy/` — regenerate: `npm run export:page-xlsx`; mapping: [`docs/AI_PAGE_COPY_SYNC.md`](./docs/AI_PAGE_COPY_SYNC.md) |
 

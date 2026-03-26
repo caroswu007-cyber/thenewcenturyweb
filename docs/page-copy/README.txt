@@ -1,9 +1,6 @@
 Page copy workbooks (trilingual workflow)
 ============================================
 
-Full mapping / AI instructions: ../AI_PAGE_COPY_SYNC.md
-Human summary in repo root: README.md → section "Page copy workbooks (Excel) & AI sync"
-
 Files in this folder:
 - 01-首页.xlsx
 - 02-组织介绍.xlsx

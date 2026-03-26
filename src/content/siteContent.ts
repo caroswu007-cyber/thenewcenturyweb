@@ -240,6 +240,7 @@ export const siteContent = {
       },
     ],
   } as DocumentaryPage,
+  /** On-page file index lives in `src/content/universalMatrixSeries.ts` (`universalMatrixFiles`), not in `volumes` below. */
   universalMatrix: {
     title: 'Universal Matrix of Meta Awareness',
     description:

@@ -6,6 +6,7 @@ import { useI18n } from '../i18n/LocaleProvider';
 import {
   founderStoryIllustrations,
   founderStoryPage,
+  founderStorySurfaceCopy,
   founderTimeline,
   STORYLINE_OF_WOOS_URL,
 } from '../content/founderStory2026Content';
@@ -55,7 +56,7 @@ function PhaseBParagraph({ text, className = '' }: { text: string; className?: s
     <p className={`${bodyProse} ${className}`}>
       <RichText text={a} />
       <Link to="/our-achievements" className="text-amber-200 underline-offset-2 hover:underline font-semibold">
-        《2025直播间成就》专题页
+        {founderStorySurfaceCopy.achievementsFeaturePageLink}
       </Link>
       <RichText text={b} />
     </p>
@@ -270,13 +271,13 @@ const FounderStoryView = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.25rem] font-bold cosmic-title leading-tight">
               {p.heroTitle}
             </h1>
-            <p className="mt-6 text-slate-300 font-ui text-xl md:text-2xl">John Long Woo · Caros · Sam</p>
+            <p className="mt-6 text-slate-300 font-ui text-xl md:text-2xl">{founderStorySurfaceCopy.heroNamesLine}</p>
           </div>
           <Link
             to="/about"
             className="shrink-0 inline-flex items-center justify-center font-ui font-semibold text-base px-6 py-3 rounded-lg border border-white/20 text-slate-200 hover:bg-white/5 transition-colors"
           >
-            ← Organization overview
+            {founderStorySurfaceCopy.backToAbout}
           </Link>
         </div>
       </header>
@@ -421,7 +422,7 @@ const FounderStoryView = () => {
             rel="noopener noreferrer"
             className="text-sky-400/90 hover:text-sky-300 underline-offset-2"
           >
-            Earlier staged timeline on the legacy site
+            {founderStorySurfaceCopy.legacyTimelineLink}
           </a>
         </p>
       </div>

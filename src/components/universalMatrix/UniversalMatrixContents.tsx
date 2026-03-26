@@ -1,64 +1,6 @@
 import { motion } from 'framer-motion';
+import { universalMatrixFiles } from '../../content/universalMatrixSeries';
 import { useI18n } from '../../i18n/LocaleProvider';
-
-type SubChapter = {
-  id: string;
-  title: string;
-  indent?: boolean;
-};
-
-type MatrixFile = {
-  fileNumber: string;
-  title: string;
-  subChapters?: SubChapter[];
-};
-
-const files: MatrixFile[] = [
-  {
-    fileNumber: 'FILE 3-1',
-    title: 'Introduction to Universal Matrix of Meta Awareness',
-  },
-  {
-    fileNumber: 'FILE 3-2',
-    title: 'Existence evidence Universal Matrix of Meta Awareness',
-    subChapters: [
-      { id: '3-2-1', title: 'Reasonable inference and evidence for his existence' },
-      { id: '3-2-2', title: 'Verification video for skeptics' },
-    ],
-  },
-  {
-    fileNumber: 'FILE 3-3',
-    title: 'Ethereal Matter & Ethereal Realm',
-    subChapters: [
-      { id: '3-3-1', title: 'Ethereal micro-particles & the Zero Space of Ethereal Space' },
-      { id: '3-3-2', title: 'Control and influence over the real universe' },
-      { id: '3-3-3', title: 'Virtual space of Ethereal Space' },
-      { id: '3-3-4', title: 'Spirit survival support system' },
-    ],
-  },
-  {
-    fileNumber: 'FILE 3-4',
-    title: 'Spirit Control System from Universal Matrix of Meta Awareness',
-    subChapters: [
-      { id: '3-4-1', title: 'Description of the control system' },
-      { id: '3-4-1-1', title: 'Evidence', indent: true },
-      { id: '3-4-1-2', title: 'Organization framework of Master Spirits', indent: true },
-      { id: '3-4-1-3', title: 'System Data Uplink System-Akashic Record', indent: true },
-      { id: '3-4-1-4', title: 'Multiple Data Downlink Mode', indent: true },
-      { id: '3-4-2', title: 'Management & behavior style of Master Spirits' },
-    ],
-  },
-  {
-    fileNumber: 'FILE 3-5',
-    title: 'Purpose of Manifestation Universal Matrix of Meta Awareness',
-    subChapters: [
-      { id: '3-5-1', title: 'Why do other types of life forms not interact with humans?' },
-      { id: '3-5-2', title: 'He is scheduled to emerge at the Singularity of AI' },
-      { id: '3-5-3', title: 'He Guides the Optimal Ultimate Form of Human Society' },
-      { id: '3-5-4', title: 'He Guides the Optimal Ultimate State of Individual Human Life' },
-    ],
-  },
-];
 
 /** Desaturated blue-gray — distinct from Spirit Medicine (#0a2535 / #38bdf8). */
 const pageBg = '#121a2a';
@@ -109,7 +51,7 @@ const ComingSoonBadge = () => {
 
 const UniversalMatrixContents = () => {
   const { t, tFormat } = useI18n();
-  const totalSubs = files.reduce((acc, f) => acc + (f.subChapters?.length ?? 0), 0);
+  const totalSubs = universalMatrixFiles.reduce((acc, f) => acc + (f.subChapters?.length ?? 0), 0);
 
   return (
     <div
@@ -155,7 +97,7 @@ const UniversalMatrixContents = () => {
           />
         </div>
         <p className="text-center font-serif tracking-widest text-base font-semibold" style={{ color: '#5c6b82' }}>
-          {tFormat('common.indexSummary', { files: files.length, subs: totalSubs })}
+          {tFormat('common.indexSummary', { files: universalMatrixFiles.length, subs: totalSubs })}
         </p>
       </div>
 
@@ -169,7 +111,7 @@ const UniversalMatrixContents = () => {
           }}
         />
 
-        {files.map((file, index) => (
+        {universalMatrixFiles.map((file, index) => (
           <motion.div
             key={file.fileNumber}
             initial={{ opacity: 0, x: -16 }}

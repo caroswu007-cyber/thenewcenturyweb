@@ -5,6 +5,18 @@
  */
 export const STORYLINE_OF_WOOS_URL = 'https://ess-esw.org/storyline-of-woos/' as const;
 
+/**
+ * Strings rendered only in `FounderStoryView` (outside `founderStoryPage` blocks or hardwired there).
+ * Centralized for export workbooks and copy edits.
+ */
+export const founderStorySurfaceCopy = {
+  heroNamesLine: 'John Long Woo · Caros · Sam',
+  backToAbout: '← Organization overview',
+  legacyTimelineLink: 'Earlier staged timeline on the legacy site',
+  /** Replaces `{{%ACH%}}` in Phase B body; currently shown as Chinese on all locales. */
+  achievementsFeaturePageLink: '《2025直播间成就》专题页',
+} as const;
+
 export const founderStoryIllustrations = [
   {
     src: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=1200&q=80',
