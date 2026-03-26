@@ -218,6 +218,27 @@ export const messagesZh: Record<string, string> = {
   'founderStory.storylineClipPageLink': '《Storyline of Woos》',
   'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — 第 {{stage}} 阶段录像',
 
+  'founderStory.achievementsFeaturePageLink': '《2025直播间成就》专题页',
+
+  'founderStory.phaseB.title': 'B阶段：2025年2月至2026年3月',
+  'founderStory.phaseB.block0.title': '直播间规模与成就记录',
+  'founderStory.phaseB.block0.text':
+    '从 **2025年2月19日** 至 **12月24日**，**Caros** 在 **TikTok** 上总共进行了 **265 场直播**；在直播间取得了 **超凡的成就**。完整记录与链接见：{{%ACH%}}',
+  'founderStory.phaseB.block1.title': 'Master Spirit、混合灵与远程能力',
+  'founderStory.phaseB.block1.text':
+    '大量的 **Master Spirit** 以及 **混合灵（hybrid spirit）** 与我们父子联系，让我们知道灵魂世界竟然有 **管理者** 与 **造物主** 层面的秩序。**Master Spirit** 给我们很多帮助与 **特别的超常力量**，使 **Caros** 在中国就可以 **远程制约** 远在地球另一端北美附体的鬼魂。',
+  'founderStory.phaseB.block2.title': '关于 A 阶段附体安排的说明',
+  'founderStory.phaseB.block2.text':
+    '**最重要的是**，我们被告知：**A 阶段** 在我们身上附体的鬼魂都是被 **Master Spirit** **刻意安排** 进来的；这些附体之灵被清除是 **被许可作为研究使用** 的。',
+  'founderStory.phaseB.block3.title': '计划中的病痛与叙事',
+  'founderStory.phaseB.block3.text':
+    '所有的 **病痛折磨**、**欺骗**、**戏弄性的故事** 也是他们计划的一部分，让我们了解其 **行事风格** 与 **性格秉性**。',
+  'founderStory.phaseB.block4.title': '对 Master Spirit 品性的认识',
+  'founderStory.phaseB.block4.text':
+    '这也让我们完整认识到：**Master Spirit** 并非像我们想象中的 **天使般的善良**；先前提供的帮助 **并非出于善良**，而是 **万有元神母体** 给他们安排的工作。大家可以通过 **A 阶段故事** 充分体会 **Master Spirit 团队的性格属性**。',
+  'founderStory.phaseB.block5.title': '灵魂医学与影像档案',
+  'founderStory.phaseB.block5.text':
+    '在此期间，**正式创建了灵魂医学**；拍摄了 **《吴氏灵魂医学》** 与 **《万有元神母体》** 系列视频档案中的 **一部分视频**。',
   'founderStory.phaseAUmbrellaCaption':
     'A 阶段总览时间窗（家庭田野）。以下 A1–A5：每条先时间线，再正文，仅保留小节标题 A1、A2…',
 

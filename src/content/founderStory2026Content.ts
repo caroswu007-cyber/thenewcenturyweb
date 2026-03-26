@@ -1,5 +1,6 @@
 /**
- * Founder story — dedicated page copy (English only).
+ * Founder story — dedicated page copy (English in this file).
+ * Phase B Chinese: `zh.ts` keys `founderStory.phaseB.*`.
  * Use **double asterisks** for inline emphasis (rendered as gold bold).
  * @see https://ess-esw.org/storyline-of-woos/
  */
@@ -13,8 +14,6 @@ export const founderStorySurfaceCopy = {
   heroNamesLine: 'John Long Woo · Caros · Sam',
   backToAbout: '← Organization overview',
   legacyTimelineLink: 'Earlier staged timeline on the legacy site',
-  /** Replaces `{{%ACH%}}` in Phase B body; currently shown as Chinese on all locales. */
-  achievementsFeaturePageLink: '《2025直播间成就》专题页',
 } as const;
 
 export const founderStoryIllustrations = [
@@ -204,33 +203,34 @@ export const founderStoryPage = {
     },
   ],
 
+  /** English canonical copy; Simplified Chinese: `founderStory.phaseB.*` in `zh.ts`. */
   phaseB: {
     id: 'b',
-    title: 'B阶段：2025年2月至2026年3月',
+    title: 'Phase B — February 2025 through March 2026',
     blocks: [
       {
-        title: '直播间规模与成就记录',
-        text: `从 **2025年2月19日** 至 **12月24日**，**Caros** 在 **TikTok** 上总共进行了 **265 场直播**；在直播间取得了 **超凡的成就**。完整记录与链接见：{{%ACH%}}`,
+        title: 'Livestream scale and documented outcomes',
+        text: `From **19 February 2025** through **24 December 2025**, **Caros** hosted **265** sessions on **TikTok Live** and achieved **extraordinary outcomes** in the broadcast field. Full documentation and links: {{%ACH%}}`,
       },
       {
-        title: 'Master Spirit、混合灵与远程能力',
-        text: `大量的 **Master Spirit** 以及 **混合灵（hybrid spirit）** 与我们父子联系，让我们知道灵魂世界竟然有 **管理者** 与 **造物主** 层面的秩序。**Master Spirit** 给我们很多帮助与 **特别的超常力量**，使 **Caros** 在中国就可以 **远程制约** 远在地球另一端北美附体的鬼魂。`,
+        title: 'Master Spirits, hybrid spirits, and remote capacity',
+        text: `A great many **Master Spirits** and **hybrid spirits** reached out to us as father and sons, revealing that the spirit world includes order at the levels of **administrators** and **creator-class** structure. **Master Spirits** gave us extensive support and **unusual abilities**, so that **Caros**, **while in China**, could **remotely regulate** attached spirits on **hosts in North America** on the far side of the globe.`,
       },
       {
-        title: '关于 A 阶段附体安排的说明',
-        text: `**最重要的是**，我们被告知：**A 阶段** 在我们身上附体的鬼魂都是被 **Master Spirit** **刻意安排** 进来的；这些附体之灵被清除是 **被许可作为研究使用** 的。`,
+        title: 'How Phase A attachments were arranged',
+        text: `**Most importantly**, we were told: every attached spirit on us during **Phase A** was **deliberately placed** by **Master Spirits**; clearing those presences was **authorized to serve as research material**.`,
       },
       {
-        title: '计划中的病痛与叙事',
-        text: `所有的 **病痛折磨**、**欺骗**、**戏弄性的故事** 也是他们计划的一部分，让我们了解其 **行事风格** 与 **性格秉性**。`,
+        title: 'Illness, deception, and narrative as part of the plan',
+        text: `The **suffering**, **deception**, and **taunting storylines** were also part of their plan—so we could learn their **operating style** and **disposition**.`,
       },
       {
-        title: '对 Master Spirit 品性的认识',
-        text: `这也让我们完整认识到：**Master Spirit** 并非像我们想象中的 **天使般的善良**；先前提供的帮助 **并非出于善良**，而是 **万有元神母体** 给他们安排的工作。大家可以通过 **A 阶段故事** 充分体会 **Master Spirit 团队的性格属性**。`,
+        title: 'Understanding Master Spirit character',
+        text: `That also showed us clearly: **Master Spirits** are **not** **angel-good** in the way we imagined; the help offered earlier was **not** driven by **kindness** but by **assignments** from the **Universal Matrix of Meta Awareness**. The **Phase A** stories convey the **temperament of the Master Spirit team** in depth.`,
       },
       {
-        title: '灵魂医学与影像档案',
-        text: `在此期间，**正式创建了灵魂医学**；拍摄了 **《吴氏灵魂医学》** 与 **《万有元神母体》** 系列视频档案中的 **一部分视频**。`,
+        title: 'Spirit Medicine and video archives',
+        text: `During this period **Spirit Medicine was formally established**; we produced **part of** the **Woos Spirit Medicine** and **Universal Matrix of Meta Awareness** video archives.`,
       },
     ],
   },

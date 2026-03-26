@@ -219,6 +219,8 @@ export const messagesEs: Record<string, string> = {
   'founderStory.storylineClipPageLink': 'Storyline of Woos',
   'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — grabación etapa {{stage}}',
 
+  'founderStory.achievementsFeaturePageLink': 'Logros de transmisiones en vivo 2025',
+
   'founderStory.phaseAUmbrellaCaption':
     'Ventana general del trabajo de campo familiar (Fase A). Sub-etapas A1–A5 abajo: primero la fecha, luego el relato.',
 

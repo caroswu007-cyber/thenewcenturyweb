@@ -220,6 +220,7 @@ export const messagesEn: Record<string, string> = {
     '**Stage {{stage}}** on the original storyline: companion image plus the same YouTube session (embedded below). For context see',
   'founderStory.storylineClipPageLink': 'Storyline of Woos',
   'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — Stage {{stage}} recording',
+  'founderStory.achievementsFeaturePageLink': '2025 Livestream Achievements',
 
   'matrix.seriesBadge': 'Meta Documentary · Series III',
   'matrix.title': 'Universal Matrix of Meta Awareness',

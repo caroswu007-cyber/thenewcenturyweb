@@ -46,8 +46,9 @@ function RichParagraph({ text, className = '' }: { text: string; className?: str
   );
 }
 
-/** Phase B copy: inline link token for `/our-achievements`. */
+/** Phase B copy: inline link token for `/our-achievements` (label from i18n per locale). */
 function PhaseBParagraph({ text, className = '' }: { text: string; className?: string }) {
+  const { t } = useI18n();
   if (!text.includes(ACH_LINK_TOKEN)) {
     return <RichParagraph text={text} className={className} />;
   }
@@ -56,7 +57,7 @@ function PhaseBParagraph({ text, className = '' }: { text: string; className?: s
     <p className={`${bodyProse} ${className}`}>
       <RichText text={a} />
       <Link to="/our-achievements" className="text-amber-200 underline-offset-2 hover:underline font-semibold">
-        {founderStorySurfaceCopy.achievementsFeaturePageLink}
+        {t('founderStory.achievementsFeaturePageLink')}
       </Link>
       <RichText text={b} />
     </p>
@@ -240,7 +241,7 @@ function StorylineClipBlock({
 }
 
 const FounderStoryView = () => {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const p = founderStoryPage;
   const ill = founderStoryIllustrations;
   const [phaseAOpen, setPhaseAOpen] = useState(false);
@@ -400,11 +401,19 @@ const FounderStoryView = () => {
           <div className="space-y-6 mt-16 md:mt-20">
             <section id={p.phaseB.id} className="scroll-mt-28 md:scroll-mt-32">
               <SectionCard>
-                <h3 className="font-ui font-bold text-amber-200 text-xl md:text-2xl mb-8 tracking-wide">{p.phaseB.title}</h3>
+                <h3 className="font-ui font-bold text-amber-200 text-xl md:text-2xl mb-8 tracking-wide">
+                  {locale === 'zh' ? t('founderStory.phaseB.title') : p.phaseB.title}
+                </h3>
                 <div className="space-y-0">
                   {p.phaseB.blocks.map((blk, bi) => (
-                    <ContentBlock key={bi} title={blk.title} showDivider={bi > 0}>
-                      <PhaseBParagraph text={blk.text} />
+                    <ContentBlock
+                      key={bi}
+                      title={locale === 'zh' ? t(`founderStory.phaseB.block${bi}.title`) : blk.title}
+                      showDivider={bi > 0}
+                    >
+                      <PhaseBParagraph
+                        text={locale === 'zh' ? t(`founderStory.phaseB.block${bi}.text`) : blk.text}
+                      />
                     </ContentBlock>
                   ))}
                 </div>

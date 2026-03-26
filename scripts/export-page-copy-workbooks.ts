@@ -143,7 +143,7 @@ function flattenAboutStatic(): CopyRow[] {
   return rows;
 }
 
-function flattenFounderStory(): CopyRow[] {
+function flattenFounderStory(zhPack: Record<string, string>): CopyRow[] {
   const rows: CopyRow[] = [];
   const add = (block_key: string, section: string, text: string, kind: string) => {
     const { en, zh } = proofreadColumns(text);
@@ -155,6 +155,17 @@ function flattenFounderStory(): CopyRow[] {
       中文: zh,
       Latin_Latina: '',
       notes: 'founderStory2026Content.ts — ** in source = emphasis',
+    });
+  };
+  const addPhaseBi18n = (block_key: string, section: string, enText: string, kind: string, zhKey: string) => {
+    rows.push({
+      block_key,
+      section_板块: section,
+      kind,
+      english_源文: enText.trim(),
+      中文: zhPack[zhKey] ?? '',
+      Latin_Latina: '',
+      notes: `Phase B: EN = content file; 中文 = zh.ts → ${zhKey}`,
     });
   };
   add('founderStoryPage.heroTitle', '创始人故事 / 英雄区', founderStoryPage.heroTitle, 'heading');
@@ -188,10 +199,28 @@ function flattenFounderStory(): CopyRow[] {
       add(`founderStoryPage.phaseAStages[${si}].storylineClip.figureAlt`, '创始人故事 / A 阶段 / 配图', sc.figureAlt, 'label');
     }
   });
-  add('founderStoryPage.phaseB.title', '创始人故事 / Phase B', founderStoryPage.phaseB.title, 'heading');
+  addPhaseBi18n(
+    'founderStoryPage.phaseB.title',
+    '创始人故事 / Phase B',
+    founderStoryPage.phaseB.title,
+    'heading',
+    'founderStory.phaseB.title',
+  );
   founderStoryPage.phaseB.blocks.forEach((blk, bi) => {
-    add(`founderStoryPage.phaseB.blocks[${bi}].title`, '创始人故事 / Phase B', blk.title, 'heading');
-    add(`founderStoryPage.phaseB.blocks[${bi}].text`, '创始人故事 / Phase B', blk.text.trim(), 'paragraph / other');
+    addPhaseBi18n(
+      `founderStoryPage.phaseB.blocks[${bi}].title`,
+      '创始人故事 / Phase B',
+      blk.title,
+      'heading',
+      `founderStory.phaseB.block${bi}.title`,
+    );
+    addPhaseBi18n(
+      `founderStoryPage.phaseB.blocks[${bi}].text`,
+      '创始人故事 / Phase B',
+      blk.text.trim(),
+      'paragraph / other',
+      `founderStory.phaseB.block${bi}.text`,
+    );
   });
   founderTimeline.forEach((row, ti) => {
     add(`founderTimeline[${ti}].range`, '创始人故事 / 年表', row.range, 'label');
@@ -206,13 +235,13 @@ function flattenFounderStory(): CopyRow[] {
 function flattenFounderSurfaceCopy(): CopyRow[] {
   const s = founderStorySurfaceCopy;
   const add = (block_key: string, section: string, text: string, kind: string) => {
-    const { en, zh } = proofreadColumns(text);
+    const { en: enCol, zh: zhCol } = proofreadColumns(text);
     return {
       block_key,
       section_板块: section,
       kind,
-      english_源文: en,
-      中文: zh,
+      english_源文: enCol,
+      中文: zhCol,
       Latin_Latina: '',
       notes: 'founderStorySurfaceCopy — FounderStoryView chrome',
     } satisfies CopyRow;
@@ -221,12 +250,6 @@ function flattenFounderSurfaceCopy(): CopyRow[] {
     add('founderStorySurfaceCopy.heroNamesLine', '创始人故事 / 英雄区副标题', s.heroNamesLine, 'label'),
     add('founderStorySurfaceCopy.backToAbout', '创始人故事 / 返回', s.backToAbout, 'button / link'),
     add('founderStorySurfaceCopy.legacyTimelineLink', '创始人故事 / 页脚外链', s.legacyTimelineLink, 'button / link'),
-    add(
-      'founderStorySurfaceCopy.achievementsFeaturePageLink',
-      '创始人故事 / Phase B 内链（替换 {{%ACH%}}）',
-      s.achievementsFeaturePageLink,
-      'button / link',
-    ),
   ];
 }
 
@@ -467,7 +490,7 @@ function main() {
       rows: [
         ...rowsForKeys(pickKeys('founderStory.'), '创始人故事 / i18n', en, zh),
         ...flattenFounderSurfaceCopy(),
-        ...flattenFounderStory(),
+        ...flattenFounderStory(zh),
       ],
     },
     {
