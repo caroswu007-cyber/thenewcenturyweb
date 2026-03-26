@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getAboutContent } from '../content/getAboutContent';
 import { useI18n } from '../i18n/LocaleProvider';
@@ -296,6 +297,20 @@ const Founders = () => {
           <h3 className="font-cinzel font-bold text-white text-xl md:text-2xl mb-2 leading-snug">{about.founders.title}</h3>
           <p className="font-cinzel text-sm uppercase tracking-widest mb-6" style={{ color: '#c9a84c' }}>{about.founders.subtitle}</p>
           <p className="text-slate-300 text-base md:text-lg leading-relaxed">{about.founders.description}</p>
+          <p className="mt-5 text-slate-400 text-sm md:text-base leading-relaxed font-ui border-l-2 border-amber-500/40 pl-4">
+            {about.founders.storyTeaser}
+          </p>
+          <Link
+            to="/founder-story"
+            className="mt-8 inline-flex items-center justify-center gap-2 font-cinzel font-bold uppercase tracking-[0.2em] text-sm md:text-base py-4 px-10 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(251,191,36,0.25)]"
+            style={{
+              background: 'linear-gradient(135deg, #92610a, #fbbf24, #d97706)',
+              color: '#0f0a00',
+              boxShadow: '0 4px 24px rgba(251,191,36,0.35)',
+            }}
+          >
+            {t('about.founders.storyCta')}
+          </Link>
         </div>
       </motion.div>
     </div>

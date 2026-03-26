@@ -1,66 +1,121 @@
-# ESS-ESW Official Website
+# ASra / SAA Official Site (ESS-ESW)
 
-The official website for the **Spirit Ambassador Association (SAA)** — a documentary and research platform exploring the intersection of science and the ethereal world.
+Official website for the **Spirit Ambassador Association (SAA)** — public branding **ASra**. Documentary and thematic content, built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS v4**.
 
-Live site: [ess-esw.org](https://ess-esw.org)
+**Live site:** https://ess-esw.org
 
-**更新日志 / Changelog:** [CHANGELOG.md](./CHANGELOG.md)（仅本地维护时可手写日期与条目，不必提交远程）
-
----
-
-## Project Overview
-
-This website presents three documentary series produced by SAA:
-
-| Series | Route | Status |
-|--------|-------|--------|
-| Woos Record of Soul | `/record-of-soul` | Active |
-| Woos Spirit Medicine | `/spirit-medicine` | In Progress |
-| Universal Matrix of Meta Awareness | `/universal-matrix` | In Progress |
+**Changelog:** [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
-## Tech Stack
+## Local project path
+
+Use this as the **repository root** when opening the project in your editor or terminal. Your machine may use a different folder name if you cloned elsewhere.
+
+| Context | Path |
+|--------|------|
+| **Example (Windows, maintainer machine)** | `C:\软件\Trae\projectweb\thenewcenturyweb` |
+| **npm package name** | `saa-react-app` (see `package.json`) |
+
+All paths in this README are **relative to the repository root** (the folder that contains `package.json`, `src/`, and `vite.config.ts`).
+
+```bash
+# Example: open project and run dev server
+cd C:\软件\Trae\projectweb\thenewcenturyweb
+npm install
+npm run dev
+```
+
+---
+
+## Project brief
+
+| Topic | Summary |
+|--------|---------|
+| **Purpose** | Multi-page marketing and content site: home aggregates three series; long-form pages for About, founder narrative, 2025 livestream achievements, etc. |
+| **Languages** | UI strings: **English**, **Spanish**, **Chinese** via `src/i18n/` (see `messages/zh.ts`, `achievementsReport.i18n.ts`). Founder Story still leans on **`src/content/*.ts`** for English blocks. |
+| **Visual identity** | Dark base + warm **amber/gold** accents; home hero uses **`GalaxyBackground`**. Founder Story and `/our-achievements` share a **narrative “glass card”** look (`#060812` wash, subtle borders). |
+| **Performance** | `/our-achievements` is **code-split** with `React.lazy`; run **`npm run build`** after substantive changes. |
+
+---
+
+## Recent updates (achievements report & typography)
+
+Maintainer-facing notes for **`/our-achievements`** (March 2026):
+
+| Topic | Detail |
+|--------|--------|
+| **Copy / i18n** | Long-form strings: `src/i18n/messages/achievementsReport.i18n.ts` (EN + ZH). Merged into locale packs via `src/i18n/translate.ts`. Optional emphasis in strings: `**phrase**`, parsed in `src/components/achievements/ReportRichText.tsx` (`ReportInline`, `ReportParagraphs`). |
+| **Layout** | `src/views/OurAchievementsView.tsx` — `report-hero-frame`, `report-section-slab`, `report-metric-shell`, `report-toc-panel`, `report-cta-bar`. No “Distribution & documentation” block on the public page (that text was internal-style notes, not user-facing narrative). |
+| **Body font** | **`Newsreader`** for `.report-document` (loaded in `index.html`); **Inter** kept for table headers (`.report-table thead th`) and small UI lines. |
+| **Scale** | Base body on the report page ≈ **1.125rem → 1.265rem** at large breakpoints; `.report-subhead` and `.report-crosshead` in `src/index.css` sit between the hero title and body. |
+| **Carousel** | `src/components/achievements/AchievementsReportCarousel.tsx` — auto-advance only runs **`thumbStrip.scrollTo({ left })`**; **`scrollIntoView` is not used** so the window does not jump on slide change. Optional `width="half"`. |
+| **Hero image** | `reportHeroFigure` in `src/content/achievements2025Content.ts`; `compressUnsplash` / sizing in the view. |
+
+---
+
+## Tech stack
 
 | Layer | Technology |
-|-------|------------|
-| Framework | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
-| Build Tool | [Vite 8](https://vitejs.dev/) |
+|--------|------------|
+| UI | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
+| Build | [Vite 8](https://vitejs.dev/) |
 | Routing | [React Router v7](https://reactrouter.com/) |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com/) |
-| Animation | [Framer Motion](https://www.framer.com/motion/) |
+| Motion | [Framer Motion](https://www.framer.com/motion/) |
 | Icons | [Lucide React](https://lucide.dev/) |
 
 ---
 
-## Project Structure
+## Routes ↔ source files
+
+Routes are declared in **`src/App.tsx`**. `/our-achievements` is wrapped in **`Suspense`** (lazy-loaded).
+
+| URL | View | Notes |
+|-----|------|--------|
+| `/` | `src/views/HomeView.tsx` | Hero, Introduction, TruthSection, Achievements, JoinSection |
+| `/about` | `src/views/AboutView.tsx` | About org; short copy + link to founder story |
+| `/founder-story` | `src/views/FounderStoryView.tsx` | Long narrative; blocks in `src/content/founderStory2026Content.ts` |
+| `/record-of-soul` | `src/views/RecordOfSoulView.tsx` | Series 1 hub |
+| `/spirit-medicine` | `src/views/WoosSpiritMedicineView.tsx` | Series 2 hub |
+| `/universal-matrix` | `src/views/UniversalMatrixView.tsx` | Series 3 hub |
+| `/universal-matrix-of-meta-awareness` | same as above | Alias route |
+| `/our-achievements` | `src/views/OurAchievementsView.tsx` (lazy) | 2025 achievements; data in `src/content/achievements2025Content.ts` |
+
+Shared chrome: **`src/components/PageShell.tsx`**, **`src/components/Navbar.tsx`**, **`src/components/Footer.tsx`**.
+
+---
+
+## Repository layout (core)
 
 ```
-ess-esw-website/
+<repository-root>/
 ├── src/
+│   ├── App.tsx                 # Routes; lazy OurAchievementsView + Suspense
+│   ├── main.tsx
+│   ├── index.css               # Tailwind @theme, .cosmic-title, .achv-*, .home-blur-surface, etc.
 │   ├── content/
-│   │   └── siteContent.ts        # All text content, links, and episode data
+│   │   ├── siteContent.ts
+│   │   ├── founderStory2026Content.ts
+│   │   ├── achievements2025Content.ts
+│   │   ├── visualTheme.ts
+│   │   ├── spiritMedicineData.ts
+│   │   └── …
+│   ├── i18n/
+│   │   ├── LocaleProvider.tsx
+│   │   ├── messages/en.ts
+│   │   └── messages/es.ts
+│   ├── views/                  # Page entry components
 │   ├── components/
-│   │   ├── Navbar.tsx             # Top navigation
-│   │   ├── Footer.tsx             # Bottom footer
-│   │   ├── home/
-│   │   │   ├── Hero.tsx           # Homepage hero banner
-│   │   │   ├── Introduction.tsx   # About section
-│   │   │   ├── TruthSection.tsx   # Video series overview cards
-│   │   │   ├── Achievements.tsx   # Achievements section
-│   │   │   └── JoinSection.tsx    # CTA / Join section
-│   │   └── record/
-│   │       └── EpisodeCard.tsx    # Reusable episode card component
-│   ├── views/
-│   │   ├── HomeView.tsx                # Homepage
-│   │   ├── RecordOfSoulView.tsx        # Season 1 directory
-│   │   ├── WoosSpiritMedicineView.tsx  # Season 2 directory
-│   │   └── UniversalMatrixView.tsx     # Season 3 directory
-│   ├── App.tsx                    # Route definitions
-│   ├── main.tsx                   # React entry point
-│   └── index.css                  # Global styles + Tailwind theme
-├── public/                        # Static assets (images, icons)
-├── index.html                     # HTML entry point
+│   │   ├── home/               # Hero, TruthSection, Achievements, JoinSection, …
+│   │   ├── achievements/       # ReplayGalleryBackdrop, CollapsibleText, LivestreamCarousel
+│   │   ├── common/             # GalaxyBackground, CosmicGalaxyCanvas, SectionDivider, …
+│   │   ├── record/             # Record of Soul components
+│   │   ├── spiritMedicine/
+│   │   └── universalMatrix/
+│   └── …
+├── public/
+├── index.html
 ├── package.json
 ├── vite.config.ts
 └── tsconfig.json
@@ -68,85 +123,58 @@ ess-esw-website/
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm (comes with Node.js)
-
-### Install & Run
+## Scripts
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/<your-org>/ess-esw-website.git
-cd ess-esw-website
-
-# 2. Install dependencies
 npm install
-
-# 3. Start development server
-npm run dev
+npm run dev       # http://localhost:5173
+npm run build     # tsc -b && vite build → dist/
+npm run lint
+npm run preview   # serve dist/ locally
+npm run export:page-xlsx   # regenerate docs/page-copy/*.xlsx (see below)
 ```
-
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-Output goes to the `dist/` folder, ready to deploy to any static host (Vercel, Netlify, Cloudflare Pages, etc.).
 
 ---
 
-## Content Editing
+## Page copy workbooks (Excel) & AI sync
 
-All website text, episode titles, descriptions, and links are centralized in one file:
+The repo ships **seven page-scoped Excel files** (`docs/page-copy/01-首页.xlsx` … `07-我们的成就.xlsx`) used to review and edit **English / 中文 / Latin** copy per section. They are **generated**, not hand-maintained.
 
-**`src/content/siteContent.ts`**
+**If you change routes, views, or where strings live:**
 
-To update content without touching component code:
-1. Open `src/content/siteContent.ts`
-2. Find the section you want to edit (e.g., `recordOfSoul.volumes`)
-3. Edit the `title`, `description`, or `link` fields
-4. Save — the dev server hot-reloads automatically
+1. Open the **AI / maintainer mapping doc:** [`docs/AI_PAGE_COPY_SYNC.md`](./docs/AI_PAGE_COPY_SYNC.md)  
+   - It lists **workbook ↔ URL ↔ view ↔ source files** and explains **`block_key`** rules, regeneration, and how to feed edits back into `en.ts` / `zh.ts` / `content/*`.
+2. Update code (and, when needed, **`scripts/export-page-copy-workbooks.ts`**) so export stays accurate.
+3. Regenerate sheets: **`npm run export:page-xlsx`**
+4. Run **`npm run build`**.
+
+**Short folder readme:** `docs/page-copy/README.txt` (column glossary only; full instructions are in `AI_PAGE_COPY_SYNC.md`).
 
 ---
 
-## Pages & Routes
+## Guidelines for AI assistants
 
-| Page | File | Description |
-|------|------|-------------|
-| `/` | `HomeView.tsx` | Homepage with hero, intro, series cards |
-| `/record-of-soul` | `RecordOfSoulView.tsx` | Season 1 episode directory |
-| `/spirit-medicine` | `WoosSpiritMedicineView.tsx` | Season 2 episode directory |
-| `/universal-matrix` | `UniversalMatrixView.tsx` | Season 3 episode directory |
+1. **Nav labels / locale strings** → `src/i18n/messages/en.ts`, `es.ts`. **Nav structure** → `src/components/Navbar.tsx`.
+2. **Home achievements strip (copy)** → i18n keys under `home.achievements.*`. **Layout & styling** → `src/components/home/Achievements.tsx` (keep `home-blur-surface` + gold accents like `TruthSection`).
+3. **Achievements page** → narrative copy **`src/i18n/messages/achievementsReport.i18n.ts`**; metrics / carousel URLs / `reportHeroFigure` → **`src/content/achievements2025Content.ts`**; layout → **`src/views/OurAchievementsView.tsx`**; album carousel → **`AchievementsReportCarousel.tsx`**; rich text helpers → **`ReportRichText.tsx`**.
+4. **Founder story** → **`src/content/founderStory2026Content.ts`** + **`src/views/FounderStoryView.tsx`** (helpers such as `SectionCard`, `RichText` live in the view file).
+5. **Global typography / title gradients** → **`src/index.css`** (e.g. `.cosmic-title`, `.achv-hero-title`, `.achv-section-title`).
+6. **Page copy Excel ↔ codebase:** follow [`docs/AI_PAGE_COPY_SYNC.md`](./docs/AI_PAGE_COPY_SYNC.md); regenerate with **`npm run export:page-xlsx`** after structural or key changes.
+7. Avoid expanding README or CHANGELOG unless the user or maintainer asks.
+8. Before finishing a task, run **`npm run build`** and fix TypeScript / build errors.
+
+---
+
+## Design notes
+
+- **Home** sections: align with **`home-blur-surface`**, amber divider lines, and **`cosmic-title`** for major headings.
+- **Founder Story & `/our-achievements`**: **`#060812`**-style backdrop, **`border-white/[0.1]`**, **`bg-[rgba(12,16,28,0.75)]`** panels — same language as `SectionCard` in `FounderStoryView.tsx`.
+- **Remote images** (Unsplash): use **`compressUnsplash()`** in `achievements2025Content.ts` where appropriate to cap width/quality.
 
 ---
 
 ## Contributing
 
-1. Fork this repository
-2. Create a feature branch: `git checkout -b feature/your-change`
-3. Make your changes
-4. Commit: `git commit -m "describe your change"`
-5. Push and open a Pull Request
-
-For content-only changes (text, links, episode order), edit `src/content/siteContent.ts` directly.
-
----
-
-## Design Guidelines
-
-- **Color palette**: Dark background (`#0a0a0a`) with gold accent (`#c9a84c`)
-- **Typography**: All headings use letter-spacing for a documentary/archival feel
-- **Mobile**: All pages are responsive — test at 375px and 768px widths
-- **Animations**: Framer Motion scroll-triggered fade-ins; keep subtle and purposeful
-
----
-
-## License
-
-© Spirit Ambassador Association. All rights reserved.
+1. Use a feature branch for code changes; content-only edits can touch `src/content/` and `src/i18n/messages/` only.
+2. Run **`npm run build`** before opening a PR.
+3. © Spirit Ambassador Association. All rights reserved.

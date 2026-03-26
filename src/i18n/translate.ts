@@ -1,12 +1,14 @@
 import type { Locale } from './locales';
+import { achievementsReportEn, achievementsReportZh } from './messages/achievementsReport.i18n';
 import { messagesEn } from './messages/en';
 import { messagesEs } from './messages/es';
+import { messagesZh } from './messages/zh';
 
 const packs: Record<Locale, Record<string, string>> = {
-  en: messagesEn,
-  es: { ...messagesEn, ...messagesEs },
+  en: { ...messagesEn, ...achievementsReportEn },
+  es: { ...messagesEn, ...messagesEs, ...achievementsReportEn },
+  zh: { ...messagesEn, ...messagesZh, ...achievementsReportZh },
 };
-
 export function translate(locale: Locale, key: string): string {
   return packs[locale][key] ?? messagesEn[key] ?? key;
 }

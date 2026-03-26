@@ -77,6 +77,17 @@ const Navbar = () => {
                 {t('nav.about')}
               </Link>
             )}
+            {location.pathname !== '/founder-story' && (
+              <Link
+                to="/founder-story"
+                className="font-cinzel text-sm tracking-widest uppercase transition-colors hidden lg:block"
+                style={{ color: 'rgba(200,200,210,0.75)' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#e2e8f0')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(200,200,210,0.75)')}
+              >
+                {t('nav.founderStory')}
+              </Link>
+            )}
             {location.pathname !== '/our-achievements' && (
               <Link
                 to="/our-achievements"

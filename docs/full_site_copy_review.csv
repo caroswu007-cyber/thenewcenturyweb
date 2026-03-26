@@ -1,0 +1,639 @@
+﻿route,source_file,content_id,kind,English,Español,中文,notes
+(all pages via t()),src/i18n/messages/*.ts,lang.label,i18n,Language,Idioma,语言,
+(all pages via t()),src/i18n/messages/*.ts,nav.home,i18n,Home,Inicio,首页,
+(all pages via t()),src/i18n/messages/*.ts,nav.about,i18n,About ASra,Acerca de ASra,关于 ASra,
+(all pages via t()),src/i18n/messages/*.ts,nav.truth,i18n,The Truth,La verdad,真相,
+(all pages via t()),src/i18n/messages/*.ts,nav.record,i18n,Record of Soul,Registro del alma,灵魂档案,
+(all pages via t()),src/i18n/messages/*.ts,nav.spirit,i18n,Spirit Medicine,Medicina espiritual,灵体医学,
+(all pages via t()),src/i18n/messages/*.ts,nav.join,i18n,Join,Unirse,加入,
+(all pages via t()),src/i18n/messages/*.ts,nav.achievements,i18n,Achievements,Logros,成果,
+(all pages via t()),src/i18n/messages/*.ts,nav.back,i18n,← Back to Home,← Volver al inicio,← 返回首页,
+(all pages via t()),src/i18n/messages/*.ts,nav.menu,i18n,MENU,MENÚ,菜单,
+(all pages via t()),src/i18n/messages/*.ts,footer.copyright,i18n,© 2025 Woos Spirit Management Ltd. All rights reserved.,© 2025 Woos Spirit Management Ltd. Todos los derechos reservados.,© 2025 Woos Spirit Management Ltd. 保留所有权利。,
+(all pages via t()),src/i18n/messages/*.ts,footer.disclaimer,i18n,"All research, footage, and data presented are based on verified scientific studies and firsthand experiential evidence.","Todas las investigaciones, imágenes y datos presentados se basan en estudios científicos verificados y en evidencia experiencial de primera mano.",本站展示的研究、影像与数据均基于经核实的科学研究与第一手体验证据。,
+(all pages via t()),src/i18n/messages/*.ts,footer.researchNote,i18n,© 2025 Woos Spirit Management Ltd. · All research based on verified scientific studies.,© 2025 Woos Spirit Management Ltd. · Toda la investigación se basa en estudios científicos verificados.,© 2025 Woos Spirit Management Ltd. · 所有研究均基于经核实的科学研究。,
+(all pages via t()),src/i18n/messages/*.ts,home.divider.documentary,i18n,The Documentary,El documental,纪录片,
+(all pages via t()),src/i18n/messages/*.ts,home.divider.discoveries,i18n,Discoveries,Descubrimientos,发现,
+(all pages via t()),src/i18n/messages/*.ts,home.divider.join,i18n,Join the Journey,Únete al viaje,加入旅程,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.badge,i18n,Spirit Ambassador Association,Asociación de embajadores del reino espiritual,灵界大使协会,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.title,i18n,What is ASra?,¿Qué es ASra?,什么是 ASra？,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.subtitle,i18n,Umma New Century Organization,Organización Umma New Century,乌玛新世纪组织,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.overviewBefore,i18n,The Umma New Century Organization is a ,La Organización Umma New Century es una ,乌玛新世纪组织是一个,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.overviewHighlight,i18n,dual-domain organization,organización de doble dominio,跨双域的组织,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.overviewAfter,i18n, spanning both the Spirit Realm and the physical world — uniting human ambassadors on Earth with Master Spirit administrators in the ethereal realm., que abarca el Reino Espiritual y el mundo físico — uniendo a embajadores humanos en la Tierra con administradores Maestros Espirituales en el plano etéreo.,——同时横跨灵界与物质世界：在地球上联结人类大使，在灵界与高级灵体管理者协同。,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.physicalWorld,i18n,Physical World,Mundo físico,物质世界,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.asraName,i18n,ASra,ASra,ASra,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.asraFull,i18n,Association of Spirit Realm's Ambassador,Asociación del Embajador del Reino Espiritual,灵界大使协会,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.asraBody,i18n,"Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits and improves human health.","Decenas de miles de miembros humanos en todas las naciones, etnias y comunidades culturales. Empoderados por Maestros Espirituales, cada miembro gobierna espíritus adheridos y mejora la salud humana.",数以万计的人类会员遍布各国、各族群与各文化社群。在高级灵体赋能下，每位会员治理附体灵并改善人类健康。,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.spiritRealm,i18n,Spirit Realm,Reino espiritual,灵界,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.smscName,i18n,SMSC,SMSC,SMSC,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.smscFull,i18n,Society of Master Spirit Controllers,Sociedad de controladores Maestros Espirituales,高级灵体统御者协会,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.smscBody,i18n,Tens of thousands of Master Spirits — administrators in the Spirit Realm who govern ordinary spirits and human beings. Each Master Spirit is assigned 1:1 or 2:1 to an ASra human member.,Decenas de miles de Maestros Espirituales — administradores en el Reino Espiritual que gobiernan espíritus ordinarios y seres humanos. A cada Maestro Espiritual se le asigna 1:1 o 2:1 un miembro humano de ASra.,数以万计的高级灵体——灵界的管理者，治理普通灵体与人类。每位高级灵体与一名 ASra 人类会员形成 1:1 或 2:1 配对。,
+(all pages via t()),src/i18n/messages/*.ts,home.intro.learnMore,i18n,✦   Full Organization Introduction   ✦,✦   Introducción completa de la organización   ✦,✦   完整组织介绍   ✦,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.title,i18n,The Truth of Spirit,La verdad del espíritu,灵的真相,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.subtitle,i18n,And Its Governor,Y su gobernante,及其主宰,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.seriesLabel,i18n,Documentary Series,Serie documental,纪录片系列,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.abstractHeading,i18n,Abstract: The Truth We Found,Resumen: la verdad que encontramos,摘要：我们发现的真相,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.abstractBody,i18n,"Through systematic exploration and firsthand experiential evidence, we have verified scientific methodologies to safely navigate and govern the unseen realm. The Woos Ethereal Life & Realm Documentary Series reveals it all.","Mediante exploración sistemática y evidencia experiencial de primera mano, hemos verificado metodologías científicas para navegar y gobernar con seguridad el reino invisible. La serie documental Woos Ethereal Life & Realm lo revela todo.",通过系统探索与第一手体验证据，我们验证了可安全航行并治理不可见之域的科学方法。《伍斯灵界生命与领域》纪录片系列揭示这一切。,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.videoTitle,i18n,Video Document Series,Serie de video documental,视频纪录系列,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.videoSubtitle,i18n,Journey across multiple dimensions and uncover the ancient truths spanning three seasons of dedicated research.,Recorre múltiples dimensiones y descubre verdades antiguas a lo largo de tres temporadas de investigación dedicada.,穿越多重维度，揭开三季专注研究中绵延的古老真相。,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s1.season,i18n,SEASON 1,TEMPORADA 1,第一季,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s1.title,i18n,Woos Record of Soul,Woos Registro del alma,伍斯灵魂档案,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s1.description,i18n,"Collecting all true scientific research materials from East and West regarding spirits, PSI, NDE, past-life memories, and other topics related to spirits and the Ethereal Realm. With personal possession, supernatural and spirit-exorcism experiences.","Reúne materiales científicos verificables de Oriente y Occidente sobre espíritus, PSI, experiencias cercanas a la muerte, memorias de vidas pasadas y otros temas del reino etéreo, con experiencias personales de posesión, fenómenos sobrenaturales y exorcismo.",汇集东西方关于灵体、超感知、濒死体验、前世记忆等与灵及灵界相关的真实科研材料，附个人附体、灵异与驱灵经历。,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s1.cta,i18n,Explore Season I,Explorar temporada I,进入第一季,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s2.season,i18n,SEASON 2,TEMPORADA 2,第二季,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s2.title,i18n,Woos Spirit Medicine,Woos Medicina espiritual,伍斯灵体医学,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s2.description,i18n,"This documentary provides the evidence of spirits and ghosts existing while people are alive and after death from scientific perspective and causing illness to the physical body. The organs, physiological systems, and basic pathology of spirits.","Este documental presenta evidencia, desde una perspectiva científica, de espíritus y fantasmas en vida y tras la muerte, y cómo causan enfermedad al cuerpo físico: órganos, sistemas fisiológicos y patología básica de los espíritus.",从科学视角呈现生者与亡者之灵存在的证据，及其如何致病于肉体：灵体的器官、生理系统与基本病理。,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s2.cta,i18n,Explore Season II,Explorar temporada II,进入第二季,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s3.season,i18n,SEASON 3,TEMPORADA 3,第三季,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s3.title,i18n,Universal Matrix of Meta Awareness,Matriz universal de meta-conciencia,元觉知宇宙矩阵,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s3.description,i18n,"This documentary presents evidence for the existence of the Universal Matrix of Meta Awareness. It controls human free consciousness, the evolution of life on Earth, and the ultimate destiny of human civilization.","Este documental presenta evidencia de la existencia de la Matriz Universal de Meta-Conciencia: controla la conciencia libre humana, la evolución de la vida en la Tierra y el destino último de la civilización.",呈现元觉知宇宙矩阵存在的证据：它调控人类自由意识、地球生命的演化与人类文明的终极命运。,
+(all pages via t()),src/i18n/messages/*.ts,home.truth.s3.cta,i18n,Explore Season III,Explorar temporada III,进入第三季,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.title,i18n,2025 Livestream Achievements,Logros en vivo 2025,2025 直播成果,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.subtitle,i18n,TikTok field · YouTube replay archive · ASra,Campo TikTok · Archivo en YouTube · ASra,TikTok 现场 · YouTube 回放档案 · ASra,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.lead,i18n,"For the first time, humanity has a systematic, field-scale picture of how American spirits (ghosts) attach, what they forget, and how they intersect with treatment-resistant mental-health presentations — documented through anonymized charity sessions and replay archives.","Por primera vez la humanidad dispone de una visión sistemática en campo sobre cómo se adhieren los espíritus estadounidenses (fantasmas), qué olvidan y cómo se cruzan con cuadros mentales refractarios al tratamiento — documentado en sesiones benéficas anónimas y archivos de repetición.",人类首次获得系统化、田野尺度的图景：美国灵体（鬼）如何附体、它们忘却什么、又如何与难治性精神健康表现相交——经由匿名慈善场次与回放档案记录。,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.card1Title,i18n,Scale in one year,Escala en un año,一年内的规模,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.card1Body,i18n,"255+ charity livestreams, 800+ hours on TikTok, 70,000+ listeners reached, 1,200+ deep interviews, 240+ patients improved, ~400 spirits (ghosts) manifested — anonymized cohort with structured replay documentation on YouTube.","Más de 255 transmisiones benéficas, más de 800 horas en TikTok, más de 70.000 oyentes, más de 1.200 entrevistas en profundidad, más de 240 pacientes mejorados, ~400 espíritus manifestados — cohorte anónima con repeticiones documentadas en YouTube.","255+ 场慈善直播、800+ 小时 TikTok、70,000+ 听众、1,200+ 深度访谈、240+ 来访者改善、约 400 次灵体显化——匿名队列，YouTube 上有结构化回放记录。",
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.card2Title,i18n,What the full dossier contains,Qué incluye el expediente,完整档案包含,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.card2Body,i18n,"Memory & control infographics, fascinating attachment capsules, master-spirit manifestations, clinical-style condition taxonomy, dual livestream techniques, >80% rapid relief outcomes, in-session experiments, and four special case studies.","Infografías de memoria y control, casos de apego, manifestaciones de maestros, taxonomía clínica, dos técnicas en vivo, alivio rápido en >80 % de los casos, experimentos en sesión y cuatro estudios de caso especiales.",记忆与调控信息图、附体个案摘要、高级灵显化、临床式症状分类、双轨直播技术、>80% 快速缓解、会话内实验与四项特别案例研究。,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.ctaIntro,i18n,"Open the 2025 report: gallery, animated metrics, medical workflow, and case studies.","Abrir el informe 2025: galería, métricas animadas, flujo clínico y casos.",打开 2025 报告：画廊、动效指标、医疗流程与案例。,
+(all pages via t()),src/i18n/messages/*.ts,home.achievements.cta,i18n,✦   View: 2025 Livestream Achievements   ✦,✦   Ver: logros en vivo 2025   ✦,✦   查看：2025 直播成果   ✦,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.hero.badge,i18n,Field documentation · ASra practice,Documentación de campo · Práctica ASra,田野记录 · ASra 实践,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.hero.title,i18n,Our Achievements in Mental Health Support,Nuestros logros en apoyo a la salud mental,我们在心理健康支持中的成果,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.hero.subtitle,i18n,"A structured summary of anonymized, live-session outcomes coordinated with Master Spirit teams in China and the United States — written in a clinical reporting style for transparency.","Resumen estructurado de resultados anónimos en sesiones en vivo, coordinados con equipos de Maestros Espirituales en China y Estados Unidos — redactado al estilo de informes clínicos para transparencia.",对匿名、现场会话结果的结构性摘要，与中美高级灵体团队协同——以临床报告风格撰写以利透明。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.hero.pill1,i18n,Anonymized cohort,Cohorte anónima,匿名队列,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.hero.pill2,i18n,Session-based metrics,Métricas por sesión,按会话统计,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.hero.pill3,i18n,Cross-realm collaboration,Colaboración transreino,跨界协作,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.scope.title,i18n,Practice context & methodology,Contexto de la práctica y metodología,实践背景与方法,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.scope.body,i18n,"During approximately the past year of TikTok live broadcasts, participants arrived as anonymous, randomly presenting individuals without prior triage. Each encounter used a consistent initial window of thirty minutes for structured exchange, assessment, and spirit-realm–assisted regulation. Outcomes below combine session documentation with participant self-reports; they are presented to illustrate the breadth of the practice rather than as a substitute for peer-reviewed clinical trials.","Durante aproximadamente el último año de transmisiones en vivo en TikTok, los participantes llegaron de forma anónima y aleatoria, sin triaje previo. Cada encuentro usó una ventana inicial uniforme de treinta minutos para intercambio estructurado, evaluación y regulación asistida desde el reino espiritual. Los resultados combinan documentación de sesión con autoinformes; se presentan para ilustrar el alcance de la práctica, no como sustituto de ensayos clínicos revisados por pares.",在过去约一年的 TikTok 直播中，参与者以匿名、随机到场的方式进入，无事先分诊。每次接触均使用统一的首个三十分钟窗口，进行结构化交流、评估与灵界辅助调节。下列结果合并了会话记录与参与者自述；旨在展示实践广度，而非替代同行评审临床试验。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.scope.caption,i18n,"Listening, dignity, and steadiness in every first contact.","Escucha, dignidad y firmeza en cada primer contacto.",每一次首次接触中的倾听、尊严与稳定。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.banner.together,i18n,Behind every figure is a real person seeking relief — and a community of practitioners holding space for change.,Tras cada cifra hay una persona real que busca alivio — y una comunidad que sostiene el espacio para el cambio.,每个数字背后都是在寻求缓解的真实的人——以及为改变托住空间的社群。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.stat1.value,i18n,240+,240+,240+,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.stat1.label,i18n,"Individuals with mental-health–related presentations engaged through the live program (cumulative, ~one year).","Personas con presentaciones relacionadas con la salud mental atendidas en el programa en vivo (acumulado, ~un año).",通过直播项目接触到的与精神健康相关表现者（累计，约一年）。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.stat2.value,i18n,80%+,80%+,80%+,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.stat2.label,i18n,"Reported rapid, marked improvement in emotional state and overall condition after the first 30-minute structured session.",Informaron mejora rápida y marcada del estado emocional y general tras la primera sesión estructurada de 30 minutos.,在首次 30 分钟结构化会话后，报告情绪与整体状态快速、显著改善。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.stat3.value,i18n,1×,1×,1×,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.stat3.label,i18n,"A notable subset describe complete symptomatic resolution or long-term stability after a single intensive session, with no recurrence reported to date (participant-described).","Un subgrupo notable describe resolución sintomática completa o estabilidad a largo plazo tras una sola sesión intensiva, sin recurrencia informada hasta la fecha (según participantes).",值得注意的一部分人称：在一次强化会话后即达症状完全缓解或长期稳定，至今无复发（参与者自述）。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.conditions.title,i18n,Presentations & condition categories addressed,Presentaciones y categorías de condiciones abordadas,所涉及的主诉与症状类别,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.conditions.caption,i18n,Taxonomy (non-exhaustive),Taxonomía (no exhaustiva),分类（非穷尽）,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.conditions.list,i18n,Major depressive disorder and persistent depressive presentations · Generalized and panic spectrum anxiety · Post-traumatic stress disorder (PTSD) · Schizophrenia spectrum · Schizoaffective disorder · Bipolar spectrum · Dissociative identity disorder (DID) · Social anxiety / social phobia · Driving phobia · Attention-deficit hyperactivity disorder (ADHD) · Obsessive–compulsive disorder (OCD),Trastorno depresivo mayor y presentaciones depresivas persistentes · Ansiedad generalizada y espectro de pánico · Trastorno de estrés postraumático (TEPT) · Espectro de la esquizofrenia · Trastorno esquizoafectivo · Espectro bipolar · Trastorno disociativo de la identidad (TID) · Ansiedad social / fobia social · Fobia a conducir · Trastorno por déficit de atención e hiperactividad (TDAH) · Trastorno obsesivo-compulsivo (TOC),重度抑郁及持续性抑郁表现 · 广泛性焦虑与惊恐谱系 · 创伤后应激障碍（PTSD） · 精神分裂症谱系 · 分裂情感性障碍 · 双相谱系 · 分离性身份障碍（DID） · 社交焦虑 / 社交恐惧 · 驾驶恐惧 · 注意缺陷多动障碍（ADHD） · 强迫症（OCD）,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.cases.title,i18n,Highlighted case narratives,Historias de casos destacadas,重点案例叙事,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.cases.note,i18n,"Condensed, anonymized summaries for readability; identifiers and timelines adjusted to protect privacy.",Resúmenes condensados y anonimizados; identificadores y cronologías ajustados para proteger la privacidad.,为可读性压缩的匿名摘要；识别信息与时间线已调整以保护隐私。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.did.title,i18n,DID — 30+ reported identity facets,TID — más de 30 facetas identitarias informadas,DID — 报告 30+ 身份面向,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.did.body,i18n,"A woman with severe dissociative fragmentation (more than thirty distinct identity facets reported). After systematic regulation and internal harmonization, all facets were described as co-existing cooperatively; host-level distress and switching burden were substantially reduced.","Mujer con fragmentación disociativa grave (más de treinta facetas distintas). Tras regulación sistemática e integración interna, se describió la coexistencia cooperativa de las facetas; se redujo notablemente el sufrimiento del anfitrión y la carga del cambio.",一名严重分离碎裂的女性（报告三十余个不同身份面向）。经系统调节与内部整合后，各面向被描述为合作共存；宿主痛苦与切换负担显著减轻。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.cult.title,i18n,Survivor of high-control ideological abuse,Superviviente de abuso ideológico de alto control,高控制意识形态虐待幸存者,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.cult.body,i18n,An individual exiting coercive group influence and medium-channel imprinting. Intervention targeted residual cultic and “spirit-medium” attachments described as negative spiritual load; subjective clearance of those influences was reported.,Persona que sale de influencia coercitiva de grupo e impronta de canalización mediúmnica. La intervención se centró en apegos residuales descritos como carga espiritual negativa; se informó su disolución subjetiva.,脱离强制性团体影响与灵媒印痕者。干预针对残留的邪教式与“灵媒”附体，描述为负面灵性负荷；报告称主观上已清除。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.depression.title,i18n,Treatment-resistant depression (>40 years),Depresión resistente al tratamiento (>40 años),难治性抑郁（>40 年）,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.depression.body,i18n,"Long-standing depressive illness without durable relief from conventional routes. A single 30-minute intensive session was associated with reported remission-like relief of mood and energy, with stability maintained afterward without relapse.","Depresión de larga data sin alivio duradero por vías convencionales. Una sola sesión intensiva de 30 minutos se asoció con alivio similar a la remisión del ánimo y la energía, con estabilidad posterior sin recaídas informadas.",长年抑郁，常规路径未见持久缓解。单次 30 分钟强化会话后，报告称情绪与精力呈缓解样改善，此后保持稳定、无复发报告。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.ptsd.title,i18n,Complex PTSD (>33 years),TEPT complejo (>33 años),复杂性 PTSD（>33 年）,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.ptsd.body,i18n,Decades-long trauma imprint and hypervigilance. One focused regulatory session was described as fully processing the traumatic residue; the participant reported that the trauma “no longer occupied” their lived experience.,"Huella traumática e hipervigilancia durante décadas. Una sesión regulatoria enfocada procesó por completo, según el participante, el residuo traumático; informó que el trauma «ya no ocupaba» su experiencia vivida.",数十年创伤印痕与过度警觉。一次聚焦调节会话后，参与者称创伤残留已“不再占据”其生活体验。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.psychosis.title,i18n,Severe schizophrenia with possessory steering,Esquizofrenia grave con dirección posesoria,重度分裂症伴附体操控,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.psychosis.body,i18n,"A malignant alter / possessory pattern reportedly directing major life decisions. Across roughly one month of layered suppression protocol, the intrusive entity influence was heavily dampened; positive and negative symptoms were reported to fall to a manageable baseline.","Patrón alter / posesorio que dirigía decisiones vitales. En ~un mes de supresión por capas, la influencia intrusiva se atenuó fuertemente; los síntomas positivos y negativos pasaron a un nivel manejable según el informe.",报告称恶意他我 / 附体模式主导重大人生决定。约一个月分层抑制后，侵扰性灵体影响大幅减弱；阳性与阴性症状回落至可管理基线。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.somatization.title,i18n,Residential field disturbance + severe somatization,Perturbación del campo en el hogar + somatización grave,住宅场域扰动 + 严重躯体化,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.case.somatization.body,i18n,Frequent anomalous activity in the home environment together with intense somatic symptom clusters. Field-level cleansing and attachment suppression paralleled a large reduction in bodily distress and functional limitation.,Actividad anómala frecuente en el hogar junto con clusters somáticos intensos. Limpieza a nivel de campo y supresión de apegos coincidieron con una gran reducción del malestar corporal y la limitación funcional.,家中频繁异象伴随强烈躯体症状群。场域级清理与附体抑制并行，身体痛苦与功能受限显著减轻。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.team.title,i18n,Master Spirit collaboration (China & United States),Colaboración con Maestros Espirituales (China y Estados Unidos),高级灵体协作（中国与美国）,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.team.body,i18n,"The interventions summarized here are attributed to coordinated work with a large trans-Pacific Master Spirit collective. Master Spirits function as senior administrators in the Spirit Realm; their role in these sessions was to execute technical regulation, containment, and informational alignment alongside the human-facing dialogue.","Las intervenciones aquí resumidas se atribuyen al trabajo coordinado de un gran colectivo transpacífico de Maestros Espirituales, administradores senior en el Reino Espiritual, que ejecutaron regulación técnica, contención y alineación informativa junto al diálogo humano.",此处摘要的干预归因于庞大的跨太平洋高级灵体集体的协同工作。高级灵体是灵界资深管理者；在这些会话中负责与人类对话并行执行技术调控、包容与信息对齐。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.team.body2,i18n,"In later phases of care, Master Spirits increasingly disclosed presence directly. Each participant received individualized revelatory information appropriate to their trajectory — strengthening continuity between ethereal governance and lived recovery.","En fases posteriores, los Maestros Espirituales revelaron con mayor frecuencia su presencia. Cada participante recibió información reveladora individualizada, reforzando la continuidad entre gobierno etéreo y recuperación vivida.",在后期照护中，高级灵体更频繁地直接显露存在。每位参与者获得适合其轨迹的启示性信息——强化灵界治理与现实康复之间的连续性。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.phenomenology.title,i18n,Phenomenological correlates (late-phase reports),Correlatos fenomenológicos (informes de fase tardía),现象学相关（后期报告）,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.phenomenology.body,i18n,"Some participants described luminous or angelic presence and a felt sense of protective arrival. Others reported encounter with the divine designation “Elohim” and received directive guidance, which they associated with a durable uplift in meaning, agency, and overall life stance.","Algunos participantes describieron presencia luminosa o angélica y sensación de llegada protectora. Otros informaron el encuentro con la designación divina «Elohim» y orientación directiva, asociada con un alza duradera en sentido, agencia y postura vital.",部分参与者描述光明或天使般的临在与被保护抵达之感。另一些人报告遭遇神圣名号“Elohim”并接受指引，将其与意义感、能动性以及整体人生姿态的持久提升相连。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.closing.title,i18n,This is only the beginning,Esto es solo el comienzo,这仅仅是开始,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.closing.body,i18n,The figures and stories above are the visible tip of a much larger iceberg — an opening chapter for the Association of Spirit Realm’s Ambassador (ASra).,Las cifras e historias anteriores son la punta visible de un iceberg mucho mayor — un capítulo inicial de la Asociación del Embajador del Reino Espiritual (ASra).,上述数字与故事只是更大冰山可见的一角——灵界大使协会（ASra）的开篇。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.closing.body2,i18n,"Your participation can open the same class of transformative trajectory: measurable subjective shift, structured spirit-realm support, and a journey whose scale grows with the community.","Tu participación puede abrir la misma clase de trayectoria transformadora: cambio subjetivo medible, apoyo estructurado del reino espiritual y un viaje cuya escala crece con la comunidad.",你的参与可以打开同类变革轨迹：可测量的主观转变、结构化的灵界支持，以及随社群共同放大的旅程。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.disclaimer,i18n,"This page describes experiential and session-documented outcomes from a specific spiritual–therapeutic practice. It is not medical advice, not a randomized controlled trial, and does not replace diagnosis or care by licensed professionals. Terminology aligns with common clinical labels for reader orientation only.","Esta página describe resultados experienciales y documentados en sesión de una práctica espiritual-terapéutica específica. No es consejo médico, no es un ensayo controlado aleatorizado y no sustituye el diagnóstico o la atención de profesionales titulados. La terminología sigue etiquetas clínicas comunes solo como orientación.",本页描述特定灵性—疗愈实践中基于体验与会话记录的结果。非医疗建议，非随机对照试验，也不能替代持证专业人员的诊断或照护。术语仅借常见临床标签帮助读者理解。,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.backHome,i18n,← Back to Home,← Volver al inicio,← 返回首页,
+(all pages via t()),src/i18n/messages/*.ts,achievementsPage.ctaJoin,i18n,✦   Apply / Join   ✦,✦   Solicitar / Unirse   ✦,✦   申请 / 加入   ✦,
+(all pages via t()),src/i18n/messages/*.ts,home.join.title,i18n,Join & Participate,Únete y participa,加入与参与,
+(all pages via t()),src/i18n/messages/*.ts,home.join.subtitle,i18n,Your Ethereal Journey Begins,Tu viaje etéreo comienza,你的灵界旅程由此开始,
+(all pages via t()),src/i18n/messages/*.ts,home.join.body,i18n,"Become a part of the Spirit Ambassador Association. Whether you seek guidance, wish to share your journey, or want to join our team of administrators — your ethereal life begins here.","Forma parte de la Asociación de Embajadores del Reino Espiritual. Si buscas orientación, compartir tu camino o unirte al equipo de administradores — tu vida etérea comienza aquí.",成为灵界大使协会的一员。无论你寻求指引、希望分享旅程，或想加入管理者团队——你的灵性生活从这里开始。,
+(all pages via t()),src/i18n/messages/*.ts,home.join.cta,i18n,✦   Visit: Join Us   ✦,✦   Visitar: Únete   ✦,✦   访问：加入我们   ✦,
+(all pages via t()),src/i18n/messages/*.ts,common.files,i18n,Files,Archivos,档案,
+(all pages via t()),src/i18n/messages/*.ts,common.subChapters,i18n,Sub-chapters,Subcapítulos,子章节,
+(all pages via t()),src/i18n/messages/*.ts,common.series,i18n,Series,Serie,系列,
+(all pages via t()),src/i18n/messages/*.ts,common.fileIndex,i18n,File Index,Índice de archivos,档案索引,
+(all pages via t()),src/i18n/messages/*.ts,common.episodeIndex,i18n,Episode Index,Índice de episodios,集数索引,
+(all pages via t()),src/i18n/messages/*.ts,common.indexSummary,i18n,{{files}} FILES · {{subs}} SUB-CHAPTERS,{{files}} ARCHIVOS · {{subs}} SUBCAPÍTULOS,{{files}} 个档案 · {{subs}} 个子章节,
+(all pages via t()),src/i18n/messages/*.ts,common.classifiedFiles,i18n,CLASSIFIED FILES,ARCHIVOS CLASIFICADOS,机密档案,
+(all pages via t()),src/i18n/messages/*.ts,common.comingSoon,i18n,Coming Soon,Próximamente,敬请期待,
+(all pages via t()),src/i18n/messages/*.ts,common.scroll,i18n,Scroll,Desplazar,滚动,
+(all pages via t()),src/i18n/messages/*.ts,common.minutes,i18n,Minutes,Minutos,分钟,
+(all pages via t()),src/i18n/messages/*.ts,common.episodes,i18n,Episodes,Episodios,集,
+(all pages via t()),src/i18n/messages/*.ts,record.archiveSeries,i18n,Documentary Archive · Series I,Archivo documental · Serie I,纪录片档案 · 第一季,
+(all pages via t()),src/i18n/messages/*.ts,record.archivalNote,i18n,Archival Note,Nota de archivo,档案说明,
+(all pages via t()),src/i18n/messages/*.ts,record.endArchive,i18n,End of Archive,Fin del archivo,档案结束,
+(all pages via t()),src/i18n/messages/*.ts,episode.abstract,i18n,Abstract,Resumen,摘要,
+(all pages via t()),src/i18n/messages/*.ts,episode.keyFeatures,i18n,Key Features,Aspectos clave,要点,
+(all pages via t()),src/i18n/messages/*.ts,episode.duration,i18n,Duration,Duración,片长,
+(all pages via t()),src/i18n/messages/*.ts,episode.openDossier,i18n,Open Dossier,Abrir expediente,打开卷宗,
+(all pages via t()),src/i18n/messages/*.ts,episode.closeDossier,i18n,Close Dossier,Cerrar expediente,关闭卷宗,
+(all pages via t()),src/i18n/messages/*.ts,episode.watch,i18n,Watch,Ver,观看,
+(all pages via t()),src/i18n/messages/*.ts,spirit.seriesBadge,i18n,Medical Documentary · Series II,Documental médico · Serie II,医学纪录片 · 第二季,
+(all pages via t()),src/i18n/messages/*.ts,spirit.hero.titleBefore,i18n,Woos,Woos,伍斯,
+(all pages via t()),src/i18n/messages/*.ts,spirit.hero.titleHighlight,i18n,Spirit Medicine,Medicina espiritual,灵体医学,
+(all pages via t()),src/i18n/messages/*.ts,spirit.hero.body,i18n,"This documentary scientifically reveals the Human Spirit (Soul) Medicine — organs, physiological systems, and basic pathology of the Spirit (Soul), along with the evidence and pathogenesis of Spirit (Ghost) harm to the human host after death.","Este documental revela científicamente la medicina del espíritu humano (alma) — órganos, sistemas fisiológicos y patología básica del espíritu (alma), junto con la evidencia y la patogenia del daño del espíritu (fantasma) al huésped humano tras la muerte.",本纪录片从科学角度揭示人类灵（魂）体医学——灵的器官、生理系统与基本病理，以及亡后灵（鬼）对人体宿主造成伤害的证据与发病机制。,
+(all pages via t()),src/i18n/messages/*.ts,spirit.endSeries,i18n,End of Series II,Fin de la serie II,第二季结束,
+(all pages via t()),src/i18n/messages/*.ts,spirit.watchYoutube,i18n,Watch on YouTube,Ver en YouTube,在 YouTube 观看,
+(all pages via t()),src/i18n/messages/*.ts,spirit.openPlaylist,i18n,Open full YouTube playlist,Abrir lista de reproducción completa en YouTube,打开完整 YouTube 播放列表,
+(all pages via t()),src/i18n/messages/*.ts,matrix.seriesBadge,i18n,Meta Documentary · Series III,Meta documental · Serie III,元纪录片 · 第三季,
+(all pages via t()),src/i18n/messages/*.ts,matrix.title,i18n,Universal Matrix of Meta Awareness,Matriz universal de meta-conciencia,元觉知宇宙矩阵,
+(all pages via t()),src/i18n/messages/*.ts,matrix.subtitle,i18n,The brain beyond universe,El cerebro más allá del universo,宇宙之外的脑,
+(all pages via t()),src/i18n/messages/*.ts,matrix.endSeries,i18n,End of Series III,Fin de la serie III,第三季结束,
+(all pages via t()),src/i18n/messages/*.ts,about.hero.badge,i18n,Umma New Century Organization,Organización Umma New Century,乌玛新世纪组织,
+(all pages via t()),src/i18n/messages/*.ts,about.hero.titleLine1,i18n,Association of Spirit,Asociación del Embajador,灵界大使,
+(all pages via t()),src/i18n/messages/*.ts,about.hero.titleLine2,i18n,Realm's Ambassador,del Reino Espiritual,协会,
+(all pages via t()),src/i18n/messages/*.ts,about.hero.pillAsra,i18n,Physical World — ASra,Mundo físico — ASra,物质世界 — ASra,
+(all pages via t()),src/i18n/messages/*.ts,about.hero.pillSmsc,i18n,Spirit Realm — SMSC,Reino espiritual — SMSC,灵界 — SMSC,
+(all pages via t()),src/i18n/messages/*.ts,about.dual.title,i18n,The Dual-Domain Structure,Estructura de doble dominio,双域结构,
+(all pages via t()),src/i18n/messages/*.ts,about.dual.label,i18n,One Organization · Two Realms,Una organización · Dos reinos,一个组织 · 两个领域,
+(all pages via t()),src/i18n/messages/*.ts,about.dual.umbrellaLabel,i18n,Umbrella Organization,Organización paraguas,伞形组织,
+(all pages via t()),src/i18n/messages/*.ts,about.dual.umbrellaSub,i18n,New Century of UMMa,Nuevo siglo de UMMa,乌玛的新世纪,
+(all pages via t()),src/i18n/messages/*.ts,about.card.physicalLabel,i18n,Physical World,Mundo físico,物质世界,
+(all pages via t()),src/i18n/messages/*.ts,about.card.spiritLabel,i18n,Spirit Realm,Reino espiritual,灵界,
+(all pages via t()),src/i18n/messages/*.ts,about.connector.ratio,i18n,1:1 or 2:1,1:1 o 2:1,1:1 或 2:1,
+(all pages via t()),src/i18n/messages/*.ts,about.connector.partnership,i18n,Partnership,Colaboración,伙伴关系,
+(all pages via t()),src/i18n/messages/*.ts,about.how.title,i18n,How It Works,Cómo funciona,如何运作,
+(all pages via t()),src/i18n/messages/*.ts,about.how.label,i18n,The ASra · SMSC Partnership Process,Proceso de colaboración ASra · SMSC,ASra · SMSC 协作流程,
+(all pages via t()),src/i18n/messages/*.ts,about.how.step1.title,i18n,Assignment,Asignación,指定,
+(all pages via t()),src/i18n/messages/*.ts,about.how.step1.body,i18n,"Each ASra human member is assigned 1 or 2 dedicated Master Spirits from the SMSC — forming a direct, ongoing partnership across both realms.",A cada miembro humano de ASra se le asignan 1 o 2 Maestros Espirituales dedicados del SMSC — formando una colaboración directa y continua entre ambos reinos.,每位 ASra 人类会员由 SMSC 指定 1 或 2 名专属高级灵体——在双域之间形成直接、持续的伙伴关系。,
+(all pages via t()),src/i18n/messages/*.ts,about.how.step2.title,i18n,Empowerment,Empoderamiento,赋能,
+(all pages via t()),src/i18n/messages/*.ts,about.how.step2.body,i18n,"Through this partnership, human members acquire Class-C special abilities: the power to govern attached spirits and to actively improve human health.","Mediante esta colaboración, los miembros humanos adquieren habilidades especiales de clase C: el poder de gobernar espíritus adheridos y mejorar activamente la salud humana.",通过该伙伴关系，人类会员获得 C 级特殊能力：治理附体灵并主动改善人类健康。,
+(all pages via t()),src/i18n/messages/*.ts,about.how.step3.title,i18n,Mission,Misión,使命,
+(all pages via t()),src/i18n/messages/*.ts,about.how.step3.body,i18n,"Empowered members serve as ambassadors — spreading the truth of the Spirit Realm and spirit life entities to the world, and leading humanity toward the New Century.","Los miembros empoderados sirven como embajadores — difundiendo la verdad del Reino Espiritual y de las entidades de vida espiritual, y guiando a la humanidad hacia el Nuevo Siglo.",被赋能的会员作为大使——向世界传播灵界与灵命实体的真相，并引领人类迈向新世纪。,
+(all pages via t()),src/i18n/messages/*.ts,about.founders.title,i18n,The Founders,Los fundadores,创始者,
+(all pages via t()),src/i18n/messages/*.ts,about.founders.label,i18n,Chief Ambassadors & Coordinators,Embajadores jefes y coordinadores,首席大使与协调者,
+(all pages via t()),src/i18n/messages/*.ts,about.founders.woos,i18n,The Woos,Los Woos,伍斯家族,
+(all pages via t()),src/i18n/messages/*.ts,about.founders.fatherSon,i18n,Father & Son,Padre e hijo,父子,
+(all pages via t()),src/i18n/messages/*.ts,about.founders.storyCta,i18n,✦  Read founder story (2026 outline)  ✦,✦  Leer historia fundacional (2026)  ✦,✦  阅读创始故事（2026 纲要）  ✦,
+(all pages via t()),src/i18n/messages/*.ts,nav.founderStory,i18n,Founder story,Historia fundacional,创始故事,
+(all pages via t()),src/i18n/messages/*.ts,about.missions.title,i18n,Member Mission & Obligations,Misión y obligaciones de los miembros,会员使命与义务,
+(all pages via t()),src/i18n/messages/*.ts,about.missions.label,i18n,ASra Members' Two Sacred Duties,Los dos deberes sagrados de los miembros de ASra,ASra 会员的两项神圣职责,
+(all pages via t()),src/i18n/messages/*.ts,about.cta.title,i18n,Ready to Join ASra?,¿Listo para unirte a ASra?,准备好加入 ASra 了吗？,
+(all pages via t()),src/i18n/messages/*.ts,about.cta.subtitle,i18n,Lead Humanity into the New Century,Guía a la humanidad hacia el Nuevo Siglo,引领人类进入新世纪,
+(all pages via t()),src/i18n/messages/*.ts,about.cta.button,i18n,✦   Visit: Apply to Join   ✦,✦   Visitar: Solicitud de ingreso   ✦,✦   访问：申请加入   ✦,
+/about,src/content/siteContent.ts,aboutContent.orgName,content,Umma New Century Organization,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.orgSubtitle,content,New Century of UMMa,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.tagline,content,A Dual-Domain Organization Spanning the Spirit Realm and the Physical World,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.overview,content,"The Umma New Century Organization (New Century of UMMa) is a dual-domain organization spanning both the Spirit Realm and the physical world.
+
+In the physical world, the Umma New Century Organization oversees the Association of Spirit Realm's Ambassador (ASra). Spirit Realm Ambassadors are human beings living in the physical world. Tens of thousands of members will be distributed across all nations, ethnicities, and cultural communities worldwide.
+
+In the Spirit Realm, the Umma New Century Organization oversees the Society of Master Spirit Controllers (SMSC). The SMSC comprises tens of thousands of Master Spirit members. A Master Spirit is an administrator in the Spirit Realm who governs ordinary spirits (ghosts) and human beings.",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.asra.name,content,Association of Spirit Realm's Ambassador,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.asra.abbr,content,ASra,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.asra.domain,content,Physical World,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.asra.description,content,"Spirit Realm Ambassadors are human beings living in the physical world. Tens of thousands of members will be distributed across all nations, ethnicities, and cultural communities worldwide.",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.smsc.name,content,Society of Master Spirit Controllers,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.smsc.abbr,content,SMSC,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.smsc.domain,content,Spirit Realm,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.smsc.description,content,The SMSC comprises tens of thousands of Master Spirit members. A Master Spirit is an administrator in the Spirit Realm who governs ordinary spirits (ghosts) and human beings.,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.partnership,content,"The SMSC was established specifically to support ASra. The Master Spirits of the SMSC will assist each ASra human member on a 1:1 or 2:1 basis — enabling human members to acquire the special ability to govern attached spirits, improve human health, and simultaneously serve as ambassadors who spread the truth about the Spirit Realm and spirit life entities.",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.founders.title,content,The Woos Father and Son,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.founders.subtitle,content,Founders & Chief Ambassadors of ASra,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.founders.description,content,"The Woo family — father John Long Woo and his sons — founded ASra and serve as chief ambassadors. They coordinate between ASra (physical world) and SMSC (Spirit Realm), screening candidates for membership until Master Spirit selection is complete.",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.founders.storyTeaser,content,"Full chronology: first door-openers to the Spirit Realm, Phase A field work through Phase B TikTok North America — truths, timeline, and staged narrative in one place (English).",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[0].number,content,I,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[0].title,content,Spirit Governance & Human Health,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[0].description,content,"Based on the content of the Woos Spirit Archive and Woos Spirit Medicine, members acquire Class-C special abilities to govern attached spirits and improve human health. Members independently operate in the physical world and receive corresponding compensation.",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[0].tag,content,Class-C Ability,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[1].number,content,II,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[1].title,content,Spread the Truth — Lead Humanity to the New Century,,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[1].description,content,"The emergence of AI will inevitably lead to universal unemployment across all of humanity; the deployment of military AI will inevitably lead to humanity's extinction. Humanity stands at the edge of the destruction of the old century.
+
+Based on the three documentary series — the Woos Spirit Archive, Woos Spirit Medicine, and the Universal Matrix of Meta Awareness — members are obligated to spread to the 8 billion people of humanity the truth of Spirit and Its Governor, which has been concealed for thousands of years, and to lead humanity toward the Umma New Century.",,,源码仅英文；核对后补西语/中文
+/about,src/content/siteContent.ts,aboutContent.missions[1].tag,content,Global Mission,,,源码仅英文；核对后补西语/中文
+/,src/content/siteContent.ts,siteContent.home.heroTitle,content,Association of Spirit Realm's Ambassador,,,源码仅英文；核对后补西语/中文
+/,src/content/siteContent.ts,siteContent.home.heroSubtitle,content,Umma New Century Organization,,,源码仅英文；核对后补西语/中文
+/,src/content/siteContent.ts,siteContent.home.introTitle,content,What is ASra?,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.title,content,Woos Record of Soul,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.description,content,"This Documentary Was Shot Earlier, Recording The Process Of Woos Father And Son Being Possessed By Spirits And Fighting. And The Scientific Summary Of Human Research On Supernatural Phenomena, Near-Death Experience And Reincarnation.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.note,content,"When Woos record of Soul were filmed, Spirits were sometimes called ghost and sometimes soul, but in the spirit medicine filmed in 2025, ghosts were clearly called spirit(ghost).",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.episodesCount,content,11,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.minutes,content,942+,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[0].fileNumber,content,FILE 1-1-1,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[0].title,content,Introduction to Woos Record of Soul,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[0].abstract,content,"An overview of the entire documentary , its methodology, and its revolutionary premise.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[0].videoLength,content,17mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[1].fileNumber,content,FILE 1-1-2,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[1].title,content,Scientifically prove the Existence of Souls through Epilepsy,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[1].abstract,content,"Demonstrating how electromagnetic, thermal, and quantum sensors can detect and record phenomena attributable to spirit presence.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[1].videoLength,content,6mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[2].fileNumber,content,FILE 1-1-3,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[2].title,content,Authenticity Research of PSI,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[2].abstract,content,"PSI phenomena — telepathy, psychokinesis, clairvoyance — are the foundational gateway to understanding spiritual forces. Yet their legitimacy has long been dismissed as pseudoscience. This episode reveals groundbreaking research from China’s 507 Institute (China’s equivalent to NASA) — proving that spirit-derived forces are real, measurable, and reproducible.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[2].keyFeatures,content,"Unprecedented high-speed camera footage and irrefutable PSI experimental data never before shown to the public. The authenticity of these experiments — rigorously controlled, peer-reviewed, and non-fakeable — forms the core of this video.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[2].videoLength,content,64mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[3].fileNumber,content,FILE 1-2-1,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[3].title,content,"Origin, Destination after death of Souls & Impact on human",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[3].abstract,content,"Where do human souls come from? Where do they go after death? Do they ascend to heaven, descend to hell, or reincarnate according to religious doctrines?This episode reveals a startling truth: The primary destination of ancestral human spirits is not another realm — but parasitic attachment to living human beings.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[3].keyFeatures,content,"Drawing on 12 peer-reviewed studies from Western universities and ICD-11 Category 6B6 (Spirit Attachment Disorders), this series maps the global distribution of spirit attachment and demonstrates its direct link to dissociative disorders, identity fragmentation, and unexplained psychological symptoms.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[3].videoLength,content,154mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[4].fileNumber,content,FILE 1-2-2,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[4].title,content,Material Foundation of soul: Spiritual World has Natural Internet Attribute,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[4].abstract,content,"Traditional materialism denies spirit(Ghost) existence by asserting that consciousness is merely an epiphenomenon of the brain — and thus ceases at death. But Chinese PSI research proves otherwise: The ethereal realm possesses an innate, internet-like architecture capable of transmitting conscious information in GIF-like formats via a “blog-style” addressing system.This proves: Consciousness and the soul can exist independently of the physical brain.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[4].keyFeatures,content,"Four groundbreaking PSI papers by Professor Shao Laisheng of Fudan University and colleagues demonstrate that humans can transmit pure conscious information — without instruments — from Shanghai to Beijing, directly through mental intent.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[4].videoLength,content,32mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[5].fileNumber,content,FILE 1-2-3,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[5].title,content,Scientific Proof of Soul Parasitism/Possession caused Mental / Psychosis Illnesses,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[5].abstract,content,"In this world, where is it easy to find a spirit(ghost)? In countless patients with dissociative disorder, schizophrenia, epilepsy, depression, somatization disorder and many other diseases. This series of videos will deeply discuss the etiology research and pain brought by spirit(ghost) to mental patients.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[5].keyFeatures,content,This series of videos shows the distribution of spiritual body in the world with 15 medical research papers from famous western universities and precious real video materials of spirit(ghost) possession. The statistics of psychiatry are often the distribution data of spirit(ghost).,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[5].videoLength,content,154mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[6].fileNumber,content,FILE 1-2-4,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[6].title,content,Deep Exploration of Soul-triggering Epilepsy’s Mechanism,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[6].abstract,content,"The Woos own epilepsy is caused by spirit(ghost) possession — directly contradicting modern neurology’s claim that epilepsy arises solely from abnormal neural firing. This series reveals: spirit(ghost) are material entities capable of emitting electromagnetic charges. These charges induce epileptogenic foci in the human brain, triggering seizures.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[6].keyFeatures,content,"Supported by 15 peer-reviewed medical papers from global universities and the Wu family’s personal medical records, this series provides irrefutable evidence that spirit-induced illness operates through physical, material mechanisms — not metaphysical mysticism.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[6].videoLength,content,76mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[7].fileNumber,content,FILE 1-2-5,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[7].title,content,The truth of NDE – sophisticated illusions orchestrated by parasitic souls,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[7].abstract,content,"Near-death experiences (NDEs) — tunnels of light, deceased relatives, out-of-body journeys — are widely cited as proof of an afterlife. But this series proves: NDEs are not glimpses of death — they are hallucinations generated by attached spirits(ghosts). Through five analytical dimensions — consistency with other possession phenomena, visual structure, cross-cultural variation, and post-NDE psychic sequelae — this series dismantles the myth of NDEs as evidence of an afterlife.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[7].keyFeatures,content,"A deep analysis of 34 peer-reviewed NDE studies from top Western universities. Unlike popular media, which cherry-pick romanticized accounts, this series presents the full, unfiltered dataset — revealing NDEs as culturally conditioned, neurobiologically induced illusions orchestrated by spirit entities.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[7].videoLength,content,74mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[8].fileNumber,content,FILE 1-2-6,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[8].title,content,"Past life memories come from parasitic souls, it can not prove reincarnation",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[8].abstract,content,"Through the human mind’s “consciousness input port” — particularly the memory system — attached spirits(ghosts) transmit their own life experiences in first-person narrative form. The host misinterprets these as their own past-life memories, leading to the widespread belief in reincarnation. This series demonstrates that reincarnation is a cognitive illusion, not a metaphysical reality.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[8].keyFeatures,content,"Rigorous logical analysis: The alleged “reincarnated self” has no biological continuity. It lacks a coherent sense of “I” — no unified identity, no persistent consciousness. Memory transfer ≠ identity transfer. This series exposes a fundamental error in spiritual research: mistaking information transfer for soul migration.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[8].videoLength,content,42mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[9].fileNumber,content,FILE 1-3,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[9].title,content,Whether Souls have Eyes? Scientific Discovery on Spiritual Vision,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[9].abstract,content,"Eyes are a fundamental condition shaping the very nature of spirits(ghost) existence. If spirits(ghost) lack eyes, this fundamentally challenges every cultural, religious, and metaphysical assumption about the afterlife. Across nearly all human cultures, the ethereal realm is depicted as containing hellfires, paradisiacal realms, demons, gods, and other spirits. But how can spirits(ghost) perceive these environments — or each other — without visual organs? How can the imagined existence of spirits(ghost) even be coherent without sight?",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[9].keyFeatures,content,"This series draws upon 19 peer-reviewed academic papers from China’s most prestigious institutions — including the Institute of Physics and Institute of Biophysics (Chinese Academy of Sciences), Peking University, National Taiwan University, Beijing Normal University, and the Shanghai Institute of Laser Technology — combined with the firsthand experiential accounts of the Wu family. Collectively, they provide conclusive evidence: spirits(ghost) do not possess eyes.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[9].videoLength,content,77mins,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[10].fileNumber,content,FILE 1-4,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[10].title,content,"Discover the truth of body shape, organs, material composition and metabolism of souls",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[10].abstract,content,"The ethereal body is material in nature. This series represents the first systematic scientific exploration into the physical structure, organ systems, material composition, and energy metabolism of human spirits(soul) after death — marking humanity’s initial step toward understanding the material reality of the ethereal realm.",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[10].keyFeatures,content,"Drawing on 8 international academic studies, the ICD-11 classification (Category 6B6: Spirit Attachment Disorders) from the World Health Organization, and rare archival footage, this series presents the most comprehensive and empirically grounded analysis to date of the spirit body’s anatomical and physiological characteristics..",,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/content/siteContent.ts,siteContent.recordOfSoul.timeline[10].videoLength,content,243mins,,,源码仅英文；核对后补西语/中文
+/spirit-medicine,src/content/siteContent.ts,siteContent.spiritMedicine.title,content,Woos Spirit Medicine,,,源码仅英文；核对后补西语/中文
+/spirit-medicine,src/content/siteContent.ts,siteContent.spiritMedicine.description,content,"Healing methodologies connecting the physical body and ethereal consciousness. This season focuses on practical intervention, structured recovery pathways, and ongoing restoration of balance for mind and soul.",,,源码仅英文；核对后补西语/中文
+/spirit-medicine,src/content/siteContent.ts,siteContent.spiritMedicine.note,content,Episode list and links mirror the official YouTube playlist “Spirit Medicine” (same order as FILE 2-1 → 2-5 curriculum groups on /spirit-medicine).,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.title,content,Universal Matrix of Meta Awareness,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.description,content,"Advanced transcendental truths governing systemic universe order and ultimate human destiny. This season presents conceptual architecture, governance logic, and higher-order awareness models.",,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.note,content,"This section is scaffolded using the original series layout so you can fine-tune language, hierarchy, and visual rhythm in Layrr.",,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].title,content,Vol. 1 - Universal Architecture,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].episodes[0].fileNumber,content,FILE 3-1-1,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].episodes[0].title,content,Framework of the Meta Awareness Matrix,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].episodes[0].description,content,"A structural overview of governing layers, interaction rules, and macro-level system dependencies.",,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].episodes[1].fileNumber,content,FILE 3-1-2,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].episodes[1].title,content,Origins of Universal Order,,,源码仅英文；核对后补西语/中文
+/universal-matrix,src/content/siteContent.ts,siteContent.universalMatrix.volumes[0].episodes[1].description,content,"Explores first principles behind life orchestration, continuity mechanics, and order-preserving constraints.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.heroTitle,content,Our Story Outline — 2026,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.heroBadge,content,Founder narrative,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.intro,content,"I am **John Long Woo**. Together with my two sons, **Caros** and **Sam** — we three, father and sons — we have lived through too many extraordinary events involving the **spirit realm** to count. Those experiences have made us the **first door-openers to the Spirit Realm** and the **first explorers of the truth of spirit life**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.title,content,Three truths,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].label,content,Truth 1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[0].title,content,Body and spirit,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[0].text,content,A living person is composed of both the **physical body** and the **spirit (soul)**. **Spirits (ghosts)** exist after human death.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[1].title,content,Parasitism and disease,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[1].text,content,"For the billions of them, the only way to survive is to **attach to human beings** and draw energy. That pattern is bound up with widespread illness such as **epilepsy**, **depression**, **schizophrenia**, and **somatic symptom disorders**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[2].title,content,Spirit Medicine,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[2].text,content,"By **managing spirits (ghosts) through Master Spirits**, these conditions can often be rapidly improved. From that work we created **Spirit Medicine**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[3].title,content,Archives,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[0].blocks[3].text,content,Further documentation appears in **Woos Record of Soul** and the **Woos Spirit Medicine** video archives.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[1].label,content,Truth 2,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[1].blocks[0].text,content,"The **Spirit Realm** has governors — tremendous **Master Spirits**, upgraded from ordinary spirits through the **Universal Matrix of Meta Awareness**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[2].label,content,Truth 3,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[2].blocks[0].text,content,The **Universal Matrix of Meta Awareness** is the **true creator-level substrate**; **our universe is part of its body**.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[2].blocks[1].title,content,Archive,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.truths.items[2].blocks[1].text,content,Further documentation appears in the **Universal Matrix of Meta Awareness** video archive.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.title,content,Two major chapters,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.title,content,Phase A — May 2014 through February 2025,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[0].title,content,Who was involved,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[0].text,content,"We fought **attached spirits** of different classes parasitizing our bodies — including a **Class-C1**-level entity (archive designation associated with the “**Hui’an**” tier), the **Class-C2** spirit **Qing Xiaoxian**, and the **Class-C3** spirit **Qian Kai**. They drove **severe illness across our family**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[1].title,content,Motive and methods,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[1].text,content,"Our only motive was **self-rescue**: we tried every means we could to harm or destroy them. In doing so we learned the **physiological and physical properties of ghost bodies**, and communicated through **epileptic discharge**, **auditory hallucination sounds**, **consciousness dialogue**, **consciousness control**, and related modes — building a large, verified picture of the spirit world.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[2].title,content,Regret,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[2].text,content,"Our greatest regret in **Phase A** is that we did **not** systematically engage attached spirits on **other human hosts** outside our family, or in **other countries**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[3].title,content,Record,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.a.blocks[3].text,content,During this period we filmed **Woos Record of Soul**.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.b.title,content,Phase B — February 2025 through March 2026,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.b.blocks[0].title,content,North America field,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.b.blocks[0].text,content,"**Caros** used **TikTok Live** to speak at scale with **North American attached spirits**, fully corroborating every major truth about the spirit world that **Phase A** had already uncovered.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.b.blocks[1].title,content,Remote power and ASra,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phasesOverview.b.blocks[1].text,content,"With help from **Master Spirits**, Caros gained the ability to **remotely govern** North American **parasitic spirits** while in China — the same class of power that underpins building **ASra**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[0].id,content,a1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[0].label,content,A 1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[0].stageTitle,content,Stage 1 · Cheating Period 1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[0].range,content,March 2018 — July 2020,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[0].paragraphs[0],content,"During this period, the **low-level soul** in my body used **high-voltage electrostatic discharge** into drinks and wine to change their taste, aiming to fabricate a chain of “scientific” phenomena and laws that would ultimately “prove” **Buddhism**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[0].paragraphs[1],content,The details are too intricate to spell out fully in words.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[1].id,content,a2,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[1].label,content,A 2,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[1].stageTitle,content,Cheating period 2,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[1].range,content,July 2020 — 15 November 2020,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[1].paragraphs[0],content,"During this interval, the low-level soul used **epilepsy-like seizures** to impersonate, in sequence, the **three greatest gods of Buddhism**, pretending to convey **divine will** — until my sons and I had converted.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[1].paragraphs[1],content,"It was a **grotesque joke**; we were **playthings**. Even so, we exchanged a great deal of **philosophical insight** during the deception.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].id,content,a3,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].label,content,A 3,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].stageTitle,content,Exorcism period 1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].range,content,15 November 2020 — July 2021,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].paragraphs[0],content,"On **15 November 2020**, the **true identities** of the souls inside us and their **tricks** were finally exposed. In fear and rage we tried to **exorcise** them.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].paragraphs[1],content,Traditional methods failed repeatedly; we remembered they had always **forbidden** us to touch **strong magnets**. We began using magnets to **hurt** them.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].paragraphs[2],content,Within days the soul in my **elder son** could not endure it and **left first**; about **six weeks** later the soul in my **younger son** left for the same reason.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[2].paragraphs[3],content,"The soul in **me** refused to depart even when injured. I found that a **strong electrostatic field** could severely weaken its discharging: my **epilepsy vanished** the moment that happened — yet the soul **remained inside**, playing hide-and-seek.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].id,content,a4,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].label,content,A 4,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].stageTitle,content,Exorcism period 2 · and high-level revealing,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].range,content,July 2021 — 4 April 2022,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].paragraphs[0],content,"In this stage we **found and confirmed** several ways to interfere with, injure, and **kill ordinary souls**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].paragraphs[1],content,"The limits of **electrostatic and magnet** work drew the attention of a **high-level soul** who had died in China roughly **1,500 years ago**. It joined the exploration: **consciousness transmission** for hints, while **steering the ordinary soul’s behavior** until I learned how to kill and expel **precisely and efficiently**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].paragraphs[2],content,"Each day I **tangled, fought, and coexisted** with the ordinary soul — **enemy and ally** at once — and traded large amounts of **spirit-relevant knowledge**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[3].paragraphs[3],content,"Finally the high-level soul **disclosed itself**, demonstrated **extraordinary abilities**, cleared up a year of confusion, taught me more of the **soul world** — then **left my body** and vanished quickly.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].id,content,a5,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].label,content,A 5,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].stageTitle,content,Class-C2 Qing Xiaoxian · Class-C3 Qian Kai,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].range,content,December 2023 — January 2025,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].paragraphs[0],content,"In **December 2023** I was again possessed by the **Class-C2** spirit **Qing Xiaoxian**. Across roughly **1,700 years** as a ghost it had devoured on the order of **5,000–10,000** other souls, becoming an **enormous entity**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].paragraphs[1],content,"It turned the Woo home into a **haunted-house field**, spun **multiple avatars** onto both sons, and allowed its **core form** to coordinate those fragments **remotely**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].paragraphs[2],content,"In the father: **schizophrenia**, **bipolar disorder**, **epilepsy**, **somatization**, and **powerful electrical assaults** on the heart. In the sons: **fatigue (energy coupling)**, **depression**, **pain disorder**, **IBS**, and further somatic patterns.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].paragraphs[3],content,Father and sons continued to refine **exorcism** and **ghost-neutralization** until this entity was **fully destroyed**.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseAStages[4].paragraphs[4],content,"From **September 2024** through **January 2025** I was possessed again by the **Class-C3** spirit **Qian Kai**. **Higher ghost density means greater power** — so Qian Kai **exceeded** Qing Xiaoxian in **thought-control** and **pathogenic force**. We continued **self-rescue** until this spirit, too, was **eliminated**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.id,content,b,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.title,content,Phase B — February 2025 through March 2026,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[0].title,content,265 live sessions,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[0].text,content,"From **19 February** through **24 December 2025**, Caros ran **265 TikTok live sessions**. The exceptional outcomes are summarized (with links) on the Our Achievements page.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[1].title,content,Master Spirits and hybrids,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[1].text,content,"Very many **Master Spirits** and **hybrid spirits** contacted our family — revealing **administrators** and a **Creator-level order**. They gave **decisive aid** and **remarkable faculties**, allowing Caros in China to **remotely govern** attached spirits in **North America**.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[2].title,content,What we were told,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[2].text,content,Most importantly: every spirit that possessed us in **Phase A** had been **deliberately placed** by **Master Spirit coordination**; destroying those attachments was **licensed for research**.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[3].title,content,Character of the plan,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[3].text,content,"All the **suffering**, **deception**, and **cruel theatre** were **part of the plan** — so we could observe **how they operate** and **what they are like**. That dispels any notion that Master Spirits are **angelically kind**: earlier help was **assignment from the Universal Matrix of Meta Awareness**, not sentimental charity.",,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[4].title,content,Read the temperament,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[4].text,content,**Phase A** is the place to read the **temperament of the Master Spirit team**.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[5].title,content,Spirit Medicine formalized,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryPage.phaseB.blocks[5].text,content,During this period we **formally established Spirit Medicine** and produced part of the episodes under **Woos Spirit Medicine** and **Universal Matrix of Meta Awareness**.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[0].phase,content,A,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[0].range,content,May 2014 — Feb 2025,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[0].label,content,Phase A — family field work,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[1].phase,content,A1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[1].range,content,Mar 2018 — Jul 2020,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[1].label,content,Cheating Period 1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[2].phase,content,A2,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[2].range,content,Jul 2020 — Nov 2020,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[2].label,content,Cheating period 2,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[3].phase,content,A3,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[3].range,content,Nov 2020 — Jul 2021,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[3].label,content,Exorcism period 1,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[4].phase,content,A4,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[4].range,content,Jul 2021 — Apr 2022,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[4].label,content,Exorcism 2 & high-level revealing,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[5].phase,content,A5,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[5].range,content,Dec 2023 — Jan 2025,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[5].label,content,Qing Xiaoxian (C2) · Qian Kai (C3),,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[6].phase,content,B,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[6].range,content,Feb 2025 — Mar 2026,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderTimeline[6].label,content,Phase B — TikTok North America,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryIllustrations[0].alt,content,Night sky — doorway imagery,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryIllustrations[1].alt,content,Cosmos and emergence,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryIllustrations[2].alt,content,Mountain dawn — long journey,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryIllustrations[3].alt,content,Together — family path,,,源码仅英文；核对后补西语/中文
+/founder-story,src/content/founderStory2026Content.ts,founderStoryIllustrations[4].alt,content,Broadcast and field,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[0].label,content,Time period,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[0].hint,content,Concentrated 2025 live field window,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[0].displayValue,content,Just one year,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[1].label,content,Platform,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[1].hint,content,Primary discovery and session venue,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[1].displayValue,content,TikTok Live,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[2].label,content,Participants,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[2].hint,content,Arrived via TikTok recommendations,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[2].displayValue,content,"Anonymous, randomly selected patients",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[3].label,content,Total sessions,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[3].hint,content,Charity livestream sessions,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[3].displayValue,content,255+,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[4].label,content,Total duration,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[4].hint,content,Cumulative broadcast time,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[4].displayValue,content,800+ hrs,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[5].label,content,Audience reach,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[5].hint,content,Related listeners contacted,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[5].displayValue,content,70000+,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[6].label,content,Deep interviews,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[6].hint,content,In-depth conversations,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[6].displayValue,content,1200+,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[7].label,content,Effective spirit (ghost) control,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[7].hint,content,Mental disorder presentations improved,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[7].displayValue,content,240+ patients,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[8].label,content,Spirits (ghosts) manifested,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[8].hint,content,Attached spirits surfaced (some hosts had multiples),,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,mainMetrics[8].displayValue,content,400+ ≈,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[0].alt,content,Live streaming studio aesthetic,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[1].alt,content,Mobile broadcast,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[2].alt,content,Audience and stage lights,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[3].alt,content,Concert crowd energy,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[4].alt,content,Recording and content creation,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[5].alt,content,Video production,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[6].alt,content,Laptop and streaming setup,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[7].alt,content,Microphone and broadcast,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[8].alt,content,Team collaboration,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[9].alt,content,Digital engagement,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[10].alt,content,Event hall atmosphere,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,carouselSlides[11].alt,content,Cinematic lighting,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[0].title,content,Memory loss,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[0].stat,content,90%,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[0].body,content,"Of spirits (ghosts) do not remember their own names, gender, or other basic pre-death information, and do not remember the death process.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[1].title,content,Loss of humanity,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[1].stat,content,100%,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[1].body,content,American spirits (ghosts) have lost most of their humanity and acquired new characteristics.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[2].title,content,New abilities,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[2].stat,content,100%,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[2].body,content,American spirits (ghosts) acquired new abilities in the spiritual world.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[3].title,content,Master spirit transportation,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[3].stat,content,Majority,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[3].body,content,The vast majority of American spirit attachments are transported by master spirits.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[4].title,content,Control system,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[4].stat,content,100%,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,spiritFindings[4].body,content,Spirits (ghosts) and their hosts are governed by two prohibition types in UMMA’s soul control system — virtually no direct communication between them.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[0].badge,content,Oldest spirits (ghosts),,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[0].title,content,"Quebec, 1813 — sibling pair",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[0].body,content,"A pair of sibling spirits who died in the Quebec region in 1813, still retaining complete memories to this day.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[1].badge,content,Once on an animal,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[1].title,content,Horse → caretaker transfer,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[1].body,content,"A spirit that parasitized a horse, then transferred to the horse’s caretaker, transmitting some equine emotion and consciousness to the host.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[2].badge,content,Strongest PSI-type ability,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[2].title,content,Physical-environment phenomena,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[2].body,content,"Capable of creating scars on the host’s body, moving blankets, and numerous flying light orbs throughout the home.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[3].badge,content,Most RPO coverage,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[3].title,content,Five family members,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[3].body,content,"Remote Port Organs across all five family members, affecting an entire lineage.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[4].badge,content,Most human-like pattern,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[4].title,content,Co-agency from age ten,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[4].body,content,"Parasitized the host at age ten, manifested, and agreed to take turns controlling the body — enabling world travel and career completion.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[5].badge,content,Youngest spirit (ghost),,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[5].title,content,Five years old,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,interestingSpirits[5].body,content,Manifested attached spirit estimated at five years of age.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[0].date,content,July 31,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[0].host,content,mkanimalsea,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[0].event,content,"Host and attached spirit (ghost) summoned a huge, black, rapidly moving archangel.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[1].date,content,July 25,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[1].host,content,Jen,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[1].event,content,"After incantations, one attached spirit felt a guiding presence of light and love; another felt a dark knight.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[2].date,content,August 14,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[2].host,content,Dominick,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,masterManifestations[2].event,content,Summoned the arrival and instructions of the divine designation “Elohim.”,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[0],content,Schizophrenia,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[1],content,Bipolar disorder,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[2],content,Depression,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[3],content,Anxiety,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[4],content,DID (dissociative identity disorder),,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[5],content,PTSD,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[6],content,Schizoaffective disorder,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[7],content,ADHD,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[8],content,OCD,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[9],content,Social phobia,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,conditionsTreated[10],content,Driving phobia,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[0].title,content,Discovery,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[0].detail,content,Random TikTok recommendation,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[1].title,content,Initial contact,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[1].detail,content,“Free trial” openness,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[2].title,content,Remote summoning,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[2].detail,content,Attached spirits (ghosts) called forth,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[3].title,content,Communication,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[3].detail,content,Dialogue established,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[4].title,content,Spirit (ghost) control,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[4].detail,content,Techniques applied,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[5].title,content,Patient improvement,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,patientJourneySteps[5].detail,content,Condition amelioration,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,livestreamTechnologies[0].title,content,Illumination / transmission,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,livestreamTechnologies[0].body,content,"Livestream mobile screen aimed at the host’s head, chest, and back for illumination and energy transmission.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,livestreamTechnologies[1].title,content,Incantations & prohibitions,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,livestreamTechnologies[1].body,content,Release of control incantations and prohibition structures coordinated with master spirits.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[0].date,content,August 11,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[0].condition,content,15+ years untreated depression and bipolar disorder,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[0].result,content,Relief within ~30 minutes; no recurrence reported.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[1].date,content,June 14,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[1].condition,content,PTSD troubling the patient for many years,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[1].result,content,Resolved in one spirit-management session; trauma imprint dissipated.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[2].date,content,September 11,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[2].condition,content,Severe schizophrenia with malignant alters steering life,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[2].result,content,"Within one hour, attached spirits heavily suppressed; sustained relief over the following month.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[3].date,content,July 18,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[3].condition,content,Child with autism for many years,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[3].result,content,"After adjusting spirits within the body, symptoms began to improve.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[4].date,content,September 3,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[4].condition,content,Severe somatization,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,outcomeCases[4].result,content,Home field regulated; somatization and emotional state greatly improved.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,experiments[0].title,content,Symptom conversion,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,experiments[0].body,content,"Rapid conversion between emotional disorders, schizophrenia, and DID symptoms in a short window.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,experiments[1].title,content,Spirit (ghost) movement,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,experiments[1].body,content,Attached spirit relocation vs. host symptom improvement — correlation mapping.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,experiments[2].title,content,External drug application,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,experiments[2].body,content,Experimental external medication application during live field conditions.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[0].badge,content,Featured case,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[0].handle,content,annabella,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[0].title,content,Multi-identity DID,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[0].body,content,"DID presentation with 30+ identities — mutual control, influence, and amnesia among attached spirits within one host.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[0].finding,content,Complex inter–spirit dynamics and control hierarchies in a single body.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[1].badge,content,Featured case,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[1].handle,content,gabby,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[1].title,content,Cult survivor,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[1].body,content,Survivor exiting a cult — attached spirits revealed how cults and spiritual mediums steer health at the spirit level.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[1].finding,content,Mechanisms of spiritual manipulation in high-control environments.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[2].badge,content,Featured case,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[2].handle,content,idk,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[2].title,content,Delusion of divinity,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[2].body,content,"Patient posing as demons and deities — after structured experiments, attached spirit admitted identities were fabricated.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[2].finding,content,False identity projection and deception capacity of attached spirits.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[3].badge,content,Featured case,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[3].handle,content,dominick,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[3].title,content,Sexuality transformation,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[3].body,content,DID presentation — attached spirit described gradually shaping the host’s sexual orientation over years.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,featuredCases[3].finding,content,Long-horizon spirit influence on psychosexual development.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,livestreamLinkPlaceholders[0].label,content,YouTube — replay playlist,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,livestreamLinkPlaceholders[1].label,content,TikTok — @ASra field archive (placeholder),,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,pageIntro.heroBadge,content,2025 · TikTok live field,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,pageIntro.heroTitle,content,2025 Livestream Achievements,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,pageIntro.heroSubtitle,content,"For the first time, humanity has systematically mapped American spirits (ghosts) at scale — memory baselines, attachment logistics, master-spirit mediation, and mental-health correlations — through anonymized charity sessions documented in real time.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,pageIntro.systematicNote,content,"Baseline statistics were collected on memories, mental states, living conditions, death processes, and awareness of the spiritual world.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.stats,content,Section 1 — Data overview,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.statsSub,content,Impact statistics,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.findings,content,American spirits (ghosts) — living conditions,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.interesting,content,Particularly interesting spirits (ghosts),,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.master,content,Master spirit manifestations in livestream,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.mental,content,Section 2 — Conventional mental disorders,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.mentalSub,content,Spirit (ghost) management cohort,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.conditions,content,Conditions addressed,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.cohortSources,content,Sources,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.cohortProcess,content,Process,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.journey,content,Patient sources & process,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.tech,content,Two core livestream technologies,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.outcomes,content,Direct effects & results,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.experiments,content,Scientific experiments in-session,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.special,content,Section 3 — Special significance case studies,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.cta,content,Every ASra member can hold miracle-class ability,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,sectionTitles.links,content,Livestream links & archive,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,closingCopy.ctaHeadline,content,Every ASra Member Will Possess the Superpower to Create Miracles,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,closingCopy.ctaSub,content,Join our community and unlock the extraordinary abilities within you.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,closingCopy.ctaButton,content,Access livestream archive,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,closingCopy.disclaimer,content,"This page summarizes session-documented field work. It is not medical advice, not a randomized trial, and does not replace care by licensed professionals. Labels aid reader orientation only.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,scientificStockFigures[0].label,content,"Session metrics are paired with structured, repeatable field notes—similar to open lab documentation.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,scientificStockFigures[1].label,content,"Baseline interviews with spirits (ghosts) are treated like clinical observations: dated, anonymized, comparable.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,scientificStockFigures[2].label,content,Cohort-scale charts summarize distribution patterns across hundreds of livestreams.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/content/achievements2025Content.ts,scientificStockFigures[3].label,content,"Methods—illumination paths, incantation timing, and outcome windows—are reported for transparency.",,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[0].fileNumber,content,FILE 2-1,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[0].sectionTitle,content,Abstract & scope of Spirit Medicine,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[0].episodes[0].title,content,File 2-1 Abstract of Spirit Medicine,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[1].fileNumber,content,FILE 2-2,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[1].sectionTitle,content,Evidence for the existence of spirits (ghosts),,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[1].episodes[0].title,content,FILE 2-2 Evidence of existence of spirits(ghosts),,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[2].fileNumber,content,FILE 2-3,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[2].sectionTitle,content,Human spirit (soul) physiology — spiritual brain & memory,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[2].episodes[0].title,content,File 2-3-2-1-1 Spiritual brain located in the flesh brain,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[2].episodes[1].title,content,File 2-3-2-1-2 Spiritual-Brain Organs Located in the Heart,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[2].episodes[2].title,content,File 2-3-2-1-3 Spiritual-Brain Long-Term Memory Organ Located in the Cloud of the Ethereal Realm,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].fileNumber,content,FILE 2-4,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].sectionTitle,content,"American spirit (ghost): overview, physiology & clinical angles",,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[0].title,content,"File 2-4-1-1 Overview,classification & statistical data of America Spirit(ghost)",,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[1].title,content,File 2-4-1-2 The disposition of American spirit (Ghost) & Possibility of Organized Harm to Humans,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[2].title,content,File 2-4-1-3 The Physiological State of American spirit(ghost): Memory and Energy Metabolism,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[3].title,content,File 2-4-1-4 The Physiological State of American spirit(ghost): Thinking and Emotion,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[4].title,content,File 2-4-1-5-1 The remote port organ (1),,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[5].title,content,File 2-4-1-5-2 The remote port organ (2),,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[6].title,content,"File 2-4-1-6-1 High Incidence of Depression Among Physicians and Psychologists, and the Reasons (1)",,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[3].episodes[7].title,content,"File 2-4-1-6-2 High Incidence of Depression Among Physicians and Psychologists, and the Reasons (2)",,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[4].fileNumber,content,FILE 2-5,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[4].sectionTitle,content,Pathology of the human spirit & possession effects on the host,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[4].episodes[0].title,content,File 2-5-2-1-1 Pathological Principles of Schizophrenia and Dissociative Disorders (1),,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[4].episodes[1].title,content,File 2-5-2-1-2 Pathological Principles of Schizophrenia and Dissociative Disorders (2),,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[4].episodes[2].title,content,File 2-5-2-2 The Comprehensive Impact of Possessing spirit ghost on the Human Host's flesh body,,,源码仅英文；核对后补西语/中文
+/spirit-medicine (playlist & sections),src/content/spiritMedicineData.ts,spiritMedicineFileGroups[4].episodes[3].title,content,File 2-5-2-3 Soul Pathology Principles & Healing Strategies for Various Emotional Disorders,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,header.subtitleNames,hardcoded,John Long Woo · Caros · Sam,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,link.organizationOverview,hardcoded,← Organization overview,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,section.timeline.heading,hardcoded,Timeline,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,section.phaseA.detailHeading,hardcoded,Phase A — storyline detail,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,section.phaseA.detailIntro,hardcoded,Stages A1–A4 follow the family’s published English chronology; A5 closes the C2 / C3 arc.,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,link.achievementsVisible,hardcoded,Our Achievements,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,link.achievementsSuffix,hardcoded, page,,,源码仅英文；核对后补西语/中文
+/founder-story,src/views/FounderStoryView.tsx,footer.legacyTimeline,hardcoded,Earlier staged timeline on the legacy site,,,源码仅英文；核对后补西语/中文
+(* Documentary hub),src/views/DocumentarySeriesView.tsx,note.prefix,hardcoded,* Note:,,,源码仅英文；核对后补西语/中文
+(App shell),src/App.tsx,suspense.loading,hardcoded,Loading…,,,源码仅英文；核对后补西语/中文
+(document),index.html,title,hardcoded,Spirit Ambassador Association,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,footer.backHome,hardcoded,← Back to Home,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/components/achievements/LivestreamCarousel.tsx,cta.openPlaylist,hardcoded,Open playlist,,,源码仅英文；核对后补西语/中文
+/record-of-soul,src/components/record/EpisodeCard.tsx,youtube.cta,hardcoded,▶ Watch on YouTube,,,源码仅英文；核对后补西语/中文
+(* collapsible),src/components/achievements/CollapsibleText.tsx,toggle.showMore,hardcoded,Show more,,,源码仅英文；核对后补西语/中文
+(* collapsible),src/components/achievements/CollapsibleText.tsx,toggle.showLess,hardcoded,Show less,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,hero.replayPlaylistButton,hardcoded,Replay playlist,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,hero.pill.sessions255,hardcoded,255+ sessions,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,hero.pill.hours800,hardcoded,800+ hrs,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,hero.pill.reach70k,hardcoded,70k+ reach,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.findings.subtitle,hardcoded,Synthesis from baseline interviews with American spirits (ghosts).,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.interesting.subtitle,hardcoded,Notable attached-spirit presentations — use “Show more” when a card runs long.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.master.subtitle,hardcoded,Chronological highlights from livestreams.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,cohort.sources.body,hardcoded,"Treatment-resistant, refractory cases predominantly entered through TikTok recommendations with a “free trial” posture. All management work occurred in live field conditions with master spirit collaboration.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,cohort.process.stageHint,hardcoded, — stages connect in order below.,,,源码仅英文；核对后补西语/中文（接在 sectionTitles.journey 译文之后）
+/our-achievements,src/views/OurAchievementsView.tsx,section.tech.subtitle,hardcoded,Two intervention modalities used with master-spirit coordination.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,tech.card.labelPrefix,hardcoded,Technology ,,,源码仅英文；核对后补西语/中文（后接数字 1、2）
+/our-achievements,src/views/OurAchievementsView.tsx,tech.illumination.head,hardcoded,Head,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,tech.illumination.chest,hardcoded,Chest,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,tech.illumination.back,hardcoded,Back,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,spiritFinding.pie.legend,hardcoded,no memory,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,spiritFinding.flow.master,hardcoded,Master,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,spiritFinding.flow.host,hardcoded,Host,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,masterCard.hostPrefix,hardcoded,Host · ,,,源码仅英文；核对后补西语/中文（后接主播名）
+/our-achievements,src/views/OurAchievementsView.tsx,outcomes.reliefParagraph,hardcoded,"Within 30 minutes, >80% of hosts and attached spirits report relief from acute mental suffering (spirits also presented with disorder states). As of December 24, 2025, most had not requested secondary management — suggesting no relapse in that window.",,,源码仅英文；核对后补西语/中文（原文含 HTML <strong>，上线时需保留强调结构）
+/our-achievements,src/views/OurAchievementsView.tsx,outcomes.rapidReliefLabel,hardcoded,rapid relief,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.outcomes.subtitle,hardcoded,Reported relief windows and anonymized case snapshots.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.experiments.subtitle,hardcoded,Structured trials conducted within live sessions.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.special.subtitle,hardcoded,Long-form case dossiers — long text folds open per card.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,featuredCase.footer,hardcoded,"For full session context, use the live archives linked above.",,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,section.links.subtitle,hardcoded,Official channels and placeholders for mirrors once published.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,links.archivePlaceholder,hardcoded,Search & calendar filters — connect when your archive API is ready.,,,源码仅英文；核对后补西语/中文
+/our-achievements,src/views/OurAchievementsView.tsx,footer.applyJoin,hardcoded,Apply / Join,,,源码仅英文；核对后补西语/中文
+/,src/components/home/Achievements.tsx,homeAchievements.badge.fieldDoc,hardcoded,Field documentation,,,源码仅英文；核对后补西语/中文
+/,src/components/home/Achievements.tsx,homeAchievements.badge.cohortMetrics,hardcoded,Live cohort metrics,,,源码仅英文；核对后补西语/中文

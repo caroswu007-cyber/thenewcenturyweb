@@ -91,7 +91,8 @@ In the Spirit Realm, the Umma New Century Organization oversees the Society of M
   founders: {
     title: 'The Woos Father and Son',
     subtitle: 'Founders & Chief Ambassadors of ASra',
-    description: `The Woos Father and Son are the founders and chief ambassadors of ASra. They are responsible for coordinating and liaising between the two associations. In the physical world, they screen suitable human candidates to become ASra ambassadors and recommend them to the SMSC. Only after selection by the SMSC do candidates officially become ASra members. The Woos Father and Son also hold the authority to revoke the membership of unqualified ASra members.`,
+    description: `The Woo family — father John Long Woo and his sons — founded ASra and serve as chief ambassadors. They coordinate between ASra (physical world) and SMSC (Spirit Realm), screening candidates for membership until Master Spirit selection is complete.`,
+    storyTeaser: `Full chronology: first door-openers to the Spirit Realm, Phase A field work through Phase B TikTok North America — truths, timeline, and staged narrative in one place (English).`,
   },
 
   missions: [
@@ -118,8 +119,8 @@ export const siteContent = {
   brand: 'ASra',
   home: {
     heroTitle: "Association of Spirit Realm's Ambassador",
-    heroSubtitle: 'Umma New Century Organization',
-    introTitle: 'What is ASra?',
+    heroSubtitle: 'New Era Organization of UMMA',
+    introTitle: 'What is ASRA?',
   },
   links: {
     join: 'https://ess-esw.org/',
@@ -226,7 +227,7 @@ export const siteContent = {
     title: 'Woos Spirit Medicine',
     description:
       'Healing methodologies connecting the physical body and ethereal consciousness. This season focuses on practical intervention, structured recovery pathways, and ongoing restoration of balance for mind and soul.',
-    note: 'Episode list and links mirror the official YouTube playlist “Spirit Medicine” (same order as FILE 2-1 → 2-5 curriculum groups on /spirit-medicine).',
+    note: 'Episode list follows the official YouTube playlist; FILE groups on /spirit-medicine are ordered 2-1, 2-2, 2-4, 2-3, 2-5. Use “Full curriculum outline” for the ess-esw.org-style directory.',
     bannerImages: [
       'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2000&q=80',
       'https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=2000&q=80',

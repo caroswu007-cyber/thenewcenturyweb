@@ -69,17 +69,21 @@ export const messagesEs: Record<string, string> = {
     'Este documental presenta evidencia de la existencia de la Matriz Universal de Meta-Conciencia: controla la conciencia libre humana, la evolución de la vida en la Tierra y el destino último de la civilización.',
   'home.truth.s3.cta': 'Explorar temporada III',
 
-  'home.achievements.title': 'Nuestros logros',
-  'home.achievements.subtitle': 'Informe de campo estilo clínico · Cohorte en vivo',
-  'home.achievements.card1Title': 'Cohorte en vivo en TikTok (≈ un año)',
+  'home.achievements.title': 'Resumen del programa 2025',
+  'home.achievements.subtitle': 'TikTok Live · Archivo en YouTube · ASra',
+  'home.achievements.kickerDoc': 'Documentación de campo',
+  'home.achievements.kickerMetrics': 'Indicadores derivados de sesiones',
+  'home.achievements.lead':
+    'Sesiones anónimas de TikTok Live coordinadas con equipos de Maestros Espirituales (China y EE. UU.) aportaron estadísticas descriptivas y observaciones cualitativas sobre espíritus adheridos estadounidenses y presentaciones de salud mental refractarias al tratamiento. La documentación y las repeticiones se mantienen por transparencia; el trabajo no se presenta como ensayo clínico aleatorizado.',
+  'home.achievements.card1Title': 'Alcance (un año)',
   'home.achievements.card1Body':
-    'Presentaciones anónimas en transmisiones en vivo. Más de 240 personas con cuadros relacionados con la salud mental recibieron diálogo estructurado e intervención asistida desde el reino espiritual. Más del 80 % informó mejora rápida y sustancial del ánimo y el funcionamiento tras la primera sesión de 30 minutos; un subgrupo describe alivio duradero tras un solo contacto intensivo.',
-  'home.achievements.card2Title': 'Alcance e historias destacadas',
+    'Más de 265 sesiones público-benéficas documentadas; más de 800 horas de emisión; unos 70.000+ contactos de oyentes según la plataforma; más de 1.200 entrevistas ampliadas; más de 240 personas que informaron mejoría en malestar relacionado con la salud mental; unos 400 espíritus adheridos distintos en los registros (algunos anfitriones con múltiples presencias). Repeticiones estructuradas archivadas en YouTube.',
+  'home.achievements.card2Title': 'Documentación extendida',
   'home.achievements.card2Body':
-    'Los cuadros documentados abarcan depresión, espectro de ansiedad, TEPT, esquizofrenia, trastorno esquizoafectivo, trastorno bipolar, TID, fobias, TDAH, TOC y casos somáticos y de perturbación del campo — con resúmenes anónimos y notas metodológicas en la página del informe.',
+    'La página dedicada informa síntesis de entrevistas basales con espíritus, narrativas ilustrativas de apego, extractos cronológicos de sesiones, lista no exhaustiva de condiciones, fuentes de la cohorte y flujo de sesión, dos modalidades técnicas principales, desenlaces descritos por participantes, observaciones estructuradas en sesión y cuatro resúmenes de caso anonimizados.',
   'home.achievements.ctaIntro':
-    'Abrir el informe estructurado: métricas, taxonomía, casos y modelo de colaboración.',
-  'home.achievements.cta': '✦   Informe completo: Nuestros logros   ✦',
+    'Continúe al informe completo para tablas de métricas, hallazgos cualitativos, notas metodológicas y narrativas de casos.',
+  'home.achievements.cta': 'Ver documentación completa',
 
   'achievementsPage.hero.badge': 'Documentación de campo · Práctica ASra',
   'achievementsPage.hero.title': 'Nuestros logros en apoyo a la salud mental',
@@ -151,17 +155,19 @@ export const messagesEs: Record<string, string> = {
   'achievementsPage.phenomenology.body':
     'Algunos participantes describieron presencia luminosa o angélica y sensación de llegada protectora. Otros informaron el encuentro con la designación divina «Elohim» y orientación directiva, asociada con un alza duradera en sentido, agencia y postura vital.',
 
-  'achievementsPage.closing.title': 'Esto es solo el comienzo',
+  'achievementsPage.closing.title': 'Documentación en curso',
   'achievementsPage.closing.body':
-    'Las cifras e historias anteriores son la punta visible de un iceberg mucho mayor — un capítulo inicial de la Asociación del Embajador del Reino Espiritual (ASra).',
+    'El material anterior es un extracto estructurado de un archivo de campo más amplio mantenido por la Asociación del Embajador del Reino Espiritual (ASra).',
   'achievementsPage.closing.body2':
-    'Tu participación puede abrir la misma clase de trayectoria transformadora: cambio subjetivo medible, apoyo estructurado del reino espiritual y un viaje cuya escala crece con la comunidad.',
+    'La membresía y los canales públicos ofrecen vías de consulta, colaboración y acceso continuado a archivos de sesión conforme se publiquen.',
 
   'achievementsPage.disclaimer':
     'Esta página describe resultados experienciales y documentados en sesión de una práctica espiritual-terapéutica específica. No es consejo médico, no es un ensayo controlado aleatorizado y no sustituye el diagnóstico o la atención de profesionales titulados. La terminología sigue etiquetas clínicas comunes solo como orientación.',
 
+  'achievementsPage.replayPlaylist': 'Lista de reproducción en YouTube',
+
   'achievementsPage.backHome': '← Volver al inicio',
-  'achievementsPage.ctaJoin': '✦   Solicitar / Unirse   ✦',
+  'achievementsPage.ctaJoin': 'Solicitar / Unirse',
 
   'home.join.title': 'Únete y participa',
   'home.join.subtitle': 'Tu viaje etéreo comienza',
@@ -200,6 +206,21 @@ export const messagesEs: Record<string, string> = {
   'spirit.endSeries': 'Fin de la serie II',
   'spirit.watchYoutube': 'Ver en YouTube',
   'spirit.openPlaylist': 'Abrir lista de reproducción completa en YouTube',
+  'spirit.fullOutlineTitle': 'Índice completo del currículo',
+  'spirit.fullOutlineIntro':
+    'Índice jerárquico alineado con la página oficial Spirit Medicine — toca un título para ir a los episodios abajo.',
+
+  'founderStory.expandPhaseA': '✦  Mostrar cronología y detalle completo Fase A  ▼',
+  'founderStory.collapsePhaseA': '✦  Ocultar detalle Fase A  ▲',
+  'founderStory.expandPhaseB': '✦  Mostrar cronología y detalle completo Fase B  ▼',
+  'founderStory.collapsePhaseB': '✦  Ocultar detalle Fase B  ▲',
+  'founderStory.storylineClipLead':
+    '**Etapa {{stage}}** en la línea narrativa original: imagen de apoyo y la misma sesión de YouTube (incrustada abajo). Contexto en',
+  'founderStory.storylineClipPageLink': 'Storyline of Woos',
+  'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — grabación etapa {{stage}}',
+
+  'founderStory.phaseAUmbrellaCaption':
+    'Ventana general del trabajo de campo familiar (Fase A). Sub-etapas A1–A5 abajo: primero la fecha, luego el relato.',
 
   'matrix.seriesBadge': 'Meta documental · Serie III',
   'matrix.title': 'Matriz universal de meta-conciencia',
@@ -237,6 +258,9 @@ export const messagesEs: Record<string, string> = {
   'about.founders.label': 'Embajadores jefes y coordinadores',
   'about.founders.woos': 'Los Woos',
   'about.founders.fatherSon': 'Padre e hijo',
+  'about.founders.storyCta': '✦  Leer historia fundacional (2026)  ✦',
+
+  'nav.founderStory': 'Historia fundacional',
 
   'about.missions.title': 'Misión y obligaciones de los miembros',
   'about.missions.label': 'Los dos deberes sagrados de los miembros de ASra',

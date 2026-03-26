@@ -2,7 +2,7 @@
  * Spirit Medicine — Season II episode list synced to official YouTube playlist.
  * @see https://www.youtube.com/playlist?list=PL-pt7dbiRizs3yIAao06SPk2NrDTBc9q_
  *
- * Titles and video IDs sourced from playlist metadata (Invidious API). Order is curriculum order (by file code), not playlist upload order.
+ * Titles and video IDs sourced from playlist metadata (Invidious API). On-site order: FILE 2-1, 2-2, 2-3, 2-4, 2-5 (2-3 before 2-4).
  */
 
 export const SPIRIT_MEDICINE_PLAYLIST_ID = 'PL-pt7dbiRizs3yIAao06SPk2NrDTBc9q_';

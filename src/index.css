@@ -92,8 +92,582 @@
     filter: drop-shadow(0 0 28px rgba(232, 165, 75, 0.35));
   }
 
+  /* Achievements — rich section hierarchy; panels are editorial lists inside each band */
+  .achv-hero-title {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    letter-spacing: 0.02em;
+    line-height: 1.12;
+    text-align: center;
+    background: linear-gradient(135deg, #fffaf4 0%, #f0c078 38%, #ffd89c 68%, #ffe8cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 24px rgba(201, 168, 76, 0.2));
+  }
+
+  .achv-section-title {
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    font-size: clamp(1.35rem, 2.85vw, 2.05rem);
+    letter-spacing: 0.05em;
+    line-height: 1.22;
+    text-align: left;
+    color: rgba(248, 250, 252, 0.98);
+  }
+
+  .achv-accent-bar {
+    height: 2px;
+    width: 3.5rem;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 1.1rem;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.45), rgba(251, 191, 36, 0.75), transparent);
+    opacity: 0.9;
+    box-shadow: 0 0 14px rgba(251, 191, 36, 0.12);
+  }
+
+  /* Achievements body copy — enumerate & narrate */
+  .achv-prose-col {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .achv-ol-statement {
+    list-style: decimal;
+    list-style-position: outside;
+    padding-left: 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .achv-ol-statement > li::marker {
+    color: rgba(251, 191, 36, 0.65);
+    font-weight: 600;
+  }
+
   /* UI chrome that should stay neutral despite Lora body */
   .font-ui {
     font-family: "Inter", system-ui, sans-serif;
+  }
+
+  /* Achievements long-form page — Newsreader body for readable long-form; UI chrome stays Inter */
+  .report-document {
+    font-family: "Newsreader", "Georgia", serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.125rem;
+    line-height: 1.72;
+  }
+
+  @media (min-width: 1024px) {
+    .report-document {
+      font-size: 1.1875rem;
+      line-height: 1.74;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .report-document {
+      font-size: 1.265rem;
+      line-height: 1.76;
+    }
+  }
+
+  .report-document .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.97rem;
+    line-height: 1.58;
+  }
+
+  @media (min-width: 1024px) {
+    .report-document .report-table {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .report-document .report-table th,
+    .report-document .report-table td {
+      padding: 0.8rem 0.95rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .report-document .report-table {
+      font-size: 1.09rem;
+      line-height: 1.62;
+    }
+    .report-document .report-table th,
+    .report-document .report-table td {
+      padding: 0.9rem 1.05rem;
+    }
+  }
+
+  .report-document .report-table th,
+  .report-document .report-table td {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 0.65rem 0.75rem;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .report-document .report-table th {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(248, 250, 252, 0.95);
+  }
+
+  .report-document .report-table td {
+    font-family: "Newsreader", "Georgia", serif;
+    color: rgba(226, 232, 240, 0.92);
+  }
+
+  .report-document .report-table tbody tr:nth-child(even) td {
+    background: rgba(0, 0, 0, 0.12);
+  }
+
+  .report-document .report-table thead th {
+    background: linear-gradient(180deg, rgba(251, 191, 36, 0.14), rgba(251, 191, 36, 0.05));
+    border-color: rgba(251, 191, 36, 0.22);
+    text-transform: uppercase;
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    color: rgba(254, 243, 199, 0.95);
+  }
+
+  @media (min-width: 1024px) {
+    .report-document .report-table thead th {
+      font-size: 0.8rem;
+      letter-spacing: 0.07em;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .report-document .report-table thead th {
+      font-size: 0.84rem;
+    }
+  }
+
+  .report-document .report-table tbody tr:hover td {
+    background: rgba(251, 191, 36, 0.05);
+  }
+
+  .report-document .report-val {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    color: rgba(253, 224, 138, 0.95);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Report page — editorial slabs */
+  .report-hero-frame {
+    position: relative;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+      linear-gradient(165deg, rgba(18, 16, 28, 0.97) 0%, rgba(12, 14, 22, 0.98) 45%, rgba(10, 12, 18, 1) 100%),
+      radial-gradient(ellipse 120% 80% at 50% -30%, rgba(201, 168, 76, 0.16), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 100% 60%, rgba(56, 189, 248, 0.06), transparent 45%);
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.35),
+      0 28px 70px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+  }
+
+  .report-hero-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 80px rgba(201, 168, 76, 0.04);
+  }
+
+  .report-hero-rule {
+    height: 3px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.45), rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 0.45), transparent);
+    opacity: 0.9;
+    margin-bottom: 1.25rem;
+  }
+
+  .report-hero-title {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-size: clamp(1.75rem, 4.8vw, 2.65rem);
+    line-height: 1.12;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, #fffaf4 0%, #f0c078 36%, #ffd89c 64%, #ffeacc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 18px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 20px rgba(201, 168, 76, 0.18));
+  }
+
+  @media (min-width: 1024px) {
+    .report-hero-title {
+      font-size: clamp(2.1rem, 2.4vw + 1.25rem, 3.5rem);
+      line-height: 1.1;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .report-hero-title {
+      font-size: clamp(2.35rem, 2.1vw + 1.35rem, 3.85rem);
+    }
+  }
+
+  .report-abstract-panel {
+    border-radius: 0.75rem;
+    border: 1px solid rgba(251, 191, 36, 0.22);
+    background: rgba(251, 191, 36, 0.06);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Distribution / source note — grey field + amber rail */
+  .report-dist-panel {
+    border-radius: 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid rgba(251, 191, 36, 0.5);
+    background: rgba(15, 23, 42, 0.42);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  /* Gold-rim wrapper for headline metric tables */
+  .report-metric-shell {
+    border-radius: 0.85rem;
+    border: 1px solid rgba(251, 191, 36, 0.28);
+    background: linear-gradient(180deg, rgba(20, 22, 30, 0.95), rgba(10, 12, 18, 0.98));
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.35),
+      0 20px 50px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(251, 191, 36, 0.06);
+    overflow: hidden;
+  }
+
+  .report-callout-key {
+    border-radius: 0.65rem;
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(15, 23, 42, 0.5));
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .report-toc-panel {
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(180deg, rgba(20, 22, 32, 0.92), rgba(12, 14, 22, 0.96));
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  }
+
+  .report-section-slab {
+    position: relative;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background:
+      linear-gradient(165deg, rgba(22, 24, 34, 0.94) 0%, rgba(14, 16, 24, 0.97) 100%);
+    box-shadow:
+      0 22px 55px rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+
+  .report-section-slab::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(ellipse 90% 40% at 0% 0%, rgba(251, 191, 36, 0.09), transparent 55%);
+    opacity: 0.9;
+  }
+
+  .report-section-slab--accent {
+    border-color: rgba(251, 191, 36, 0.22);
+    box-shadow:
+      0 22px 55px rgba(0, 0, 0, 0.42),
+      0 0 0 1px rgba(251, 191, 36, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .report-section-slab--accent::before {
+    background: radial-gradient(ellipse 100% 50% at 50% -20%, rgba(251, 191, 36, 0.14), transparent 50%);
+  }
+
+  /* Between hero title (largest) and body copy: clearly larger than paragraph text */
+  .report-subhead {
+    font-family: "Cinzel", serif;
+    font-size: clamp(0.98rem, 0.35vw + 0.88rem, 1.14rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(253, 224, 138, 0.88);
+  }
+
+  @media (min-width: 1024px) {
+    .report-subhead {
+      font-size: clamp(1.05rem, 0.45vw + 0.9rem, 1.2rem);
+      letter-spacing: 0.11em;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .report-subhead {
+      font-size: clamp(1.08rem, 0.4vw + 0.95rem, 1.28rem);
+    }
+  }
+
+  /* In-section subtitles (below .report-subhead band titles) */
+  .report-crosshead {
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.08rem, 0.55vw + 0.95rem, 1.35rem);
+    font-weight: 600;
+    letter-spacing: 0.055em;
+    line-height: 1.3;
+    color: rgba(248, 250, 252, 0.96);
+  }
+
+  @media (min-width: 1024px) {
+    .report-crosshead {
+      font-size: clamp(1.12rem, 0.5vw + 1rem, 1.42rem);
+    }
+  }
+
+  /* Closing links panel: single slab + animated grid (no nested chrome) */
+  .report-closing-panel {
+    position: relative;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(251, 191, 36, 0.32);
+    background: linear-gradient(155deg, rgba(26, 28, 40, 0.97) 0%, rgba(8, 10, 16, 0.99) 100%);
+    box-shadow:
+      0 28px 64px rgba(0, 0, 0, 0.48),
+      0 0 0 1px rgba(251, 191, 36, 0.07),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+  }
+
+  .report-closing-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(ellipse 100% 55% at 50% -30%, rgba(251, 191, 36, 0.16), transparent 52%);
+  }
+
+  .report-closing-panel__sheen {
+    position: absolute;
+    inset: -40% -20%;
+    pointer-events: none;
+    z-index: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(251, 191, 36, 0.07) 48%,
+      rgba(56, 189, 248, 0.06) 52%,
+      transparent 60%
+    );
+    animation: report-closing-sheen 14s ease-in-out infinite;
+  }
+
+  @keyframes report-closing-sheen {
+    0%,
+    100% {
+      transform: translateX(-18%) rotate(8deg);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translateX(18%) rotate(8deg);
+      opacity: 0.95;
+    }
+  }
+
+  .report-closing-panel__grid {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.88;
+    background-image:
+      linear-gradient(to right, rgba(251, 191, 36, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(251, 191, 36, 0.1) 1px, transparent 1px),
+      linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+    background-size: 52px 52px, 52px 52px, 13px 13px, 13px 13px;
+    background-position: 0 0, 0 0, 0 0, 6px 6px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, black 20%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, black 20%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
+    animation: report-closing-grid-drift 26s linear infinite;
+  }
+
+  @keyframes report-closing-grid-drift {
+    0% {
+      background-position: 0 0, 0 0, 0 0, 6px 6px;
+    }
+    100% {
+      background-position: 52px 52px, 52px 52px, 13px 13px, 19px 19px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .report-closing-panel__grid,
+    .report-closing-panel__sheen {
+      animation: none;
+    }
+
+    .report-closing-panel__sheen {
+      opacity: 0.35;
+    }
+  }
+
+  .report-closing-panel__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .report-closing-title {
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.45rem, 2.5vw + 0.85rem, 2.45rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    color: rgba(254, 252, 236, 0.98);
+    text-shadow:
+      0 0 50px rgba(251, 191, 36, 0.2),
+      0 2px 20px rgba(0, 0, 0, 0.55);
+    max-width: 42rem;
+  }
+
+  .report-closing-title::after {
+    content: "";
+    display: block;
+    width: min(14rem, 72%);
+    height: 3px;
+    margin-top: 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.95), rgba(56, 189, 248, 0.5), transparent);
+    box-shadow: 0 0 18px rgba(251, 191, 36, 0.25);
+  }
+
+  @media (min-width: 1024px) {
+    .report-closing-title {
+      font-size: clamp(1.55rem, 1.65vw + 1.15rem, 2.65rem);
+      letter-spacing: 0.055em;
+    }
+  }
+
+  .report-closing-link-card {
+    border-radius: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(12, 18, 32, 0.72));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .report-closing-link-card:hover {
+    border-color: rgba(251, 191, 36, 0.38);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 0 1px rgba(251, 191, 36, 0.1),
+      0 14px 32px rgba(0, 0, 0, 0.32);
+  }
+
+  /* Wider closing slab — dual column, aurora ring */
+  .report-closing-panel--heroic {
+    border-width: 1px;
+    box-shadow:
+      0 36px 90px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(251, 191, 36, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  }
+
+  .report-closing-panel__aurora {
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(
+      ellipse 120% 80% at 50% 0%,
+      rgba(56, 189, 248, 0.12),
+      transparent 42%
+    );
+    opacity: 0.85;
+  }
+
+  .report-closing-hero-grid {
+    display: grid;
+    gap: 2.75rem;
+    align-items: start;
+  }
+
+  @media (min-width: 1280px) {
+    .report-closing-hero-grid {
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+      gap: 3rem 3.5rem;
+    }
+  }
+
+  .report-closing-eyebrow {
+    font-family: "Cinzel", serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: rgba(251, 191, 36, 0.52);
+    margin-bottom: 0.85rem;
+  }
+
+  @media (min-width: 768px) {
+    .report-closing-eyebrow {
+      font-size: 0.72rem;
+    }
+  }
+
+  .report-closing-title--heroic {
+    max-width: min(48rem, 100%);
+    font-size: clamp(1.65rem, 2.35vw + 1rem, 2.85rem);
+    letter-spacing: 0.045em;
+    line-height: 1.18;
+  }
+
+  .report-closing-title--heroic::after {
+    width: min(22rem, 88%);
+    margin-top: 1.35rem;
+    height: 4px;
+    box-shadow: 0 0 28px rgba(251, 191, 36, 0.35);
+  }
+
+  .report-closing-link-card--heroic {
+    border-color: rgba(251, 191, 36, 0.14);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.07), rgba(8, 12, 22, 0.82));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 8px 28px rgba(0, 0, 0, 0.28);
+  }
+
+  .report-divider-ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 2.5rem 0;
+    color: rgba(251, 191, 36, 0.35);
+    font-size: 0.5rem;
+  }
+
+  .report-divider-ornament::before,
+  .report-divider-ornament::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.35), transparent);
   }
 }

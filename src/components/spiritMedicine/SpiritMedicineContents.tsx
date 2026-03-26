@@ -146,6 +146,7 @@ const SpiritMedicineContents = () => {
         {spiritMedicineFileGroups.map((file, index) => (
           <motion.div
             key={file.fileNumber}
+            id={`sm-file-${file.fileNumber.replace(/\s+/g, '-')}`}
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}

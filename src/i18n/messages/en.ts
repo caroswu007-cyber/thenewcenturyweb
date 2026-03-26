@@ -3,7 +3,7 @@ export const messagesEn: Record<string, string> = {
   'lang.label': 'Language',
 
   'nav.home': 'Home',
-  'nav.about': 'About ASra',
+  'nav.about': 'About ASRA',
   'nav.truth': 'The Truth',
   'nav.record': 'Record of Soul',
   'nav.spirit': 'Spirit Medicine',
@@ -22,15 +22,15 @@ export const messagesEn: Record<string, string> = {
   'home.divider.discoveries': 'Discoveries',
   'home.divider.join': 'Join the Journey',
 
-  'home.intro.badge': 'Spirit Ambassador Association',
-  'home.intro.title': 'What is ASra?',
-  'home.intro.subtitle': 'Umma New Century Organization',
-  'home.intro.overviewBefore': 'The Umma New Century Organization is a ',
+  'home.intro.badge': 'ASRA',
+  'home.intro.title': 'What is ASRA?',
+  'home.intro.subtitle': 'New Era Organization of UMMA',
+  'home.intro.overviewBefore': 'The New Era Organization of UMMA is a ',
   'home.intro.overviewHighlight': 'dual-domain organization',
   'home.intro.overviewAfter':
     ' spanning both the Spirit Realm and the physical world — uniting human ambassadors on Earth with Master Spirit administrators in the ethereal realm.',
   'home.intro.physicalWorld': 'Physical World',
-  'home.intro.asraName': 'ASra',
+  'home.intro.asraName': 'ASRA',
   'home.intro.asraFull': "Association of Spirit Realm's Ambassador",
   'home.intro.asraBody':
     'Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits and improves human health.',
@@ -38,13 +38,13 @@ export const messagesEn: Record<string, string> = {
   'home.intro.smscName': 'SMSC',
   'home.intro.smscFull': 'Society of Master Spirit Controllers',
   'home.intro.smscBody':
-    'Tens of thousands of Master Spirits — administrators in the Spirit Realm who govern ordinary spirits and human beings. Each Master Spirit is assigned 1:1 or 2:1 to an ASra human member.',
+    'Tens of thousands of Master Spirits — administrators in the Spirit Realm who govern ordinary spirits and human beings. Each Master Spirit is assigned 1:1 or 2:1 to an ASRA human member.',
   'home.intro.learnMore': '✦   Full Organization Introduction   ✦',
 
   'home.truth.title': 'The Truth of Spirit',
   'home.truth.subtitle': 'And Its Governor',
   'home.truth.seriesLabel': 'Documentary Series',
-  'home.truth.abstractHeading': 'Abstract: The Truth We Found',
+  'home.truth.abstractHeading': 'The Truth We Found',
   'home.truth.abstractBody':
     'Through systematic exploration and firsthand experiential evidence, we have verified scientific methodologies to safely navigate and govern the unseen realm. The Woos Ethereal Life & Realm Documentary Series reveals it all.',
   'home.truth.videoTitle': 'Video Document Series',
@@ -64,21 +64,26 @@ export const messagesEn: Record<string, string> = {
   'home.truth.s2.cta': 'Explore Season II',
 
   'home.truth.s3.season': 'SEASON 3',
-  'home.truth.s3.title': 'Universal Matrix of Meta Awareness',
+  'home.truth.s3.title': 'Universal Matrix of Meta Awareness--The creator',
   'home.truth.s3.description':
     'This documentary presents evidence for the existence of the Universal Matrix of Meta Awareness. It controls human free consciousness, the evolution of life on Earth, and the ultimate destiny of human civilization.',
   'home.truth.s3.cta': 'Explore Season III',
 
-  'home.achievements.title': 'Our Achievements',
-  'home.achievements.subtitle': 'Clinical-style field report · Live cohort',
-  'home.achievements.card1Title': 'TikTok live cohort (≈ one year)',
+  'home.achievements.title': 'Achievements',
+  'home.achievements.subtitle': 'TikTok Live · YouTube archive · ASRA',
+  'home.achievements.kickerDoc': 'Field documentation',
+  'home.achievements.kickerMetrics': 'Session-derived indicators',
+  'home.achievements.lead':
+    'Coordinated with Master Spirit teams, the founder yielded descriptive statistics and qualitative observations on American attached spirits and rescued large-scale treatment-resistant mental-health cases.',
+  'home.achievements.card1Title': 'Data overview',
   'home.achievements.card1Body':
-    'Anonymous, walk-in presentations in live broadcasts. More than 240 individuals across major mental-health-related presentations received structured dialogue and spirit-realm–assisted intervention. Over 80% reported rapid, substantial improvement in mood and overall functioning after the first 30-minute session; a subset describe durable relief after a single intensive contact.',
-  'home.achievements.card2Title': 'Scope & highlighted narratives',
+    '255+ documented public-benefit sessions; 800+ broadcast hours; an estimated 70,000+ platform-indicated listener contacts; 1,200+ extended interviews; 240+ individuals reporting improvement in mental-health–related distress; approximately 400 distinct attached spirits noted in records (some hosts carried multiples). Structured replays are archived on YouTube.',
+  'home.achievements.card2Title': 'Content',
   'home.achievements.card2Body':
-    'Documented presentations span depression, anxiety spectrum, PTSD, schizophrenia, schizoaffective disorder, bipolar disorder, DID, phobias, ADHD, OCD, and related somatic and field-disturbance cases — with anonymized case summaries and methodology notes on the full dossier page.',
-  'home.achievements.ctaIntro': 'Open the structured report: metrics, taxonomy, case capsules, and collaboration model.',
-  'home.achievements.cta': '✦   Full report: Our Achievements   ✦',
+    'Here displays: lived state of American spirits (ghosts), especially notable spirits (ghosts), Master Spirit appearances in the livestream, routine mental-disorder spirit (ghost) management report, special illustrative spirit (ghost) regulation cases',
+  'home.achievements.ctaIntro':
+    'Continue to the full report for tabulated metrics, qualitative findings, methodology notes, and case narratives.',
+  'home.achievements.cta': 'View full documentation',
 
   'achievementsPage.hero.badge': 'Field documentation · ASra practice',
   'achievementsPage.hero.title': 'Our Achievements in Mental Health Support',
@@ -150,22 +155,24 @@ export const messagesEn: Record<string, string> = {
   'achievementsPage.phenomenology.body':
     'Some participants described luminous or angelic presence and a felt sense of protective arrival. Others reported encounter with the divine designation “Elohim” and received directive guidance, which they associated with a durable uplift in meaning, agency, and overall life stance.',
 
-  'achievementsPage.closing.title': 'This is only the beginning',
+  'achievementsPage.closing.title': 'Ongoing documentation',
   'achievementsPage.closing.body':
-    'The figures and stories above are the visible tip of a much larger iceberg — an opening chapter for the Association of Spirit Realm’s Ambassador (ASra).',
+    'The material above is a structured excerpt from a larger field record maintained by the Spirit Ambassador Association (ASra).',
   'achievementsPage.closing.body2':
-    'Your participation can open the same class of transformative trajectory: measurable subjective shift, structured spirit-realm support, and a journey whose scale grows with the community.',
+    'Membership and public channels offer routes for inquiry, collaboration, and continued access to session archives as they are published.',
 
   'achievementsPage.disclaimer':
     'This page describes experiential and session-documented outcomes from a specific spiritual–therapeutic practice. It is not medical advice, not a randomized controlled trial, and does not replace diagnosis or care by licensed professionals. Terminology aligns with common clinical labels for reader orientation only.',
 
+  'achievementsPage.replayPlaylist': 'YouTube replay playlist',
+
   'achievementsPage.backHome': '← Back to Home',
-  'achievementsPage.ctaJoin': '✦   Apply / Join   ✦',
+  'achievementsPage.ctaJoin': 'Apply / Join',
 
   'home.join.title': 'Join & Participate',
   'home.join.subtitle': 'Your Ethereal Journey Begins',
   'home.join.body':
-    'Become a part of the Spirit Ambassador Association. Whether you seek guidance, wish to share your journey, or want to join our team of administrators — your ethereal life begins here.',
+    'Become a part of the Spirit Ambassador Association, you will get rescue on your mental problems permanently, gaining power to rescue others, and find your career with this ability',
   'home.join.cta': '✦   Visit: Join Us   ✦',
 
   'common.files': 'Files',
@@ -199,6 +206,20 @@ export const messagesEn: Record<string, string> = {
   'spirit.endSeries': 'End of Series II',
   'spirit.watchYoutube': 'Watch on YouTube',
   'spirit.openPlaylist': 'Open full YouTube playlist',
+  'spirit.fullOutlineTitle': 'Full curriculum outline',
+  'spirit.fullOutlineIntro':
+    'Hierarchical index aligned with the official Spirit Medicine page — tap a heading to jump to episodes below.',
+
+  'founderStory.expandPhaseA': '✦  Show Phase A chronology & full detail  ▼',
+  'founderStory.collapsePhaseA': '✦  Hide Phase A detail  ▲',
+  'founderStory.expandPhaseB': '✦  Show Phase B chronology & full detail  ▼',
+  'founderStory.collapsePhaseB': '✦  Hide Phase B detail  ▲',
+  'founderStory.phaseAUmbrellaCaption':
+    'Overall window for family field work (Phase A). Sub-stages A1–A5 below: date line first, then narrative.',
+  'founderStory.storylineClipLead':
+    '**Stage {{stage}}** on the original storyline: companion image plus the same YouTube session (embedded below). For context see',
+  'founderStory.storylineClipPageLink': 'Storyline of Woos',
+  'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — Stage {{stage}} recording',
 
   'matrix.seriesBadge': 'Meta Documentary · Series III',
   'matrix.title': 'Universal Matrix of Meta Awareness',
@@ -236,6 +257,9 @@ export const messagesEn: Record<string, string> = {
   'about.founders.label': 'Chief Ambassadors & Coordinators',
   'about.founders.woos': 'The Woos',
   'about.founders.fatherSon': 'Father & Son',
+  'about.founders.storyCta': '✦  Read founder story (2026 outline)  ✦',
+
+  'nav.founderStory': 'Founder story',
 
   'about.missions.title': 'Member Mission & Obligations',
   'about.missions.label': "ASra Members' Two Sacred Duties",

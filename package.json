@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "export:i18n-csv": "node scripts/export-i18n-csv.mjs",
+    "export:site-copy": "tsx scripts/export-all-site-copy.ts",
+    "export:page-xlsx": "tsx scripts/export-page-copy-workbooks.ts"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
@@ -30,8 +33,10 @@
     "globals": "^17.4.0",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
+    "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^8.0.0"
+    "vite": "^8.0.0",
+    "xlsx": "^0.18.5"
   }
 }
