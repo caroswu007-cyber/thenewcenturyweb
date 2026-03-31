@@ -1,0 +1,92 @@
+# Content Sync System
+
+## Architecture (single source of truth)
+
+```
+docs/page-copy/*.xlsx          ← Human editors work here (EN + ZH columns)
+        │
+        │  npm run copy:import (safe: only reads xlsx, only writes generated.ts)
+        ▼
+src/content/pageCopyDocs.generated.ts   ← Auto-generated, never hand-edit
+        │
+        ▼
+pageCopyRuntime.ts → getPageCopyText(locale, key, fallback)
+        │               Lookup order: xlsx(generated) → en fallback → TS fallback
+        ▼
+  React components render localized content
+```
+
+## Two Commands
+
+### `npm run copy:import` — SAFE, run anytime
+- Reads all `docs/page-copy/*.xlsx` files (sorted by filename; first file wins for duplicate `block_key`)
+- Writes `src/content/pageCopyDocs.generated.ts`
+- Never touches xlsx files
+
+### `npm run copy:scaffold` — SAFE, writes to staging only
+- Reads code structure (TS content files + i18n messages)
+- Writes template xlsx to `docs/page-copy-staging/` (never to `docs/page-copy/`)
+- Human must manually merge new rows from staging into the real xlsx
+- Use after adding new page sections or block_keys in code
+
+## Workflow for Humans
+
+### Editing existing content
+1. Open the relevant xlsx in `docs/page-copy/` (e.g. `01-首页.xlsx`)
+2. Edit the `english_源文` and/or `中文` columns
+3. Save the xlsx
+4. Run `npm run copy:import`
+5. Done — content appears on the site
+
+### Adding new page sections
+1. Add the new structure in the TS content file (e.g. `siteContent.ts`, `founderStory2026Content.ts`)
+2. Add `getPageCopyText()` calls in `pageCopyRuntime.ts` for the new keys
+3. Run `npm run copy:scaffold` to get updated templates in `docs/page-copy-staging/`
+4. Copy new rows from staging xlsx into the corresponding real xlsx in `docs/page-copy/`
+5. Fill in translations in the real xlsx
+6. Run `npm run copy:import`
+7. Delete the staging files
+
+## Rules for AI Agents
+
+### NEVER do these
+- **NEVER** directly write to or overwrite files in `docs/page-copy/`
+- **NEVER** hand-edit `src/content/pageCopyDocs.generated.ts`
+- **NEVER** put Chinese page body text inline in TypeScript code (no ZH override objects, no inline translations)
+- **NEVER** create parallel content resolution paths (everything goes through `getPageCopyText`)
+- **NEVER** run `copy:scaffold` without the user explicitly requesting it
+
+### SAFE to do
+- Run `npm run copy:import` (reads xlsx, writes generated.ts — always safe)
+- Edit TS structural/fallback content files (`founderStory2026Content.ts`, `siteContent.ts`, etc.) for English defaults
+- Edit `en.ts` / `zh.ts` for **UI chrome only** (button labels, nav items, expand/collapse text — NOT page body content)
+- Edit `pageCopyRuntime.ts` to add `getPageCopyText()` mappings for new block_keys
+
+### If user asks to update page content
+1. Ask: is the change in English, Chinese, or both?
+2. The content lives in `docs/page-copy/*.xlsx` — guide the user to edit the xlsx
+3. After xlsx edit: run `npm run copy:import`
+4. If the user provides new content to add: edit the TS structure file for English fallback, then tell them to update the xlsx for ZH
+
+## File Map
+
+| File | Role | Editable? |
+|------|------|-----------|
+| `docs/page-copy/*.xlsx` | Source of truth for EN+ZH page copy | YES (by human) |
+| `src/content/pageCopyDocs.generated.ts` | Generated from xlsx | NO (auto-generated) |
+| `src/content/pageCopyRuntime.ts` | Unified content resolution | YES (for adding new key mappings) |
+| `src/content/founderStory2026Content.ts` | Founder story EN structure + fallback | YES |
+| `src/content/siteContent.ts` | Home/record/about EN structure + fallback | YES |
+| `src/i18n/messages/en.ts` | UI chrome strings (EN) | YES (UI only) |
+| `src/i18n/messages/zh.ts` | UI chrome strings (ZH) | YES (UI only) |
+| `scripts/generate-page-copy-runtime.ts` | copy:import script | YES |
+| `scripts/scaffold-page-copy-workbooks.ts` | copy:scaffold script | YES |
+
+## Content Resolution Order
+
+`getPageCopyText(locale, key, fallback)`:
+1. Look up `key` in `pageCopyDocs[locale]` (from xlsx)
+2. If empty, look up `key` in `pageCopyDocs.en` (English from xlsx)
+3. If still empty, return `fallback` (from TS content file)
+
+There is only ONE resolution path. No special bypasses for any page.

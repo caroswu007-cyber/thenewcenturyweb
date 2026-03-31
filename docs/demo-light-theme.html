@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASRA — Light Theme Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  /* ── TOKENS ─────────────────────────────────────────────── */
+  :root {
+    --sand:      #f0ebe3;
+    --sand-mid:  #e8e0d5;
+    --sand-deep: #d9cfc2;
+    --linen:     #faf7f2;
+    --stone:     #b5a898;
+    --ink:       #2c2620;
+    --ink-mid:   #4a3f36;
+    --ink-light: #7a6e65;
+    --sage:      #5a6b5a;
+    --sage-light:#8fa08f;
+    --gold:      #9a7c4a;
+    --gold-light:#c4a96e;
+    --white:     #ffffff;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Jost', system-ui, sans-serif;
+
+    --radius: 2px;
+    --max-w: 1100px;
+    --section-pad: 7rem 2rem;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--linen);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────── */
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+  h1 { font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 300; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; }
+  h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); font-weight: 400; }
+  h4 { font-size: 1.1rem; font-weight: 500; }
+
+  p { color: var(--ink-mid); }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .serif-italic {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ── LAYOUT ─────────────────────────────────────────────── */
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  section { padding: var(--section-pad); }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 2.5rem; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    :root { --section-pad: 4rem 1.25rem; }
+    .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  /* ── DIVIDER ─────────────────────────────────────────────── */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--stone);
+    margin: 1.5rem 0;
+  }
+  .divider-center { margin: 1.5rem auto; }
+
+  /* ── BUTTONS ─────────────────────────────────────────────── */
+  .btn {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .btn-outline {
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background: var(--ink);
+    color: var(--linen);
+  }
+  .btn-sage {
+    background: var(--sage);
+    color: var(--white);
+    border: 1px solid var(--sage);
+  }
+  .btn-sage:hover {
+    background: transparent;
+    color: var(--sage);
+  }
+
+  /* ── NAV ─────────────────────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 2.5rem;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(181, 168, 152, 0.2);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── PAGE TABS ───────────────────────────────────────────── */
+  .page-tabs {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(44, 38, 32, 0.88);
+    backdrop-filter: blur(12px);
+    padding: 0.5rem;
+    border-radius: 100px;
+  }
+  .tab-btn {
+    padding: 0.55rem 1.4rem;
+    border-radius: 100px;
+    border: none;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s;
+    background: transparent;
+    color: rgba(250, 247, 242, 0.55);
+  }
+  .tab-btn.active {
+    background: var(--linen);
+    color: var(--ink);
+  }
+
+  /* ── PAGE PANELS ─────────────────────────────────────────── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ══════════════════════════════════════════════════════════
+     HOME PAGE
+  ══════════════════════════════════════════════════════════ */
+
+  /* Hero */
+  .home-hero {
+    min-height: 100svh;
+    background: var(--sand);
+    background-image:
+      radial-gradient(ellipse 70% 60% at 60% 40%, rgba(154,124,74,0.08) 0%, transparent 65%),
+      radial-gradient(ellipse 50% 80% at 20% 80%, rgba(90,107,90,0.06) 0%, transparent 60%);
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .home-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  .hero-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--ink);
+    max-width: 14ch;
+    margin-bottom: 2.5rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  .hero-cta-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.4;
+  }
+  .hero-scroll-hint span {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--ink);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 0.8; transform: scaleY(0.6); }
+  }
+
+  /* What is ASRA */
+  .intro-section {
+    background: var(--white);
+    padding: var(--section-pad);
+  }
+  .intro-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border: 1px solid var(--sand-deep);
+    border-radius: 100px;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 2.5rem;
+  }
+  .intro-lead {
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 36ch;
+    margin-bottom: 3rem;
+  }
+  .domain-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--sand-deep);
+    border: 1px solid var(--sand-deep);
+    margin-top: 4rem;
+  }
+  .domain-card {
+    background: var(--linen);
+    padding: 2.5rem;
+  }
+  .domain-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0.75rem;
+  }
+  .domain-name {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .domain-full {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    margin-bottom: 1.25rem;
+  }
+  .domain-body { font-size: 0.88rem; line-height: 1.75; }
+
+  /* Documentary strip */
+  .doc-section {
+    background: var(--sand);
+    padding: var(--section-pad);
+  }
+  .doc-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .doc-header h2 { margin-bottom: 1rem; }
+  .doc-header p { max-width: 52ch; margin: 0 auto; font-size: 0.92rem; }
+  .season-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--sand-deep);
+    border: 1px solid var(--sand-deep);
+  }
+  .season-card {
+    background: var(--linen);
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .season-num {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .season-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .season-body { font-size: 0.85rem; line-height: 1.75; flex: 1; }
+  .season-cta {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .season-cta::after { content: '→'; }
+
+  /* Achievements strip */
+  .ach-strip {
+    background: var(--white);
+    padding: var(--section-pad);
+  }
+  .ach-strip-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .stat-item {}
+  .stat-value {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+  }
+
+  /* Join */
+  .join-section {
+    background: var(--sand);
+    padding: var(--section-pad);
+    text-align: center;
+  }
+  .join-section h2 { margin-bottom: 1.5rem; }
+  .join-section p { max-width: 48ch; margin: 0 auto 3rem; font-size: 0.95rem; }
+
+  /* ══════════════════════════════════════════════════════════
+     ACHIEVEMENTS PAGE
+  ══════════════════════════════════════════════════════════ */
+
+  .ach-hero {
+    min-height: 60vh;
+    background: var(--sand);
+    background-image: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(154,124,74,0.07) 0%, transparent 70%);
+    display: flex;
+    align-items: flex-end;
+    padding: 9rem 2rem 5rem;
+  }
+  .ach-hero-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; }
+  .ach-hero h1 { max-width: 20ch; margin-bottom: 1.5rem; }
+  .ach-hero p { max-width: 55ch; font-size: 0.92rem; }
+  .ach-pills {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .pill {
+    padding: 0.35rem 1rem;
+    border: 1px solid var(--sand-deep);
+    border-radius: 100px;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    background: rgba(255,255,255,0.6);
+  }
+
+  .metrics-section {
+    background: var(--white);
+    padding: var(--section-pad);
+  }
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--sand-deep);
+    border: 1px solid var(--sand-deep);
+    margin-top: 4rem;
+  }
+  .metric-card {
+    background: var(--linen);
+    padding: 2.5rem 2rem;
+  }
+  .metric-value {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+  .metric-label { font-size: 0.82rem; color: var(--ink-light); line-height: 1.5; }
+  .metric-hint {
+    font-size: 0.72rem;
+    color: var(--stone);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  .findings-section {
+    background: var(--sand);
+    padding: var(--section-pad);
+  }
+  .finding-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--sand-deep);
+  }
+  .finding-row:first-child { border-top: 1px solid var(--sand-deep); }
+  .finding-stat {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .finding-title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .finding-body { font-size: 0.88rem; color: var(--ink-mid); }
+
+  .cases-section {
+    background: var(--white);
+    padding: var(--section-pad);
+  }
+  .case-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--sand-deep);
+    border: 1px solid var(--sand-deep);
+    margin-top: 4rem;
+  }
+  .case-card {
+    background: var(--linen);
+    padding: 2.5rem;
+  }
+  .case-badge {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 1rem;
+  }
+  .case-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+  }
+  .case-body { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.75; }
+  .case-finding {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--sand-deep);
+    font-size: 0.8rem;
+    color: var(--sage);
+    font-style: italic;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     FOUNDER STORY PAGE
+  ══════════════════════════════════════════════════════════ */
+
+  .founder-hero {
+    min-height: 65vh;
+    background: var(--sand);
+    background-image:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(90,107,90,0.07) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 60% at 20% 70%, rgba(154,124,74,0.06) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 9rem 2rem 5rem;
+  }
+  .founder-hero-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; }
+  .founder-names {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+  .founder-hero h1 { max-width: 18ch; margin-bottom: 2rem; }
+
+  .timeline-section {
+    background: var(--white);
+    padding: var(--section-pad);
+  }
+  .timeline-items {
+    margin-top: 4rem;
+    position: relative;
+  }
+  .timeline-items::before {
+    content: '';
+    position: absolute;
+    left: 90px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--sand-deep);
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--sand-mid);
+  }
+  .timeline-item:first-child { padding-top: 0; }
+  .timeline-phase {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--gold);
+    padding-top: 0.2rem;
+    text-align: right;
+    padding-right: 2rem;
+  }
+  .timeline-content {}
+  .timeline-range {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0.5rem;
+  }
+  .timeline-label {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .truths-section {
+    background: var(--sand);
+    padding: var(--section-pad);
+  }
+  .truth-item {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--sand-deep);
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .truth-item:first-child { border-top: 1px solid var(--sand-deep); }
+  .truth-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--sand-deep);
+    line-height: 1;
+    padding-top: 0.2rem;
+  }
+  .truth-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0.75rem;
+  }
+  .truth-text {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .truth-text strong { font-weight: 500; color: var(--ink); }
+
+  .phase-b-section {
+    background: var(--white);
+    padding: var(--section-pad);
+  }
+  .phase-b-header {
+    margin-bottom: 4rem;
+  }
+  .phase-b-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--sand-deep);
+    border: 1px solid var(--sand-deep);
+  }
+  .phase-b-block {
+    background: var(--linen);
+    padding: 2.5rem;
+  }
+  .phase-b-block-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .phase-b-block-text {
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    line-height: 1.8;
+  }
+
+  /* ── SECTION HEADER ─────────────────────────────────────── */
+  .section-header { margin-bottom: 4rem; }
+  .section-header h2 { margin-bottom: 1rem; }
+  .section-header p { max-width: 55ch; font-size: 0.92rem; }
+
+  /* ── QUOTE BLOCK ─────────────────────────────────────────── */
+  .quote-block {
+    background: var(--sand-mid);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .quote-text {
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink);
+    max-width: 36ch;
+    margin: 0 auto 2rem;
+    line-height: 1.5;
+  }
+  .quote-attr {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  /* ── FOOTER ─────────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    color: rgba(250, 247, 242, 0.5);
+    padding: 4rem 2rem;
+  }
+  .footer-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--linen);
+    margin-bottom: 0.75rem;
+  }
+  .footer-copy { font-size: 0.78rem; max-width: 36ch; line-height: 1.6; }
+  .footer-disclaimer { font-size: 0.72rem; max-width: 40ch; line-height: 1.6; }
+
+  /* ── ANIMATIONS ─────────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.8s ease both; }
+  .fade-up-2 { animation: fadeUp 0.8s 0.15s ease both; }
+  .fade-up-3 { animation: fadeUp 0.8s 0.3s ease both; }
+  .fade-up-4 { animation: fadeUp 0.8s 0.45s ease both; }
+
+  @media (max-width: 900px) {
+    .domain-cards { grid-template-columns: 1fr; }
+    .season-cards { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: 1fr 1fr; }
+    .case-cards { grid-template-columns: 1fr; }
+    .phase-b-blocks { grid-template-columns: 1fr; }
+    .ach-strip-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .timeline-items::before { left: 60px; }
+    .timeline-item { grid-template-columns: 60px 1fr; gap: 1.5rem; }
+    .truth-item { grid-template-columns: 50px 1fr; gap: 1.5rem; }
+  }
+  @media (max-width: 600px) {
+    .metrics-grid { grid-template-columns: 1fr; }
+    .timeline-items::before { display: none; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .timeline-phase { text-align: left; padding-right: 0; }
+    .truth-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    nav .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">ASra</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('achievements')">Achievements</a></li>
+    <li><a href="#" onclick="showPage('founder')">Founder Story</a></li>
+    <li><a href="#" onclick="showPage('home')">About ASRA</a></li>
+    <li><a href="#" onclick="showPage('home')">Join</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE TABS (demo switcher) -->
+<div class="page-tabs">
+  <button class="tab-btn active" onclick="showPage('home')">Home</button>
+  <button class="tab-btn" onclick="showPage('achievements')">Achievements</button>
+  <button class="tab-btn" onclick="showPage('founder')">Founder Story</button>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="home-hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow fade-up">New Era of UMMA Organization</p>
+      <h1 class="hero-title fade-up-2">
+        Association of<br><em>Spirit Realm's</em><br>Ambassador
+      </h1>
+      <p class="hero-sub fade-up-3">First door-openers to the Spirit Realm</p>
+      <div class="hero-cta-row fade-up-4">
+        <a href="#" class="btn btn-outline">Full Organization Introduction →</a>
+        <a href="#" class="btn btn-sage" onclick="showPage('founder')">Read Founder Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- What is ASRA -->
+  <section class="intro-section">
+    <div class="container">
+      <span class="intro-badge">ASRA</span>
+      <p class="intro-lead">
+        A dual-domain organization spanning both the Spirit Realm and the physical world — uniting human ambassadors on Earth with Master Spirit administrators in the ethereal realm.
+      </p>
+      <div class="divider"></div>
+      <p style="font-size:0.9rem; max-width:60ch;">
+        The New Era of UMMA Organization oversees two bodies — one in the physical world, one in the Spirit Realm — working in coordinated partnership to govern attached spirits and improve human health.
+      </p>
+      <div class="domain-cards">
+        <div class="domain-card">
+          <p class="domain-label">Physical World</p>
+          <p class="domain-name">ASRA</p>
+          <p class="domain-full">Association of Spirit Realm's Ambassador</p>
+          <div class="divider"></div>
+          <p class="domain-body">Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits and improves human health.</p>
+        </div>
+        <div class="domain-card">
+          <p class="domain-label">Spirit Realm</p>
+          <p class="domain-name">SMSC</p>
+          <p class="domain-full">Society of Master Spirit Controllers</p>
+          <div class="divider"></div>
+          <p class="domain-body">Tens of thousands of Master Spirits — administrators in the Spirit Realm who govern ordinary spirits and human beings. Each Master Spirit is assigned 1:1 or 2:1 to an ASRA human member.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentary -->
+  <section class="doc-section">
+    <div class="container">
+      <div class="doc-header">
+        <p class="eyebrow" style="margin-bottom:1.25rem;">The Documentary</p>
+        <h2>The Truth of Spirit<br><span class="serif-italic" style="color:var(--gold);">And Its Governor</span></h2>
+        <div class="divider divider-center"></div>
+        <p>Through systematic exploration and firsthand experiential evidence, we have explored the ethereal world and life in many areas. The Woos Ethereal Life & Realm Documentary Series reveals it all.</p>
+      </div>
+      <div class="season-cards">
+        <div class="season-card">
+          <p class="season-num">Season I</p>
+          <p class="season-title">Woos Record of Soul</p>
+          <div class="divider"></div>
+          <p class="season-body">Collecting all true scientific research materials from East and West regarding spirits, PSI, NDE, past-life memories, and other topics related to spirits and the Ethereal Realm. With personal possession, supernatural and spirit-exorcism experiences.</p>
+          <a href="#" class="season-cta">Explore Season I</a>
+        </div>
+        <div class="season-card">
+          <p class="season-num">Season II</p>
+          <p class="season-title">Woos Spirit Medicine</p>
+          <div class="divider"></div>
+          <p class="season-body">This documentary provides the evidence of spirits and ghosts existing while people are alive and after death from scientific perspective and causing illness to the physical body. The organs, physiological systems, and basic pathology of spirits.</p>
+          <a href="#" class="season-cta">Explore Season II</a>
+        </div>
+        <div class="season-card">
+          <p class="season-num">Season III</p>
+          <p class="season-title">Universal Matrix of Meta Awareness</p>
+          <div class="divider"></div>
+          <p class="season-body">This documentary presents evidence for the existence of the Universal Matrix of Meta Awareness. It has created three types of virtual survival environments for humanity, controls human free consciousness, the evolution of life on Earth, and the ultimate destiny of human civilization.</p>
+          <a href="#" class="season-cta">Explore Season III</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements strip -->
+  <section class="ach-strip">
+    <div class="container">
+      <div class="ach-strip-inner">
+        <div>
+          <p class="eyebrow" style="margin-bottom:1.25rem;">Discoveries</p>
+          <h2>Achievements</h2>
+          <div class="divider"></div>
+          <p style="font-size:0.88rem;">Coordinated with Master Spirit teams, the founder yielded descriptive statistics and qualitative observations on American attached spirits and rescued large-scale treatment-resistant mental-health cases.</p>
+          <div style="margin-top:2.5rem;">
+            <a href="#" class="btn btn-outline" onclick="showPage('achievements')">View full content →</a>
+          </div>
+        </div>
+        <div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <p class="stat-value">265+</p>
+              <p class="stat-label">Documented public-benefit sessions</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-value">800+</p>
+              <p class="stat-label">Broadcast hours</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-value">70k+</p>
+              <p class="stat-label">Estimated platform reach</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-value">240+</p>
+              <p class="stat-label">Individuals reporting improvement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <div class="quote-block">
+    <p class="quote-text">"First door-openers to the Spirit Realm, and the first explorers of the truth of spirit life."</p>
+    <p class="quote-attr">— John Long Woo, Founder</p>
+  </div>
+
+  <!-- Join -->
+  <section class="join-section">
+    <div class="container">
+      <p class="eyebrow" style="margin-bottom:1.5rem;">Join the Journey</p>
+      <h2>Join &amp; Participate</h2>
+      <div class="divider divider-center"></div>
+      <p>Become a part of the Spirit Ambassador Association — receive relief from mental health challenges, gain the ability to help others, and build a career that cannot be replaced by AI.</p>
+      <a href="#" class="btn btn-sage">✦ Visit: Join Us ✦</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">ASra</p>
+        <p class="footer-copy">© 2025 Woos Spirit Management Ltd. All rights reserved.</p>
+      </div>
+      <p class="footer-disclaimer">All research, footage, and data presented are based on verified scientific studies and firsthand experiential evidence.</p>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     ACHIEVEMENTS PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-achievements" class="page">
+
+  <!-- Hero -->
+  <section class="ach-hero">
+    <div class="ach-hero-inner">
+      <p class="eyebrow fade-up" style="margin-bottom:1.5rem;">2025 · Field Documentation</p>
+      <h1 class="fade-up-2">2025 Program<br><em class="serif-italic" style="color:var(--gold);">Outcomes &amp;</em><br>Documentation</h1>
+      <p class="fade-up-3" style="max-width:55ch; font-size:0.9rem; margin-top:1.5rem;">
+        Structured summary of anonymized TikTok Live sessions coordinated with Master Spirit teams: descriptive statistics, qualitative spirit-realm observations, mental-health presentations, and representative case narratives.
+      </p>
+      <div class="ach-pills fade-up-4">
+        <span class="pill">Anonymized cohort</span>
+        <span class="pill">Session-based metrics</span>
+        <span class="pill">Cross-realm collaboration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" style="margin-bottom:1rem;">Descriptive Statistics</p>
+        <h2>Aggregated indicators<br><span class="serif-italic" style="color:var(--gold);">for the 2025 reporting window</span></h2>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <p class="metric-value">265+</p>
+          <p class="metric-label">Documented public-benefit live sessions</p>
+          <p class="metric-hint">Primary platform: TikTok Live</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">800+</p>
+          <p class="metric-label">Cumulative broadcast hours</p>
+          <p class="metric-hint">Total logged airtime</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">70k+</p>
+          <p class="metric-label">Estimated platform-indicated listener contacts</p>
+          <p class="metric-hint">Reach across the reporting period</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">1,200+</p>
+          <p class="metric-label">Extended interviews</p>
+          <p class="metric-hint">Structured conversations beyond initial contact</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">240+</p>
+          <p class="metric-label">Individuals reporting mental-health improvement</p>
+          <p class="metric-hint">Self-reported distress reduction</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">400+</p>
+          <p class="metric-label">Attached spirits documented</p>
+          <p class="metric-hint">Some hosts carried multiples</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spirit Findings -->
+  <section class="findings-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" style="margin-bottom:1rem;">Synthesis</p>
+        <h2>Baseline interviews<br><span class="serif-italic" style="color:var(--gold);">with attached spirits</span></h2>
+        <div class="divider"></div>
+        <p>Qualitative patterns from structured interviews with American attached spirits (ghosts), summarized below.</p>
+      </div>
+      <div>
+        <div class="finding-row">
+          <p class="finding-stat">90%</p>
+          <div>
+            <p class="finding-title">Memory loss</p>
+            <p class="finding-body">Of spirits (ghosts) do not remember their own names, gender, or other basic pre-death information, and do not remember the death process.</p>
+          </div>
+        </div>
+        <div class="finding-row">
+          <p class="finding-stat">100%</p>
+          <div>
+            <p class="finding-title">Loss of humanity</p>
+            <p class="finding-body">American spirits (ghosts) have lost most of their humanity and acquired new characteristics.</p>
+          </div>
+        </div>
+        <div class="finding-row">
+          <p class="finding-stat">100%</p>
+          <div>
+            <p class="finding-title">New abilities</p>
+            <p class="finding-body">American spirits (ghosts) acquired new abilities in the spiritual world.</p>
+          </div>
+        </div>
+        <div class="finding-row">
+          <p class="finding-stat">Maj.</p>
+          <div>
+            <p class="finding-title">Master spirit transportation</p>
+            <p class="finding-body">The vast majority of American spirit attachments are transported by master spirits.</p>
+          </div>
+        </div>
+        <div class="finding-row">
+          <p class="finding-stat">100%</p>
+          <div>
+            <p class="finding-title">Control system</p>
+            <p class="finding-body">Spirits (ghosts) and their hosts are governed by two prohibition types in UMMA's soul control system — virtually no direct communication between them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section class="cases-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" style="margin-bottom:1rem;">Illustrative Case Summaries</p>
+        <h2>Selected<br><span class="serif-italic" style="color:var(--gold);">case narratives</span></h2>
+        <div class="divider"></div>
+        <p>Condensed, anonymized summaries for readability; identifiers and timelines adjusted to protect privacy.</p>
+      </div>
+      <div class="case-cards">
+        <div class="case-card">
+          <p class="case-badge">DID — 30+ reported identity facets</p>
+          <p class="case-title">Multi-identity dissociation</p>
+          <p class="case-body">A woman with severe dissociative fragmentation (more than thirty distinct identity facets reported). After systematic regulation and internal harmonization, all facets were described as co-existing cooperatively; host-level distress and switching burden were substantially reduced.</p>
+          <p class="case-finding">Complex inter-spirit dynamics and control hierarchies in a single body.</p>
+        </div>
+        <div class="case-card">
+          <p class="case-badge">Treatment-resistant depression · 40+ years</p>
+          <p class="case-title">Long-standing depressive illness</p>
+          <p class="case-body">Long-standing depressive illness without durable relief from conventional routes. A single 30-minute intensive session was associated with reported remission-like relief of mood and energy, with stability maintained afterward without relapse.</p>
+          <p class="case-finding">Single-session relief after decades of treatment-resistant presentation.</p>
+        </div>
+        <div class="case-card">
+          <p class="case-badge">Complex PTSD · 33+ years</p>
+          <p class="case-title">Decades-long trauma imprint</p>
+          <p class="case-body">Decades-long trauma imprint and hypervigilance. One focused regulatory session was described as fully processing the traumatic residue; the participant reported that the trauma "no longer occupied" their lived experience.</p>
+          <p class="case-finding">Trauma imprint dissipated in a single structured session.</p>
+        </div>
+        <div class="case-card">
+          <p class="case-badge">Severe schizophrenia</p>
+          <p class="case-title">Possessory steering pattern</p>
+          <p class="case-body">A malignant alter / possessory pattern reportedly directing major life decisions. Across roughly one month of layered suppression protocol, the intrusive entity influence was heavily dampened; positive and negative symptoms were reported to fall to a manageable baseline.</p>
+          <p class="case-finding">Sustained relief over the following month after initial intervention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcome stats -->
+  <div class="quote-block">
+    <p class="quote-text">"Within approximately 30 minutes of the initial structured contact, more than 80% of hosts and attached spirits reported relief from acute mental distress."</p>
+    <p class="quote-attr">— 2025 Field Documentation</p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">ASra</p>
+        <p class="footer-copy">© 2025 Woos Spirit Management Ltd. All rights reserved.</p>
+      </div>
+      <p class="footer-disclaimer">This page describes experiential and session-documented outcomes from a specific spiritual–therapeutic practice. It is not medical advice and does not replace diagnosis or care by licensed professionals.</p>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOUNDER STORY PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-founder" class="page">
+
+  <!-- Hero -->
+  <section class="founder-hero">
+    <div class="founder-hero-inner">
+      <p class="founder-names fade-up">John Long Woo · Caros · Sam</p>
+      <h1 class="fade-up-2">Our Story<br><em class="serif-italic" style="color:var(--gold);">Outline</em><br>— 2026</h1>
+      <div class="divider fade-up-3"></div>
+      <p class="fade-up-4" style="max-width:50ch; font-size:0.9rem;">Founder narrative — first door-openers to the Spirit Realm and first explorers of the truth of spirit life.</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section style="background:var(--white); padding:var(--section-pad);">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <p class="eyebrow" style="margin-bottom:1.5rem;">Introduction</p>
+          <h2>I am <span class="serif-italic" style="color:var(--gold);">John Long Woo.</span></h2>
+          <div class="divider"></div>
+        </div>
+        <div>
+          <p style="font-family:var(--serif); font-size:1.1rem; font-weight:300; line-height:1.75; color:var(--ink);">
+            Together with my two sons, <strong>Caros</strong> and <strong>Sam</strong> — we three, father and sons — we have lived through too many extraordinary events involving the <strong>spirit realm</strong> to count. Those experiences have made us the <strong>first door-openers to the Spirit Realm</strong> and the <strong>first explorers of the truth of spirit life</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Truths -->
+  <section class="truths-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" style="margin-bottom:1rem;">Core Discoveries</p>
+        <h2>Three<br><span class="serif-italic" style="color:var(--gold);">Truths</span></h2>
+      </div>
+      <div>
+        <div class="truth-item">
+          <p class="truth-num">I</p>
+          <div>
+            <p class="truth-label">Truth 1</p>
+            <p class="truth-text">A living person is composed of both the <strong>physical body</strong> and the <strong>spirit (soul)</strong>. <strong>Spirits (ghosts)</strong> exist after human death. For the billions of them, the only way to survive is to <strong>attach to human beings</strong> and draw energy. That pattern is bound up with widespread illness such as <strong>epilepsy</strong>, <strong>depression</strong>, <strong>schizophrenia</strong>, and <strong>somatic symptom disorders</strong>. By <strong>managing spirits through Master Spirits</strong>, these conditions can often be rapidly improved. From that work we created <strong>Spirit Medicine</strong>.</p>
+          </div>
+        </div>
+        <div class="truth-item">
+          <p class="truth-num">II</p>
+          <div>
+            <p class="truth-label">Truth 2</p>
+            <p class="truth-text">The <strong>Spirit Realm</strong> has governors — tremendous <strong>Master Spirits</strong>, upgraded from ordinary spirits through the <strong>Universal Matrix of Meta Awareness</strong>.</p>
+          </div>
+        </div>
+        <div class="truth-item">
+          <p class="truth-num">III</p>
+          <div>
+            <p class="truth-label">Truth 3</p>
+            <p class="truth-text">The <strong>Universal Matrix of Meta Awareness</strong> is the <strong>true creator-level substrate</strong>; <strong>our universe is part of its body</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" style="margin-bottom:1rem;">Two Major Chapters</p>
+        <h2>Phase<br><span class="serif-italic" style="color:var(--gold);">Timeline</span></h2>
+      </div>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <p class="timeline-phase">A</p>
+          <div class="timeline-content">
+            <p class="timeline-range">May 2014 — February 2025</p>
+            <p class="timeline-label">Phase A — Family field work</p>
+            <p style="font-size:0.88rem;">We fought attached spirits of different classes parasitizing our bodies — including Class-C1, Class-C2 spirit Qing Xiaoxian, and Class-C3 spirit Qian Kai. They drove severe illness across our family. Our only motive was self-rescue.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-phase">A1</p>
+          <div class="timeline-content">
+            <p class="timeline-range">March 2018 — July 2020</p>
+            <p class="timeline-label">Stage 1 · Cheating Period 1</p>
+            <p style="font-size:0.88rem;">During this period, the low-level soul in my body used high-voltage electrostatic discharge into drinks and wine to change their taste, aiming to fabricate a chain of "scientific" phenomena and laws that would ultimately "prove" Buddhism.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-phase">A2</p>
+          <div class="timeline-content">
+            <p class="timeline-range">July 2020 — November 2020</p>
+            <p class="timeline-label">Cheating Period 2</p>
+            <p style="font-size:0.88rem;">During this interval, the low-level soul used epilepsy-like seizures to impersonate the three greatest gods of Buddhism, pretending to convey divine will — until my sons and I had converted. It was a grotesque joke; we were playthings.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-phase">A3</p>
+          <div class="timeline-content">
+            <p class="timeline-range">November 2020 — July 2021</p>
+            <p class="timeline-label">Exorcism Period 1</p>
+            <p style="font-size:0.88rem;">On 15 November 2020, the true identities of the souls inside us and their tricks were finally exposed. In fear and rage we tried to exorcise them. Traditional methods failed; we began using magnets to hurt them.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-phase">A4</p>
+          <div class="timeline-content">
+            <p class="timeline-range">July 2021 — April 2022</p>
+            <p class="timeline-label">Exorcism Period 2 · High-level revealing</p>
+            <p style="font-size:0.88rem;">In this stage we found and confirmed several ways to interfere with, injure, and kill ordinary souls. A high-level soul who had died in China roughly 1,500 years ago joined the exploration and disclosed itself.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-phase">A5</p>
+          <div class="timeline-content">
+            <p class="timeline-range">December 2023 — January 2025</p>
+            <p class="timeline-label">Class-C2 Qing Xiaoxian · Class-C3 Qian Kai</p>
+            <p style="font-size:0.88rem;">In December 2023 I was again possessed by the Class-C2 spirit Qing Xiaoxian. Across roughly 1,700 years as a ghost it had devoured on the order of 5,000–10,000 other souls, becoming an enormous entity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase B -->
+  <section class="phase-b-section">
+    <div class="container">
+      <div class="phase-b-header">
+        <p class="eyebrow" style="margin-bottom:1rem;">Phase B</p>
+        <h2>February 2025<br><span class="serif-italic" style="color:var(--gold);">through March 2026</span></h2>
+        <div class="divider"></div>
+        <p style="font-size:0.9rem; max-width:55ch;">TikTok Live broadcasts, Master Spirit collaboration, and the formal establishment of Spirit Medicine.</p>
+      </div>
+      <div class="phase-b-blocks">
+        <div class="phase-b-block">
+          <p class="phase-b-block-title">Livestream scale and documented outcomes</p>
+          <p class="phase-b-block-text">From 19 February 2025 through 24 December 2025, <strong>Caros</strong> hosted <strong>265</strong> TikTok Live sessions and achieved extraordinary outcomes in the broadcast field. Full documentation and links available in the Achievements section.</p>
+        </div>
+        <div class="phase-b-block">
+          <p class="phase-b-block-title">Master Spirits, hybrid spirits, and remote capacity</p>
+          <p class="phase-b-block-text">A great many Master Spirits and hybrid spirits reached out to us as father and sons, revealing that the spirit world includes order at the levels of administrators and creator-class structure. Caros, while in China, could remotely regulate attached spirits on hosts in North America.</p>
+        </div>
+        <div class="phase-b-block">
+          <p class="phase-b-block-title">How Phase A attachments were arranged</p>
+          <p class="phase-b-block-text">Most importantly, we were told: every attached spirit on us during Phase A was deliberately placed by Master Spirits; clearing those presences was authorized to serve as research material.</p>
+        </div>
+        <div class="phase-b-block">
+          <p class="phase-b-block-title">Spirit Medicine and video archives</p>
+          <p class="phase-b-block-text">During this period Spirit Medicine was formally established; we produced part of the Woos Spirit Medicine and Universal Matrix of Meta Awareness video archives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <div class="quote-block">
+    <p class="quote-text">"Every attached spirit on us during Phase A was deliberately placed by Master Spirits — clearing those presences was authorized to serve as research material."</p>
+    <p class="quote-attr">— John Long Woo</p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">ASra</p>
+        <p class="footer-copy">© 2025 Woos Spirit Management Ltd. All rights reserved.</p>
+      </div>
+      <p class="footer-disclaimer">All research, footage, and data presented are based on verified scientific studies and firsthand experiential evidence.</p>
+    </div>
+  </footer>
+</div>
+
+
+<script>
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    const idx = ['home','achievements','founder'].indexOf(name);
+    document.querySelectorAll('.tab-btn')[idx].classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

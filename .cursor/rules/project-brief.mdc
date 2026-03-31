@@ -11,10 +11,11 @@ alwaysApply: true
 # Copy Source Of Truth
 
 - For rendered English and Chinese page copy, the source of truth is `docs/page-copy/*.xlsx`.
-- After workbook edits, run `npm run import:page-xlsx`.
+- After workbook edits, run `npm run copy:import`.
 - This generates `src/content/pageCopyDocs.generated.ts`.
 - The app reads workbook text through `src/content/pageCopyRuntime.ts`.
 - Do not hand-edit `src/content/pageCopyDocs.generated.ts`.
+- For detailed rules see `.cursor/rules/content-sync.mdc`.
 
 # Main Edit Points
 

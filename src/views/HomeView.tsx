@@ -4,58 +4,49 @@ import TruthSection from '../components/home/TruthSection';
 import Achievements from '../components/home/Achievements';
 import JoinSection from '../components/home/JoinSection';
 import SectionDivider from '../components/common/SectionDivider';
-import GalaxyBackground from '../components/common/GalaxyBackground';
-import { warmImagery } from '../content/visualTheme';
 import { useI18n } from '../i18n/LocaleProvider';
 
 const HomeView = () => {
   const { t } = useI18n();
   return (
-    <div className="relative bg-[#120e0c]">
-      {/* Hero + Introduction: one column so galaxy + nebula fill the full scroll height */}
+    <div className="relative ed-vignette" style={{ background: '#F5EDE0' }}>
+      {/* Hero + Introduction: warm tonal background, editorial feel */}
       <div className="relative">
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
-          <div className="absolute inset-0 bg-[#120e0c]" />
-          <GalaxyBackground />
-          {/* Warm golden-hour wash over soft light spiral */}
+        {/* Ambient radial warmth — replaces galaxy for editorial style */}
+        <div
+          className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+          aria-hidden
+        >
           <div
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(
-                180deg,
-                rgba(0,0,0,0) 0%,
-                rgba(40,24,16,0.08) 22%,
-                rgba(55,28,18,0.14) 45%,
-                rgba(45,22,28,0.2) 68%,
-                rgba(28,14,22,0.28) 100%
-              )`,
+              background: `
+                radial-gradient(ellipse 80% 55% at 50% 10%, rgba(194,123,32,0.14) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 20% 60%, rgba(61,37,16,0.07) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 40% at 80% 40%, rgba(194,123,32,0.08) 0%, transparent 55%),
+                #F5EDE0
+              `,
+            }}
+          />
+          {/* Decorative soft rings for depth */}
+          <div
+            className="absolute"
+            style={{
+              top: '8%', right: '5%',
+              width: 'min(520px, 55vw)', height: 'min(520px, 55vw)',
+              borderRadius: '50%',
+              border: '1px solid rgba(194,123,32,0.1)',
+              pointerEvents: 'none',
             }}
           />
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute"
             style={{
-              backgroundImage: `url(${warmImagery.homeAtmosphere})`,
-              opacity: 0.42,
-              mixBlendMode: 'soft-light',
-              maskImage:
-                'linear-gradient(to bottom, transparent 0%, transparent 26%, rgba(0,0,0,0.3) 48%, rgba(0,0,0,0.82) 76%, black 100%)',
-              WebkitMaskImage:
-                'linear-gradient(to bottom, transparent 0%, transparent 26%, rgba(0,0,0,0.3) 48%, rgba(0,0,0,0.82) 76%, black 100%)',
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(
-                180deg,
-                rgba(18,12,10,0.28) 0%,
-                rgba(18,12,10,0.08) 28%,
-                transparent 46%,
-                transparent 52%,
-                rgba(20,14,12,0.12) 72%,
-                rgba(18,12,10,0.55) 88%,
-                rgba(18,12,10,0.85) 100%
-              )`,
+              top: 'calc(8% + 40px)', right: 'calc(5% + 40px)',
+              width: 'min(440px, 47vw)', height: 'min(440px, 47vw)',
+              borderRadius: '50%',
+              border: '1px solid rgba(194,123,32,0.06)',
+              pointerEvents: 'none',
             }}
           />
         </div>

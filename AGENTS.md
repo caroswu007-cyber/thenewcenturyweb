@@ -28,24 +28,26 @@ ASra marketing / documentary site built with React + Vite. Main routes:
 npm install
 npm run dev
 npm run build
-npm run export:page-xlsx
-npm run import:page-xlsx
+npm run copy:import      # xlsx → generated.ts (safe, read-only for xlsx)
+npm run copy:scaffold    # code structure → staging xlsx (never overwrites real xlsx)
 ```
 
 ## Copy source of truth
 
-For rendered English / Chinese page copy, the authority is:
+For rendered English / Chinese page copy, the single source of truth is:
 
 - `docs/page-copy/*.xlsx`
 
 Runtime flow:
 
 1. Edit workbook text in `docs/page-copy/`
-2. Run `npm run import:page-xlsx`
+2. Run `npm run copy:import`
 3. This generates `src/content/pageCopyDocs.generated.ts`
 4. The app reads that through `src/content/pageCopyRuntime.ts`
 
-Do not assume `src/content/siteContent.ts` or `src/i18n/messages/*.ts` are the final rendered truth for EN/ZH page copy. They are now fallback / structural sources in many places.
+TS content files (`siteContent.ts`, `founderStory2026Content.ts`) are English fallbacks only.
+`en.ts` / `zh.ts` are for UI chrome (buttons, nav, expand/collapse labels) — NOT page body copy.
+See `.cursor/rules/content-sync.mdc` for detailed AI rules and workflow.
 
 ## Main content entry points
 
@@ -69,4 +71,4 @@ Do not assume `src/content/siteContent.ts` or `src/i18n/messages/*.ts` are the f
 
 ## History
 
-Use `CHANGELOG.md` only as optional background. For current guidance, rely on this file and `docs/AI_PAGE_COPY_SYNC.md`.
+Use `CHANGELOG.md` only as optional background. For current guidance, rely on this file and `.cursor/rules/content-sync.mdc`.

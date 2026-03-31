@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASRA — Dark iGaming Style Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:     #0D0803;
+      --ink2:    #1a1208;
+      --gold:    #BE9E52;
+      --yellow:  #FDE542;
+      --orange:  #D84615;
+      --brown:   #5C3E26;
+      --muted:   #B3B0A5;
+      --white:   #FDFDFC;
+      --card-bg: rgba(30,20,8,0.85);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--ink);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 3rem;
+      background: rgba(13,8,3,0.8);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(190,158,82,0.15);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 1.45rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--white);
+    }
+    .nav-logo span { color: var(--yellow); }
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--yellow); }
+    .nav-cta {
+      padding: .55rem 1.5rem;
+      background: var(--yellow); color: var(--ink);
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: .8rem; letter-spacing: .1em; text-transform: uppercase;
+      border: none; cursor: pointer; border-radius: 2px;
+      transition: background .2s, transform .15s;
+    }
+    .nav-cta:hover { background: #ffe000; transform: translateY(-1px); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      overflow: hidden;
+      padding: 8rem 3rem 6rem;
+    }
+    .hero-glow {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 55% at 55% 40%, rgba(190,158,82,0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 75% 25%, rgba(253,229,66,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 80% at 20% 80%, rgba(92,62,38,0.35) 0%, transparent 60%);
+    }
+    /* animated particle stars */
+    .hero-stars {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 15% 20%, rgba(253,229,66,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 55%, rgba(190,158,82,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 70% 15%, rgba(253,229,66,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 70%, rgba(190,158,82,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 80%, rgba(253,229,66,0.3) 0%, transparent 100%),
+        radial-gradient(2px 2px at 60% 90%, rgba(190,158,82,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 40%, rgba(253,229,66,0.5) 0%, transparent 100%);
+    }
+    /* orbiting ring decoration */
+    .hero-ring {
+      position: absolute; right: 8%; top: 50%;
+      transform: translateY(-50%);
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(190,158,82,0.15);
+      pointer-events: none;
+    }
+    .hero-ring::after {
+      content: '';
+      position: absolute; inset: 30px;
+      border-radius: 50%;
+      border: 1px solid rgba(253,229,66,0.08);
+    }
+    /* glowing orb */
+    .hero-orb {
+      position: absolute; right: 16%; top: 50%;
+      transform: translate(50%,-50%);
+      width: 260px; height: 260px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(190,158,82,0.35) 0%, rgba(92,62,38,0.15) 50%, transparent 70%);
+      filter: blur(30px);
+      pointer-events: none;
+      animation: pulse 6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: .7; transform: translate(50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(50%,-50%) scale(1.12); }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 680px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .35rem 1rem; margin-bottom: 2rem;
+      border: 1px solid rgba(190,158,82,0.4);
+      border-radius: 2px;
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .hero-badge::before {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--yellow);
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:.3} }
+    .hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+    }
+    .hero-title .accent { color: var(--yellow); }
+    .hero-title .gold-line {
+      display: block;
+      -webkit-text-stroke: 1px rgba(190,158,82,0.6);
+      color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem; line-height: 1.7;
+      color: var(--muted); max-width: 520px;
+      margin-bottom: 3rem;
+    }
+    .hero-actions { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .btn-primary {
+      padding: .85rem 2.4rem;
+      background: var(--yellow); color: var(--ink);
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: .85rem; letter-spacing: .1em; text-transform: uppercase;
+      border: none; cursor: pointer; border-radius: 2px;
+      transition: all .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-primary:hover { background: #ffe000; box-shadow: 0 0 30px rgba(253,229,66,0.4); }
+    .btn-secondary {
+      padding: .85rem 2.4rem;
+      background: transparent; color: var(--gold);
+      font-family: 'Syne', sans-serif; font-weight: 600;
+      font-size: .85rem; letter-spacing: .1em; text-transform: uppercase;
+      border: 1px solid rgba(190,158,82,0.5); cursor: pointer; border-radius: 2px;
+      transition: all .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--gold); background: rgba(190,158,82,0.08); }
+
+    .hero-stats {
+      display: flex; gap: 3rem; margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(190,158,82,0.2);
+    }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem; font-weight: 800;
+      color: var(--yellow);
+    }
+    .stat-label { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .2rem; }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      display: flex; align-items: center; gap: 1rem;
+      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .section-label::after {
+      content: ''; flex: 1; max-width: 80px;
+      height: 1px; background: rgba(190,158,82,0.4);
+    }
+
+    /* ─── MARQUEE ─── */
+    .marquee-strip {
+      padding: 1.1rem 0;
+      background: var(--yellow);
+      overflow: hidden; white-space: nowrap;
+      border-top: 1px solid rgba(0,0,0,.1);
+    }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 22s linear infinite;
+    }
+    .marquee-inner span {
+      font-family: 'Syne', sans-serif;
+      font-size: .8rem; font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      color: var(--ink); padding: 0 2.5rem;
+    }
+    .marquee-inner span::before { content: '✦  '; }
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ─── SERIES SECTION ─── */
+    .section {
+      padding: 7rem 3rem;
+    }
+    .section-header { margin-bottom: 4rem; }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800; text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+    }
+    .series-card {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--ink2);
+    }
+    .series-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      transition: opacity .4s;
+    }
+    .series-card:nth-child(1)::before {
+      background: linear-gradient(135deg, rgba(190,158,82,0.25) 0%, rgba(13,8,3,0.6) 100%);
+    }
+    .series-card:nth-child(2)::before {
+      background: linear-gradient(135deg, rgba(216,70,21,0.25) 0%, rgba(13,8,3,0.6) 100%);
+    }
+    .series-card:nth-child(3)::before {
+      background: linear-gradient(135deg, rgba(253,229,66,0.2) 0%, rgba(13,8,3,0.6) 100%);
+    }
+    .series-card-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform .6s ease;
+      opacity: .35;
+    }
+    .series-card:hover .series-card-bg { transform: scale(1.06); opacity: .45; }
+
+    /* SVG/pattern backgrounds */
+    .series-card:nth-child(1) .series-card-bg {
+      background: radial-gradient(ellipse at 40% 30%, rgba(190,158,82,0.5) 0%, transparent 60%),
+                  repeating-linear-gradient(45deg, rgba(190,158,82,0.05) 0px, rgba(190,158,82,0.05) 1px, transparent 1px, transparent 12px);
+    }
+    .series-card:nth-child(2) .series-card-bg {
+      background: radial-gradient(ellipse at 60% 60%, rgba(216,70,21,0.4) 0%, transparent 60%),
+                  repeating-linear-gradient(-45deg, rgba(216,70,21,0.05) 0px, rgba(216,70,21,0.05) 1px, transparent 1px, transparent 12px);
+    }
+    .series-card:nth-child(3) .series-card-bg {
+      background: radial-gradient(ellipse at 50% 40%, rgba(253,229,66,0.35) 0%, transparent 60%),
+                  repeating-linear-gradient(0deg, rgba(253,229,66,0.04) 0px, rgba(253,229,66,0.04) 1px, transparent 1px, transparent 14px);
+    }
+
+    .series-card-content {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      height: 100%; padding: 2.5rem 2rem;
+    }
+    .series-num {
+      font-family: 'Syne', sans-serif;
+      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: .8rem;
+    }
+    .series-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem; font-weight: 700; text-transform: uppercase;
+      line-height: 1.2; margin-bottom: .8rem;
+    }
+    .series-desc { font-size: .83rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; }
+    .series-tag {
+      display: inline-block;
+      padding: .3rem .9rem;
+      border: 1px solid rgba(190,158,82,0.4);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold); border-radius: 1px;
+      transition: all .2s;
+    }
+    .series-card:hover .series-tag { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+
+    /* ─── STATS BANNER ─── */
+    .stats-banner {
+      padding: 5rem 3rem;
+      background: var(--ink2);
+      border-top: 1px solid rgba(190,158,82,0.12);
+      border-bottom: 1px solid rgba(190,158,82,0.12);
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; max-width: 1100px; margin: 0 auto;
+    }
+    .stats-item { text-align: center; }
+    .stats-big {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      font-weight: 800; color: var(--yellow);
+      letter-spacing: -.02em; line-height: 1;
+    }
+    .stats-sub { font-size: .78rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-top: .6rem; }
+
+    /* ─── DIVIDER ─── */
+    .divider-gold {
+      display: flex; align-items: center; gap: 1.5rem;
+      padding: 0 3rem; margin: 1rem 0;
+    }
+    .divider-gold::before, .divider-gold::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(190,158,82,0.3), transparent);
+    }
+    .divider-text {
+      font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── FEATURED BANNER ─── */
+    .feature-banner {
+      margin: 0 3rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+    }
+    .fb-main {
+      position: relative;
+      padding: 4rem;
+      background: linear-gradient(135deg, #1a1005 0%, #0D0803 100%);
+      border: 1px solid rgba(190,158,82,0.18);
+      overflow: hidden;
+    }
+    .fb-main::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 300px; height: 300px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(190,158,82,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .fb-main-eyebrow {
+      font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 1.2rem;
+    }
+    .fb-main-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 800; text-transform: uppercase; line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    .fb-main-title em { color: var(--yellow); font-style: normal; }
+    .fb-main-body { font-size: .9rem; color: var(--muted); line-height: 1.7; max-width: 400px; }
+    .fb-side { display: flex; flex-direction: column; gap: 1.5px; }
+    .fb-card {
+      flex: 1;
+      padding: 2.5rem 2.8rem;
+      display: flex; flex-direction: column; justify-content: space-between;
+      background: var(--ink2);
+      border: 1px solid rgba(190,158,82,0.1);
+      transition: border-color .3s;
+    }
+    .fb-card:hover { border-color: rgba(190,158,82,0.4); }
+    .fb-card-label {
+      font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: .8rem;
+    }
+    .fb-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
+    }
+    .fb-card-meta { font-size: .78rem; color: var(--muted); margin-top: 1rem; }
+    .fb-card-arrow {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(190,158,82,0.4);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 1rem;
+      margin-top: 2rem; transition: all .2s;
+    }
+    .fb-card:hover .fb-card-arrow { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+
+    /* ─── JOIN CTA ─── */
+    .join-section {
+      padding: 8rem 3rem;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(190,158,82,0.15) 0%, transparent 60%),
+        var(--ink);
+    }
+    .join-tag {
+      display: inline-block;
+      padding: .35rem 1.2rem; margin-bottom: 2rem;
+      background: rgba(253,229,66,0.1);
+      border: 1px solid rgba(253,229,66,0.3);
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--yellow); border-radius: 2px;
+    }
+    .join-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800; text-transform: uppercase;
+      line-height: 1.0; margin-bottom: 1.5rem;
+    }
+    .join-title .outline {
+      -webkit-text-stroke: 1px rgba(190,158,82,0.5);
+      color: transparent;
+    }
+    .join-body { font-size: 1rem; color: var(--muted); max-width: 500px; margin: 0 auto 3rem; line-height: 1.7; }
+    .join-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 3rem;
+      border-top: 1px solid rgba(190,158,82,0.12);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .foot-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+    .foot-logo span { color: var(--yellow); }
+    .foot-copy { font-size: .78rem; color: var(--muted); }
+    .foot-links { display: flex; gap: 2rem; }
+    .foot-links a { font-size: .78rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .foot-links a:hover { color: var(--yellow); }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .section { padding: 5rem 1.5rem; }
+      .series-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .feature-banner { grid-template-columns: 1fr; margin: 0 1.5rem; }
+      .hero { padding: 8rem 1.5rem 5rem; }
+      .hero-ring, .hero-orb { display: none; }
+      .join-section { padding: 6rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">A<span>S</span>RA</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About ASRA</a></li>
+    <li><a href="#">Record of Soul</a></li>
+    <li><a href="#">Spirit Medicine</a></li>
+    <li><a href="#">Achievements</a></li>
+  </ul>
+  <button class="nav-cta">Join the Journey</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-stars"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-content">
+    <div class="hero-badge">New Era — Active Mission</div>
+    <h1 class="hero-title">
+      Association<br>
+      of <span class="accent">Spirit</span><br>
+      <span class="gold-line">Realm's</span><br>
+      Ambassador
+    </h1>
+    <p class="hero-subtitle">
+      Where human ambassadors and Master Spirits unite across two realms.
+      Discovering truth through documentary, healing, and meta-awareness.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">Explore the Truth</a>
+      <a href="#" class="btn-secondary">Watch Record of Soul</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">942+</div>
+        <div class="stat-label">Minutes of Documentary</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Documentary Series</div>
+      </div>
+      <div>
+        <div class="stat-num">11</div>
+        <div class="stat-label">Episodes Released</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>New Era of UMMA Organization</span>
+    <span>Woos Record of Soul</span>
+    <span>Spirit Medicine</span>
+    <span>Universal Matrix of Meta Awareness</span>
+    <span>The Woo Family Ambassadors</span>
+    <span>New Era of UMMA Organization</span>
+    <span>Woos Record of Soul</span>
+    <span>Spirit Medicine</span>
+    <span>Universal Matrix of Meta Awareness</span>
+    <span>The Woo Family Ambassadors</span>
+  </div>
+</div>
+
+<!-- SERIES SECTION -->
+<section class="section">
+  <div class="section-header reveal">
+    <div class="section-label">Documentary Series</div>
+    <h2 class="section-title">Three Paths.<br>One Truth.</h2>
+  </div>
+  <div class="series-grid">
+    <div class="series-card reveal">
+      <div class="series-card-bg"></div>
+      <div class="series-card-content">
+        <div class="series-num">Series 01</div>
+        <div class="series-title">Woos Record<br>of Soul</div>
+        <div class="series-desc">11 episodes. 942+ minutes of documented encounters with spirit, science, and the nature of consciousness.</div>
+        <div class="series-tag">Watch Now →</div>
+      </div>
+    </div>
+    <div class="series-card reveal">
+      <div class="series-card-bg"></div>
+      <div class="series-card-content">
+        <div class="series-num">Series 02</div>
+        <div class="series-title">Woos Spirit<br>Medicine</div>
+        <div class="series-desc">A groundbreaking exploration of spirit-guided healing, pathology, and the intersection of realms.</div>
+        <div class="series-tag">Explore →</div>
+      </div>
+    </div>
+    <div class="series-card reveal">
+      <div class="series-card-bg"></div>
+      <div class="series-card-content">
+        <div class="series-num">Series 03</div>
+        <div class="series-title">Universal<br>Matrix</div>
+        <div class="series-desc">Meta-awareness and the creator framework — navigating the unseen architecture of existence.</div>
+        <div class="series-tag">Discover →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BANNER -->
+<div class="stats-banner">
+  <div class="stats-grid">
+    <div class="stats-item reveal">
+      <div class="stats-big">942<span style="color:var(--gold);font-size:.6em">+</span></div>
+      <div class="stats-sub">Documentary Minutes</div>
+    </div>
+    <div class="stats-item reveal">
+      <div class="stats-big">2</div>
+      <div class="stats-sub">Realm Domains</div>
+    </div>
+    <div class="stats-item reveal">
+      <div class="stats-big">∞</div>
+      <div class="stats-sub">Spirit Connections</div>
+    </div>
+    <div class="stats-item reveal">
+      <div class="stats-big">1</div>
+      <div class="stats-sub">Family of Ambassadors</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider-gold"><span class="divider-text">Discoveries & Truth</span></div>
+
+<!-- FEATURE BANNER -->
+<div class="feature-banner">
+  <div class="fb-main reveal">
+    <div class="fb-main-eyebrow">✦ Featured Initiative</div>
+    <h3 class="fb-main-title">The <em>New Era</em> of UMMA Organization</h3>
+    <p class="fb-main-body">
+      A dual-domain organization bridging the physical world and the Spirit Realm. Human ambassadors
+      (ASRA) partner with Master Spirits (SMSC) in a 1:1 or 2:1 covenant — building a new governance
+      of spirit health and collective truth.
+    </p>
+    <a href="#" class="btn-primary" style="margin-top:2.5rem;display:inline-block">Learn About ASRA</a>
+  </div>
+  <div class="fb-side">
+    <div class="fb-card reveal">
+      <div>
+        <div class="fb-card-label">✦ Mission One</div>
+        <div class="fb-card-title">Spirit Governance & Health</div>
+        <div class="fb-card-meta">Advancing the understanding of spiritual pathology and the healing wisdom of the SMSC.</div>
+      </div>
+      <div class="fb-card-arrow">→</div>
+    </div>
+    <div class="fb-card reveal">
+      <div>
+        <div class="fb-card-label">✦ Mission Two</div>
+        <div class="fb-card-title">Spreading Truth in the New Era</div>
+        <div class="fb-card-meta">Addressing AI disruption, unemployment, and the spiritual dimension of our changing world.</div>
+      </div>
+      <div class="fb-card-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- JOIN CTA -->
+<section class="join-section">
+  <div class="join-tag">✦ Join the Journey</div>
+  <h2 class="join-title reveal">
+    Become<br>
+    <span class="outline">An Ambassador</span>
+  </h2>
+  <p class="join-body">The Woo family opens the path. Every ambassador matters. Connect with the Spirit Realm and carry the truth into the New Era.</p>
+  <div class="join-actions">
+    <a href="https://ess-esw.org/" class="btn-primary" target="_blank">Join Now at ess-esw.org</a>
+    <a href="#" class="btn-secondary">Learn More</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">A<span>S</span>RA<br><small style="font-size:.55rem;color:var(--muted);letter-spacing:.1em;font-weight:400">NEW ERA OF UMMA</small></div>
+  <div class="foot-links">
+    <a href="#">About</a>
+    <a href="#">Record of Soul</a>
+    <a href="#">Spirit Medicine</a>
+    <a href="#">Universal Matrix</a>
+    <a href="#">Achievements</a>
+  </div>
+  <div class="foot-copy">© 2025 Woos Spirit Management Ltd.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Staggered series cards
+  document.querySelectorAll('.series-grid .series-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.12) + 's';
+  });
+  document.querySelectorAll('.stats-item').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.1) + 's';
+  });
+
+  // Count-up animation for stats
+  function countUp(el, target, duration = 2000) {
+    let start = 0, step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { el.textContent = target + '+'; clearInterval(timer); }
+      else el.textContent = Math.floor(start);
+    }, 16);
+  }
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target.querySelector('.stats-big');
+        if (el && el.textContent.includes('942')) countUp(el, 942);
+        statsObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stats-item').forEach(el => statsObserver.observe(el));
+</script>
+</body>
+</html>

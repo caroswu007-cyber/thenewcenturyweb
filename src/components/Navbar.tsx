@@ -15,14 +15,19 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="font-ui fixed w-full z-50 backdrop-blur-md shadow-lg border-b border-amber-900/20 py-4 md:py-5 px-4 sm:px-6 md:px-12 flex flex-wrap gap-y-3 justify-between items-center transition-all"
-        style={{ background: 'rgba(28,18,14,0.9)' }}
+        className="font-cinzel fixed w-full z-50 shadow-sm border-b py-4 md:py-5 px-4 sm:px-6 md:px-12 flex flex-wrap gap-y-3 justify-between items-center transition-all"
+        style={{
+          background: 'rgba(251,246,238,0.93)',
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
+          borderColor: 'rgba(31,18,8,0.1)',
+        }}
       >
         <Link
           to="/"
           onClick={closeMobile}
-          className="font-cinzel font-bold tracking-[0.25em] uppercase drop-shadow-[0_0_10px_rgba(251,191,36,0.3)] transition-colors hover:text-white text-base md:text-[1.2rem]"
-          style={{ color: '#fbbf24' }}
+          className="font-cinzel font-bold tracking-[0.25em] uppercase transition-colors text-base md:text-[1.2rem]"
+          style={{ color: '#1F1208' }}
         >
           ASra
         </Link>
@@ -31,39 +36,53 @@ const Navbar = () => {
           {isHome ? (
             <>
               {/* Desktop links */}
-              <ul className="hidden md:flex flex-wrap gap-x-4 lg:gap-x-7 text-sm font-semibold tracking-widest uppercase items-center font-cinzel">
+              <ul className="hidden md:flex flex-wrap gap-x-4 lg:gap-x-7 text-sm font-medium tracking-widest uppercase items-center font-cinzel">
                 <li>
-                  <a href="#home" className="hover:text-accent transition-colors text-slate-300">
+                  <a href="#home" className="transition-colors" style={{ color: 'rgba(31,18,8,0.7)' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#C27B20')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='rgba(31,18,8,0.7)')}>
                     {t('nav.home')}
                   </a>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:text-accent transition-colors text-slate-300">
+                  <Link to="/about" className="transition-colors" style={{ color: 'rgba(31,18,8,0.7)' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#C27B20')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='rgba(31,18,8,0.7)')}>
                     {t('nav.about')}
                   </Link>
                 </li>
                 <li>
-                  <a href="#truth" className="hover:text-accent transition-colors text-slate-300">
+                  <a href="#truth" className="transition-colors" style={{ color: 'rgba(31,18,8,0.7)' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#C27B20')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='rgba(31,18,8,0.7)')}>
                     {t('nav.truth')}
                   </a>
                 </li>
                 <li>
-                  <Link to="/record-of-soul" className="hover:text-accent transition-colors text-slate-300">
+                  <Link to="/record-of-soul" className="transition-colors" style={{ color: 'rgba(31,18,8,0.7)' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#C27B20')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='rgba(31,18,8,0.7)')}>
                     {t('nav.record')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/spirit-medicine" className="hover:text-accent transition-colors text-slate-300">
+                  <Link to="/spirit-medicine" className="transition-colors" style={{ color: 'rgba(31,18,8,0.7)' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#C27B20')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='rgba(31,18,8,0.7)')}>
                     {t('nav.spirit')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/our-achievements" className="hover:text-accent transition-colors text-slate-300">
+                  <Link to="/our-achievements" className="transition-colors" style={{ color: 'rgba(31,18,8,0.7)' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#C27B20')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='rgba(31,18,8,0.7)')}>
                     {t('nav.achievements')}
                   </Link>
                 </li>
                 <li>
-                  <a href="#join" className="hover:text-accent transition-colors text-slate-300">
+                  <a href="#join" className="transition-colors" style={{ color: '#C27B20', borderBottom: '1px solid rgba(194,123,32,0.4)', paddingBottom: '1px' }}
+                    onMouseEnter={e=>(e.currentTarget.style.color='#8B5413')}
+                    onMouseLeave={e=>(e.currentTarget.style.color='#C27B20')}>
                     {t('nav.join')}
                   </a>
                 </li>
@@ -71,9 +90,10 @@ const Navbar = () => {
               {/* Mobile hamburger */}
               <button
                 type="button"
-                className="md:hidden flex items-center justify-center w-9 h-9 rounded-md border border-amber-500/25 text-amber-300/90 hover:text-amber-200 transition-colors"
+                className="md:hidden flex items-center justify-center w-9 h-9 rounded-md border transition-colors"
                 aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                 onClick={() => setMobileOpen(v => !v)}
+                style={{ borderColor: 'rgba(31,18,8,0.2)', color: '#3D2510' }}
               >
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -84,9 +104,9 @@ const Navbar = () => {
                 <Link
                   to="/about"
                   className="font-cinzel text-sm tracking-widest uppercase transition-colors hidden md:block"
-                  style={{ color: 'rgba(251,191,36,0.6)' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#fbbf24')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(251,191,36,0.6)')}
+                  style={{ color: 'rgba(31,18,8,0.6)' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#C27B20')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(31,18,8,0.6)')}
                 >
                   {t('nav.about')}
                 </Link>
@@ -95,9 +115,9 @@ const Navbar = () => {
                 <Link
                   to="/founder-story"
                   className="font-cinzel text-sm tracking-widest uppercase transition-colors hidden lg:block"
-                  style={{ color: 'rgba(200,200,210,0.75)' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#e2e8f0')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(200,200,210,0.75)')}
+                  style={{ color: 'rgba(31,18,8,0.55)' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#1F1208')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(31,18,8,0.55)')}
                 >
                   {t('nav.founderStory')}
                 </Link>
@@ -106,17 +126,17 @@ const Navbar = () => {
                 <Link
                   to="/our-achievements"
                   className="font-cinzel text-sm tracking-widest uppercase transition-colors hidden md:block"
-                  style={{ color: 'rgba(251,191,136,0.75)' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#fcd9a8')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(251,191,136,0.75)')}
+                  style={{ color: 'rgba(31,18,8,0.65)' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#C27B20')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(31,18,8,0.65)')}
                 >
                   {t('nav.achievements')}
                 </Link>
               )}
               <Link
                 to="/"
-                className="font-cinzel text-sm font-semibold tracking-widest uppercase hover:text-white transition-colors"
-                style={{ color: 'rgba(251,191,36,0.7)' }}
+                className="font-cinzel text-sm font-semibold tracking-widest uppercase hover:text-[#C27B20] transition-colors"
+                style={{ color: 'rgba(31,18,8,0.65)' }}
               >
                 {t('nav.back')}
               </Link>
@@ -130,7 +150,7 @@ const Navbar = () => {
       {isHome && mobileOpen && (
         <div
           className="fixed inset-0 z-40 flex flex-col md:hidden"
-          style={{ background: 'rgba(20,14,10,0.97)', paddingTop: '4.5rem' }}
+          style={{ background: 'rgba(251,246,238,0.98)', paddingTop: '4.5rem' }}
           onClick={closeMobile}
         >
           <nav
@@ -140,49 +160,56 @@ const Navbar = () => {
             <a
               href="#home"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b border-amber-500/10 text-slate-200 hover:text-amber-200 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b transition-colors"
+              style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#1F1208' }}
             >
               {t('nav.home')}
             </a>
             <Link
               to="/about"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b border-amber-500/10 text-slate-200 hover:text-amber-200 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b transition-colors"
+              style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#1F1208' }}
             >
               {t('nav.about')}
             </Link>
             <a
               href="#truth"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b border-amber-500/10 text-slate-200 hover:text-amber-200 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b transition-colors"
+              style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#1F1208' }}
             >
               {t('nav.truth')}
             </a>
             <Link
               to="/record-of-soul"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b border-amber-500/10 text-slate-200 hover:text-amber-200 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b transition-colors"
+              style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#1F1208' }}
             >
               {t('nav.record')}
             </Link>
             <Link
               to="/spirit-medicine"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b border-amber-500/10 text-slate-200 hover:text-amber-200 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b transition-colors"
+              style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#1F1208' }}
             >
               {t('nav.spirit')}
             </Link>
             <Link
               to="/our-achievements"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b border-amber-500/10 text-slate-200 hover:text-amber-200 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 border-b transition-colors"
+              style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#1F1208' }}
             >
               {t('nav.achievements')}
             </Link>
             <a
               href="#join"
               onClick={closeMobile}
-              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 text-amber-200 hover:text-amber-100 transition-colors"
+              className="w-full text-center font-cinzel text-base uppercase tracking-[0.3em] py-4 transition-colors"
+              style={{ color: '#C27B20' }}
             >
               {t('nav.join')}
             </a>

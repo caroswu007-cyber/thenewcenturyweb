@@ -1,3 +1,9 @@
+/**
+ * SAFE: This script only READS xlsx files and WRITES one generated TS file.
+ * It never modifies or overwrites any xlsx in docs/page-copy/.
+ *
+ * Usage:  npm run copy:import
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

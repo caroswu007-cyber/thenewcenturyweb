@@ -50,7 +50,8 @@ export function AchievementsReportCarousel({ width = 'half' }: { width?: Carouse
 
   return (
     <div className={shellW}>
-      <div className="relative overflow-hidden rounded-xl border border-amber-400/30 bg-black/50 shadow-[0_16px_44px_rgba(0,0,0,0.4)] ring-1 ring-white/[0.06]">
+      <div className="relative overflow-hidden rounded-xl shadow-[0_10px_32px_rgba(31,18,8,0.14)]"
+        style={{ border: '1px solid rgba(194,123,32,0.28)', background: 'rgba(237,224,204,0.5)' }}>
         <div className="relative aspect-[16/9] min-h-[128px] md:min-h-[140px] lg:min-h-[156px]">
           <AnimatePresence initial={false} mode="wait">
             <motion.img
@@ -66,13 +67,15 @@ export function AchievementsReportCarousel({ width = 'half' }: { width?: Carouse
             />
           </AnimatePresence>
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-amber-950/20"
+            className="pointer-events-none absolute inset-0"
+            style={{ background: 'linear-gradient(to top, rgba(245,237,224,0.55) 0%, rgba(237,224,204,0.1) 40%, transparent 100%)' }}
             aria-hidden
           />
         </div>
         <div
           ref={thumbRef}
-          className="flex gap-1.5 overflow-x-auto border-t border-white/10 bg-black/55 px-2.5 py-2 md:px-3 md:py-2.5"
+          className="flex gap-1.5 overflow-x-auto px-2.5 py-2 md:px-3 md:py-2.5"
+          style={{ borderTop: '1px solid rgba(31,18,8,0.09)', background: 'rgba(237,224,204,0.6)' }}
         >
           {slides.map((s, i) => (
             <button
@@ -82,9 +85,12 @@ export function AchievementsReportCarousel({ width = 'half' }: { width?: Carouse
               onClick={() => setIndex(i)}
               className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md border transition md:h-10 md:w-[4.25rem] ${
                 (reduceMotion ? 0 : index) === i
-                  ? 'border-amber-400/80 ring-2 ring-amber-400/35'
-                  : 'border-white/15 opacity-75 hover:border-amber-400/40 hover:opacity-100'
+                  ? ''
+                  : 'opacity-70 hover:opacity-100'
               }`}
+              style={{
+                borderColor: (reduceMotion ? 0 : index) === i ? 'rgba(194,123,32,0.75)' : 'rgba(31,18,8,0.15)',
+              }}
               aria-label={`Slide ${i + 1}`}
             >
               <img src={s.src} alt={s.alt} className="h-full w-full object-cover" draggable={false} />
@@ -92,7 +98,7 @@ export function AchievementsReportCarousel({ width = 'half' }: { width?: Carouse
           ))}
         </div>
       </div>
-      <p className="mt-2.5 text-center font-ui text-[0.7rem] text-slate-500 md:text-xs leading-snug px-1">
+      <p className="mt-2.5 text-center font-cinzel text-[0.7rem] md:text-xs leading-snug px-1" style={{ color: '#9B8E80' }}>
         <ReportInline text={t('achievementsReport.carouselNote')} />
       </p>
     </div>

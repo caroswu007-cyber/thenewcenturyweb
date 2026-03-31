@@ -9,11 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "preview:dist": "npm run build && vite preview",
-    "export:i18n-csv": "node scripts/export-i18n-csv.mjs",
-    "export:site-copy": "tsx scripts/export-all-site-copy.ts",
-    "export:page-xlsx": "tsx scripts/export-page-copy-workbooks.ts",
-    "import:page-xlsx": "tsx scripts/generate-page-copy-runtime.ts",
-    "dump:page-copy": "tsx scripts/dump-page-copy-json.ts"
+    "copy:import": "tsx scripts/generate-page-copy-runtime.ts",
+    "copy:scaffold": "tsx scripts/scaffold-page-copy-workbooks.ts",
+    "export:i18n-csv": "node scripts/export-i18n-csv.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

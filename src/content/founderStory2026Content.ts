@@ -22,27 +22,31 @@ export const founderStoryIllustrations: { src: string; alt: string }[] = [];
 export const founderTimeline = [
   { phase: 'A', range: 'May 2014 — Feb 2025', label: 'Phase A — family field work', tone: 'sky' as const },
   { phase: 'A1', range: 'Mar 2018 — Jul 2020', label: 'Cheating Period 1', tone: 'amber' as const },
-  { phase: 'A2', range: 'Jul 2020 — Nov 2020', label: 'Cheating period 2', tone: 'amber' as const },
-  { phase: 'A3', range: 'Nov 2020 — Jul 2021', label: 'Exorcism period 1', tone: 'violet' as const },
-  { phase: 'A4', range: 'Jul 2021 — Apr 2022', label: 'Exorcism 2 & high-level revealing', tone: 'violet' as const },
+  { phase: 'A2', range: 'Jul 2020 — Nov 15, 2020', label: 'Cheating period 2', tone: 'amber' as const },
+  { phase: 'A3', range: 'Nov 15, 2020 — Jul 2021', label: 'Exorcism period 1', tone: 'violet' as const },
+  { phase: 'A4', range: 'Jul 2021 — Dec 2023', label: 'Exorcism 2 & high-level revealing', tone: 'violet' as const },
   { phase: 'A5', range: 'Dec 2023 — Jan 2025', label: 'Qing Xiaoxian (C2) · Qian Kai (C3)', tone: 'rose' as const },
   { phase: 'B', range: '2025年2月—2026年3月', label: 'B阶段 · TikTok 直播与灵魂医学档案', tone: 'gold' as const },
 ];
 
 export const founderStoryPage = {
-  heroTitle: 'Our Story Outline — 2026',
+  heroTitle: 'ASRA Founders: The Story of the Woo Family',
   heroBadge: 'Founder narrative',
 
-  intro: `I am **John Long Woo**. Together with my two sons, **Caros** and **Sam** — we three, father and sons — we have lived through too many extraordinary events involving the **spirit realm** to count. Those experiences have made us the **first door-openers to the Spirit Realm** and the **first explorers of the truth of spirit life**.`,
+  intro: `I am **John Long Woo**. Together with my two sons, **Caros** and **Sam** — we three, father and sons — have lived through too many extraordinary stories involving the **spirit realm** to count. These experiences have made us the **first door-openers to the Spirit Realm** and the **first explorers of the truth of spirit life** (First door-opener to the Spirit Realm and first explorer of the Spirit life's truth).`,
 
   truths: {
-    title: 'Three truths',
+    title: 'Discovered Truths of the Spirit Realm',
     items: [
       {
         label: 'Truth 1',
         blocks: [
           {
-            text: `A living person is composed of both the **physical body** and the **spirit (soul)**. **Spirits (ghosts)** exist after human death. For the billions of them, the only way to survive is to **attach to human beings** and draw energy. That pattern is bound up with widespread illness such as **epilepsy**, **depression**, **schizophrenia**, and **somatic symptom disorders**. By **managing spirits (ghosts) through Master Spirits**, these conditions can often be rapidly improved. From that work we created **Spirit Medicine**. Further documentation appears in **Woos Record of Soul** and the **Woos Spirit Medicine** video archives.`,
+            text: `A living person is composed of both the **physical body** and the **spirit (soul)**. After death, the spirit becomes a **ghost (spirit ghost)**. For the **billions** of them, the only means of survival is to **attach to human beings** and obtain energy. This leads to global diseases such as **epilepsy**, **depression**, **schizophrenia**, and **somatic symptoms**. Through **managing spirits (ghosts) by master spirits**, these conditions can be rapidly improved. From this work we created **Spirit Medicine**.`,
+          },
+          {
+            title: 'Archives',
+            text: `Further documentation appears in the **Woos Record of Soul** and the **Woos Spirit Medicine** video archives.`,
           },
         ],
       },
@@ -50,7 +54,7 @@ export const founderStoryPage = {
         label: 'Truth 2',
         blocks: [
           {
-            text: `The **Spirit Realm** has governors — tremendous **Master Spirits**, upgraded from ordinary spirits through the **Universal Matrix of Meta Awareness**.`,
+            text: `The **Spirit Realm** has governors — tremendous **master spirits**, upgraded from ordinary **C1 spirit ghosts** through the **Universal Matrix of Meta Awareness** (spirit realm has governor, who are tremendous master spirits, upgraded from C1 spirit ghost by Universal Matrix of Meta Awareness).`,
           },
         ],
       },
@@ -58,11 +62,7 @@ export const founderStoryPage = {
         label: 'Truth 3',
         blocks: [
           {
-            text: `The **Universal Matrix of Meta Awareness** is the **true creator-level substrate**; **our universe is part of its body**.`,
-          },
-          {
-            title: 'Archive',
-            text: `Further documentation appears in the **Universal Matrix of Meta Awareness** video archive.`,
+            text: `The **Universal Matrix of Meta Awareness** is the **true creator**. Our **13.8-billion-year universe** is a part of **its body**. Further documentation appears in the **Universal Matrix of Meta Awareness** video archive.`,
           },
         ],
       },
@@ -70,25 +70,25 @@ export const founderStoryPage = {
   },
 
   phasesOverview: {
-    title: 'Two major chapters',
+    title: 'Two Major Chapters',
     a: {
       title: 'Phase A — May 2014 through February 2025',
       blocks: [
         {
-          title: 'Who was involved',
-          text: `We fought **attached spirits** of different classes parasitizing our bodies — including a **Class-C1**-level entity (archive designation associated with the “**Hui’an**” tier), the **Class-C2** spirit **Qing Xiaoxian**, and the **Class-C3** spirit **Qian Kai**. They drove **severe illness across our family**.`,
+          title: 'What happened',
+          text: `In this phase, we mainly fought the **attached spirits (ghosts) of different levels** parasitizing our bodies — including the **C1-level** entity (Hui'an), the **C2-level** ghost **Qing Xiaoxian**, and the **C3-level** ghost **Qian Kai**. They caused **various illnesses across our entire family**.`,
         },
         {
           title: 'Motive and methods',
-          text: `Our only motive was **self-rescue**: we tried every means we could to harm or destroy them. In doing so we learned the **physiological and physical properties of ghost bodies**, and communicated through **epileptic discharge**, **auditory hallucination sounds**, **consciousness dialogue**, **consciousness control**, and related modes — building a large, verified picture of the spirit world.`,
+          text: `We fought only for **self-rescue** — trying and researching every possible method to **kill** them. In the process of harming and destroying them, we learned the **physiological and physical properties of ghost bodies**, and communicated through **epileptic discharge**, **auditory hallucination sounds**, **consciousness dialogue**, **consciousness control**, and other modes — building a verified picture of the spirit world.`,
         },
         {
           title: 'Regret',
-          text: `Our greatest regret in **Phase A** is that we did **not** systematically engage attached spirits on **other human hosts** outside our family, or in **other countries**.`,
+          text: `Our greatest regret in **Phase A** is that we did **not** engage with attached spirits on **other people** outside our family, or those in **other countries**.`,
         },
         {
           title: 'Record',
-          text: `During this period we filmed **Woos Record of Soul**.`,
+          text: `During this period we filmed the **Woos Record of Soul**.`,
         },
       ],
     },
@@ -101,8 +101,8 @@ export const founderStoryPage = {
       stageTitle: 'Stage 1 · Cheating Period 1',
       range: 'March 2018 — July 2020',
       paragraphs: [
-        `During this period, the **low-level soul** in my body used **high-voltage electrostatic discharge** into drinks and wine to change their taste, aiming to fabricate a chain of “scientific” phenomena and laws that would ultimately “prove” **Buddhism**.`,
-        `The details are too intricate to spell out fully in words.`,
+        `During this period, the **C1 spirit ghost** in my body used the way of releasing **high voltage electrostatic** in drinks and wine to change the taste of drinks, aimed to fabricate a series of scientific phenomena and laws, which would finally lead to the proof of the existence of **Buddhism**. The details are complicated to explain clearly in words.`,
+        `(详情请看视频)`,
       ],
       /** @see https://ess-esw.org/storyline-of-woos/ Stage 1 — SEE IN YOUTUBE */
       storylineClip: {
@@ -116,8 +116,7 @@ export const founderStoryPage = {
       stageTitle: 'Cheating period 2',
       range: 'July 2020 — 15 November 2020',
       paragraphs: [
-        `During this interval, the low-level soul used **epilepsy-like seizures** to impersonate, in sequence, the **three greatest gods of Buddhism**, pretending to convey **divine will** — until my sons and I had converted.`,
-        `It was a **grotesque joke**; we were **playthings**. Even so, we exchanged a great deal of **philosophical insight** during the deception.`,
+        `During this time, the **C1 spirit ghost** in my body used ways of **epilepsy seizure** to disguise itself as the **three greatest gods of Buddhism** by time and pretend conveying deity's will to us, made me and my two sons converted to **Buddhism** finally. It's actually a big joke and we were just like **toy monkeys** at that time. However we exchanged a lot of **philosophy cognition and knowledge** during the cheating.`,
       ],
       /** @see https://ess-esw.org/storyline-of-woos/ Stage 2 — SEE IN YOUTUBE */
       storylineClip: {
@@ -131,22 +130,20 @@ export const founderStoryPage = {
       stageTitle: 'Exorcism period 1',
       range: '15 November 2020 — July 2021',
       paragraphs: [
-        `On **15 November 2020**, the **true identities** of the souls inside us and their **tricks** were finally exposed. In fear and rage we tried to **exorcise** them.`,
-        `Traditional methods failed repeatedly; we remembered they had always **forbidden** us to touch **strong magnets**. We began using magnets to **hurt** them.`,
-        `Within days the soul in my **elder son** could not endure it and **left first**; about **six weeks** later the soul in my **younger son** left for the same reason.`,
-        `The soul in **me** refused to depart even when injured. I found that a **strong electrostatic field** could severely weaken its discharging: my **epilepsy vanished** the moment that happened — yet the soul **remained inside**, playing hide-and-seek.`,
+        `At **Nov 15, 2020**, the **real identities** of spirit ghosts inside us and their tricks were finally **debunked**. In great fear and anger, we want to **exorcise** them. After many failures using traditional ways, we recalled that they always forbade us to touch any **strong magnets** with various excuses in previous communications. So we started using **magnets** to hurt them.`,
+        `A few days later, the spirit ghost inside my **elder son** couldn't stand it and **left first**. Then after a **month and a half**, the spirit ghost inside my **younger son** also left due to the same reason. But the spirit ghost in my body was unable to leave even it was already slightly injured, it made me puzzled.`,
+        `I found out that using a **strong electrostatic field** could greatly weaken it from discharging, and my **epilepsy** was eliminated immediately once it happens. But the spirit ghost was still inside me and continued **played hide and seek** with me.`,
       ],
     },
     {
       id: 'a4',
       label: 'A 4',
       stageTitle: 'Exorcism period 2 · and high-level revealing',
-      range: 'July 2021 — 4 April 2022',
+      range: 'July 2021 — December 2023',
       paragraphs: [
-        `In this stage we **found and confirmed** several ways to interfere with, injure, and **kill ordinary souls**.`,
-        `The limits of **electrostatic and magnet** work drew the attention of a **high-level soul** who had died in China roughly **1,500 years ago**. It joined the exploration: **consciousness transmission** for hints, while **steering the ordinary soul’s behavior** until I learned how to kill and expel **precisely and efficiently**.`,
-        `Each day I **tangled, fought, and coexisted** with the ordinary soul — **enemy and ally** at once — and traded large amounts of **spirit-relevant knowledge**.`,
-        `Finally the high-level soul **disclosed itself**, demonstrated **extraordinary abilities**, cleared up a year of confusion, taught me more of the **soul world** — then **left my body** and vanished quickly.`,
+        `During this stage, several ways of **interfering, hurting and killing C1 spirit ghost** were found and confirmed.`,
+        `The limitation of **electronic and magnet therapy** raised interest of a **master ghost** who died **1500 years ago** in China. It participated in the exploration of how to exorcise and kill **C1 spirit ghost** without raising the C1 spirit ghost and my attention. During the process, it used ways of **consciousness transmission** to give me hint, inspiration. In the same time, it also **manipulated the behavior** of that C1 spirit ghost, which finally let me know how to kill and exorcise C1 spirit ghost **precisely and efficiently**.`,
+        `I **entangled, fought, and coexisted** with the C1 spirit ghost every day, formed a subtle relationship that was both **enemy and friend**. In the process of injuring the spirit ghost, we also exchanged a lot of knowledge about **spiritual related information**. Finally, the master ghost **showed up** and demonstrated its **extraordinary abilities**. It explained various confusions over the past year and taught me much knowledge of the **spiritual realm**, then it left my body and vanished quickly.`,
       ],
     },
     {
@@ -155,11 +152,10 @@ export const founderStoryPage = {
       stageTitle: 'Class-C2 Qing Xiaoxian · Class-C3 Qian Kai',
       range: 'December 2023 — January 2025',
       paragraphs: [
-        `In **December 2023** I was again possessed by the **Class-C2** spirit **Qing Xiaoxian**. Across roughly **1,700 years** as a ghost it had devoured on the order of **5,000–10,000** other souls, becoming an **enormous entity**.`,
-        `It turned the Woo home into a **haunted-house field**, spun **multiple avatars** onto both sons, and allowed its **core form** to coordinate those fragments **remotely**.`,
-        `In the father: **schizophrenia**, **bipolar disorder**, **epilepsy**, **somatization**, and **powerful electrical assaults** on the heart. In the sons: **fatigue (energy coupling)**, **depression**, **pain disorder**, **IBS**, and further somatic patterns.`,
-        `Father and sons continued to refine **exorcism** and **ghost-neutralization** until this entity was **fully destroyed**.`,
-        `From **September 2024** through **January 2025** I was possessed again by the **Class-C3** spirit **Qian Kai**. **Higher ghost density means greater power** — so Qian Kai **exceeded** Qing Xiaoxian in **thought-control** and **pathogenic force**. We continued **self-rescue** until this spirit, too, was **eliminated**.`,
+        `In **December 2023**, I was again possessed by the **C2-level** ghost **Qing Xiaoxian**. During its **1,700 years** as a ghost, this entity had devoured approximately **5,000 to 10,000** other souls, becoming an **enormous spirit body**. It turned the Woo home into a **haunted house**, created **multiple avatars** that attached to both sons, and the core entity could **communicate with these avatars remotely**.`,
+        `In my body, this ghost caused **schizophrenia**, **bipolar disorder**, **epilepsy**, **somatization**, and other manifestations. It also attacked my **heart** with extremely powerful electric currents, causing **heart failure symptoms**. In both sons, it caused **fatigue (energy synergy)**, **depression**, **pain disorders**, **irritable bowel syndrome**, and other somatic symptoms.`,
+        `We continued to refine **exorcism and ghost-elimination** techniques and ultimately **successfully destroyed** this ghost.`,
+        `From **September 2024** to **January 2025**, I was again possessed by the **C3-level** ghost **Qian Kai**. Qian Kai's density was far **higher** than the C2-level Qing Xiaoxian. The higher the ghost's density, the **stronger its capabilities** — so Qian Kai's **thought-control and pathogenic power** were also stronger. We continued **self-rescue** and killed this ghost as well.`,
       ],
     },
   ],
@@ -170,28 +166,28 @@ export const founderStoryPage = {
     title: 'Phase B — February 2025 through March 2026',
     blocks: [
       {
-        title: 'Livestream scale and documented outcomes',
-        text: `From **19 February 2025** through **24 December 2025**, **Caros** hosted **265** TikTok Live sessions and achieved **extraordinary outcomes** in the broadcast field. Full documentation and links: {{%ACH%}}`,
+        title: 'Verification of Phase A truths',
+        text: `In this phase, **Caros** communicated with a large number of **attached ghosts** in North America through **TikTok live streams**, completely confirming all the **spirit world truths** we obtained in **Phase A**. With the help of **master spirits**, Caros obtained the **superpower to remotely control attached ghosts** in North America. This superpower is the foundation upon which we built **ASRA**.`,
       },
       {
-        title: 'Master Spirits, hybrid spirits, and remote capacity',
-        text: `A great many **Master Spirits** and **hybrid spirits** reached out to us as father and sons, revealing that the spirit world includes order at the levels of **administrators** and **creator-class** structure. **Master Spirits** gave us extensive support and **unusual abilities**, so that **Caros**, **while in China**, could **remotely regulate** attached spirits on **hosts in North America** on the far side of the globe.`,
+        title: 'Livestream scale and documented outcomes',
+        text: `From **19 February 2025** to **24 December 2025**, **Caros** conducted a total of **255** live streams on **TikTok**, achieving **extraordinary outcomes** in the livestream field. Links to these achievements: {{%ACH%}}`,
+      },
+      {
+        title: 'Master spirits and hybrid spirits',
+        text: `A great number of **master spirits** and **hybrid spirits** reached out to us as father and sons, letting us know that the **spirit world** surprisingly has **administrators and creators**. **Master spirits** gave us a great deal of help and **special miraculous powers**, enabling **Caros**, while in **China**, to directly and **remotely control** attached ghosts on the **far side of the globe in North America**.`,
       },
       {
         title: 'How Phase A attachments were arranged',
-        text: `**Most importantly**, we were told: every attached spirit on us during **Phase A** was **deliberately placed** by **Master Spirits**; clearing those presences was **authorized to serve as research material**.`,
+        text: `**Most importantly**, we were told: every attached ghost on us during **Phase A** was **deliberately arranged** by **master spirits**. The killing of those attached ghosts was **permitted as research material**. All the **suffering, deception, and taunting storylines** were also part of their plan — to let us understand their **operating style and character disposition**.`,
       },
       {
-        title: 'Illness, deception, and narrative as part of the plan',
-        text: `The **suffering**, **deception**, and **taunting storylines** were also part of their plan—so we could learn their **operating style** and **disposition**.`,
-      },
-      {
-        title: 'Understanding Master Spirit character',
-        text: `That also showed us clearly: **Master Spirits** are **not** **angel-good** in the way we imagined; the help offered earlier was **not** driven by **kindness** but by **assignments** from the **Universal Matrix of Meta Awareness**. The **Phase A** stories convey the **temperament of the Master Spirit team** in depth.`,
+        title: 'Understanding master spirit character',
+        text: `This also let us fully understand: **master spirits** are **not** as **angel-like kind** as we imagined. The help provided earlier was **not** out of **kindness** but was work **assigned to them by the Universal Matrix of Meta Awareness**. Everyone can fully appreciate the **character attributes of the master spirit team** through the **Phase A stories**.`,
       },
       {
         title: 'Spirit Medicine and video archives',
-        text: `During this period **Spirit Medicine was formally established**; we produced **part of** the **Woos Spirit Medicine** and **Universal Matrix of Meta Awareness** video archives.`,
+        text: `During this period, **Spirit Medicine was formally established**. Part of the **Woos Spirit Medicine** and **Universal Matrix of Meta Awareness** video archive series were filmed.`,
       },
     ],
   },

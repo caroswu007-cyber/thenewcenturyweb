@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <!-- 极浅砂粒：最深仅 0.76（浅灰），大部分纯白，multiply 几乎无灰感 -->
+    <filter id="micro" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" seed="17" stitchTiles="stitch" result="raw"/>
+      <feColorMatrix in="raw" type="saturate" values="0" result="g"/>
+      <feComponentTransfer in="g">
+        <feFuncR type="table" values="0.76 0.83 0.91 0.97 1 1 1 1 1 1 1"/>
+        <feFuncG type="table" values="0.76 0.83 0.91 0.97 1 1 1 1 1 1 1"/>
+        <feFuncB type="table" values="0.76 0.83 0.91 0.97 1 1 1 1 1 1 1"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" filter="url(#micro)" fill="#ffffff"/>
+</svg>

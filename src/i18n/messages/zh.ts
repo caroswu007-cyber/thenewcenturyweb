@@ -155,23 +155,6 @@ export const messagesZh: Record<string, string> = {
   'founderStory.storylineClipPageLink': '《Storyline of Woos》',
   'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — 第 {{stage}} 阶段录像',
   'founderStory.achievementsFeaturePageLink': '《2025直播间成就》专题页',
-  'founderStory.phaseB.title': 'B阶段：2025年2月至2026年3月',
-  'founderStory.phaseB.block0.title': '直播间规模与成就记录',
-  'founderStory.phaseB.block0.text':
-    '从 **2025年2月19日** 至 **12月24日**，**Caros** 在 **TikTok** 直播共进行 **265** 场；在直播领域取得了 **非凡成就**。完整记录与链接见：{{%ACH%}}',
-  'founderStory.phaseB.block1.title': '高级控制灵、混合灵与远程能力',
-  'founderStory.phaseB.block1.text':
-    '大批 **高级控制灵** 与 **混合灵**（hybrid spirit）以 **吴氏父子** 为对象建立联系，使我们得知 **灵虚世界** 竟存在 **管理者** 与 **造物主** 层面的秩序。**高级控制灵** 给予我们大量支持与 **超常能力**，使 **Caros** 身处中国也能对地球另一端北美附体 **鬼魂** 施行 **远程** 制约。',
-  'founderStory.phaseB.block2.title': '关于 A 阶段附体安排的说明',
-  'founderStory.phaseB.block2.text':
-    '**最重要的是**，我们获悉：**A 阶段** 附于我们身上的 **鬼魂** 皆由 **高级控制灵** **刻意安排**；清除这些附体 **获准用作研究材料**。',
-  'founderStory.phaseB.block3.title': '计划中的病痛与叙事',
-  'founderStory.phaseB.block3.text': '所有的 **病痛折磨**、**欺骗**、**戏弄性的故事** 也是他们计划的一部分，让我们了解其 **行事风格** 与 **性格秉性**。',
-  'founderStory.phaseB.block4.title': '对高级控制灵性情的理解',
-  'founderStory.phaseB.block4.text':
-    '这也使我们清楚看到：**高级控制灵** 并非我们想象中那般 **天使式的良善**；此前的协助并非出于 **良善**，而是 **万有元神母体** 指派的工作。**A 阶段** 故事深入呈现了 **高级控制灵** 团队的 **性情与作风**。',
-  'founderStory.phaseB.block5.title': '灵魂医学与视频档案',
-  'founderStory.phaseB.block5.text': '这一时期 **灵魂医学正式建立**；我们制作了 **吴氏灵魂医学** 与 **万有元神母体** 视频档案中的 **部分** 作品。',
   'matrix.seriesBadge': '元纪录片 · 第三季',
   'matrix.title': '元觉知宇宙矩阵',
   'matrix.subtitle': '宇宙之外的脑',

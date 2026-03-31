@@ -3,14 +3,24 @@ import { motion } from 'framer-motion';
 import { BarChart3, Microscope, Radio } from 'lucide-react';
 import { useI18n } from '../../i18n/LocaleProvider';
 
-/** Matches TruthSection / JoinSection: home-blur-surface + amber accents (same family as Founder Story) */
 const Achievements = () => {
   const { t } = useI18n();
 
   return (
     <section
       id="achievements"
-      className="home-blur-surface py-16 md:py-24 px-4 sm:px-6 md:px-12 relative scroll-mt-24 md:scroll-mt-28 border-t border-[rgba(251,191,36,0.12)]"
+      className="py-16 md:py-24 px-4 sm:px-6 md:px-12 relative scroll-mt-24 md:scroll-mt-28 ed-vignette"
+      style={{
+        borderTop: '1px solid rgba(194,123,32,0.12)',
+        background: `linear-gradient(
+          180deg,
+          rgba(245,237,224,0) 0%,
+          rgba(245,237,224,0.65) 4%,
+          #F5EDE0 50%,
+          rgba(245,237,224,0.65) 96%,
+          rgba(245,237,224,0) 100%
+        )`,
+      }}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -20,7 +30,7 @@ const Achievements = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-10 md:mb-16"
         >
-          <p className="font-cinzel text-xs md:text-sm uppercase tracking-[0.22em] mb-6" style={{ color: 'rgba(251,191,36,0.45)' }}>
+          <p className="font-cinzel text-xs md:text-sm uppercase tracking-[0.22em] mb-6" style={{ color: 'rgba(194,123,32,0.6)' }}>
             {t('home.achievements.subtitle')}
           </p>
 
@@ -31,17 +41,20 @@ const Achievements = () => {
             {t('home.achievements.title')}
           </h2>
 
-          <p className="text-slate-200/95 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8 md:mb-10 font-light">
+          <p style={{ color: '#3D2510' }} className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8 md:mb-10 font-light">
             {t('home.achievements.lead')}
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-10 gap-y-3 mb-12 text-slate-300/95 text-sm md:text-base max-w-2xl mx-auto font-ui border-t border-b border-white/[0.08] py-6">
+          <div
+            className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-10 gap-y-3 mb-12 text-sm md:text-base max-w-2xl mx-auto font-cinzel border-t border-b py-6"
+            style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#3D2510' }}
+          >
             <span className="inline-flex items-center gap-2 justify-center">
-              <Microscope className="w-4 h-4 text-sky-400/80 shrink-0" aria-hidden />
+              <Microscope className="w-4 h-4 shrink-0" style={{ color: '#C27B20' }} aria-hidden />
               {t('home.achievements.kickerDoc')}
             </span>
             <span className="inline-flex items-center gap-2 justify-center">
-              <Radio className="w-4 h-4 text-amber-200/80 shrink-0" aria-hidden />
+              <Radio className="w-4 h-4 shrink-0" style={{ color: '#8B5413' }} aria-hidden />
               {t('home.achievements.kickerMetrics')}
             </span>
           </div>
@@ -53,17 +66,22 @@ const Achievements = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-lg p-6 sm:p-8 md:p-10 backdrop-blur-md border border-white/[0.1] bg-[rgba(15,23,42,0.55)]"
+            className="rounded-xl p-6 sm:p-8 md:p-10"
+            style={{
+              background: 'rgba(251,246,238,0.88)',
+              border: '1px solid rgba(31,18,8,0.09)',
+              boxShadow: '0 3px 22px rgba(31,18,8,0.07)',
+            }}
           >
             <div className="flex items-center gap-3 mb-5 md:mb-6">
-              <BarChart3 className="w-6 h-6 md:w-7 md:h-7 text-sky-300/95 shrink-0" aria-hidden />
+              <BarChart3 className="w-6 h-6 md:w-7 md:h-7 shrink-0" style={{ color: '#C27B20' }} aria-hidden />
               <div
                 className="h-px flex-1"
-                style={{ background: 'linear-gradient(to right, rgba(56,189,248,0.35), transparent)' }}
+                style={{ background: 'linear-gradient(to right, rgba(194,123,32,0.35), transparent)' }}
               />
             </div>
-            <h3 className="font-ui text-lg sm:text-xl md:text-2xl text-white mb-4 font-semibold tracking-tight">{t('home.achievements.card1Title')}</h3>
-            <p className="text-slate-200/90 leading-relaxed text-sm sm:text-base md:text-lg font-ui">{t('home.achievements.card1Body')}</p>
+            <h3 className="font-cinzel text-lg sm:text-xl md:text-2xl mb-4 font-semibold tracking-tight" style={{ color: '#1F1208' }}>{t('home.achievements.card1Title')}</h3>
+            <p className="leading-relaxed text-sm sm:text-base md:text-lg font-cinzel" style={{ color: '#3D2510' }}>{t('home.achievements.card1Body')}</p>
           </motion.div>
 
           <motion.div
@@ -71,17 +89,22 @@ const Achievements = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08, duration: 0.6 }}
-            className="rounded-lg p-6 sm:p-8 md:p-10 backdrop-blur-md border border-white/[0.1] bg-[rgba(15,23,42,0.55)]"
+            className="rounded-xl p-6 sm:p-8 md:p-10"
+            style={{
+              background: 'rgba(237,224,204,0.7)',
+              border: '1px solid rgba(31,18,8,0.09)',
+              boxShadow: '0 3px 22px rgba(31,18,8,0.07)',
+            }}
           >
             <div className="flex items-center gap-3 mb-5 md:mb-6">
-              <Microscope className="w-6 h-6 md:w-7 md:h-7 text-amber-200/95 shrink-0" aria-hidden />
+              <Microscope className="w-6 h-6 md:w-7 md:h-7 shrink-0" style={{ color: '#8B5413' }} aria-hidden />
               <div
                 className="h-px flex-1"
-                style={{ background: 'linear-gradient(to right, rgba(251,191,36,0.35), transparent)' }}
+                style={{ background: 'linear-gradient(to right, rgba(139,84,19,0.35), transparent)' }}
               />
             </div>
-            <h3 className="font-ui text-lg sm:text-xl md:text-2xl text-white mb-4 font-semibold tracking-tight">{t('home.achievements.card2Title')}</h3>
-            <p className="text-slate-200/90 leading-relaxed text-sm sm:text-base md:text-lg font-ui">{t('home.achievements.card2Body')}</p>
+            <h3 className="font-cinzel text-lg sm:text-xl md:text-2xl mb-4 font-semibold tracking-tight" style={{ color: '#1F1208' }}>{t('home.achievements.card2Title')}</h3>
+            <p className="leading-relaxed text-sm sm:text-base md:text-lg font-cinzel" style={{ color: '#3D2510' }}>{t('home.achievements.card2Body')}</p>
           </motion.div>
         </div>
 
@@ -91,14 +114,21 @@ const Achievements = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-slate-300/95 mb-6 md:mb-8 text-base sm:text-lg md:text-xl font-ui font-light max-w-2xl mx-auto leading-relaxed">
+          <p style={{ color: '#3D2510' }} className="mb-6 md:mb-8 text-base sm:text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
             {t('home.achievements.ctaIntro')}
           </p>
           <Link
             to="/our-achievements"
-            className="inline-flex items-center gap-2 font-ui font-medium text-base md:text-lg py-3.5 px-8 rounded-md border border-amber-500/30 bg-slate-900/80 text-slate-100 hover:border-amber-400/45 hover:bg-slate-900 transition-colors"
+            className="inline-flex items-center gap-2 font-cinzel font-medium text-base md:text-lg py-3.5 px-8 rounded-full border transition-colors"
+            style={{
+              borderColor: 'rgba(31,18,8,0.22)',
+              background: 'rgba(251,246,238,0.8)',
+              color: '#1F1208',
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(194,123,32,0.5)'; (e.currentTarget as HTMLAnchorElement).style.color = '#C27B20'; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(31,18,8,0.22)'; (e.currentTarget as HTMLAnchorElement).style.color = '#1F1208'; }}
           >
-            <BarChart3 className="w-5 h-5 text-amber-200/80 shrink-0" aria-hidden />
+            <BarChart3 className="w-5 h-5 shrink-0" style={{ color: '#C27B20' }} aria-hidden />
             {t('home.achievements.cta')}
           </Link>
         </motion.div>

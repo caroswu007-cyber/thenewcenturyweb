@@ -20,33 +20,24 @@ const RecordOfSoulHero = () => {
         <LibraryAmbientBackground />
       </div>
 
-      {/* Readable veil — slightly lighter so library motion reads; typography stays crisp */}
-      <div className="absolute inset-0 z-[2] bg-black/36" />
+      {/* Warm sepia veil — amber-brown tone over dark image */}
+      <div className="absolute inset-0 z-[2]" style={{ background: 'rgba(75,38,8,0.52)' }} />
 
-      {/* Edge vignette — deeper at corners for contrast */}
+      {/* Edge vignette — warm walnut corners */}
       <div
         className="absolute inset-0 z-[2]"
         style={{
           background:
-            'radial-gradient(ellipse at 50% 36%, rgba(0,0,0,0) 18%, rgba(0,0,0,0.72) 100%)',
+            'radial-gradient(ellipse at 50% 36%, rgba(0,0,0,0) 15%, rgba(45,18,4,0.68) 100%)',
         }}
       />
 
-      {/* Warm amber glow at center — gives depth */}
+      {/* Warm amber lamp glow at center */}
       <div
         className="absolute inset-0 z-[2] pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 58% at 50% 42%, rgba(235, 195, 120, 0.16) 0%, transparent 68%)',
-        }}
-      />
-
-      {/* Film scanline texture */}
-      <div
-        className="absolute inset-0 z-[2] pointer-events-none opacity-[0.14]"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.04) 2px, rgba(255,255,255,0.04) 4px)',
+            'radial-gradient(ellipse 75% 55% at 50% 38%, rgba(210,155,70,0.32) 0%, rgba(160,100,30,0.12) 48%, transparent 72%)',
         }}
       />
 
@@ -141,8 +132,8 @@ const RecordOfSoulHero = () => {
         <div
           className="max-w-2xl w-full text-left px-5 py-4"
           style={{
-            borderLeft: '3px solid rgba(245,200,110,0.92)',
-            background: 'rgba(18,14,10,0.92)',
+            borderLeft: '3px solid rgba(180,120,40,0.85)',
+            background: 'rgba(50,25,5,0.72)',
           }}
         >
           <p
@@ -174,10 +165,10 @@ const RecordOfSoulHero = () => {
         />
       </div>
 
-      {/* Bottom gradient — smooth fade into timeline */}
+      {/* Bottom gradient — smooth fade into parchment timeline */}
       <div
         className="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-[3]"
-        style={{ background: 'linear-gradient(to top, #14110c, transparent)' }}
+        style={{ background: 'linear-gradient(to top, #E8D5B8, transparent)' }}
       />
     </section>
   );

@@ -27,16 +27,16 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.45, delay: index * 0.04, ease: 'easeOut' }}
       className="py-8 last:border-b-0"
-      style={{ borderBottom: '1px solid rgba(255,255,255,0.14)' }}
+      style={{ borderBottom: '1px solid rgba(31,18,8,0.13)' }}
     >
       {/* File badge */}
       <div className="flex items-center gap-3 mb-4">
         <span
           className="font-mono text-sm tracking-[0.2em] uppercase px-2.5 py-1 rounded-sm font-semibold"
           style={{
-            color: '#f0c860',
-            background: 'rgba(220,175,90,0.18)',
-            border: '1px solid rgba(235,195,110,0.55)',
+            color: '#7A4A12',
+            background: 'rgba(160,95,25,0.1)',
+            border: '1px solid rgba(140,85,20,0.35)',
             letterSpacing: '0.18em',
           }}
         >
@@ -45,7 +45,7 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
         <div
           className="flex-1 h-px max-w-20"
           style={{
-            background: 'linear-gradient(to right, rgba(235,195,110,0.55), transparent)',
+            background: 'linear-gradient(to right, rgba(140,85,20,0.4), transparent)',
           }}
         />
       </div>
@@ -55,8 +55,8 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
         className="font-serif font-bold leading-snug mb-5 transition-colors duration-300"
         style={{
           fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)',
-          color: isOpen ? '#fff6e4' : '#f5ebd8',
-          textShadow: isOpen ? '0 0 36px rgba(240,190,100,0.35)' : 'none',
+          color: isOpen ? '#1A0A02' : '#2A1408',
+          textShadow: 'none',
         }}
       >
         {title}
@@ -71,17 +71,17 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
           fontFamily: 'monospace',
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
-          color: isOpen ? '#e8c266' : '#c9a878',
-          border: `1px solid ${isOpen ? 'rgba(235,195,110,0.65)' : 'rgba(255,255,255,0.22)'}`,
+          color: isOpen ? '#7A4A12' : '#5A3210',
+          border: `1px solid ${isOpen ? 'rgba(140,85,20,0.5)' : 'rgba(31,18,8,0.22)'}`,
           padding: '0.4rem 1rem',
           borderRadius: '2px',
-          background: isOpen ? 'rgba(220,175,90,0.14)' : 'rgba(255,255,255,0.04)',
+          background: isOpen ? 'rgba(160,95,25,0.08)' : 'rgba(31,18,8,0.04)',
         }}
       >
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2 }}
-          style={{ color: '#e8c266', fontSize: '1rem', lineHeight: 1 }}
+          style={{ color: '#9A5A18', fontSize: '1rem', lineHeight: 1 }}
         >
           +
         </motion.span>
@@ -102,20 +102,20 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
             <div
               className="mb-6 pl-5 py-4 pr-3"
               style={{
-                borderLeft: '2px solid rgba(235,195,110,0.6)',
-                background: 'rgba(255,255,255,0.045)',
+                borderLeft: '2px solid rgba(160,95,25,0.5)',
+                background: 'rgba(31,18,8,0.05)',
               }}
             >
               {/* Abstract */}
               <p
                 className="font-mono text-sm uppercase tracking-[0.2em] mb-2 font-semibold"
-                style={{ color: '#e0a050' }}
+                style={{ color: '#7A4A12' }}
               >
                 {t('episode.abstract')}
               </p>
               <p
                 className="text-base leading-relaxed mb-5"
-                style={{ color: '#e8dcc8' }}
+                style={{ color: '#3D2010' }}
               >
                 {abstract}
               </p>
@@ -125,17 +125,17 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
                 <>
                   <div
                     className="h-px mb-4"
-                    style={{ background: 'rgba(235,195,110,0.28)' }}
+                    style={{ background: 'rgba(140,85,20,0.2)' }}
                   />
                   <p
                     className="font-mono text-sm uppercase tracking-[0.2em] mb-2 font-semibold"
-                    style={{ color: '#e0a050' }}
+                    style={{ color: '#7A4A12' }}
                   >
                     {t('episode.keyFeatures')}
                   </p>
                   <p
                     className="text-base leading-relaxed"
-                    style={{ color: '#e8dcc8' }}
+                    style={{ color: '#3D2010' }}
                   >
                     {keyFeatures}
                   </p>
@@ -153,26 +153,26 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
           <div className="flex items-center gap-3 mb-1.5">
             <span
               className="font-mono text-sm uppercase tracking-wider"
-              style={{ color: '#b8a990' }}
+              style={{ color: '#6A4018' }}
             >
               {t('episode.duration')}
             </span>
             <span
               className="font-mono text-sm font-semibold"
-              style={{ color: '#f0c870' }}
+              style={{ color: '#9A5A18' }}
             >
               {videoLength}
             </span>
           </div>
           <div
             className="h-0.5 rounded-full overflow-hidden"
-            style={{ background: 'rgba(255,255,255,0.14)', maxWidth: '12rem' }}
+            style={{ background: 'rgba(31,18,8,0.14)', maxWidth: '12rem' }}
           >
             <div
               className="h-full rounded-full"
               style={{
                 width: `${durationPercent}%`,
-                background: 'linear-gradient(to right, #b87830, #f0d878)',
+                background: 'linear-gradient(to right, #8B5020, #C27B30)',
               }}
             />
           </div>
@@ -190,19 +190,19 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
               fontFamily: 'monospace',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: '#c9b8a0',
-              border: '1px solid rgba(255,255,255,0.28)',
+              color: '#5A3210',
+              border: '1px solid rgba(31,18,8,0.25)',
               padding: '0.45rem 1rem',
               borderRadius: '2px',
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLAnchorElement).style.color = '#e8c060';
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(220,180,60,0.6)';
-              (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(200,160,60,0.08)';
+              (e.currentTarget as HTMLAnchorElement).style.color = '#7A4A12';
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(140,85,20,0.5)';
+              (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(160,95,25,0.08)';
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLAnchorElement).style.color = '#c9b8a0';
-              (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.28)';
+              (e.currentTarget as HTMLAnchorElement).style.color = '#5A3210';
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(31,18,8,0.25)';
               (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
             }}
           >

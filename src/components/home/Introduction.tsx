@@ -9,23 +9,22 @@ const Introduction = () => {
   return (
     <section
       id="introduction"
-      className="relative z-10 -mt-20 md:-mt-28 overflow-hidden pt-16 md:pt-24 lg:pt-28 pb-36 md:pb-44 lg:pb-48 px-4 sm:px-6 md:px-12 scroll-mt-24 md:scroll-mt-28"
+      className="relative z-10 -mt-20 md:-mt-28 overflow-hidden pt-16 md:pt-24 lg:pt-28 pb-36 md:pb-44 lg:pb-48 px-4 sm:px-6 md:px-12 scroll-mt-24 md:scroll-mt-28 ed-vignette"
       style={{
-        /* Single seamless fade — no mid-section colour steps */
         background: `linear-gradient(
           180deg,
-          rgba(0,0,0,0) 0%,
-          rgba(18,12,10,0.08) 18%,
-          rgba(18,12,10,0.22) 50%,
-          rgba(18,12,10,0.72) 88%,
-          rgba(18,12,10,0.95) 100%
+          rgba(245,237,224,0) 0%,
+          rgba(237,224,204,0.35) 18%,
+          rgba(237,224,204,0.68) 50%,
+          rgba(237,224,204,0.85) 88%,
+          rgba(237,224,204,0.95) 100%
         )`,
       }}
     >
       <div className="relative z-[1] max-w-6xl mx-auto">
         <p
           className="text-center font-cinzel text-[0.62rem] sm:text-xs uppercase tracking-[0.42em] mb-8 md:mb-10"
-          style={{ color: 'rgba(251,191,36,0.38)' }}
+          style={{ color: 'rgba(194,123,32,0.55)' }}
         >
           {t('home.intro.badge')}
         </p>
@@ -39,9 +38,9 @@ const Introduction = () => {
           className="text-center mb-12 md:mb-16 px-2 py-3 md:py-4"
         >
           <div className="flex items-center justify-center gap-4 mb-7 md:mb-8">
-            <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.5))' }} />
-            <span style={{ color: 'rgba(251,191,36,0.5)', fontSize: '0.6rem', letterSpacing: '0.4em' }}>✦ ✦ ✦</span>
-            <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.5))' }} />
+            <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to right, transparent, rgba(194,123,32,0.5))' }} />
+            <span style={{ color: 'rgba(194,123,32,0.5)', fontSize: '0.6rem', letterSpacing: '0.4em' }}>✦ ✦ ✦</span>
+            <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(194,123,32,0.5))' }} />
           </div>
 
           <h2
@@ -52,32 +51,32 @@ const Introduction = () => {
           </h2>
 
           <div className="flex items-center justify-center gap-3 sm:gap-4 mt-5 flex-wrap">
-            <div className="h-px w-16 sm:w-32 shrink-0" style={{ background: 'linear-gradient(to right, transparent, rgba(251,191,36,0.3))' }} />
+            <div className="h-px w-16 sm:w-32 shrink-0" style={{ background: 'linear-gradient(to right, transparent, rgba(194,123,32,0.3))' }} />
             <span
               className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.35em] text-center"
-              style={{ color: 'rgba(251,191,36,0.35)' }}
+              style={{ color: 'rgba(61,37,16,0.5)' }}
             >
               {t('home.intro.subtitle')}
             </span>
-            <div className="h-px w-16 sm:w-32 shrink-0" style={{ background: 'linear-gradient(to left, transparent, rgba(251,191,36,0.3))' }} />
+            <div className="h-px w-16 sm:w-32 shrink-0" style={{ background: 'linear-gradient(to left, transparent, rgba(194,123,32,0.3))' }} />
           </div>
         </motion.div>
 
-        {/* Overview paragraph — no card frame, just subtle text-shadow for legibility */}
+        {/* Overview paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.05, duration: 0.65 }}
-          className="text-center text-slate-200/95 text-base sm:text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto mb-16 md:mb-20 px-2 sm:px-4"
-          style={{ textShadow: '0 1px 22px rgba(0,0,0,0.45)' }}
+          className="text-center text-base sm:text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto mb-16 md:mb-20 px-2 sm:px-4"
+          style={{ color: '#3D2510' }}
         >
           {t('home.intro.overviewBefore')}
-          <span style={{ color: '#fbbf24' }}>{t('home.intro.overviewHighlight')}</span>
+          <span style={{ color: '#C27B20', fontStyle: 'italic' }}>{t('home.intro.overviewHighlight')}</span>
           {t('home.intro.overviewAfter')}
         </motion.p>
 
-        {/* ASra / SMSC cards — no outer container background to avoid a third dividing line */}
+        {/* ASra / SMSC cards — warm paper style */}
         <div className="grid md:grid-cols-2 gap-5 md:gap-8 mb-16 md:mb-20">
           {/* ASra card */}
           <motion.div
@@ -85,27 +84,27 @@ const Introduction = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="backdrop-blur-xl p-6 sm:p-8 md:p-9 rounded-2xl transition-all duration-300"
+            className="p-6 sm:p-8 md:p-9 rounded-xl transition-all duration-300"
             style={{
-              background: 'rgba(15,23,42,0.42)',
-              border: '1px solid rgba(251,191,36,0.08)',
-              boxShadow: '0 4px 28px rgba(0,0,0,0.25)',
+              background: 'rgba(251,246,238,0.88)',
+              border: '1px solid rgba(31,18,8,0.09)',
+              boxShadow: '0 3px 22px rgba(31,18,8,0.07)',
             }}
-            onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(251,191,36,0.24)'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(251,191,36,0.08)'; }}
+            onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(194,123,32,0.3)'; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(31,18,8,0.09)'; }}
           >
-            <div className="h-px mb-6" style={{ background: 'linear-gradient(to right, rgba(251,191,36,0.5), transparent)' }} />
+            <div className="h-px mb-6" style={{ background: 'linear-gradient(to right, rgba(194,123,32,0.5), transparent)' }} />
             <span
               className="font-cinzel font-bold text-xs sm:text-sm tracking-[0.28em] uppercase px-3 py-1 rounded-full mb-5 inline-block"
-              style={{ background: 'rgba(251,191,36,0.1)', border: '1px solid rgba(251,191,36,0.3)', color: '#fbbf24' }}
+              style={{ background: 'rgba(194,123,32,0.08)', border: '1px solid rgba(194,123,32,0.25)', color: '#C27B20' }}
             >
               {t('home.intro.physicalWorld')}
             </span>
-            <h3 className="font-cinzel text-lg sm:text-xl text-white mb-1 mt-3 tracking-wide">{t('home.intro.asraName')}</h3>
-            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4" style={{ color: 'rgba(251,191,36,0.5)' }}>
+            <h3 className="font-cinzel text-lg sm:text-xl mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.asraName')}</h3>
+            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4" style={{ color: 'rgba(194,123,32,0.65)' }}>
               {t('home.intro.asraFull')}
             </p>
-            <p className="text-slate-300 leading-relaxed text-base sm:text-lg">{t('home.intro.asraBody')}</p>
+            <p style={{ color: '#3D2510' }} className="leading-relaxed text-base sm:text-lg">{t('home.intro.asraBody')}</p>
           </motion.div>
 
           {/* SMSC card */}
@@ -114,27 +113,27 @@ const Introduction = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="backdrop-blur-xl p-6 sm:p-8 md:p-9 rounded-2xl transition-all duration-300"
+            className="p-6 sm:p-8 md:p-9 rounded-xl transition-all duration-300"
             style={{
-              background: 'rgba(15,23,42,0.42)',
-              border: '1px solid rgba(167,139,250,0.08)',
-              boxShadow: '0 4px 28px rgba(0,0,0,0.25)',
+              background: 'rgba(237,224,204,0.7)',
+              border: '1px solid rgba(31,18,8,0.09)',
+              boxShadow: '0 3px 22px rgba(31,18,8,0.07)',
             }}
-            onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(167,139,250,0.24)'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(167,139,250,0.08)'; }}
+            onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(194,123,32,0.3)'; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(31,18,8,0.09)'; }}
           >
-            <div className="h-px mb-6" style={{ background: 'linear-gradient(to right, rgba(167,139,250,0.5), transparent)' }} />
+            <div className="h-px mb-6" style={{ background: 'linear-gradient(to right, rgba(61,37,16,0.3), transparent)' }} />
             <span
               className="font-cinzel font-bold text-xs sm:text-sm tracking-[0.28em] uppercase px-3 py-1 rounded-full mb-5 inline-block"
-              style={{ background: 'rgba(167,139,250,0.1)', border: '1px solid rgba(167,139,250,0.3)', color: '#a78bfa' }}
+              style={{ background: 'rgba(61,37,16,0.08)', border: '1px solid rgba(61,37,16,0.2)', color: '#3D2510' }}
             >
               {t('home.intro.spiritRealm')}
             </span>
-            <h3 className="font-cinzel text-lg sm:text-xl text-white mb-1 mt-3 tracking-wide">{t('home.intro.smscName')}</h3>
-            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4" style={{ color: 'rgba(167,139,250,0.5)' }}>
+            <h3 className="font-cinzel text-lg sm:text-xl mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.smscName')}</h3>
+            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4" style={{ color: 'rgba(61,37,16,0.5)' }}>
               {t('home.intro.smscFull')}
             </p>
-            <p className="text-slate-300 leading-relaxed text-base sm:text-lg">{t('home.intro.smscBody')}</p>
+            <p style={{ color: '#3D2510' }} className="leading-relaxed text-base sm:text-lg">{t('home.intro.smscBody')}</p>
           </motion.div>
         </div>
 
@@ -149,21 +148,21 @@ const Introduction = () => {
           <Link
             to="/about"
             className="inline-block font-cinzel font-bold uppercase tracking-widest text-sm sm:text-base py-3 sm:py-3.5 px-8 sm:px-10 rounded-full transition-all hover:-translate-y-1"
-            style={{ border: '1px solid rgba(251,191,36,0.35)', color: '#fbbf24', background: 'rgba(251,191,36,0.05)' }}
-            onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(251,191,36,0.1)'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(251,191,36,0.05)'; }}
+            style={{ border: '1px solid rgba(31,18,8,0.25)', color: '#1F1208', background: 'rgba(31,18,8,0.04)' }}
+            onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(31,18,8,0.08)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(194,123,32,0.5)'; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(31,18,8,0.04)'; (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(31,18,8,0.25)'; }}
           >
             {t('home.intro.learnMore')}
           </Link>
         </motion.div>
       </div>
 
-      {/* Feather into next band */}
+      {/* Feather into next section */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-40 md:h-52 lg:h-60 z-0"
         style={{
           background:
-            'linear-gradient(180deg, transparent 0%, rgba(18,12,10,0.12) 22%, rgba(18,12,10,0.42) 58%, rgba(18,12,10,0.97) 100%)',
+            'linear-gradient(180deg, transparent 0%, rgba(237,224,204,0.25) 30%, rgba(237,224,204,0.85) 70%, rgba(237,224,204,1) 100%)',
         }}
         aria-hidden
       />

@@ -34,24 +34,27 @@ function ReportHeroFigure() {
   if (!src) {
     return (
       <figure
-        className="relative aspect-[4/3] w-full max-w-xl mx-auto lg:mx-0 lg:max-w-none rounded-xl border-2 border-dashed border-amber-400/35 bg-black/25 flex items-center justify-center p-6 lg:sticky lg:top-28"
+        className="relative aspect-[4/3] w-full max-w-xl mx-auto lg:mx-0 lg:max-w-none rounded-xl border-2 border-dashed flex items-center justify-center p-6 lg:sticky lg:top-28"
+        style={{ borderColor: 'rgba(194,123,32,0.3)', background: 'rgba(237,224,204,0.5)' }}
         aria-label={caption}
       >
-        <figcaption className="text-center text-sm lg:text-base text-slate-500 font-ui leading-relaxed max-w-sm">
+        <figcaption className="text-center text-sm lg:text-base font-cinzel leading-relaxed max-w-sm" style={{ color: '#9B8E80' }}>
           {caption}
         </figcaption>
       </figure>
     );
   }
 
-  return (
-    <figure className="relative aspect-[4/3] w-full max-w-xl mx-auto lg:mx-0 lg:max-w-none rounded-xl overflow-hidden border border-amber-400/35 shadow-[0_24px_60px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.06] lg:sticky lg:top-28">
+    return (
+    <figure className="relative aspect-[4/3] w-full max-w-xl mx-auto lg:mx-0 lg:max-w-none rounded-xl overflow-hidden shadow-[0_16px_45px_rgba(31,18,8,0.12)] lg:sticky lg:top-28"
+      style={{ border: '1px solid rgba(194,123,32,0.25)' }}>
       <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" />
       <div
-        className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0b0c10]/92 via-[#0b0c10]/20 to-transparent"
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'linear-gradient(to top, rgba(237,224,204,0.85) 0%, rgba(237,224,204,0.2) 45%, transparent 100%)' }}
         aria-hidden
       />
-      <figcaption className="absolute bottom-0 left-0 right-0 px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm text-slate-200/95 font-ui leading-snug bg-gradient-to-t from-black/85 to-transparent">
+      <figcaption className="absolute bottom-0 left-0 right-0 px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-cinzel leading-snug" style={{ background: 'linear-gradient(to top, rgba(237,224,204,0.9) 0%, transparent 100%)', color: '#3D2510' }}>
         {caption}
       </figcaption>
     </figure>
@@ -81,32 +84,40 @@ function ReportSection({
         className={`report-section-slab relative ${compactTop ? 'mt-8 md:mt-10' : 'mt-12 md:mt-14'} ${emphasis ? 'report-section-slab--accent' : ''}`}
       >
         <div
-          className={`relative z-[1] border-t border-amber-400/25 px-5 py-8 md:px-8 md:py-10 lg:px-11 lg:py-11 xl:px-14 xl:py-12 ${compactTop ? 'pt-7 md:pt-9' : ''}`}
+        className={`relative z-[1] px-5 py-8 md:px-8 md:py-10 lg:px-11 lg:py-11 xl:px-14 xl:py-12 ${compactTop ? 'pt-7 md:pt-9' : ''}`}
+        style={{ borderTop: '1px solid rgba(194,123,32,0.2)' }}
         >
           <div className="flex flex-col sm:flex-row gap-5 sm:items-start mb-8">
             <div
-              className="shrink-0 flex h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 items-center justify-center rounded-2xl border-2 border-amber-400/40 bg-gradient-to-br from-amber-500/25 to-amber-950/40 font-cinzel text-base sm:text-lg lg:text-xl font-bold text-amber-100 tabular-nums shadow-[0_0_28px_rgba(251,191,36,0.18)] ring-2 ring-black/20"
+              className="shrink-0 flex h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 items-center justify-center rounded-2xl font-cinzel text-base sm:text-lg lg:text-xl font-bold tabular-nums"
+              style={{
+                border: '2px solid rgba(194,123,32,0.35)',
+                background: 'linear-gradient(135deg, rgba(194,123,32,0.15) 0%, rgba(194,123,32,0.05) 100%)',
+                color: '#C27B20',
+                boxShadow: '0 2px 18px rgba(194,123,32,0.12)',
+              }}
               aria-hidden
             >
               {num}
             </div>
             <div className="min-w-0 flex-1 pt-0.5">
-              <h2 className="font-cinzel text-2xl sm:text-[1.65rem] md:text-[1.8rem] lg:text-[2.05rem] xl:text-[2.25rem] font-semibold tracking-[0.05em] text-slate-50 leading-snug mb-3">
+              <h2 className="font-cinzel text-2xl sm:text-[1.65rem] md:text-[1.8rem] lg:text-[2.05rem] xl:text-[2.25rem] font-semibold tracking-[0.05em] leading-snug mb-3"
+                style={{ color: '#1F1208' }}>
                 {title}
               </h2>
               <div
                 className="h-0.5 w-full max-w-md lg:max-w-xl rounded-full mb-4"
                 style={{
                   background:
-                    'linear-gradient(90deg, rgba(251,191,36,0.75), rgba(251,191,36,0.25), rgba(56,189,248,0.2), transparent)',
+                    'linear-gradient(90deg, rgba(194,123,32,0.65), rgba(194,123,32,0.25), rgba(139,84,19,0.15), transparent)',
                 }}
               />
               {subtitle ? (
-                <p className="text-base lg:text-lg text-slate-500/90 leading-relaxed max-w-4xl">{subtitle}</p>
+                <p className="text-base lg:text-lg leading-relaxed max-w-4xl" style={{ color: '#9B8E80' }}>{subtitle}</p>
               ) : null}
             </div>
           </div>
-          <div className="border-t border-white/[0.08] pt-8 lg:pt-10">{children}</div>
+          <div className="pt-8 lg:pt-10" style={{ borderTop: '1px solid rgba(31,18,8,0.08)' }}>{children}</div>
         </div>
       </div>
     </section>
@@ -119,22 +130,14 @@ const OurAchievementsView = () => {
   const { livestreamLinkPlaceholders } = getLocalizedAchievementsAssets(locale);
 
   return (
-    <div className="relative min-h-screen pt-24 pb-20 text-[#e8e6e3] overflow-x-hidden">
+    <div className="relative min-h-screen pt-24 pb-20 overflow-x-hidden ed-vignette" style={{ background: '#F5EDE0', color: '#1F1208' }}>
+      {/* Warm ambient background — no dark fixed layers */}
       <div
         className="pointer-events-none fixed inset-0 z-0"
         aria-hidden
         style={{
           background:
-            '#0b0c10 radial-gradient(ellipse 100% 60% at 50% -15%, rgba(201,168,76,0.14), transparent 52%), radial-gradient(ellipse 50% 40% at 100% 80%, rgba(56,189,248,0.06), transparent 45%)',
-        }}
-      />
-      <div
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.04]"
-        aria-hidden
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(148,163,184,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.35) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
+            'radial-gradient(ellipse 100% 60% at 50% -15%, rgba(194,123,32,0.1), transparent 52%)',
         }}
       />
 
@@ -144,12 +147,12 @@ const OurAchievementsView = () => {
 
           <div className="flex flex-col lg:grid lg:grid-cols-[1fr_minmax(0,1.05fr)] lg:gap-12 xl:gap-14 lg:items-start">
             <div className="min-w-0 order-1">
-              <p className="font-ui text-[0.65rem] sm:text-xs lg:text-sm uppercase tracking-[0.2em] text-amber-200/55 text-center lg:text-left mb-3">
+              <p className="font-cinzel text-[0.65rem] sm:text-xs lg:text-sm uppercase tracking-[0.2em] text-center lg:text-left mb-3" style={{ color: 'rgba(194,123,32,0.65)' }}>
                 {t('achievementsReport.orgLine')}
               </p>
               <h1 className="report-hero-title text-center lg:text-left">{t('achievementsReport.title')}</h1>
               {t('achievementsReport.termGloss') ? (
-                <p className="text-center lg:text-left text-sm sm:text-base text-slate-500/90 max-w-3xl mx-auto lg:mx-0 mt-4 leading-relaxed">
+                <p className="text-center lg:text-left text-sm sm:text-base max-w-3xl mx-auto lg:mx-0 mt-4 leading-relaxed" style={{ color: '#9B8E80' }}>
                   {t('achievementsReport.termGloss')}
                 </p>
               ) : null}
@@ -165,11 +168,11 @@ const OurAchievementsView = () => {
 
         <nav className="report-toc-panel px-5 py-6 md:px-8 md:py-8 lg:px-10 lg:py-9 mb-10 md:mb-12" aria-labelledby="toc-heading">
           <div className="flex items-center gap-3 mb-5">
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" aria-hidden />
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-700/30 to-transparent" aria-hidden />
             <h2 id="toc-heading" className="report-subhead !normal-case !tracking-[0.22em] text-center shrink-0">
               {t('achievementsReport.contents')}
             </h2>
-            <span className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" aria-hidden />
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-700/30 to-transparent" aria-hidden />
           </div>
           <ol className="grid gap-3 md:gap-4 md:grid-cols-2 text-[1.02rem] md:text-[1.08rem] list-none pl-0 leading-snug">
             {[
@@ -179,10 +182,15 @@ const OurAchievementsView = () => {
             ].map(([id, roman, key]) => (
               <li
                 key={id as string}
-                className="rounded-lg border border-white/[0.06] bg-white/[0.02] px-4 py-3 transition hover:border-amber-400/25 hover:bg-amber-500/[0.06]"
+                className="rounded-lg px-4 py-3 transition"
+                style={{ border: '1px solid rgba(31,18,8,0.08)', background: 'rgba(31,18,8,0.02)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLLIElement).style.borderColor = 'rgba(194,123,32,0.25)'; (e.currentTarget as HTMLLIElement).style.background = 'rgba(194,123,32,0.04)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLLIElement).style.borderColor = 'rgba(31,18,8,0.08)'; (e.currentTarget as HTMLLIElement).style.background = 'rgba(31,18,8,0.02)'; }}
               >
-                <a href={`#${id}`} className="flex gap-3 items-start text-slate-200 hover:text-amber-100">
-                  <span className="font-cinzel text-amber-400/90 tabular-nums shrink-0 pt-0.5" aria-hidden>
+                <a href={`#${id}`} className="flex gap-3 items-start" style={{ color: '#3D2510' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = '#C27B20'; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = '#3D2510'; }}>
+                  <span className="font-cinzel tabular-nums shrink-0 pt-0.5" style={{ color: '#C27B20' }} aria-hidden>
                     {roman}
                   </span>
                   <span className="leading-snug">{t(key)}</span>
@@ -211,7 +219,7 @@ const OurAchievementsView = () => {
             <h3 className="report-subhead mt-2 mb-4">{t('achievementsReport.s1.spiritHeading')}</h3>
             <ReportParagraphs
               text={t('achievementsReport.s1.spiritIntro')}
-              paragraphClassName="mb-2 leading-relaxed text-slate-400/95 lg:leading-relaxed"
+              paragraphClassName="mb-2 leading-relaxed lg:leading-relaxed" style={{ color: '#9B8E80' }}
             />
           </div>
 
@@ -225,7 +233,7 @@ const OurAchievementsView = () => {
               <tbody>
                 {SPIRIT_ROWS.map(row => (
                   <tr key={row}>
-                    <td className="text-slate-300">
+                    <td style={{ color: '#3D2510' }}>
                       <ReportInline text={t(`achievementsReport.spirit.${row}`)} />
                     </td>
                   </tr>
@@ -238,10 +246,10 @@ const OurAchievementsView = () => {
 
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <h3 className="report-subhead mb-4">{t('achievementsReport.interesting.title')}</h3>
-            <p className="mb-4 leading-relaxed text-slate-500/90">
+            <p className="mb-4 leading-relaxed" style={{ color: '#9B8E80' }}>
               <ReportInline text={t('achievementsReport.interesting.intro')} />
             </p>
-            <ol className="list-decimal list-outside space-y-4 pl-6 text-slate-300/95 leading-relaxed marker:text-amber-400/70">
+              <ol className="list-decimal list-outside space-y-4 pl-6 leading-relaxed" style={{ color: '#3D2510' }}>
               {INTERESTING_ROWS.map(row => (
                 <li key={row}>
                   <ReportInline text={t(`achievementsReport.interesting.${row}`)} />
@@ -254,9 +262,9 @@ const OurAchievementsView = () => {
 
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <h3 className="report-subhead mb-4">{t('achievementsReport.master.title')}</h3>
-            <ul className="space-y-5 border-l-2 border-amber-400/30 pl-5">
+              <ul className="space-y-5 pl-5" style={{ borderLeft: '2px solid rgba(194,123,32,0.3)' }}>
               {MASTER_ROWS.map(row => (
-                <li key={row} className="leading-relaxed text-slate-300">
+                <li key={row} className="leading-relaxed" style={{ color: '#3D2510' }}>
                   <ReportInline text={t(`achievementsReport.master.${row}`)} />
                 </li>
               ))}
@@ -267,11 +275,11 @@ const OurAchievementsView = () => {
         <ReportSection id="s2" num="Ⅱ" title={t('achievementsReport.s2.title')}>
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <p className="report-subhead mb-3">{t('achievementsReport.s2.sec51')}</p>
-            <p className="text-slate-500/90 mb-3 leading-relaxed">
+            <p className="mb-3 leading-relaxed" style={{ color: '#9B8E80' }}>
               <ReportInline text={t('achievementsReport.s2.condNote')} />
             </p>
             <ReportLeftRail>
-              <p className="leading-relaxed text-slate-200/95">
+              <p className="leading-relaxed" style={{ color: '#3D2510' }}>
                 <ReportInline text={t('achievementsReport.s2.intro')} />
               </p>
             </ReportLeftRail>
@@ -284,11 +292,11 @@ const OurAchievementsView = () => {
             <h3 className="report-crosshead mb-3">{t('achievementsReport.cohort.title')}</h3>
             <ReportParagraphs
               text={t('achievementsReport.cohort.body')}
-              paragraphClassName="leading-relaxed text-slate-400/95 lg:leading-relaxed mb-8"
+              paragraphClassName="leading-relaxed lg:leading-relaxed mb-8" style={{ color: '#9B8E80' }}
             />
 
             <h3 className="report-crosshead mb-3">{t('achievementsReport.tech.title')}</h3>
-            <ul className="space-y-3 text-slate-300/95 list-disc pl-5 mb-0">
+            <ul className="space-y-3 list-disc pl-5 mb-0" style={{ color: '#3D2510' }}>
               <li>
                 <ReportInline text={t('achievementsReport.tech.1')} />
               </li>
@@ -303,10 +311,10 @@ const OurAchievementsView = () => {
           <p className="report-subhead mb-5 mx-auto w-full max-w-[min(72rem,100%)]">{t('achievementsReport.s2.sec53')}</p>
 
           <div className="report-callout-key px-4 py-5 md:px-6 md:py-6 lg:px-8 lg:py-8 mb-8 mx-auto w-full max-w-[min(72rem,100%)]">
-            <p className="report-subhead mb-3 !text-sky-200/90">{t('achievementsReport.callout.principalLabel')}</p>
+            <p className="report-subhead !text-amber-700/90 mb-3">{t('achievementsReport.callout.principalLabel')}</p>
             <ReportParagraphs
               text={t('achievementsReport.outcomes.body')}
-              paragraphClassName="leading-relaxed text-slate-200/95 lg:leading-relaxed"
+              paragraphClassName="leading-relaxed lg:leading-relaxed"
             />
           </div>
 
@@ -323,7 +331,7 @@ const OurAchievementsView = () => {
               <tbody>
                 {CASE_ROWS.map(row => (
                   <tr key={row}>
-                    <td className="text-slate-300">
+                    <td style={{ color: '#3D2510' }}>
                       <ReportInline text={t(`achievementsReport.case.${row}`)} />
                     </td>
                   </tr>
@@ -336,7 +344,7 @@ const OurAchievementsView = () => {
 
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <h3 className="report-subhead mb-4">{t('achievementsReport.exp.title')}</h3>
-            <ol className="list-decimal list-outside space-y-4 pl-6 text-slate-300/95 marker:text-amber-400/70">
+              <ol className="list-decimal list-outside space-y-4 pl-6 leading-relaxed" style={{ color: '#3D2510' }}>
               {EXP_ROWS.map(row => (
                 <li key={row}>
                   <ReportInline text={t(`achievementsReport.exp.${row}`)} />
@@ -347,7 +355,7 @@ const OurAchievementsView = () => {
         </ReportSection>
 
         <ReportSection id="s3" num="Ⅲ" title={t('achievementsReport.s3.title')} emphasis>
-          <p className="mb-6 font-semibold text-slate-200/95 mx-auto w-full max-w-[min(72rem,100%)] leading-relaxed">
+          <p className="mb-6 font-semibold mx-auto w-full max-w-[min(72rem,100%)] leading-relaxed" style={{ color: '#3D2510' }}>
             <ReportInline text={t('achievementsReport.s3.lead')} />
           </p>
 
@@ -361,7 +369,7 @@ const OurAchievementsView = () => {
               <tbody>
                 {SPECIAL_ROWS.map(row => (
                   <tr key={row}>
-                    <td className="text-slate-300">
+                    <td style={{ color: '#3D2510' }}>
                       <ReportInline text={t(`achievementsReport.special.${row}`)} />
                     </td>
                   </tr>
@@ -399,11 +407,13 @@ const OurAchievementsView = () => {
                   <ReportParagraphs
                     text={t('achievementsReport.closing.invitation')}
                     className="!mt-8 md:!mt-10"
-                    paragraphClassName="text-base md:text-[1.08rem] lg:text-lg leading-[1.75] text-slate-200/95 [&_strong]:font-semibold [&_strong]:text-amber-100"
+                    paragraphClassName="text-base md:text-[1.08rem] lg:text-lg leading-[1.75] [&_strong]:font-semibold"
+                    style={{ color: 'rgba(245,237,224,0.9)' }}
                   />
                 </motion.div>
                 <div
-                  className="hidden xl:block h-px w-full max-w-lg bg-gradient-to-r from-amber-400/35 via-sky-400/25 to-transparent rounded-full"
+                  className="hidden xl:block h-px w-full max-w-lg rounded-full"
+                  style={{ background: 'linear-gradient(to right, rgba(194,123,32,0.35), rgba(224,154,66,0.22), transparent)' }}
                   aria-hidden
                 />
               </div>
@@ -416,7 +426,7 @@ const OurAchievementsView = () => {
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.45, delay: 0.1 }}
                 >
-                  <p className="report-subhead mb-0 !normal-case !tracking-normal text-sky-100/90">
+                  <p className="report-subhead mb-0 !normal-case !tracking-normal" style={{ color: 'rgba(245,237,224,0.85)' }}>
                     {t('achievementsReport.closing.linksIntro')}
                   </p>
                 </motion.div>
@@ -435,7 +445,7 @@ const OurAchievementsView = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-medium text-amber-100/90 hover:text-amber-50"
+                        className="inline-flex items-center gap-2 font-medium hover:underline" style={{ color: 'rgba(224,154,66,0.92)' }}
                       >
                         {link.label}
                         <ExternalLink className="h-3.5 w-3.5 opacity-70 shrink-0" aria-hidden />
@@ -453,7 +463,12 @@ const OurAchievementsView = () => {
                   transition={{ duration: 0.45, delay: 0.35 }}
                   whileHover={{ y: -3, scale: 1.02 }}
                   whileTap={{ scale: 0.99 }}
-                  className="inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-full bg-gradient-to-r from-amber-700/95 to-amber-600/95 px-8 py-3.5 text-sm font-semibold text-amber-50 shadow-lg shadow-black/45 ring-1 ring-amber-400/35 hover:from-amber-600 hover:to-amber-500 lg:text-base"
+                  className="inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold shadow-lg ring-1 lg:text-base"
+                  style={{
+                    background: 'linear-gradient(to right, #8B5413, #C27B20)',
+                    color: '#F5EDE0',
+                    boxShadow: '0 4px 18px rgba(139,84,19,0.3)',
+                  }}
                 >
                   {t('achievementsPage.replayPlaylist')}
                   <ExternalLink className="h-4 w-4 opacity-90 shrink-0" aria-hidden />
@@ -467,13 +482,16 @@ const OurAchievementsView = () => {
           <div className="report-divider-ornament mb-8" aria-hidden>
             ◆
           </div>
-          <p className="mb-8 max-w-4xl font-ui text-xs leading-relaxed text-slate-500 lg:text-sm lg:leading-relaxed xl:max-w-5xl">
+          <p className="mb-8 max-w-4xl font-cinzel text-xs leading-relaxed lg:text-sm lg:leading-relaxed xl:max-w-5xl" style={{ color: '#9B8E80' }}>
             {t('achievementsPage.disclaimer')}
           </p>
-          <div className="flex flex-wrap items-center gap-4 font-ui text-sm lg:text-base">
+          <div className="flex flex-wrap items-center gap-4 font-cinzel text-sm lg:text-base">
             <Link
               to="/"
-              className="rounded-full border border-amber-400/35 bg-amber-500/[0.08] px-6 py-2.5 text-slate-200 transition hover:border-amber-400/50 hover:text-amber-100"
+              className="rounded-full px-6 py-2.5 transition"
+              style={{ border: '1px solid rgba(31,18,8,0.2)', background: 'rgba(31,18,8,0.04)', color: '#3D2510' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(194,123,32,0.4)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(31,18,8,0.2)'; }}
             >
               {t('achievementsPage.backHome')}
             </Link>
@@ -481,7 +499,8 @@ const OurAchievementsView = () => {
               href={join}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-amber-400/40 bg-gradient-to-r from-amber-700/85 to-amber-600/85 px-6 py-2.5 text-amber-50 font-medium shadow-md hover:from-amber-600 hover:to-amber-500"
+              className="rounded-full px-6 py-2.5 font-medium shadow-md"
+              style={{ background: 'linear-gradient(to right, #8B5413, #C27B20)', color: '#F5EDE0', border: '1px solid rgba(194,123,32,0.3)' }}
             >
               {t('achievementsPage.ctaJoin')}
             </a>
