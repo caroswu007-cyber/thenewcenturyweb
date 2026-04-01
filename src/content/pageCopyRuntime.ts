@@ -131,12 +131,22 @@ export function getLocalizedSiteContent(locale: Locale) {
     recordOfSoul: {
       ...baseSiteContent.recordOfSoul,
       title: getPageCopyText(locale, 'siteContent.recordOfSoul.title', baseSiteContent.recordOfSoul.title),
+      filePageTitle: getPageCopyText(
+        locale,
+        'siteContent.recordOfSoul.filePageTitle',
+        baseSiteContent.recordOfSoul.filePageTitle,
+      ),
       description: getPageCopyText(
         locale,
         'siteContent.recordOfSoul.description',
         baseSiteContent.recordOfSoul.description,
       ),
       note: getPageCopyText(locale, 'siteContent.recordOfSoul.note', baseSiteContent.recordOfSoul.note),
+      terminologyExplanation: getPageCopyText(
+        locale,
+        'siteContent.recordOfSoul.terminologyExplanation',
+        baseSiteContent.recordOfSoul.terminologyExplanation,
+      ),
       episodesCount: getPageCopyText(
         locale,
         'siteContent.recordOfSoul.episodesCount',

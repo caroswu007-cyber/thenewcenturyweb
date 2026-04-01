@@ -20,7 +20,7 @@ export const achievementsReportEn: Record<string, string> = {
   'achievementsReport.s2.sec52': 'Cohort, workflow, and modalities',
   'achievementsReport.s2.sec53': 'Outcomes, case notes, and exploratory procedures',
   'achievementsReport.s2.condNote':
-    'The following conditions were represented among participants who received contact plus effective spirit (ghost) regulation.',
+    'TikTok surfaced the following categories of patients in the livestream; attached spirits on each were brought under effective regulation.',
   'achievementsReport.carouselNote':
     'Placeholder gallery — replace slides in `carouselSlides` with captures from the YouTube replay channel.',
   'achievementsReport.orgLine': 'Spirit Ambassador Association (ASra)',
@@ -30,24 +30,24 @@ export const achievementsReportEn: Record<string, string> = {
   'achievementsReport.toc.3': 'III. Special illustrative cases — livestream links',
   'achievementsReport.s1.title': 'I. Data overview',
   'achievementsReport.s1.lead':
-    'In just the past year, on **TikTok Live**, with **anonymous**, **randomly presenting** participants: more than **255+** public-benefit livestreams, with total airtime exceeding **800+ hours**.\n\nRoughly **70,000+** related listeners were reached; more than **1,200+** extended interviews; **effective spirit (ghost) regulation** reached **240+** individuals with mental-disorder presentations; about **400+** attached spirits/ghosts were brought forward (**some hosts carried multiple spirits**).',
+    'From February through December 2025, **Caros** conducted 255+ documented public-service livestreams on TikTok, totaling more than 800 hours. TikTok brought 70,000+ related listeners to the room; there were 1,200+ in-depth interviews; 400+ long-hidden attached spirits were brought forward for dialogue; and 240+ patients with mental-health presentations gained rapid on-stream relief from spirit-related distress.',
   'achievementsReport.s1.spiritHeading':
     'Livestream statistics on the lived state of American spirits (ghosts)',
   'achievementsReport.s1.spiritIntro':
-    'In the livestream context we collected **baseline information** from American spirits (ghosts) across **memory**, **mental state**, **living conditions**, the **death transition**, and **awareness of the spirit world**.\n\nThe summaries below condense repeat patterns voiced across sessions.',
+    'President **Caros** assembled baseline information in the livestream on American spirits (ghosts): memory, mental state, living conditions, the death transition, and awareness of the spirit world.\n\nThe items below condense recurring patterns voiced across sessions.',
   'achievementsReport.spirit.1':
-    '(1) **90%** of spirits (ghosts) **do not remember** their name, sex, or other basic pre-death information, and **do not remember the death process**.',
+    '(1) About 90% of spirits (ghosts) do not remember name, sex, or other basic pre-death information, and do not remember the death process.',
   'achievementsReport.spirit.2':
-    '(2) **100%** of American spirits (ghosts) have **lost most former human qualities** and have taken on **new dispositions**.',
+    '(2) 100% of American spirits (ghosts) have lost most former human qualities and have taken on new dispositions.',
   'achievementsReport.spirit.3':
-    '(3) **100%** of American spirits (ghosts) acquired **new abilities** in the spirit world.',
+    '(3) 100% of American spirits (ghosts) acquired new abilities in the spirit world.',
   'achievementsReport.spirit.4':
-    '(4) The **vast majority** of attachments are **transferred by Master Spirits**.',
+    '(4) The vast majority of attached spirits are moved into or out of hosts with Master Spirit coordination.',
   'achievementsReport.spirit.5':
-    '(5) **100%** of American spirits (ghosts) and their hosts are constrained by **two kinds of prohibitions** in **UMMA’s soul-control system**, so host and spirit **barely communicate**.',
+    '(5) 100% of American spirits (ghosts) and their hosts are constrained by two prohibitions in UMMA’s soul-control system, so neither side may communicate the true physiology and living conditions of spirits.',
   'achievementsReport.interesting.title': 'Especially notable spirits (ghosts)',
   'achievementsReport.interesting.intro':
-    'Among attached spirits, many profiles are **especially vivid**; a **selection** follows:',
+    'Among attached spirits, many profiles are especially vivid; a selection follows:',
   'achievementsReport.interesting.1':
     'Oldest spirits (ghosts): a sibling pair who died in the Quebec region in 1813, still retaining full memories.',
   'achievementsReport.interesting.2':
@@ -70,17 +70,17 @@ export const achievementsReportEn: Record<string, string> = {
     'August 14 livestream: host Dominick summoned the arrival and instruction of the divine designation “Elohim.”',
   'achievementsReport.s2.title': 'II. Routine mental-disorder spirit (ghost) interventions',
   'achievementsReport.s2.intro':
-    '**Conditions** for which patients underwent contact and effective spirit (ghost) regulation include: **schizophrenia**, **bipolar disorder**, **depression**, **anxiety**, **DID**, **PTSD**, **schizoaffective disorder**, **ADHD**, **OCD**, **social phobia**, **driving phobia**.',
+    'Conditions represented among patients who received contact and effective spirit (ghost) regulation include: schizophrenia, bipolar disorder, depression, anxiety, DID, PTSD, schizoaffective disorder, ADHD, OCD, social phobia, and driving phobia.',
   'achievementsReport.cohort.title': 'Sources of improved participants and basic workflow',
   'achievementsReport.cohort.body':
-    'Nearly all participants were **treatment-resistant**, **refractory** cases.\n\nThey entered via **TikTok recommendations**, took a **“free trial”** posture, and followed: **remote attached-spirit management** → **dialogue** → **spirit (ghost) regulation** → **reported improvement**.',
+    'Nearly all participants were treatment-resistant, refractory cases.\n\nThey entered via TikTok recommendations, took a “try it” posture, and followed: remote bring-forward → dialogue → spirit regulation → reported improvement.',
   'achievementsReport.tech.title': 'Two livestream techniques (with Master Spirit coordination)',
   'achievementsReport.tech.1':
-    '(1) Mobile livestream image aimed at the host’s **head, chest, and back** for **illumination**.',
-  'achievementsReport.tech.2': '(2) **Release incantations** / **prohibition work**.',
+    '(1) The host aims the mobile livestream camera at the head, chest, and back for illumination.',
+  'achievementsReport.tech.2': '(2) Release incantations / prohibition work.',
   'achievementsReport.outcomes.title': 'Direct effects',
   'achievementsReport.outcomes.body':
-    'Within **30 minutes**, **>80%** of human hosts and attached spirits (ghosts) reported **complete relief** of acute mental distress (spirits in this cohort also showed **mental-disorder–like states**).\n\nThrough **24 December 2025**, **most** did not request a **second round** of regulation — i.e. **no relapse** in that window **by self-report**.',
+    'Within 30 minutes, >80% of human hosts and attached spirits (ghosts) reported marked relief of acute mental distress (spirits in this cohort often showed mental-disorder–like states).\n\nThrough 24 December 2025, most who improved did not request a second round of regulation — i.e. no relapse in that window by self-report.',
   'achievementsReport.cases.title': 'Representative case notes',
   'achievementsReport.case.1':
     'August 11 livestream: depression and bipolar disorder untreated >15 years — eased within thirty minutes with no recurrence reported.',
@@ -99,7 +99,7 @@ export const achievementsReportEn: Record<string, string> = {
     '(2) Attached spirit (ghost) somatic relocation vs. host symptom improvement — mapping.',
   'achievementsReport.exp.3': '(3) Experimental external application of medication.',
   'achievementsReport.s3.title': 'III. Special illustrative spirit (ghost) regulation cases',
-  'achievementsReport.s3.lead': '**Highlighted cases** (selection):',
+  'achievementsReport.s3.lead': 'Highlighted cases (selection):',
   'achievementsReport.special.1':
     '(1) DID spectrum with ≥30 identities — TikTok @annabella: mutual control, mutual influence, and amnesia among many attached spirits in one host.',
   'achievementsReport.special.2':
@@ -111,7 +111,7 @@ export const achievementsReportEn: Record<string, string> = {
   'achievementsReport.closing.eyebrow': 'A shared horizon',
   'achievementsReport.closing.miracle': 'You were not shown miracles in order to remain only a spectator.',
   'achievementsReport.closing.invitation':
-    '**You can gain the same capacities** written into this report — what you have just reviewed is **trainable**, not the private gift of a single family.\n\nRemote control, **Master Spirit**–coordinated spirit regulation, and the relief windows you saw in the data are **replicable** on ASRA’s path. Step across the threshold: **the lineage is open, and the work is meant for you.**',
+    'First address your own distress and witness other members’ PRCASG capacities — then apply to train the same capacities for yourself.',
   'achievementsReport.closing.linksIntro': 'Public record — sessions & archive:',
   'achievementsReport.th.summary': 'Summary',
   'achievementsReport.th.note': 'Note',
@@ -147,7 +147,7 @@ export const achievementsReportZh: Record<string, string> = {
   'achievementsReport.s2.sec51': '病种覆盖',
   'achievementsReport.s2.sec52': '队列来源、流程与技术',
   'achievementsReport.s2.sec53': '转归、案例记录与探索性步骤',
-  'achievementsReport.s2.condNote': '以下病种出现在接受接触并有效鬼魂控制的患者中。',
+  'achievementsReport.s2.condNote': 'TikTok 系统推送了以下类别的精神患者来到直播间，他们身上的鬼魂都得到了有效的控制。',
   'achievementsReport.carouselNote': '示意多图相册（请将 `carouselSlides` 替换为 YouTube 直播回放频道截图）。',
   'achievementsReport.orgLine': '灵魂世界使者协会（ASRA）',
   'achievementsReport.contents': '目录',
@@ -156,17 +156,17 @@ export const achievementsReportZh: Record<string, string> = {
   'achievementsReport.toc.3': '第三板块：特殊意义鬼魂控制案例展示',
   'achievementsReport.s1.title': '第一板块：数据概览',
   'achievementsReport.s1.lead':
-    '仅仅过去一年、**TikTok 线上直播**、**匿名**、**随机**到访者：**超过 265 场**公益直播，总时长**超过 800 小时**。\n\n约 **70000+** 触达；与 **1200+** 名听众**深度访谈**；**有效鬼魂控制**逾 **240 名**各类 **mental disorder** 患者；唤出约 **400 名附体鬼魂**（**部分多灵附体**）。',
+    '在2025年2月至12月，**Caros** 在 TikTok 上进行了 255+ 有记录的公益直播，总时长超过 800 小时。TikTok 推送 70,000+ 高相关人士来访直播间，与 1,200+ 人次深度访谈；其中召唤 400+ 隐藏在患者体内多年的附体鬼魂并与他们深度交流，帮助 240+ 精神障碍患者现场快速改善附体鬼魂带来的痛苦。',
   'achievementsReport.s1.spiritHeading': '直播间对美国鬼魂生存状态统计',
   'achievementsReport.s1.spiritIntro':
-    '我在直播间就美国鬼魂的**记忆**、**精神状态**、**生存状态**、**死亡过程**以及对**灵魂世界**的认知等，做了**全方位基本信息**汇总。\n\n下列条目是多场会话中**重复出现的模式**的凝练。',
-  'achievementsReport.spirit.1': '1　**90%** 的鬼魂**不记得**姓名、性别等**基本生前信息**，也**不记得死亡过程**',
-  'achievementsReport.spirit.2': '2　**100%** 美国鬼魂**失去大部分人性**，并获得**新的秉性**',
-  'achievementsReport.spirit.3': '3　**100%** 美国鬼魂在灵魂世界获得**新的能力**',
-  'achievementsReport.spirit.4': '4　**绝大部分**附体由 **master spirit** **搬运**',
-  'achievementsReport.spirit.5': '5　**100%** 美国鬼魂与宿主受 **UMMA** 灵魂控制系统中**两道禁令**约束，**双方几乎无法交流**',
+    '会长 **Caros** 在直播间就美国鬼魂的记忆、精神状态、生存状态、死亡过程以及对灵魂世界的认知等，做了全方位基本信息汇总。\n\n下列条目是多场会话中重复出现的模式的凝练。',
+  'achievementsReport.spirit.1': '1　约 90% 的鬼魂不记得姓名、性别等基本生前信息，也不记得死亡过程。',
+  'achievementsReport.spirit.2': '2　100% 的美国鬼魂失去大部分人性，并获得新的秉性。',
+  'achievementsReport.spirit.3': '3　100% 的美国鬼魂在灵魂世界获得新的能力。',
+  'achievementsReport.spirit.4': '4　绝大部分附体鬼魂由高级控制灵协助完成附体或离体。',
+  'achievementsReport.spirit.5': '5　100% 的美国鬼魂与宿主受 UMMA 灵魂控制系统中两道禁令约束，禁止双方交流鬼魂的真实生理与生存状况。',
   'achievementsReport.interesting.title': '特别有趣的鬼魂',
-  'achievementsReport.interesting.intro': '在众多附体鬼魂中，有多例**形态鲜明**的案例；此处**择要**陈列：',
+  'achievementsReport.interesting.intro': '在众多附体鬼魂中，有多例丰富有趣的案例；此处择要陈列：',
   'achievementsReport.interesting.1': '年龄最大鬼魂：一对死于1813年魁北克地区的兄妹灵体，至今仍保留着完整记忆',
   'achievementsReport.interesting.2': '非人类寄生鬼魂：一名灵体曾寄生过马匹，并且后来转移到饲养员身上，使得能够将马的部分情绪和意识传递给饲养员',
   'achievementsReport.interesting.3': 'PSI能力最强的鬼魂：能够直接在宿主身上制造伤痕，并且移动被子，在家中制造大量飞舞的光球',
@@ -181,16 +181,16 @@ export const achievementsReportZh: Record<string, string> = {
   'achievementsReport.master.3': '八月十四日直播间，宿主dominick召唤到了神灵“elohim”的到来和指示。',
   'achievementsReport.s2.title': '第二板块：常规mental disorder鬼魂控制',
   'achievementsReport.s2.intro':
-    '接触并**有效鬼魂控制**的患者，**病种包括**：**精分**，**双向**，**抑郁**，**焦虑**，**多重人格障碍**，**创伤后遗症**，**分裂性情感障碍**，**注意力缺陷综合征**，**强迫症**，**社交恐惧症**，**驾驶恐惧症**。',
+    '病种包括：精分、双向、抑郁、焦虑、多重人格障碍、创伤后遗症、分裂性情感障碍、注意力缺陷综合征、强迫症、社交恐惧症、驾驶恐惧症。',
   'achievementsReport.cohort.title': '被改善者来源和基本流程',
   'achievementsReport.cohort.body':
-    '接受鬼魂控制者**绝大多数**为**耐药性难治**案例。\n\n经 **TikTok** 随机推荐入场，持**试一试**心态，流程为：**远程附体唤出 → 与鬼魂交流 → 鬼魂控制 → 状态改善**。',
+    '接受鬼魂控制者绝大多数为耐药性、难治案例。\n\n经 TikTok 随机推荐入场，持试一试心态，流程为：远程附体唤出 → 与鬼魂交流 → 鬼魂控制 → 状态改善。',
   'achievementsReport.tech.title': '直播间使用的两项技术（master spirit配合）',
-  'achievementsReport.tech.1': '1. **直播间**手机画面对准宿主**头部、胸部和背部**进行**照射**',
-  'achievementsReport.tech.2': '2. **解除咒语**',
+  'achievementsReport.tech.1': '1. 患者将手机直播间画面对准自己的头部、胸部和背部进行照射。',
+  'achievementsReport.tech.2': '2. 解除咒语 / 禁令操作。',
   'achievementsReport.outcomes.title': '直接效果',
   'achievementsReport.outcomes.body':
-    '**30 分钟内**，**>80%** 的人类宿主与附体鬼魂**自觉**各类精神痛苦**显著缓解**（鬼魂侧亦常伴**精神障碍样**表现）。\n\n改善后至 **2025 年 12 月 24 日**，**多数**未再要求**二次鬼魂控制**，即**自述**该时段内**无复发**。',
+    '30 分钟内，>80% 的人类宿主与附体鬼魂双方自觉各类精神痛苦显著缓解（鬼魂侧亦常伴精神障碍样表现）。\n\n改善后至 2025 年 12 月 24 日，改善者多数未再要求二次鬼魂控制，即自述该时段内无复发。',
   'achievementsReport.cases.title': '代表性案例举例',
   'achievementsReport.case.1': '八月十一日直播间：超过十五年未治愈的抑郁，双向---在三十分钟内缓解并且再无复发',
   'achievementsReport.case.2': '六月十四日直播间：困扰多年的PTSD---在一次鬼魂控制中就得到了完全疏通，心灵创伤消散',
@@ -202,7 +202,7 @@ export const achievementsReportZh: Record<string, string> = {
   'achievementsReport.exp.2': '2.附体鬼魂躯体移动，宿主症状改善',
   'achievementsReport.exp.3': '3.药物的体外应用实验',
   'achievementsReport.s3.title': '第三板块：特殊意义鬼魂控制案例展示',
-  'achievementsReport.s3.lead': '**特别案例**（择要）：',
+  'achievementsReport.s3.lead': '特别案例（择要）：',
   'achievementsReport.special.1': '1、身上超过30个身份的DID准患者---tiktok用户名 annabella：同一宿主内大量附体灵体之间的相互控制，影响，失忆，带来的影响',
   'achievementsReport.special.2': '2、从邪教中逃离的幸存者，tiktok用户名 gabby---附体灵体完整揭示了邪教，灵媒是如何在灵体层面控制人，影响人的健康',
   'achievementsReport.special.3': '3、伪装成魔鬼，神明的delusion患者tiktok用户名 idk：---通过扑克牌实验后，附体灵体承认那些身份都是自己伪装的，并不存在',
@@ -210,7 +210,7 @@ export const achievementsReportZh: Record<string, string> = {
   'achievementsReport.closing.eyebrow': '同道之召',
   'achievementsReport.closing.miracle': '这些奇迹不仅仅是让你作为一个旁观者',
   'achievementsReport.closing.invitation':
-    '**你也能获得同样的能力**——你在本篇读到的**远程控制**、**高级控制灵协同下的鬼魂管理**与那些**可度量的缓解窗口**，都不是极少数人的私藏，而是**可训练、可复现**的路径。\n\n在 **ASRA** 的系统修习中，这些程序会被**有序地交到你的手中**。**这份能力，同样为你预备。**',
+    '先改善自己的痛苦，体验其他会员 PRCASG 超能力的存在——然后再申请自己拥有 PRCASG 超能力。',
   'achievementsReport.closing.linksIntro': '公开留痕 — 直播间与回放列表：',
   'achievementsReport.th.summary': '内容',
   'achievementsReport.th.note': '说明',

@@ -10,9 +10,11 @@ import {
 import { getLocalizedSpiritMedicineFileGroups } from '../../content/pageCopyRuntime';
 import { useI18n } from '../../i18n/LocaleProvider';
 
+/** Strip redundant file codes; metadata line above already shows code + duration. */
 function displayEpisodeTitle(raw: string): string {
-  const stripped = raw.replace(/^(?:File|FILE)\s+[\d.-]+\s+/i, '').trim();
-  return stripped || raw;
+  const noFile = raw.replace(/^(?:File|FILE)\s+[\d.-]+\s+/i, '').trim();
+  const noZhArchival = noFile.replace(/^档案\s+[\d.-]+\s*/u, '').trim();
+  return noZhArchival || noFile || raw;
 }
 
 const ghostImages = [

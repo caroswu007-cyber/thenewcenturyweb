@@ -69,8 +69,8 @@ const TruthSection = () => {
             {t('home.truth.title')}
           </h2>
           <p
-            className="font-cinzel mt-2 mb-5 px-2"
-            style={{ fontSize: 'clamp(0.95rem, 2.65vw, 1.95rem)', color: 'rgba(61,37,16,0.5)', letterSpacing: '0.04em' }}
+            className="font-cinzel mt-2 mb-5 px-2 font-semibold"
+            style={{ fontSize: 'clamp(0.95rem, 2.65vw, 1.95rem)', color: 'rgba(45,28,12,0.88)', letterSpacing: '0.04em' }}
           >
             {t('home.truth.subtitle')}
           </p>

@@ -7,7 +7,7 @@ export function ReportInline({ text, className = '' }: { text: string; className
       {parts.map((part, i) => {
         if (part.startsWith('**') && part.endsWith('**')) {
           return (
-            <strong key={i} className="font-semibold" style={{ color: '#8B5413' }}>
+            <strong key={i} className="font-semibold" style={{ color: '#6B4E2E' }}>
               {part.slice(2, -2)}
             </strong>
           );
@@ -34,7 +34,7 @@ export function ReportParagraphs({
   return (
     <div className={`space-y-4 md:space-y-5 ${className}`}>
       {paras.map((p, i) => (
-        <p key={i} className={paragraphClassName} style={style ?? { color: '#3D2510' }}>
+        <p key={i} className={paragraphClassName} style={style ?? { color: '#2C231A' }}>
           <ReportInline text={p} />
         </p>
       ))}

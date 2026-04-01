@@ -24,7 +24,7 @@ export const messagesEn: Record<string, string> = {
   'home.intro.overviewBefore': 'The New Era of UMMA Organization is a',
   'home.intro.overviewHighlight': 'dual-domain organization',
   'home.intro.overviewAfter':
-    'spanning both the Spirit Realm and the physical world — uniting human ambassadors on Earth with Master Spirit administrators in the ethereal realm.',
+    'In the physical world, the New Era of UMMA Organization has under its jurisdiction the Association of Spirit Realm\'s Ambassador (ASRA); members of ASRA are human beings in the physical world. ——In the spiritual world, the New Era of UMMA Organization has under its jurisdiction the Society of Master Spirit Controllers (SMSC); members of SMSC are senior master spirits in the spiritual world. **This website is the official website of ASRA.** The New Era of UMMA Organization and SMSC do not maintain any websites in the physical world.',
   'home.intro.physicalWorld': 'Physical World',
   'home.intro.asraName': 'ASRA',
   'home.intro.asraFull': 'Association of Spirit Realm\'s Ambassador',
@@ -62,17 +62,23 @@ export const messagesEn: Record<string, string> = {
   'home.truth.s3.cta': 'Explore Season III',
   'home.achievements.title': 'Achievements',
   'home.achievements.subtitle': 'TikTok Live · YouTube archive · ASRA',
-  'home.achievements.kickerDoc': 'Field documentation',
-  'home.achievements.kickerMetrics': 'Session-derived indicators',
+  'home.achievements.kickerDoc':
+    'This is a masterpiece of large-scale global teamwork by the many master members of SMSC.',
+  'home.achievements.kickerMetrics': '',
   'home.achievements.lead':
     'Coordinated with Master Spirit teams, the founder yielded descriptive statistics and qualitative observations on American attached spirits and rescued large-scale treatment-resistant mental-health cases.',
   'home.achievements.card1Title': 'Data overview',
-  'home.achievements.card1Body':
-    '265+ documented public-benefit sessions; 800+ broadcast hours; an estimated 70,000+ platform-indicated listener contacts; 1,200+ extended interviews; 240+ individuals reporting improvement in mental-health–related distress; approximately 400 distinct attached spirits noted in records (some hosts carried multiples). Structured replays are archived on YouTube.',
+  'home.achievements.card1Body': `255+ recorded public welfare live broadcasts; 800+ broadcast hours; TikTok pushed to 70,000+ highly relevant visitors; 1,200+ in-depth interviews.
+
+Among them:
+
+In-depth communication with 400+ attached spirit ghosts.
+
+Helped 240+ patients with mental disorders quickly relieve the suffering caused by attached spirit ghosts on-site.`,
   'home.achievements.card2Title': 'Content',
   'home.achievements.card2Body':
     'Here displays: American spirits (ghosts) Report,Notable spirits (ghosts),Master Spirit\'s Revelation ,Routine mental-disorder spirit (ghost) management report,Special spirit (ghost) management cases',
-  'home.achievements.ctaIntro': 'Continue to the full report.',
+  'home.achievements.ctaIntro': '',
   'home.achievements.cta': 'View full content',
   'achievementsPage.hero.badge': 'Field documentation · ASra practice',
   'achievementsPage.hero.title': 'Our Achievements in Mental Health Support',
@@ -187,6 +193,7 @@ export const messagesEn: Record<string, string> = {
   'founderStory.storylineClipPageLink': 'Storyline of Woos',
   'founderStory.storylineYoutubeIframeTitle': 'Storyline of Woos — Stage {{stage}} recording',
   'founderStory.achievementsFeaturePageLink': '2025 Livestream Achievements',
+  'founderStory.phaseATimelineStageMid': ' Stage: ',
   'matrix.seriesBadge': 'Meta Documentary · Series III',
   'matrix.title': 'Universal Matrix of Meta Awareness',
   'matrix.subtitle': 'The brain beyond universe',
@@ -197,8 +204,8 @@ export const messagesEn: Record<string, string> = {
   'about.hero.badge': 'New Era of UMMA Organization',
   'about.hero.titleLine1': 'Association of Spirit',
   'about.hero.titleLine2': 'Realm\'s Ambassador',
-  'about.hero.pillAsra': 'Physical World — ASra',
-  'about.hero.pillSmsc': 'Spirit Realm — SMSC',
+  'about.hero.pillAsra': 'Physical world has ASRA under its jurisdiction',
+  'about.hero.pillSmsc': 'Spirit realm has SMSC under its jurisdiction',
   'about.dual.title': 'The Dual-Domain Structure',
   'about.dual.label': 'One Organization · Two Realms',
   'about.dual.umbrellaLabel': 'Umbrella Organization',
@@ -224,12 +231,16 @@ export const messagesEn: Record<string, string> = {
   'about.founders.fatherSon': 'Father & Son',
   'about.founders.storyCta': '✦  Read founder story  ✦',
   'nav.founderStory': 'Founder story',
+  'nav.etherealTruth': 'Truth of ethereal realm',
+  'nav.etherealTruth.record': 'Woos Record of Soul',
+  'nav.etherealTruth.spiritMedicine': 'Woos Spirit Medicine',
+  'nav.etherealTruth.universalMatrix': 'Universal Matrix of Meta Awareness',
   'about.missions.title': 'Member Mission & Obligations',
   'about.missions.label': 'ASRA Members\' Two Sacred Duties',
   'about.cta.title': 'Ready to Join ASRA?',
   'about.cta.subtitle': 'Lead Humanity into the New Era',
   'about.cta.button': '✦   Visit: Apply to Join   ✦',
-  'about.hero.pillASRA': 'Physical World — ASRA',
+  'about.hero.pillASRA': 'Physical world has ASRA under its jurisdiction',
   'home.intro.ASRABody':
     'Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits and improves human health.',
   'home.intro.ASRAFull': 'Association of Spirit Realm\'s Ambassador',

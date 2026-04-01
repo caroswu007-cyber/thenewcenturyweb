@@ -130,19 +130,12 @@ export const siteContent = {
   },
   recordOfSoul: {
     title: 'Woos Record of Soul',
+    filePageTitle: "Wu's Spirit File Page",
     description:
-      
-      
-      
-      
-      
       'This Documentary Was Shot Earlier, Recording The Process Of Woos Father And Son Being Possessed By Spirits And Fighting. And The Scientific Summary Of Human Research On Supernatural Phenomena, Near-Death Experience And Reincarnation.',
-    note: 
-      
-      
-      
-      
-      'When Woos record of Soul were filmed, Spirits were sometimes called ghost and sometimes soul, but in the spirit medicine filmed in 2025, ghosts were clearly called spirit(ghost).',
+    note:
+      "When Wu's Spirit Files were filmed, spirit, spirit (ghost), and spirit (soul) were not strictly distinguished and were used interchangeably. In Wu's Soul Medicine filmed in 2025, the three terms were formally defined. Spirit refers to the soul-body while a person is alive. Spirit (ghost) refers to the independent soul-life separated from the physical body after death. Spirit (soul) is the collective term for spirit and spirit (ghost).",
+    terminologyExplanation: '',
     episodesCount: '11',
     minutes: '942+',
     backgroundImage: 'https://images.unsplash.com/photo-1445264618034-159aa57a1535?auto=format&fit=crop&w=1920&q=80',

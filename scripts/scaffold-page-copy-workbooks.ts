@@ -205,8 +205,15 @@ function flattenRecordOfSoul(): CopyRow[] {
     rows.push({ block_key, section_板块: section, kind, english_源文: text, 中文: '', Latin_Latina: '', notes: 'siteContent.recordOfSoul' });
   };
   add('siteContent.recordOfSoul.title', '灵魂档案 / 英雄区', r.title, 'heading');
+  add('siteContent.recordOfSoul.filePageTitle', '灵魂档案 / 档案页标题', r.filePageTitle, 'heading');
   add('siteContent.recordOfSoul.description', '灵魂档案 / 英雄区', r.description.trim(), 'paragraph / other');
   add('siteContent.recordOfSoul.note', '灵魂档案 / 注释', r.note.trim(), 'paragraph / other');
+  add(
+    'siteContent.recordOfSoul.terminologyExplanation',
+    '灵魂档案 / 术语说明',
+    r.terminologyExplanation.trim(),
+    'paragraph / other',
+  );
   add('siteContent.recordOfSoul.episodesCount', '灵魂档案 / 统计', r.episodesCount, 'label');
   add('siteContent.recordOfSoul.minutes', '灵魂档案 / 统计', r.minutes, 'label');
   r.timeline.forEach((ep, ei) => {

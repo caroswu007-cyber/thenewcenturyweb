@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>成就报告 · 排版预览</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --parchment: #f5ede0;
+      --ink-body: #2c231a;
+      --ink-soft: #4a3d32;
+      --emphasis: #6b4e2e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Serif SC", "Songti SC", serif;
+      background: var(--parchment);
+      color: var(--ink-body);
+      line-height: 1.75;
+      padding: 2rem 1.25rem 3rem;
+    }
+    .wrap { max-width: 42rem; margin: 0 auto; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin: 0 0 0.5rem; }
+    .meta { color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 2rem; }
+    .card {
+      background: rgba(237, 224, 204, 0.55);
+      border: 1px solid rgba(31, 18, 8, 0.12);
+      border-radius: 0.65rem;
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 1.75rem;
+    }
+    .label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--emphasis); margin-bottom: 0.5rem; }
+    .before { color: #8b6f5a; }
+    .before strong { color: #a85a00; font-weight: 600; }
+    .after { color: var(--ink-body); }
+    .after strong { color: var(--emphasis); font-weight: 600; }
+    p { margin: 0 0 1rem; }
+    p:last-child { margin-bottom: 0; }
+    .actions {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+      margin-top: 2rem; padding-top: 1.5rem;
+      border-top: 1px solid rgba(31, 18, 8, 0.1);
+    }
+    .actions a {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      border: 1px solid rgba(194, 123, 32, 0.45);
+      color: var(--ink-body);
+      background: rgba(194, 123, 32, 0.08);
+    }
+    .actions a.primary { background: linear-gradient(to right, #8b5413, #c27b20); color: #f5ede0; border-color: transparent; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>2025 成就页面 · 排版预览</h1>
+    <p class="meta">本地开发时打开真实页面：<code>/our-achievements</code>（语言切换到中文）。本页仅演示正文字色与加粗强度，与线上组件一致。</p>
+
+    <div class="card">
+      <div class="label">旧版（加粗过多）</div>
+      <p class="before">会长 caros 在直播间就美国鬼魂的<strong>记忆</strong>、<strong>精神状态</strong>、<strong>生存状态</strong>、<strong>死亡过程</strong>以及对<strong>灵魂世界</strong>的认知等，做了<strong>全方位基本信息</strong>汇总。</p>
+    </div>
+
+    <div class="card">
+      <div class="label">新版（仅突出专名）</div>
+      <p class="after">会长 <strong>Caros</strong> 在直播间就美国鬼魂的记忆、精神状态、生存状态、死亡过程以及对灵魂世界的认知等，做了全方位基本信息汇总。</p>
+      <p class="after">下列条目是多场会话中重复出现的模式的凝练。</p>
+    </div>
+
+    <div class="actions">
+      <a class="primary" href="/our-achievements">进入站内成就页</a>
+      <a href="/">返回首页</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,8 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useI18n } from '../i18n/LocaleProvider';
+
+const ETHEREAL_TRUTH_CHILDREN = [
+  { to: '/record-of-soul', labelKey: 'nav.etherealTruth.record' as const, match: (p: string) => p === '/record-of-soul' },
+  { to: '/spirit-medicine', labelKey: 'nav.etherealTruth.spiritMedicine' as const, match: (p: string) => p === '/spirit-medicine' },
+  {
+    to: '/universal-matrix',
+    labelKey: 'nav.etherealTruth.universalMatrix' as const,
+    match: (p: string) => p === '/universal-matrix' || p === '/universal-matrix-of-meta-awareness',
+  },
+] as const;
 
 function subNavLinkHandlers(path: string, pathname: string) {
   const rest = pathname === path ? '#C27B20' : 'rgba(31,18,8,0.7)';
@@ -21,8 +31,24 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
   const { t } = useI18n();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [etherealTruthOpen, setEtherealTruthOpen] = useState(false);
+  const truthWrapRef = useRef<HTMLLIElement>(null);
 
   const closeMobile = () => setMobileOpen(false);
+
+  const isEtherealTruthSectionActive = ETHEREAL_TRUTH_CHILDREN.some(c => c.match(location.pathname));
+
+  useEffect(() => {
+    if (!etherealTruthOpen) return;
+    const onDown = (e: MouseEvent) => {
+      const el = truthWrapRef.current;
+      if (el && !el.contains(e.target as Node)) {
+        setEtherealTruthOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', onDown);
+    return () => document.removeEventListener('mousedown', onDown);
+  }, [etherealTruthOpen]);
 
   return (
     <>
@@ -38,7 +64,10 @@ const Navbar = () => {
       >
         <Link
           to="/"
-          onClick={closeMobile}
+          onClick={() => {
+            closeMobile();
+            setEtherealTruthOpen(false);
+          }}
           className="font-cinzel font-bold tracking-[0.25em] uppercase transition-colors text-base md:text-[1.2rem]"
           style={{ color: '#1F1208' }}
         >
@@ -60,6 +89,69 @@ const Navbar = () => {
               >
                 {t('nav.about')}
               </Link>
+            </li>
+            <li ref={truthWrapRef} className="relative">
+              <button
+                type="button"
+                aria-expanded={etherealTruthOpen}
+                aria-controls="nav-ethereal-truth-panel"
+                id="nav-ethereal-truth-trigger"
+                className="inline-flex items-center gap-1 transition-colors uppercase tracking-widest text-left"
+                style={{
+                  color: isEtherealTruthSectionActive || etherealTruthOpen ? '#C27B20' : 'rgba(31,18,8,0.7)',
+                }}
+                onClick={() => setEtherealTruthOpen(v => !v)}
+                onMouseEnter={e => {
+                  if (!isEtherealTruthSectionActive && !etherealTruthOpen) {
+                    e.currentTarget.style.color = '#C27B20';
+                  }
+                }}
+                onMouseLeave={e => {
+                  const active = isEtherealTruthSectionActive || etherealTruthOpen;
+                  e.currentTarget.style.color = active ? '#C27B20' : 'rgba(31,18,8,0.7)';
+                }}
+              >
+                {t('nav.etherealTruth')}
+                <ChevronDown
+                  aria-hidden
+                  className={`w-4 h-4 shrink-0 opacity-80 transition-transform ${etherealTruthOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {etherealTruthOpen ? (
+                <div
+                  id="nav-ethereal-truth-panel"
+                  role="region"
+                  aria-labelledby="nav-ethereal-truth-trigger"
+                  className="absolute left-0 top-full mt-2 min-w-[16rem] py-2 rounded-lg z-[60] shadow-lg border"
+                  style={{
+                    background: 'rgba(251,246,238,0.98)',
+                    borderColor: 'rgba(31,18,8,0.1)',
+                    boxShadow: '0 12px 40px rgba(31,18,8,0.12)',
+                  }}
+                >
+                  <ul className="flex flex-col gap-0.5 py-1">
+                    {ETHEREAL_TRUTH_CHILDREN.map(({ to, labelKey, match }) => {
+                      const childActive = match(location.pathname);
+                      return (
+                        <li key={to}>
+                          <Link
+                            to={to}
+                            className="block px-4 py-2.5 text-sm tracking-wide transition-colors normal-case"
+                            style={{
+                              color: childActive ? '#C27B20' : 'rgba(31,18,8,0.85)',
+                              background: childActive ? 'rgba(194,123,32,0.08)' : 'transparent',
+                            }}
+                            onClick={() => setEtherealTruthOpen(false)}
+                            {...subNavLinkHandlers(to, childActive ? to : location.pathname)}
+                          >
+                            {t(labelKey)}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : null}
             </li>
             <li>
               <Link
@@ -120,7 +212,10 @@ const Navbar = () => {
         <div
           className="fixed inset-0 z-40 flex flex-col md:hidden"
           style={{ background: 'rgba(251,246,238,0.98)', paddingTop: '4.5rem' }}
-          onClick={closeMobile}
+          onClick={() => {
+            closeMobile();
+            setEtherealTruthOpen(false);
+          }}
         >
           <nav
             className="flex flex-col items-center gap-1 py-8 px-6 overflow-y-auto"
@@ -134,6 +229,48 @@ const Navbar = () => {
             >
               {t('nav.about')}
             </Link>
+            <div className="w-full border-b" style={{ borderColor: 'rgba(31,18,8,0.1)' }}>
+              <button
+                type="button"
+                aria-expanded={etherealTruthOpen}
+                className="w-full flex items-center justify-center gap-2 font-cinzel text-base uppercase tracking-[0.3em] py-4 transition-colors"
+                style={{
+                  color:
+                    isEtherealTruthSectionActive || etherealTruthOpen ? '#C27B20' : '#1F1208',
+                }}
+                onClick={() => setEtherealTruthOpen(v => !v)}
+              >
+                {t('nav.etherealTruth')}
+                <ChevronDown
+                  aria-hidden
+                  className={`w-5 h-5 shrink-0 transition-transform ${etherealTruthOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {etherealTruthOpen ? (
+                <ul className="pb-3 flex flex-col gap-0">
+                  {ETHEREAL_TRUTH_CHILDREN.map(({ to, labelKey, match }) => {
+                    const childActive = match(location.pathname);
+                    return (
+                      <li key={to}>
+                        <Link
+                          to={to}
+                          onClick={() => {
+                            closeMobile();
+                            setEtherealTruthOpen(false);
+                          }}
+                          className="block w-full text-center font-cinzel text-sm tracking-[0.2em] py-3 transition-colors"
+                          style={{
+                            color: childActive ? '#C27B20' : 'rgba(31,18,8,0.75)',
+                          }}
+                        >
+                          {t(labelKey)}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : null}
+            </div>
             <Link
               to="/founder-story"
               onClick={closeMobile}

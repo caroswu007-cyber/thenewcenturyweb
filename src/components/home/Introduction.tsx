@@ -72,6 +72,7 @@ const Introduction = () => {
             align="center"
             className="mt-3 md:mt-4"
             paragraphClassName="max-w-3xl text-balance"
+            closingNote
           />
         </motion.div>
 
@@ -100,7 +101,7 @@ const Introduction = () => {
               {t('home.intro.physicalWorld')}
             </span>
             <h3 className="font-cinzel text-lg sm:text-xl mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.asraName')}</h3>
-            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4" style={{ color: 'rgba(194,123,32,0.65)' }}>
+            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4 font-semibold" style={{ color: '#6B3D12' }}>
               {t('home.intro.asraFull')}
             </p>
             <HomeProseBlocks text={t('home.intro.asraBody')} tone="umber" paragraphClassName="max-w-[40rem]" />
@@ -129,7 +130,7 @@ const Introduction = () => {
               {t('home.intro.spiritRealm')}
             </span>
             <h3 className="font-cinzel text-lg sm:text-xl mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.smscName')}</h3>
-            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4" style={{ color: 'rgba(61,37,16,0.5)' }}>
+            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4 font-semibold" style={{ color: '#352010' }}>
               {t('home.intro.smscFull')}
             </p>
             <HomeProseBlocks text={t('home.intro.smscBody')} tone="umber" paragraphClassName="max-w-[40rem]" />

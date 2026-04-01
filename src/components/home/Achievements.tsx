@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BarChart3, Microscope, Radio } from 'lucide-react';
+import { BarChart3, Globe, Microscope } from 'lucide-react';
 import { useI18n } from '../../i18n/LocaleProvider';
 import { HomeProseBlocks } from './HomeProse';
 
@@ -51,16 +51,12 @@ const Achievements = () => {
           />
 
           <div
-            className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-10 gap-y-3 mb-12 text-sm md:text-base max-w-2xl mx-auto font-cinzel border-t border-b py-6"
+            className="flex flex-wrap justify-center mb-12 text-sm md:text-base max-w-3xl mx-auto font-cinzel border-t border-b py-6 px-2"
             style={{ borderColor: 'rgba(31,18,8,0.1)', color: '#3D2510' }}
           >
-            <span className="inline-flex items-center gap-2 justify-center">
-              <Microscope className="w-4 h-4 shrink-0" style={{ color: '#C27B20' }} aria-hidden />
+            <span className="inline-flex items-center gap-3 justify-center text-center">
+              <Globe className="w-5 h-5 shrink-0" style={{ color: '#C27B20' }} aria-hidden />
               {t('home.achievements.kickerDoc')}
-            </span>
-            <span className="inline-flex items-center gap-2 justify-center">
-              <Radio className="w-4 h-4 shrink-0" style={{ color: '#8B5413' }} aria-hidden />
-              {t('home.achievements.kickerMetrics')}
             </span>
           </div>
         </motion.div>
@@ -119,13 +115,6 @@ const Achievements = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <HomeProseBlocks
-            text={t('home.achievements.ctaIntro')}
-            tone="umber"
-            align="center"
-            className="mb-6 md:mb-8 max-w-2xl mx-auto"
-            paragraphClassName="text-base sm:text-lg md:text-xl font-light text-balance"
-          />
           <Link
             to="/our-achievements"
             className="inline-flex items-center gap-2 font-cinzel font-medium text-base md:text-lg py-3.5 px-8 rounded-full border transition-colors"

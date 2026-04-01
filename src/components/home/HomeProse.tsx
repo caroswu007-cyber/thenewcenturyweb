@@ -16,12 +16,16 @@ const toneColor: Record<HomeProseTone, string> = {
 function HomeRichText({
   text,
   tone,
+  strongAccent,
 }: {
   text: string;
   tone: HomeProseTone;
+  /** Brighter **…** on closing / callout paragraphs */
+  strongAccent?: boolean;
 }) {
-  const strongStyle =
-    tone === 'umber' || tone === 'muted'
+  const strongStyle = strongAccent
+    ? { color: '#6B2400', fontWeight: 700 as const }
+    : tone === 'umber' || tone === 'muted'
       ? { color: '#8B5413', fontWeight: 600 as const }
       : { color: '#E09A42', fontWeight: 600 as const };
 
@@ -36,7 +40,11 @@ function HomeRichText({
             </strong>
           );
         }
-        return <span key={i}>{part}</span>;
+        return (
+          <span key={i} style={strongAccent ? { color: '#7A3206', fontWeight: 600 } : undefined}>
+            {part}
+          </span>
+        );
       })}
     </>
   );
@@ -194,6 +202,8 @@ export function HomeProseBlocks({
   /** When set, overrides default responsive body scale (e.g. truth cards). */
   size = 'default',
   align = 'left',
+  /** Last paragraph: high-contrast ink + amber panel (e.g. intro “本网站是 ASRA…” note). */
+  closingNote = false,
 }: {
   text: string;
   tone: HomeProseTone;
@@ -201,25 +211,38 @@ export function HomeProseBlocks({
   paragraphClassName?: string;
   size?: 'default' | 'comfortable';
   align?: 'left' | 'center';
+  closingNote?: boolean;
 }) {
   const paras = splitHomeCopyIntoParagraphs(text);
   const color = toneColor[tone];
   const alignCls = align === 'center' ? 'text-center mx-auto' : '';
   const scaleCls = size === 'comfortable' ? paraScaleComfortable : paraScaleDefault;
+  const lastIdx = paras.length - 1;
 
   return (
     <div className={className}>
       {paras.map((p, i) => {
         const numbered = /^\s*\d+[\.\、]/.test(p);
+        const isClosing = closingNote && i === lastIdx && tone === 'umber';
+        const closingPanelClass = isClosing
+          ? 'rounded-lg px-4 py-4 sm:px-5 sm:py-5 shadow-sm border border-[rgba(168,74,0,0.28)]'
+          : '';
+        const closingBg = isClosing
+          ? {
+              background: 'linear-gradient(135deg, rgba(194,123,32,0.14) 0%, rgba(255,248,235,0.55) 100%)',
+            }
+          : undefined;
+        const pColor = isClosing ? '#5C2004' : color;
+
         return (
           <p
             key={`${i}-${p.slice(0, 24)}`}
             className={`${scaleCls} ${alignCls} ${paragraphClassName} ${i > 0 ? 'mt-4 md:mt-5' : ''} ${
               numbered ? 'pl-3 sm:pl-4 border-l-2 border-[rgba(194,123,32,0.38)]' : ''
-            }`}
-            style={{ color }}
+            } ${closingPanelClass}`}
+            style={{ ...closingBg, color: pColor }}
           >
-            <HomeRichText text={p} tone={tone} />
+            <HomeRichText text={p} tone={tone} strongAccent={isClosing} />
           </p>
         );
       })}

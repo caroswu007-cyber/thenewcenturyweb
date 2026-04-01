@@ -11,15 +11,19 @@ const contentStackClass = `${articleShell} flex flex-col gap-14 md:gap-[4.25rem]
 
 const ACH_LINK_TOKEN = '{{%ACH%}}';
 
-/** Inline **amber emphasis** */
-function RichText({ text }: { text: string }) {
+const RICH_STRONG_ON_LIGHT = '#C27B20';
+const RICH_STRONG_ON_DARK = '#D4A853';
+
+/** `**phrase**` → gold accent on parchment; brighter gold on dark walnut cards. */
+function RichText({ text, tone = 'onLight' }: { text: string; tone?: 'onLight' | 'onDark' }) {
+  const accent = tone === 'onDark' ? RICH_STRONG_ON_DARK : RICH_STRONG_ON_LIGHT;
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
   return (
     <>
       {parts.map((part, i) => {
         if (part.startsWith('**') && part.endsWith('**')) {
           return (
-            <strong key={i} style={{ color: '#8B5413', fontWeight: 600 }}>
+            <strong key={i} style={{ color: accent, fontWeight: 600 }}>
               {part.slice(2, -2)}
             </strong>
           );
@@ -32,10 +36,18 @@ function RichText({ text }: { text: string }) {
 
 const bodyProse = 'text-[0.95rem] sm:text-[1.02rem] md:text-lg lg:text-[1.125rem] leading-[1.75]';
 
-function RichParagraph({ text, className = '' }: { text: string; className?: string }) {
+function RichParagraph({
+  text,
+  className = '',
+  tone = 'onLight',
+}: {
+  text: string;
+  className?: string;
+  tone?: 'onLight' | 'onDark';
+}) {
   return (
     <p className={`${bodyProse} ${className}`} style={{ color: '#3D2510' }}>
-      <RichText text={text} />
+      <RichText text={text} tone={tone} />
     </p>
   );
 }
@@ -48,11 +60,11 @@ function PhaseBParagraph({ text, className = '' }: { text: string; className?: s
   const [a, b] = text.split(ACH_LINK_TOKEN);
   return (
     <p className={`${bodyProse} ${className}`} style={{ color: '#3D2510' }}>
-      <RichText text={a} />
+      <RichText text={a} tone="onLight" />
       <Link to="/our-achievements" style={{ color: '#C27B20' }} className="underline-offset-2 hover:underline font-semibold">
         {t('founderStory.achievementsFeaturePageLink')}
       </Link>
-      <RichText text={b} />
+      <RichText text={b} tone="onLight" />
     </p>
   );
 }
@@ -128,7 +140,12 @@ function ContentBlock({
   return (
     <div className={showDivider ? 'pt-6 mt-6' : ''} style={showDivider ? { borderTop: `1px solid ${dark ? 'rgba(212,168,83,0.12)' : 'rgba(31,18,8,0.08)'}` } : {}}>
       {title ? (
-        <h4 className="font-cinzel font-bold text-base md:text-lg mb-3 tracking-wide" style={{ color: dark ? '#D4A853' : '#8B5413' }}>{title}</h4>
+        <h4
+          className="font-cinzel font-bold text-base md:text-lg mb-3 tracking-wide"
+          style={{ color: dark ? 'rgba(245,237,224,0.88)' : '#8B5413' }}
+        >
+          {title}
+        </h4>
       ) : null}
       {children}
     </div>
@@ -152,6 +169,7 @@ function TimelineRangeOnly({
   tone: string;
   stageLabel?: string;
 }) {
+  const { t } = useI18n();
   const alignDot = stageLabel ? 'items-center' : 'items-start';
   return (
     <div className={`flex gap-4 ${alignDot} mb-7 pb-7`} style={{ borderBottom: '1px solid rgba(31,18,8,0.08)' }}>
@@ -160,15 +178,22 @@ function TimelineRangeOnly({
         style={toneDotStyle[tone] ?? toneDotStyle.amber}
         aria-hidden
       />
-      <div className="flex-1 min-w-0 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <p className={`font-cinzel text-sm md:text-base tracking-wide ${stageLabel ? '' : 'pt-0.5'}`} style={{ color: '#9B8E80' }}>
-          {range}
-        </p>
+      <div className="flex-1 min-w-0">
         {stageLabel ? (
-          <span className="font-cinzel text-base md:text-lg font-bold tracking-[0.12em] shrink-0" style={{ color: '#1F1208' }}>
-            {stageLabel}
-          </span>
-        ) : null}
+          <p className="font-cinzel text-sm md:text-base tracking-wide leading-relaxed pt-0.5" style={{ color: '#3D2510' }}>
+            <span className="font-bold" style={{ color: '#1F1208' }}>
+              {stageLabel}
+            </span>
+            <span className="font-semibold" style={{ color: '#7A4512' }}>
+              {t('founderStory.phaseATimelineStageMid')}
+            </span>
+            <span style={{ color: '#5C4A3A' }}>{range}</span>
+          </p>
+        ) : (
+          <p className="font-cinzel text-sm md:text-base tracking-wide pt-0.5" style={{ color: '#9B8E80' }}>
+            {range}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -356,7 +381,7 @@ const FounderStoryView = () => {
                         {item.blocks.map((blk, bi) => (
                           <ContentBlock key={bi} title={'title' in blk ? blk.title : undefined} showDivider={bi > 0} dark>
                             <p className={`${bodyProse}`} style={{ color: 'rgba(245,237,224,0.85)' }}>
-                              <RichText text={blk.text} />
+                              <RichText text={blk.text} tone="onDark" />
                             </p>
                           </ContentBlock>
                         ))}

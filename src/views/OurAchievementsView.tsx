@@ -23,6 +23,10 @@ const CASE_ROWS = ['1', '2', '3', '4', '5'] as const;
 const EXP_ROWS = ['1', '2', '3'] as const;
 const SPECIAL_ROWS = ['1', '2', '3', '4'] as const;
 
+/** Body copy on parchment — higher contrast than legacy muted taupe. */
+const REPORT_INK_BODY = '#2C231A';
+const REPORT_INK_SOFT = '#4A3D32';
+
 function ReportHeroFigure() {
   const { t, locale } = useI18n();
   const { reportHeroFigure } = getLocalizedAchievementsAssets(locale);
@@ -37,7 +41,7 @@ function ReportHeroFigure() {
         style={{ borderColor: 'rgba(194,123,32,0.3)', background: 'rgba(237,224,204,0.5)' }}
         aria-label={caption}
       >
-        <figcaption className="text-center text-sm lg:text-base font-cinzel leading-relaxed max-w-sm" style={{ color: '#9B8E80' }}>
+        <figcaption className="text-center text-sm lg:text-base font-cinzel leading-relaxed max-w-sm" style={{ color: REPORT_INK_SOFT }}>
           {caption}
         </figcaption>
       </figure>
@@ -53,7 +57,7 @@ function ReportHeroFigure() {
         style={{ background: 'linear-gradient(to top, rgba(237,224,204,0.85) 0%, rgba(237,224,204,0.2) 45%, transparent 100%)' }}
         aria-hidden
       />
-      <figcaption className="absolute bottom-0 left-0 right-0 px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-cinzel leading-snug" style={{ background: 'linear-gradient(to top, rgba(237,224,204,0.9) 0%, transparent 100%)', color: '#3D2510' }}>
+      <figcaption className="absolute bottom-0 left-0 right-0 px-3 py-2.5 sm:px-4 sm:py-3 text-xs sm:text-sm font-cinzel leading-snug" style={{ background: 'linear-gradient(to top, rgba(237,224,204,0.9) 0%, transparent 100%)', color: REPORT_INK_BODY }}>
         {caption}
       </figcaption>
     </figure>
@@ -112,7 +116,7 @@ function ReportSection({
                 }}
               />
               {subtitle ? (
-                <p className="text-base lg:text-lg leading-relaxed max-w-4xl" style={{ color: '#9B8E80' }}>{subtitle}</p>
+                <p className="text-base lg:text-lg leading-relaxed max-w-4xl" style={{ color: REPORT_INK_SOFT }}>{subtitle}</p>
               ) : null}
             </div>
           </div>
@@ -150,7 +154,7 @@ const OurAchievementsView = () => {
               </p>
               <h1 className="report-hero-title text-center lg:text-left">{t('achievementsReport.title')}</h1>
               {t('achievementsReport.termGloss') ? (
-                <p className="text-center lg:text-left text-sm sm:text-base max-w-3xl mx-auto lg:mx-0 mt-4 leading-relaxed" style={{ color: '#9B8E80' }}>
+                <p className="text-center lg:text-left text-sm sm:text-base max-w-3xl mx-auto lg:mx-0 mt-4 leading-relaxed" style={{ color: REPORT_INK_SOFT }}>
                   {t('achievementsReport.termGloss')}
                 </p>
               ) : null}
@@ -185,9 +189,9 @@ const OurAchievementsView = () => {
                 onMouseEnter={e => { (e.currentTarget as HTMLLIElement).style.borderColor = 'rgba(194,123,32,0.25)'; (e.currentTarget as HTMLLIElement).style.background = 'rgba(194,123,32,0.04)'; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLLIElement).style.borderColor = 'rgba(31,18,8,0.08)'; (e.currentTarget as HTMLLIElement).style.background = 'rgba(31,18,8,0.02)'; }}
               >
-                <a href={`#${id}`} className="flex gap-3 items-start" style={{ color: '#3D2510' }}
+                <a href={`#${id}`} className="flex gap-3 items-start" style={{ color: REPORT_INK_BODY }}
                   onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = '#C27B20'; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = '#3D2510'; }}>
+                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = REPORT_INK_BODY; }}>
                   <span className="font-cinzel tabular-nums shrink-0 pt-0.5" style={{ color: '#C27B20' }} aria-hidden>
                     {roman}
                   </span>
@@ -217,7 +221,7 @@ const OurAchievementsView = () => {
             <h3 className="report-subhead mt-2 mb-4">{t('achievementsReport.s1.spiritHeading')}</h3>
             <ReportParagraphs
               text={t('achievementsReport.s1.spiritIntro')}
-              paragraphClassName="mb-2 leading-relaxed lg:leading-relaxed" style={{ color: '#9B8E80' }}
+              paragraphClassName="mb-2 leading-relaxed lg:leading-relaxed" style={{ color: REPORT_INK_BODY }}
             />
           </div>
 
@@ -231,7 +235,7 @@ const OurAchievementsView = () => {
               <tbody>
                 {SPIRIT_ROWS.map(row => (
                   <tr key={row}>
-                    <td style={{ color: '#3D2510' }}>
+                    <td style={{ color: REPORT_INK_BODY }}>
                       <ReportInline text={t(`achievementsReport.spirit.${row}`)} />
                     </td>
                   </tr>
@@ -244,10 +248,10 @@ const OurAchievementsView = () => {
 
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <h3 className="report-subhead mb-4">{t('achievementsReport.interesting.title')}</h3>
-            <p className="mb-4 leading-relaxed" style={{ color: '#9B8E80' }}>
+            <p className="mb-4 leading-relaxed" style={{ color: REPORT_INK_BODY }}>
               <ReportInline text={t('achievementsReport.interesting.intro')} />
             </p>
-              <ol className="list-decimal list-outside space-y-4 pl-6 leading-relaxed" style={{ color: '#3D2510' }}>
+              <ol className="list-decimal list-outside space-y-4 pl-6 leading-relaxed" style={{ color: REPORT_INK_BODY }}>
               {INTERESTING_ROWS.map(row => (
                 <li key={row}>
                   <ReportInline text={t(`achievementsReport.interesting.${row}`)} />
@@ -262,7 +266,7 @@ const OurAchievementsView = () => {
             <h3 className="report-subhead mb-4">{t('achievementsReport.master.title')}</h3>
               <ul className="space-y-5 pl-5" style={{ borderLeft: '2px solid rgba(194,123,32,0.3)' }}>
               {MASTER_ROWS.map(row => (
-                <li key={row} className="leading-relaxed" style={{ color: '#3D2510' }}>
+                <li key={row} className="leading-relaxed" style={{ color: REPORT_INK_BODY }}>
                   <ReportInline text={t(`achievementsReport.master.${row}`)} />
                 </li>
               ))}
@@ -273,11 +277,11 @@ const OurAchievementsView = () => {
         <ReportSection id="s2" num="Ⅱ" title={t('achievementsReport.s2.title')}>
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <p className="report-subhead mb-3">{t('achievementsReport.s2.sec51')}</p>
-            <p className="mb-3 leading-relaxed" style={{ color: '#9B8E80' }}>
+            <p className="mb-3 leading-relaxed" style={{ color: REPORT_INK_BODY }}>
               <ReportInline text={t('achievementsReport.s2.condNote')} />
             </p>
             <ReportLeftRail>
-              <p className="leading-relaxed" style={{ color: '#3D2510' }}>
+              <p className="leading-relaxed" style={{ color: REPORT_INK_BODY }}>
                 <ReportInline text={t('achievementsReport.s2.intro')} />
               </p>
             </ReportLeftRail>
@@ -290,11 +294,11 @@ const OurAchievementsView = () => {
             <h3 className="report-crosshead mb-3">{t('achievementsReport.cohort.title')}</h3>
             <ReportParagraphs
               text={t('achievementsReport.cohort.body')}
-              paragraphClassName="leading-relaxed lg:leading-relaxed mb-8" style={{ color: '#9B8E80' }}
+              paragraphClassName="leading-relaxed lg:leading-relaxed mb-8" style={{ color: REPORT_INK_BODY }}
             />
 
             <h3 className="report-crosshead mb-3">{t('achievementsReport.tech.title')}</h3>
-            <ul className="space-y-3 list-disc pl-5 mb-0" style={{ color: '#3D2510' }}>
+            <ul className="space-y-3 list-disc pl-5 mb-0" style={{ color: REPORT_INK_BODY }}>
               <li>
                 <ReportInline text={t('achievementsReport.tech.1')} />
               </li>
@@ -329,7 +333,7 @@ const OurAchievementsView = () => {
               <tbody>
                 {CASE_ROWS.map(row => (
                   <tr key={row}>
-                    <td style={{ color: '#3D2510' }}>
+                    <td style={{ color: REPORT_INK_BODY }}>
                       <ReportInline text={t(`achievementsReport.case.${row}`)} />
                     </td>
                   </tr>
@@ -342,7 +346,7 @@ const OurAchievementsView = () => {
 
           <div className="mx-auto w-full max-w-[min(72rem,100%)]">
             <h3 className="report-subhead mb-4">{t('achievementsReport.exp.title')}</h3>
-              <ol className="list-decimal list-outside space-y-4 pl-6 leading-relaxed" style={{ color: '#3D2510' }}>
+              <ol className="list-decimal list-outside space-y-4 pl-6 leading-relaxed" style={{ color: REPORT_INK_BODY }}>
               {EXP_ROWS.map(row => (
                 <li key={row}>
                   <ReportInline text={t(`achievementsReport.exp.${row}`)} />
@@ -353,7 +357,7 @@ const OurAchievementsView = () => {
         </ReportSection>
 
         <ReportSection id="s3" num="Ⅲ" title={t('achievementsReport.s3.title')} emphasis>
-          <p className="mb-6 font-semibold mx-auto w-full max-w-[min(72rem,100%)] leading-relaxed" style={{ color: '#3D2510' }}>
+          <p className="mb-6 font-semibold mx-auto w-full max-w-[min(72rem,100%)] leading-relaxed" style={{ color: REPORT_INK_BODY }}>
             <ReportInline text={t('achievementsReport.s3.lead')} />
           </p>
 
@@ -367,7 +371,7 @@ const OurAchievementsView = () => {
               <tbody>
                 {SPECIAL_ROWS.map(row => (
                   <tr key={row}>
-                    <td style={{ color: '#3D2510' }}>
+                    <td style={{ color: REPORT_INK_BODY }}>
                       <ReportInline text={t(`achievementsReport.special.${row}`)} />
                     </td>
                   </tr>
@@ -480,14 +484,14 @@ const OurAchievementsView = () => {
           <div className="report-divider-ornament mb-8" aria-hidden>
             ◆
           </div>
-          <p className="mb-8 max-w-4xl font-cinzel text-xs leading-relaxed lg:text-sm lg:leading-relaxed xl:max-w-5xl" style={{ color: '#9B8E80' }}>
+          <p className="mb-8 max-w-4xl font-cinzel text-xs leading-relaxed lg:text-sm lg:leading-relaxed xl:max-w-5xl" style={{ color: REPORT_INK_SOFT }}>
             {t('achievementsPage.disclaimer')}
           </p>
           <div className="flex flex-wrap items-center gap-4 font-cinzel text-sm lg:text-base">
             <Link
               to="/"
               className="rounded-full px-6 py-2.5 transition"
-              style={{ border: '1px solid rgba(31,18,8,0.2)', background: 'rgba(31,18,8,0.04)', color: '#3D2510' }}
+              style={{ border: '1px solid rgba(31,18,8,0.2)', background: 'rgba(31,18,8,0.04)', color: REPORT_INK_BODY }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(194,123,32,0.4)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(31,18,8,0.2)'; }}
             >

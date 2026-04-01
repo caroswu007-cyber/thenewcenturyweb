@@ -15,8 +15,14 @@ const OrnamLine = ({ flip = false }: { flip?: boolean }) => (
   </div>
 );
 
+/** Section kicker under H2 — strong contrast on parchment (#F5EDE0 / creams) */
+const ABOUT_SUBHEAD_FG = '#924C12';
+
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-cinzel text-sm uppercase tracking-[0.4em] mt-4" style={{ color: 'rgba(194,123,32,0.5)' }}>
+  <p
+    className="font-cinzel text-sm font-semibold uppercase tracking-[0.4em] mt-4"
+    style={{ color: ABOUT_SUBHEAD_FG }}
+  >
     {children}
   </p>
 );
@@ -100,10 +106,16 @@ const AboutHero = () => {
       {/* Abbr badge row */}
       <div className="flex items-center gap-3 sm:gap-5 mb-6 md:mb-8 flex-wrap justify-center">
         <span
-          className="font-cinzel font-bold text-sm sm:text-base tracking-[0.3em] px-3 sm:px-4 py-1.5 rounded-full"
-          style={{ border: '1px solid rgba(194,123,32,0.4)', color: '#C27B20', background: 'rgba(194,123,32,0.07)' }}
+          className="font-cinzel font-bold text-sm sm:text-base px-3 sm:px-4 py-1.5 rounded-full normal-case"
+          style={{
+            border: '1px solid rgba(194,123,32,0.4)',
+            color: '#C27B20',
+            background: 'rgba(194,123,32,0.07)',
+            letterSpacing: '0.12em',
+            fontFeatureSettings: '"lnum" 1, "kern" 1',
+          }}
         >
-          ASra
+          ASRA
         </span>
         <span style={{ color: 'rgba(194,123,32,0.3)', fontSize: '1.2rem' }}>·</span>
         <span
@@ -125,11 +137,11 @@ const AboutHero = () => {
       <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
         <div className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full" style={{ background: 'rgba(194,123,32,0.08)', border: '1px solid rgba(194,123,32,0.2)' }}>
           <div className="w-2 h-2 rounded-full shrink-0" style={{ background: '#C27B20' }} />
-          <span className="font-cinzel text-xs sm:text-sm tracking-widest uppercase" style={{ color: '#C27B20' }}>{t('about.hero.pillAsra')}</span>
+          <span className="font-cinzel text-xs sm:text-sm tracking-wide normal-case" style={{ color: '#C27B20' }}>{t('about.hero.pillAsra')}</span>
         </div>
         <div className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full" style={{ background: 'rgba(61,37,16,0.07)', border: '1px solid rgba(61,37,16,0.18)' }}>
           <div className="w-2 h-2 rounded-full shrink-0" style={{ background: '#3D2510' }} />
-          <span className="font-cinzel text-xs sm:text-sm tracking-widest uppercase" style={{ color: '#3D2510' }}>{t('about.hero.pillSmsc')}</span>
+          <span className="font-cinzel text-xs sm:text-sm tracking-wide normal-case" style={{ color: '#3D2510' }}>{t('about.hero.pillSmsc')}</span>
         </div>
       </div>
     </motion.div>
@@ -169,14 +181,14 @@ const DualDomain = () => {
         className="text-center mb-12 mx-auto max-w-2xl rounded-xl py-7 px-8"
         style={{ background: 'rgba(194,123,32,0.06)', border: '1px solid rgba(194,123,32,0.2)' }}
       >
-        <p className="font-cinzel text-sm uppercase tracking-[0.35em] mb-3" style={{ color: 'rgba(194,123,32,0.6)' }}>{t('about.dual.umbrellaLabel')}</p>
+        <p className="font-cinzel text-sm font-semibold uppercase tracking-[0.35em] mb-3" style={{ color: ABOUT_SUBHEAD_FG }}>{t('about.dual.umbrellaLabel')}</p>
         <h3 className="font-cinzel font-bold text-xl md:text-2xl tracking-wide" style={{ color: '#1F1208' }}>{about.orgName}</h3>
-        <p className="font-cinzel text-sm mt-1 tracking-widest" style={{ color: 'rgba(194,123,32,0.55)' }}>{about.orgSubtitle}</p>
+        <p className="font-cinzel text-sm font-medium mt-1 tracking-widest" style={{ color: '#7A3D0F' }}>{about.orgSubtitle}</p>
       </motion.div>
 
       {/* Connecting lines visual */}
       <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-0 max-w-5xl mx-auto">
-        {/* ASra Card */}
+        {/* ASRA card */}
         <motion.div
           initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
           className="flex-1 rounded-xl overflow-hidden"
@@ -190,7 +202,12 @@ const DualDomain = () => {
           </div>
           <div className="p-6 sm:p-8">
             <div className="h-0.5 mb-5" style={{ background: 'linear-gradient(to right, rgba(194,123,32,0.5), transparent)' }} />
-            <p className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.2em] mb-2" style={{ color: '#C27B20' }}>ASra</p>
+            <p
+              className="font-cinzel text-xs sm:text-sm normal-case mb-2"
+              style={{ color: '#C27B20', letterSpacing: '0.12em', fontFeatureSettings: '"lnum" 1, "kern" 1' }}
+            >
+              ASRA
+            </p>
             <h3 className="font-cinzel font-bold text-base sm:text-lg mb-3 leading-snug" style={{ color: '#1F1208' }}>{about.asra.name}</h3>
             <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3D2510' }}>{about.asra.description}</p>
           </div>
@@ -201,8 +218,8 @@ const DualDomain = () => {
           <div className="flex-1 w-px md:w-auto md:h-full border-t md:border-t-0 md:border-l border-dashed" style={{ borderColor: 'rgba(194,123,32,0.25)' }} />
           <div className="flex flex-col items-center gap-1 text-center px-4">
             <span style={{ color: 'rgba(194,123,32,0.5)', fontSize: '1.4rem' }}>⇄</span>
-            <span className="font-cinzel font-bold text-xs sm:text-sm tracking-wider text-center" style={{ color: 'rgba(194,123,32,0.7)' }}>{t('about.connector.ratio')}</span>
-            <span className="font-cinzel text-xs sm:text-sm text-center" style={{ color: 'rgba(194,123,32,0.4)' }}>{t('about.connector.partnership')}</span>
+            <span className="font-cinzel font-bold text-xs sm:text-sm tracking-wider text-center" style={{ color: '#7A3D0F' }}>{t('about.connector.ratio')}</span>
+            <span className="font-cinzel text-xs sm:text-sm text-center font-semibold" style={{ color: ABOUT_SUBHEAD_FG }}>{t('about.connector.partnership')}</span>
           </div>
           <div className="flex-1 w-px md:w-auto md:h-full border-t md:border-t-0 md:border-l border-dashed" style={{ borderColor: 'rgba(194,123,32,0.25)' }} />
         </div>
