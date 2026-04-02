@@ -37,7 +37,7 @@ const Achievements = () => {
 
           <h2
             className="cosmic-title font-bold mb-10"
-            style={{ fontSize: 'clamp(1.85rem, 4.25vw, 3.35rem)', lineHeight: 1.12 }}
+            style={{ fontSize: 'clamp(1.32rem, 3.4vw, 2.72rem)', lineHeight: 1.12 }}
           >
             {t('home.achievements.title')}
           </h2>
@@ -104,7 +104,7 @@ const Achievements = () => {
                 style={{ background: 'linear-gradient(to right, rgba(139,84,19,0.35), transparent)' }}
               />
             </div>
-            <h3 className="font-cinzel text-lg sm:text-xl md:text-2xl mb-4 font-semibold tracking-tight" style={{ color: '#1F1208' }}>{t('home.achievements.card2Title')}</h3>
+            <h3 className="font-cinzel text-base sm:text-lg md:text-xl mb-4 font-semibold tracking-tight" style={{ color: '#1F1208' }}>{t('home.achievements.card2Title')}</h3>
             <HomeProseBlocks text={t('home.achievements.card2Body')} tone="umber" paragraphClassName="text-balance" />
           </motion.div>
         </div>

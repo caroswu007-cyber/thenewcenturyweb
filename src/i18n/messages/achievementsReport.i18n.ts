@@ -20,21 +20,21 @@ export const achievementsReportEn: Record<string, string> = {
   'achievementsReport.s2.sec52': 'Cohort, workflow, and modalities',
   'achievementsReport.s2.sec53': 'Outcomes, case notes, and exploratory procedures',
   'achievementsReport.s2.condNote':
-    'TikTok surfaced the following categories of patients in the livestream; attached spirits on each were brought under effective regulation.',
+    'TikTok surfaced the following categories of patients in the livestream; attached spirits (ghosts) on each were brought under effective regulation.',
   'achievementsReport.carouselNote':
     'Placeholder gallery — replace slides in `carouselSlides` with captures from the YouTube replay channel.',
   'achievementsReport.orgLine': 'Spirit Ambassador Association (ASra)',
   'achievementsReport.contents': 'Contents',
   'achievementsReport.toc.1': 'I. Data overview',
-  'achievementsReport.toc.2': 'II. Routine mental-disorder cases — spirit (ghost) interventions',
+  'achievementsReport.toc.2': 'II. Routine mental-disorder cases — spirit interventions',
   'achievementsReport.toc.3': 'III. Special illustrative cases — livestream links',
   'achievementsReport.s1.title': 'I. Data overview',
   'achievementsReport.s1.lead':
-    'From February through December 2025, **Caros** conducted 255+ documented public-service livestreams on TikTok, totaling more than 800 hours. TikTok brought 70,000+ related listeners to the room; there were 1,200+ in-depth interviews; 400+ long-hidden attached spirits were brought forward for dialogue; and 240+ patients with mental-health presentations gained rapid on-stream relief from spirit-related distress.',
+    'From February through December 2025, **Caros Woo** conducted 255+ documented public-service livestreams on TikTok, totaling more than 800 hours. TikTok brought 70,000+ related listeners to the room; there were 1,200+ in-depth interviews; 400+ long-hidden attached spirits (ghosts) were brought forward for dialogue; and 240+ patients with mental-health presentations gained rapid on-stream relief from spirit (soul)-related distress.',
   'achievementsReport.s1.spiritHeading':
-    'Livestream statistics on the lived state of American spirits (ghosts)',
+    'Livestream statistics on the lived state of American spirits',
   'achievementsReport.s1.spiritIntro':
-    'President **Caros** assembled baseline information in the livestream on American spirits (ghosts): memory, mental state, living conditions, the death transition, and awareness of the spirit world.\n\nThe items below condense recurring patterns voiced across sessions.',
+    'President **Caros Woo** assembled baseline information in the livestream on American spirits (ghosts): memory, mental state, living conditions, the death transition, and awareness of the spirit world.\n\nThe items below condense recurring patterns voiced across sessions.',
   'achievementsReport.spirit.1':
     '(1) About 90% of spirits (ghosts) do not remember name, sex, or other basic pre-death information, and do not remember the death process.',
   'achievementsReport.spirit.2':
@@ -42,12 +42,12 @@ export const achievementsReportEn: Record<string, string> = {
   'achievementsReport.spirit.3':
     '(3) 100% of American spirits (ghosts) acquired new abilities in the spirit world.',
   'achievementsReport.spirit.4':
-    '(4) The vast majority of attached spirits are moved into or out of hosts with Master Spirit coordination.',
+    '(4) The vast majority of attached spirits (ghosts) are moved into or out of hosts with Master Spirit coordination.',
   'achievementsReport.spirit.5':
-    '(5) 100% of American spirits (ghosts) and their hosts are constrained by two prohibitions in UMMA’s soul-control system, so neither side may communicate the true physiology and living conditions of spirits.',
-  'achievementsReport.interesting.title': 'Especially notable spirits (ghosts)',
+    '(5) 100% of American spirits (ghosts) and their hosts are constrained by two prohibitions in UMMA’s spirit (soul)–control system, so neither side may communicate the true physiology and living conditions of spirits (ghosts).',
+  'achievementsReport.interesting.title': 'Especially notable spirits',
   'achievementsReport.interesting.intro':
-    'Among attached spirits, many profiles are especially vivid; a selection follows:',
+    'Among attached spirits (ghosts), many profiles are especially vivid; a selection follows:',
   'achievementsReport.interesting.1':
     'Oldest spirits (ghosts): a sibling pair who died in the Quebec region in 1813, still retaining full memories.',
   'achievementsReport.interesting.2':
@@ -68,37 +68,37 @@ export const achievementsReportEn: Record<string, string> = {
     'July 25 livestream: on host Jen, two attached spirits (ghosts), after incantations to summon a Master Spirit — one sensed a guiding presence of light and love; the other sensed a dark knight.',
   'achievementsReport.master.3':
     'August 14 livestream: host Dominick summoned the arrival and instruction of the divine designation “Elohim.”',
-  'achievementsReport.s2.title': 'II. Routine mental-disorder spirit (ghost) interventions',
+  'achievementsReport.s2.title': 'II. Routine mental-disorder spirit interventions',
   'achievementsReport.s2.intro':
     'Conditions represented among patients who received contact and effective spirit (ghost) regulation include: schizophrenia, bipolar disorder, depression, anxiety, DID, PTSD, schizoaffective disorder, ADHD, OCD, social phobia, and driving phobia.',
   'achievementsReport.cohort.title': 'Sources of improved participants and basic workflow',
   'achievementsReport.cohort.body':
-    'Nearly all participants were treatment-resistant, refractory cases.\n\nThey entered via TikTok recommendations, took a “try it” posture, and followed: remote bring-forward → dialogue → spirit regulation → reported improvement.',
+    'Nearly all participants were treatment-resistant, refractory cases.\n\nThey entered via TikTok recommendations, took a “try it” posture, and followed: remote bring-forward → dialogue → spirit (ghost) regulation → reported improvement.',
   'achievementsReport.tech.title': 'Two livestream techniques (with Master Spirit coordination)',
   'achievementsReport.tech.1':
     '(1) The host aims the mobile livestream camera at the head, chest, and back for illumination.',
   'achievementsReport.tech.2': '(2) Release incantations / prohibition work.',
   'achievementsReport.outcomes.title': 'Direct effects',
   'achievementsReport.outcomes.body':
-    'Within 30 minutes, >80% of human hosts and attached spirits (ghosts) reported marked relief of acute mental distress (spirits in this cohort often showed mental-disorder–like states).\n\nThrough 24 December 2025, most who improved did not request a second round of regulation — i.e. no relapse in that window by self-report.',
+    'Within 30 minutes, >80% of human hosts and attached spirits (ghosts) reported marked relief of acute mental distress (spirits (ghosts) in this cohort often showed mental-disorder–like states).\n\nThrough 24 December 2025, most who improved did not request a second round of regulation — i.e. no relapse in that window by self-report.',
   'achievementsReport.cases.title': 'Representative case notes',
   'achievementsReport.case.1':
     'August 11 livestream: depression and bipolar disorder untreated >15 years — eased within thirty minutes with no recurrence reported.',
   'achievementsReport.case.2':
     'June 14 livestream: long-standing PTSD — fully cleared in one spirit (ghost) regulation session; trauma residue dissipated.',
   'achievementsReport.case.3':
-    'September 11 livestream: severe schizophrenia; malignant alters steering life — within one hour attached spirits were heavily suppressed and symptoms eased, with continued easing over the following month.',
+    'September 11 livestream: severe schizophrenia; malignant alters steering life — within one hour attached spirits (ghosts) were heavily suppressed and symptoms eased, with continued easing over the following month.',
   'achievementsReport.case.4':
-    'July 18 livestream: child with autism many years — after harmonizing spirits in the body, symptoms began to improve.',
+    'July 18 livestream: child with autism many years — after harmonizing spirits (ghosts) in the body, symptoms began to improve.',
   'achievementsReport.case.5':
-    'September 3 livestream: severe somatization — after using livestream energy work to suppress spirits in the home, somatization and mood greatly improved.',
+    'September 3 livestream: severe somatization — after using livestream energy work to suppress spirits (ghosts) in the home, somatization and mood greatly improved.',
   'achievementsReport.exp.title': 'Research-style procedures in the livestream',
   'achievementsReport.exp.1':
     '(1) Rapid cross-conversion among mood-disorder, schizophrenia, and DID symptoms within a short interval.',
   'achievementsReport.exp.2':
     '(2) Attached spirit (ghost) somatic relocation vs. host symptom improvement — mapping.',
   'achievementsReport.exp.3': '(3) Experimental external application of medication.',
-  'achievementsReport.s3.title': 'III. Special illustrative spirit (ghost) regulation cases',
+  'achievementsReport.s3.title': 'III. Special illustrative spirit regulation cases',
   'achievementsReport.s3.lead': 'Highlighted cases (selection):',
   'achievementsReport.special.1':
     '(1) DID spectrum with ≥30 identities — TikTok @annabella: mutual control, mutual influence, and amnesia among many attached spirits in one host.',
@@ -156,10 +156,10 @@ export const achievementsReportZh: Record<string, string> = {
   'achievementsReport.toc.3': '第三板块：特殊意义鬼魂控制案例展示',
   'achievementsReport.s1.title': '第一板块：数据概览',
   'achievementsReport.s1.lead':
-    '在2025年2月至12月，**Caros** 在 TikTok 上进行了 255+ 有记录的公益直播，总时长超过 800 小时。TikTok 推送 70,000+ 高相关人士来访直播间，与 1,200+ 人次深度访谈；其中召唤 400+ 隐藏在患者体内多年的附体鬼魂并与他们深度交流，帮助 240+ 精神障碍患者现场快速改善附体鬼魂带来的痛苦。',
+    '在2025年2月至12月，**Caros Woo** 在 TikTok 上进行了 255+ 有记录的公益直播，总时长超过 800 小时。TikTok 推送 70,000+ 高相关人士来访直播间，与 1,200+ 人次深度访谈；其中召唤 400+ 隐藏在患者体内多年的附体鬼魂并与他们深度交流，帮助 240+ 精神障碍患者现场快速改善附体鬼魂带来的痛苦。',
   'achievementsReport.s1.spiritHeading': '直播间对美国鬼魂生存状态统计',
   'achievementsReport.s1.spiritIntro':
-    '会长 **Caros** 在直播间就美国鬼魂的记忆、精神状态、生存状态、死亡过程以及对灵魂世界的认知等，做了全方位基本信息汇总。\n\n下列条目是多场会话中重复出现的模式的凝练。',
+    '会长 **Caros Woo** 在直播间就美国鬼魂的记忆、精神状态、生存状态、死亡过程以及对灵魂世界的认知等，做了全方位基本信息汇总。\n\n下列条目是多场会话中重复出现的模式的凝练。',
   'achievementsReport.spirit.1': '1　约 90% 的鬼魂不记得姓名、性别等基本生前信息，也不记得死亡过程。',
   'achievementsReport.spirit.2': '2　100% 的美国鬼魂失去大部分人性，并获得新的秉性。',
   'achievementsReport.spirit.3': '3　100% 的美国鬼魂在灵魂世界获得新的能力。',

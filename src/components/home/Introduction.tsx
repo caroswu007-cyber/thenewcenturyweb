@@ -39,7 +39,7 @@ const Introduction = () => {
 
           <h2
             className="cosmic-title mb-4"
-            style={{ fontSize: 'clamp(1.85rem, 5.2vw, 4.1rem)', lineHeight: 1.1 }}
+            style={{ fontSize: 'clamp(1.28rem, 3.45vw, 2.72rem)', lineHeight: 1.1 }}
           >
             {home.introTitle}
           </h2>
@@ -100,7 +100,7 @@ const Introduction = () => {
             >
               {t('home.intro.physicalWorld')}
             </span>
-            <h3 className="font-cinzel text-lg sm:text-xl mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.asraName')}</h3>
+            <h3 className="font-cinzel text-base sm:text-lg mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.asraName')}</h3>
             <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4 font-semibold" style={{ color: '#6B3D12' }}>
               {t('home.intro.asraFull')}
             </p>
@@ -129,7 +129,7 @@ const Introduction = () => {
             >
               {t('home.intro.spiritRealm')}
             </span>
-            <h3 className="font-cinzel text-lg sm:text-xl mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.smscName')}</h3>
+            <h3 className="font-cinzel text-base sm:text-lg mb-1 mt-3 tracking-wide" style={{ color: '#1F1208' }}>{t('home.intro.smscName')}</h3>
             <p className="font-cinzel text-xs sm:text-sm uppercase tracking-widest mb-4 font-semibold" style={{ color: '#352010' }}>
               {t('home.intro.smscFull')}
             </p>

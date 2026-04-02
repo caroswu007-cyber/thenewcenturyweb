@@ -65,7 +65,7 @@ const TruthSection = () => {
             <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to left, transparent, rgba(194,123,32,0.5))' }} />
           </div>
 
-          <h2 className="cosmic-title mb-3" style={{ fontSize: 'clamp(1.65rem, 4.75vw, 3.75rem)', lineHeight: 1.1 }}>
+          <h2 className="cosmic-title mb-3" style={{ fontSize: 'clamp(1.32rem, 3.6vw, 2.82rem)', lineHeight: 1.1 }}>
             {t('home.truth.title')}
           </h2>
           <p
@@ -109,7 +109,7 @@ const TruthSection = () => {
             <div className="h-px mb-6 md:mb-8" style={{ background: 'linear-gradient(to right, transparent, rgba(194,123,32,0.5), transparent)' }} />
             <h3
               className="font-cinzel mb-5"
-              style={{ fontSize: 'clamp(1.05rem, 2.65vw, 1.65rem)', color: '#D4A853', letterSpacing: '0.06em' }}
+              style={{ fontSize: 'clamp(0.95rem, 2.15vw, 1.42rem)', color: '#D4A853', letterSpacing: '0.06em' }}
             >
               {t('home.truth.abstractHeading')}
             </h3>
@@ -188,7 +188,7 @@ const TruthSection = () => {
 
                 <h4
                   className="font-cinzel font-bold mb-4 leading-snug"
-                  style={{ fontSize: 'clamp(1.05rem, 2.15vw, 1.45rem)', color: '#F5EDE0' }}
+                  style={{ fontSize: 'clamp(0.94rem, 1.85vw, 1.26rem)', color: '#F5EDE0' }}
                 >
                   {s.title}
                 </h4>

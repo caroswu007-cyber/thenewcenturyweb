@@ -94,7 +94,7 @@ function main() {
     if (key === 'founderStoryPage.intro') {
       row.english_源文 = stripBoldLoop(en);
       row.中文 =
-        '我， John LONG WOO, 和我的两个儿子Caros和Sam，我们父子三人，与灵魂世界有太多传奇的故事。这些经历造就我们是灵魂世界首位开门者，并且是灵魂生命真相的首位探索者。';
+        '我， John LONG WOO, 和我的两个儿子Caros Woo和Sam，我们父子三人，与灵魂世界有太多传奇的故事。这些经历造就我们是灵魂世界首位开门者，并且是灵魂生命真相的首位探索者。';
       n++;
       continue;
     }
@@ -116,7 +116,7 @@ function main() {
     'founderStoryPage.phaseAStages[4].paragraphs[3]':
       "From September 2024 to January 2025, as a father, I was again attached by a C3-level ghost, Qian Kai. Qian Kai's density was far higher than the C2-level Qing Xiaoxian. The higher a ghost's density, the stronger its ability—so Qian Kai's thought-control and pathogenic power were stronger as well. We continued self-rescue and eliminated this ghost.",
     'founderStoryPage.phaseB.blocks[2].text':
-      'A great number of master spirits and hybrid spirits reached out to us as father and sons, letting us know that the spirit world surprisingly has administrators and creators. Master spirits gave us a great deal of help. Caros obtained the PRCASG superpower to remotely control attached spirits in North America, so that while in China he could remotely control spirits on the other side of the globe. This PRCASG superpower is the basis on which we built ASRA.',
+      'A great number of master spirits and hybrid spirits reached out to us as father and sons, letting us know that the spirit world surprisingly has administrators and creators. Master spirits gave us a great deal of help. Caros Woo obtained the PRCASG superpower to remotely control attached spirits in North America, so that while in China he could remotely control spirits on the other side of the globe. This PRCASG superpower is the basis on which we built ASRA.',
   };
   for (const row of rows) {
     const key = String(row.block_key ?? '').trim();

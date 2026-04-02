@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Clapperboard } from 'lucide-react';
 import { getLocalizedSpiritMedicineOfficialOutline } from '../../content/pageCopyRuntime';
 import { useI18n } from '../../i18n/LocaleProvider';
+import { InlineRich } from '../common/InlineRich';
 
 /**
  * Full curriculum tree (ess-esw.org/spirit-medicine style), same teal/cyan visual language as SpiritMedicineContents.
@@ -53,7 +54,11 @@ const SpiritMedicineFullOutline = () => {
             className="text-sm sm:text-base md:text-lg font-serif max-w-3xl mx-auto leading-relaxed md:leading-relaxed px-2"
             style={{ color: 'rgba(186,230,253,0.92)' }}
           >
-            {t('spirit.fullOutlineIntro')}
+            <InlineRich
+              text={t('spirit.fullOutlineIntro')}
+              strongClassName="font-semibold"
+              strongStyle={{ color: 'rgba(224,242,254,0.98)' }}
+            />
           </p>
         </header>
 
@@ -187,7 +192,11 @@ const SpiritMedicineFullOutline = () => {
               className="font-serif text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
               style={{ color: 'rgba(226,232,240,0.92)' }}
             >
-              {t('spirit.filmedCatalogLead')}
+              <InlineRich
+                text={t('spirit.filmedCatalogLead')}
+                strongClassName="font-semibold"
+                strongStyle={{ color: 'rgba(248,250,252,0.97)' }}
+              />
             </p>
           </div>
         </div>

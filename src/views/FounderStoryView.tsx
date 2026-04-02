@@ -391,7 +391,7 @@ const FounderStoryView = () => {
                           dark
                           buttons={[
                             { to: '/record-of-soul', label: locale === 'zh' ? '吴氏灵体档案 →' : 'Woos Record of Soul →' },
-                            { to: '/spirit-medicine', label: locale === 'zh' ? '灵魂医学视频档案 →' : 'Spirit Medicine Archive →' },
+                            { to: '/spirit-medicine', label: locale === 'zh' ? '灵魂医学视频档案 →' : 'Woos Spirit Medicine →' },
                           ]}
                         />
                       )}

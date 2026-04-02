@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { InlineRich } from '../common/InlineRich';
 
 type EpisodeCardProps = {
   fileNumber: string;
@@ -22,7 +23,9 @@ const EpisodeCard = ({ fileNumber, title, description, link, delay = 0 }: Episod
         {fileNumber}
       </span>
       <h3 className="font-serif text-lg sm:text-xl md:text-2xl text-white mb-3 leading-snug">{title}</h3>
-      <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-5 md:mb-6">{description}</p>
+      <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-5 md:mb-6">
+        <InlineRich text={description} strongClassName="font-semibold text-slate-200" />
+      </p>
       <a href={link} target="_blank" rel="noopener noreferrer" className="block text-center md:inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 text-white font-semibold py-2.5 px-5 md:px-6 rounded-full transition-all shadow-lg shadow-red-900/40 text-base">
         ▶ Watch on YouTube
       </a>

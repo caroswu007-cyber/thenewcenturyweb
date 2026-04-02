@@ -1,5 +1,6 @@
 import { useLocalizedSiteContent } from '../../content/useLocalizedSiteContent';
 import { useI18n } from '../../i18n/LocaleProvider';
+import { InlineRich } from '../common/InlineRich';
 
 const UniversalMatrixHero = () => {
   const { universalMatrix } = useLocalizedSiteContent();
@@ -121,7 +122,11 @@ const UniversalMatrixHero = () => {
           className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mb-8 sm:mb-10 px-1"
           style={{ color: 'rgba(203,213,225,0.92)' }}
         >
-          {universalMatrix.description}
+          <InlineRich
+            text={universalMatrix.description}
+            strongClassName="font-semibold"
+            strongStyle={{ color: 'rgba(241,245,249,0.96)' }}
+          />
         </p>
 
         <div className="flex flex-wrap sm:flex-nowrap items-stretch border border-slate-500/25 bg-slate-950/35 backdrop-blur-sm w-full max-w-xs sm:max-w-none sm:w-auto">

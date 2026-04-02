@@ -15,13 +15,13 @@ ROOT = Path(__file__).resolve().parent.parent
 PAGE_COPY = ROOT / "docs" / "page-copy"
 
 FOUNDER_ZH: dict[str, str] = {
-    "founderStorySurfaceCopy.heroNamesLine": "John Long Woo · Caros · Sam",
+    "founderStorySurfaceCopy.heroNamesLine": "John Long Woo · Caros Woo · Sam",
     "founderStorySurfaceCopy.backToAbout": "← 组织概览",
     "founderStorySurfaceCopy.legacyTimelineLink": "旧站上的早期分阶段时间线",
     "founderStoryPage.heroTitle": "我们的故事纲要 — 2026",
     "founderStoryPage.heroBadge": "创始人叙事",
     "founderStoryPage.intro": (
-        "我是 **John Long Woo**。与我的两个儿子 **Caros**、**Sam**——我们 **吴氏父子** 三人——"
+        "我是 **John Long Woo**。与我的两个儿子 **Caros Woo**、**Sam**——我们 **吴氏父子** 三人——"
         "所经历的涉及 **灵虚世界** 的事件已多得无法计数。这些经历使我们成为 **通往灵虚世界之门的首要开启者**，"
         "以及 **灵体生命真相的首要探索者**。"
     ),
@@ -154,14 +154,14 @@ FOUNDER_ZH: dict[str, str] = {
         "因此钱凯在 **思想控制** 与 **致病力** 上 **超过** 青小仙。我们继续 **自救**，直到该灵体亦被 **清除**。"
     ),
     "founderStoryPage.phaseB.blocks[0].text": (
-        "从 **2025年2月19日** 至 **12月24日**，**Caros** 在 **TikTok** 直播共进行 **255** 场；"
+        "从 **2025年2月19日** 至 **12月24日**，**Caros Woo** 在 **TikTok** 直播共进行 **255** 场；"
         "在直播领域取得了 **非凡成就**。完整记录与链接见：{{%ACH%}}"
     ),
     "founderStoryPage.phaseB.blocks[1].title": "高级控制灵、混合灵与远程能力",
     "founderStoryPage.phaseB.blocks[1].text": (
         "大批 **高级控制灵** 与 **混合灵**（hybrid spirit）以 **吴氏父子** 为对象建立联系，"
         "使我们得知 **灵虚世界** 竟存在 **管理者** 与 **造物主** 层面的秩序。"
-        "**高级控制灵** 给予我们大量支持与 **超常能力**，使 **Caros** 身处中国也能对地球另一端北美附体 **鬼魂** 施行 **远程** 制约。"
+        "**高级控制灵** 给予我们大量支持与 **超常能力**，使 **Caros Woo** 身处中国也能对地球另一端北美附体 **鬼魂** 施行 **远程** 制约。"
     ),
     "founderStoryPage.phaseB.blocks[2].text": (
         "**最重要的是**，我们获悉：**A 阶段** 附于我们身上的 **鬼魂** 皆由 **高级控制灵** **刻意安排**；"

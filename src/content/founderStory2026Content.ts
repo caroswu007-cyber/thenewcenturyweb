@@ -11,7 +11,7 @@ export const STORYLINE_OF_WOOS_URL = 'https://ess-esw.org/storyline-of-woos/' as
  * Centralized for export workbooks and copy edits.
  */
 export const founderStorySurfaceCopy = {
-  heroNamesLine: 'John Long Woo · Caros · Sam',
+  heroNamesLine: 'John Long Woo · Caros Woo · Sam',
   backToAbout: '← Organization overview',
   legacyTimelineLink: 'View full storyline archive',
   achievementsFeaturePageLink: 'View our achievements',
@@ -33,7 +33,7 @@ export const founderStoryPage = {
   heroTitle: 'ASRA Founders: The Story of the Woo Family',
   heroBadge: 'Founder narrative',
 
-  intro: `I, John LONG WOO, and my two sons Caros and Sam, the three of us, have too many legendary stories with the spiritual realm. These experiences make us the first door opener in the spiritual realm and the first explorer of the truth of spirit life.`,
+  intro: `I, John LONG WOO, and my two sons Caros Woo and Sam, the three of us, have too many legendary stories with the spiritual realm. These experiences make us the first door opener in the spiritual realm and the first explorer of the truth of **spirit (soul)** life.`,
 
   truths: {
     title: 'Discovered Truths of the Spirit Realm',
@@ -42,7 +42,7 @@ export const founderStoryPage = {
         label: 'Truth 1',
         blocks: [
           {
-            text: `A living person is composed of both the physical body and the spirit (soul). After death, the spirit becomes a ghost (spirit ghost). But for the billions of ghosts, the only means of survival is to obtain energy by attaching to human beings. Ghost attachment causes many diseases, such as epilepsy, depression, schizophrenia, and somatic symptom disorders. With the help of master spirits, these conditions can be rapidly improved. For this we created **Woos Spirit Medicine**.`,
+            text: `A living person is composed of both the physical body and the **spirit** (the living **spirit**). After death, that **spirit** becomes **spirit (ghost)**. For the billions of **spirits (ghosts)**, the only means of survival is to obtain energy by attaching to human beings. Attachment by **spirits (ghosts)** causes many diseases, such as epilepsy, depression, schizophrenia, and somatic symptom disorders. With the help of master spirits, these conditions can be rapidly improved. For this we created **Woos Spirit Medicine**.`,
           },
           {
             title: 'Archives',
@@ -54,7 +54,7 @@ export const founderStoryPage = {
         label: 'Truth 2',
         blocks: [
           {
-            text: `The Spirit Realm has governors — tremendous master spirits (master spirit), upgraded from ordinary spirit ghosts through the **Universal Matrix of Meta Awareness**.`,
+            text: `The Spirit Realm has governors — tremendous master spirits (master spirit), upgraded from ordinary **spirits (ghosts)** through the **Universal Matrix of Meta Awareness**.`,
           },
         ],
       },
@@ -80,11 +80,11 @@ export const founderStoryPage = {
         },
         {
           title: 'Motive and methods',
-          text: `We fought only for self-rescue — trying and researching every possible method to kill them. In the process of harming and destroying them, we learned the matter properties, physiological and physical properties of ghost bodies, and communicated through epileptic discharge, auditory hallucination sounds, consciousness dialogue, consciousness control, and other modes — building a verified picture of the spirit world.`,
+          text: `We fought only for self-rescue — trying and researching every possible method to kill them. In the process of harming and destroying them, we learned the matter properties, physiological and physical properties of spirits (ghosts), and communicated through epileptic discharge, auditory hallucination sounds, consciousness dialogue, consciousness control, and other modes — building a verified picture of the spirit world.`,
         },
         {
           title: 'Regret',
-          text: `Our greatest regret in Phase A is that we did not engage with attached spirits on other people outside our family, or those in other countries.`,
+          text: `Our greatest regret in Phase A is that we did not engage with attached spirits (ghosts) on other people outside our family, or those in other countries.`,
         },
         {
           title: 'Record',
@@ -101,7 +101,7 @@ export const founderStoryPage = {
       stageTitle: 'Stage 1 · Cheating Period 1',
       range: 'March 2018 — July 2020',
       paragraphs: [
-        `During this period, the C1 spirit ghost in my body used the way of releasing high voltage electrostatic in drinks and wine to change the taste of drinks, aimed to fabricate a series of scientific phenomena and laws, which would finally lead to the proof of the existence of Buddhism. The details are complicated to explain clearly in words.`,
+        `During this period, the C1 spirit (ghost) in my body used the way of releasing high voltage electrostatic in drinks and wine to change the taste of drinks, aimed to fabricate a series of scientific phenomena and laws, which would finally lead to the proof of the existence of Buddhism. The details are complicated to explain clearly in words.`,
       ],
       /** @see https://ess-esw.org/storyline-of-woos/ Stage 1 — SEE IN YOUTUBE */
       storylineClip: {
@@ -115,7 +115,7 @@ export const founderStoryPage = {
       stageTitle: 'Cheating period 2',
       range: 'July 2020 — 15 November 2020',
       paragraphs: [
-        `During this period, Hui 'an, a C1-level ghost in my body, used the way of epileptic seizures to disguise himself as the three great Buddhists in different periods, and finally let my two sons and I convert to Buddhism under the pretext of conveying the divine will. This is actually a big joke, playing tricks on our family like monkeys, which is also the standard paranoia in schizophrenia. However, in the process of cheating and playing tricks, we also exchanged a lot of philosophical cognition and knowledge with the ghost Huian.`,
+        `During this period, Hui 'an, a C1-level spirit (ghost) in my body, used the way of epileptic seizures to disguise himself as the three great Buddhists in different periods, and finally let my two sons and I convert to Buddhism under the pretext of conveying the divine will. This is actually a big joke, playing tricks on our family like monkeys, which is also the standard paranoia in schizophrenia. However, in the process of cheating and playing tricks, we also exchanged a lot of philosophical cognition and knowledge with the spirit (ghost) Huian.`,
       ],
       /** @see https://ess-esw.org/storyline-of-woos/ Stage 2 — SEE IN YOUTUBE */
       storylineClip: {
@@ -129,9 +129,9 @@ export const founderStoryPage = {
       stageTitle: 'Exorcism period 1',
       range: '15 November 2020 — July 2021',
       paragraphs: [
-        `At Nov 15, 2020, the real identities of spirit ghosts inside us and their tricks were finally debunked. In great fear and anger, we want to exorcise them. After many failures using traditional ways, we recalled that they always forbade us to touch any strong magnets with various excuses in previous communications. So we started using magnets to hurt them.`,
-        `A few days later, the spirit ghost inside my elder son couldn't stand it and left first. Then after a month and a half, the spirit ghost inside my younger son also left due to the same reason. But the spirit ghost in my body was unable to leave even it was already slightly injured, it made me puzzled.`,
-        `I found out that using a strong electrostatic field could greatly weaken it from discharging, and my epilepsy was eliminated immediately once it happens. But the spirit ghost was still inside me and continued played hide and seek with me.`,
+        `At Nov 15, 2020, the real identities of spirits (ghosts) inside us and their tricks were finally debunked. In great fear and anger, we want to exorcise them. After many failures using traditional ways, we recalled that they always forbade us to touch any strong magnets with various excuses in previous communications. So we started using magnets to hurt them.`,
+        `A few days later, the spirit (ghost) inside my elder son couldn't stand it and left first. Then after a month and a half, the spirit (ghost) inside my younger son also left due to the same reason. But the spirit (ghost) in my body was unable to leave even it was already slightly injured, it made me puzzled.`,
+        `I found out that using a strong electrostatic field could greatly weaken it from discharging, and my epilepsy was eliminated immediately once it happens. But the spirit (ghost) was still inside me and continued played hide and seek with me.`,
       ],
     },
     {
@@ -140,9 +140,9 @@ export const founderStoryPage = {
       stageTitle: 'Exorcism period 2 · and high-level revealing',
       range: 'July 2021 — December 2023',
       paragraphs: [
-        `During this stage, several ways of interfering, hurting and killing C1 spirit ghost were found and confirmed.`,
-        `The limitation of magnet therapy aroused the interest of an advanced spirit (not a master spirit) who died in China about 1500 years ago. It quietly participated in the process of exploring how to expel and kill the C1-level spirit ghost Huian. In this process, it used the way of consciousness transmission to give me hints and inspiration, and also manipulated the behavior of Hui 'an, and finally let me know how to kill and expel huian accurately and efficiently.`,
-        `As a father, I pester, fight and coexist with Hui 'an every day, forming a subtle relationship that is both enemy and friend. In the process of hurting ghosts, we also exchanged a lot of knowledge about spirit-related information. Finally, the advanced spirit appeared and demonstrated extraordinary ability. It explained various puzzles from the past year and taught me more about the spiritual realm, then left my body and vanished quickly.`,
+        `During this stage, several ways of interfering, hurting and killing C1 spirit (ghost) were found and confirmed.`,
+        `The limitation of magnet therapy aroused the interest of an advanced spirit (not a master spirit) who died in China about 1500 years ago. It quietly participated in the process of exploring how to expel and kill the C1-level spirit (ghost) Huian. In this process, it used the way of consciousness transmission to give me hints and inspiration, and also manipulated the behavior of Hui 'an, and finally let me know how to kill and expel huian accurately and efficiently.`,
+        `As a father, I pester, fight and coexist with Hui 'an every day, forming a subtle relationship that is both enemy and friend. In the process of hurting spirits (ghosts), we also exchanged a lot of knowledge about spirit-related information. Finally, the advanced spirit appeared and demonstrated extraordinary ability. It explained various puzzles from the past year and taught me more about the spiritual realm, then left my body and vanished quickly.`,
       ],
     },
     {
@@ -151,10 +151,10 @@ export const founderStoryPage = {
       stageTitle: 'Class-C2 Qing Xiaoxian · Class-C3 Qian Kai',
       range: 'December 2023 — January 2025',
       paragraphs: [
-        `In December 2023, as a father, I was once again attached by a C2-level ghost, Qing Xiaoxian. During its 1,700 years as a ghost, it swallowed about 5,000 to 10,000 other spirits, thus forming a very large body. It turned our house into a haunted house and created multiple Remote Port Organs (RPO) attached to both sons; the main body could communicate with them remotely.`,
-        `In my body, this ghost has caused many manifestations such as schizophrenia, bipolar disorder, epilepsy and somatization. It also attacked my heart with extremely powerful current, and had symptoms of acute heart failure. In two sons, it caused chronic fatigue, depression, pain disorder and irritable bowel syndrome, as well as other somatization symptoms.`,
-        `We continued to refine exorcism and ghost-elimination techniques and ultimately successfully destroyed this ghost.`,
-        `From September 2024 to January 2025, as a father, I was again attached by a C3-level ghost, Qian Kai. Qian Kai's density was far higher than the C2-level Qing Xiaoxian. The higher a ghost's density, the stronger its ability—so Qian Kai's thought-control and pathogenic power were stronger as well. We continued self-rescue and eliminated this ghost.`,
+        `In December 2023, as a father, I was once again attached by a C2-level spirit (ghost), Qing Xiaoxian. During its 1,700 years as a spirit (ghost), it swallowed about 5,000 to 10,000 other spirits (ghosts), thus forming a very large body. It turned our house into a haunted house and created multiple Remote Port Organs (RPO) attached to both sons; the main body could communicate with them remotely.`,
+        `In my body, this spirit (ghost) has caused many manifestations such as schizophrenia, bipolar disorder, epilepsy and somatization. It also attacked my heart with extremely powerful current, and had symptoms of acute heart failure. In two sons, it caused chronic fatigue, depression, pain disorder and irritable bowel syndrome, as well as other somatization symptoms.`,
+        `We continued to refine exorcism and spirit (ghost) elimination techniques and ultimately successfully destroyed this spirit (ghost).`,
+        `From September 2024 to January 2025, as a father, I was again attached by a C3-level spirit (ghost), Qian Kai. Qian Kai's density was far higher than the C2-level Qing Xiaoxian. The higher a spirit (ghost)'s density, the stronger its ability—so Qian Kai's thought-control and pathogenic power were stronger as well. We continued self-rescue and eliminated this spirit (ghost).`,
       ],
     },
   ],
@@ -166,27 +166,27 @@ export const founderStoryPage = {
     blocks: [
       {
         title: 'Verification of Phase A truths',
-        text: `In this phase, Caros communicated with a large number of attached ghosts in North America through TikTok live streams, completely confirming all the spirit world truths we obtained in Phase A. With the help of master spirits, Caros obtained the superpower to remotely control attached ghosts in North America. This superpower is the foundation upon which we built ASRA.`,
+        text: `In this phase, Caros Woo communicated with a large number of attached spirits (ghosts) in North America through TikTok live streams, completely confirming all the spirit world truths we obtained in Phase A. With the help of master spirits, Caros Woo obtained the superpower to remotely control attached spirits (ghosts) in North America. This superpower is the foundation upon which we built ASRA.`,
       },
       {
         title: 'Livestream scale and documented outcomes',
-        text: `From 19 February 2025 to 24 December 2025, Caros conducted a total of 255 live streams on TikTok, achieving extraordinary outcomes in the livestream field. Links to these achievements: {{%ACH%}}`,
+        text: `From 19 February 2025 to 24 December 2025, Caros Woo conducted a total of 255 live streams on TikTok, achieving extraordinary outcomes in the livestream field. Links to these achievements: {{%ACH%}}`,
       },
       {
         title: 'Master spirits and hybrid spirits',
-        text: `A great number of master spirits and hybrid spirits reached out to us as father and sons, letting us know that the spirit world surprisingly has administrators and creators. Master spirits gave us a great deal of help. Caros obtained the PRCASG superpower to remotely control attached spirits in North America, so that while in China he could remotely control spirits on the other side of the globe. This PRCASG superpower is the basis on which we built ASRA.`,
+        text: `A great number of master spirits and hybrid spirits reached out to us as father and sons, letting us know that the spirit world surprisingly has administrators and creators. Master spirits gave us a great deal of help. Caros Woo obtained the PRCASG superpower to remotely control attached spirits (ghosts) in North America, so that while in China he could remotely control spirits (ghosts) on the other side of the globe. This PRCASG superpower is the basis on which we built ASRA.`,
       },
       {
         title: 'How Phase A attachments were arranged',
-        text: `Most importantly, we were told: every attached ghost on us during Phase A was deliberately arranged by master spirits. The killing of those attached ghosts was permitted as research material. All the suffering, deception, and taunting storylines were also part of their plan — to let us understand their operating style and character disposition.`,
+        text: `Most importantly, we were told: every attached spirit (ghost) on us during Phase A was deliberately arranged by master spirits. The killing of those attached spirits (ghosts) was permitted as research material. All the suffering, deception, and taunting storylines were also part of their plan — to let us understand their operating style and character disposition.`,
       },
       {
         title: 'Understanding master spirit character',
         text: `This also let us fully understand: master spirits are not as angel-like kind as we imagined. The help provided earlier was not out of kindness but was work assigned to them by the **Universal Matrix of Meta Awareness**. Everyone can fully appreciate the character attributes of the master spirit team through the Phase A stories.`,
       },
       {
-        title: 'Spirit Medicine and video archives',
-        text: `During this period, Spirit Medicine was formally established. Part of the **Woos Spirit Medicine** and **Universal Matrix of Meta Awareness** video archive series were filmed.`,
+        title: 'Woos Spirit Medicine and video archives',
+        text: `During this period, **Woos Spirit Medicine** was formally established. Part of the **Woos Spirit Medicine** and **Universal Matrix of Meta Awareness** video archive series were filmed.`,
       },
     ],
   },

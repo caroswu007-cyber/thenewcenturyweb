@@ -1,20 +1,14 @@
 import type { ReactNode } from 'react';
+import { InlineRich } from '../common/InlineRich';
 
 export function ReportInline({ text, className = '' }: { text: string; className?: string }) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
   return (
-    <span className={className}>
-      {parts.map((part, i) => {
-        if (part.startsWith('**') && part.endsWith('**')) {
-          return (
-            <strong key={i} className="font-semibold" style={{ color: '#6B4E2E' }}>
-              {part.slice(2, -2)}
-            </strong>
-          );
-        }
-        return <span key={i}>{part}</span>;
-      })}
-    </span>
+    <InlineRich
+      text={text}
+      className={className}
+      strongClassName="font-semibold"
+      strongStyle={{ color: '#6B4E2E' }}
+    />
   );
 }
 

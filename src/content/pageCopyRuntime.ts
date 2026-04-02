@@ -20,6 +20,7 @@ import {
   type SpiritMedicineOutlineFile,
 } from './spiritMedicineOfficialOutline';
 import { universalMatrixFiles as baseUniversalMatrixFiles, type MatrixFile } from './universalMatrixSeries';
+import { EN_SPIRIT_TERMINOLOGY_OVERRIDES } from './spiritTerminologyEnOverrides';
 
 const DOC_KEY_ALIASES: Record<string, string> = {
   'about.hero.pillAsra': 'about.hero.pillASRA',
@@ -39,10 +40,18 @@ function lookupDoc(pack: Record<string, string>, key: string): string | undefine
 
 export function getPageCopyText(locale: Locale, key: string, fallback: string): string {
   const localized = lookupDoc(pageCopyDocs[docLocale(locale)], key);
-  if (localized != null && localized !== '') return localized;
-  const english = lookupDoc(pageCopyDocs.en, key);
-  if (english != null && english !== '') return english;
-  return fallback;
+  let resolved =
+    localized != null && localized !== ''
+      ? localized
+      : (() => {
+          const english = lookupDoc(pageCopyDocs.en, key);
+          if (english != null && english !== '') return english;
+          return fallback;
+        })();
+  if (locale === 'en' && Object.prototype.hasOwnProperty.call(EN_SPIRIT_TERMINOLOGY_OVERRIDES, key)) {
+    return EN_SPIRIT_TERMINOLOGY_OVERRIDES[key];
+  }
+  return resolved;
 }
 
 export function getPageCopyI18nOverrides(locale: Locale): Record<string, string> {
@@ -59,6 +68,10 @@ export function getPageCopyI18nOverrides(locale: Locale): Record<string, string>
 
   for (const [alias, target] of Object.entries(DOC_KEY_ALIASES)) {
     if (!(alias in out) && pageCopyDocs.en[target]) out[alias] = pageCopyDocs.en[target];
+  }
+
+  if (locale === 'en') {
+    Object.assign(out, EN_SPIRIT_TERMINOLOGY_OVERRIDES);
   }
 
   return out;

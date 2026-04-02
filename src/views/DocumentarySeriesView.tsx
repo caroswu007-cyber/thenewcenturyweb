@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import EpisodeCard from '../components/record/EpisodeCard';
+import { InlineRich } from '../components/common/InlineRich';
 import type { DocumentaryPage } from '../content/siteContent';
 
 type DocumentarySeriesViewProps = {
@@ -26,7 +27,7 @@ const DocumentarySeriesView = ({ page }: DocumentarySeriesViewProps) => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="max-w-3xl mx-auto text-base md:text-lg text-slate-300 leading-relaxed font-light mb-10"
         >
-          {description}
+          <InlineRich text={description} strongClassName="font-semibold text-slate-100" />
         </motion.p>
 
         <motion.div
@@ -36,7 +37,8 @@ const DocumentarySeriesView = ({ page }: DocumentarySeriesViewProps) => {
           className="max-w-3xl mx-auto bg-slate-800/60 border border-accent/20 p-5 md:p-6 rounded-xl shadow-2xl backdrop-blur-sm"
         >
           <p className="text-slate-300 italic text-base md:text-lg leading-relaxed">
-            <span className="text-accent font-semibold not-italic">* Note:</span> {note}
+            <span className="text-accent font-semibold not-italic">* Note:</span>{' '}
+            <InlineRich text={note} strongClassName="font-semibold not-italic text-slate-100" italic />
           </p>
         </motion.div>
       </header>

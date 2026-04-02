@@ -1,5 +1,6 @@
 import { useLocalizedSiteContent } from '../../content/useLocalizedSiteContent';
 import { useI18n } from '../../i18n/LocaleProvider';
+import { InlineRich } from '../common/InlineRich';
 import LibraryAmbientBackground from './LibraryAmbientBackground';
 
 const RecordOfSoulHero = () => {
@@ -77,7 +78,7 @@ const RecordOfSoulHero = () => {
             className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mb-10 sm:mb-12 font-light tracking-wide px-1"
             style={{ color: '#faf2e4' }}
           >
-            {description}
+            <InlineRich text={description} strongClassName="font-semibold" strongStyle={{ color: '#ffe090' }} />
           </p>
 
           <div
@@ -131,7 +132,12 @@ const RecordOfSoulHero = () => {
               {t('record.archivalNote')}
             </p>
             <p className="text-base leading-relaxed italic" style={{ color: '#f5ead8' }}>
-              {note}
+              <InlineRich
+                text={note}
+                italic
+                strongClassName="font-semibold not-italic"
+                strongStyle={{ color: '#ffe8c4' }}
+              />
             </p>
           </div>
         </div>
@@ -158,7 +164,11 @@ const RecordOfSoulHero = () => {
             className="max-w-3xl mx-auto font-serif text-sm md:text-base leading-relaxed text-left"
             style={{ color: '#1a0f05' }}
           >
-            {terminologyExplanation}
+            <InlineRich
+              text={terminologyExplanation}
+              strongClassName="font-semibold"
+              strongStyle={{ color: '#5a3008' }}
+            />
           </p>
         </section>
       ) : null}

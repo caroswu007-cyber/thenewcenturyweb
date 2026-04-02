@@ -1,12 +1,21 @@
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useLocalizedSiteContent } from '../../content/useLocalizedSiteContent';
+import { InlineRich } from '../common/InlineRich';
 
 const gatherEase = [0.16, 1, 0.3, 1] as const;
+
+/** English home title: line break after “of” (e.g. “Association of” / “Spirit Realm's …”). */
+function heroTitleWithLineBreakAfterOf(heroTitle: string): string {
+  if (heroTitle.includes('\n')) return heroTitle;
+  return heroTitle.replace(/\bof\s+/i, 'of\n');
+}
 
 /** Hero text only — editorial warm style, no dark galaxy */
 const Hero = () => {
   const { home } = useLocalizedSiteContent();
   const { heroTitle, heroSubtitle } = home;
+  const heroTitleDisplay = useMemo(() => heroTitleWithLineBreakAfterOf(heroTitle), [heroTitle]);
 
   return (
     <section
@@ -44,7 +53,7 @@ const Hero = () => {
           initial={{ opacity: 0, letterSpacing: '0.8em', y: 8 }}
           animate={{ opacity: 1, letterSpacing: '0.3em', y: 0 }}
           transition={{ duration: 1.4, delay: 0.55, ease: gatherEase }}
-          className="font-cinzel text-xs sm:text-sm md:text-base uppercase tracking-[0.3em]"
+          className="font-cinzel text-[0.65rem] sm:text-xs md:text-sm uppercase tracking-[0.3em]"
           style={{ color: 'rgba(194,123,32,0.8)' }}
         >
           {heroSubtitle}
@@ -52,10 +61,11 @@ const Hero = () => {
 
         {/* Main title — Cormorant Garamond editorial treatment */}
         <motion.h1
-          className="cosmic-title font-bold leading-tight"
+          className="cosmic-title font-bold"
           style={{
-            fontSize: 'clamp(2.6rem, 10vw, 5.75rem)',
-            lineHeight: 1.1,
+            fontSize: 'clamp(1.9rem, 6.25vw, 3.85rem)',
+            lineHeight: 1.45,
+            whiteSpace: 'pre-line',
             willChange: 'transform, opacity, filter',
           }}
           initial={{
@@ -78,7 +88,11 @@ const Hero = () => {
             ease: gatherEase,
           }}
         >
-          {heroTitle}
+          <InlineRich
+            text={heroTitleDisplay}
+            strongClassName="font-bold"
+            strongStyle={{ color: '#C27B20' }}
+          />
         </motion.h1>
 
         {/* Decorative bottom rule */}

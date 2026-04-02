@@ -1,4 +1,5 @@
 import { useI18n } from '../../i18n/LocaleProvider';
+import { InlineRich } from '../common/InlineRich';
 
 const SpiritMedicineHero = () => {
   const { t } = useI18n();
@@ -79,7 +80,11 @@ const SpiritMedicineHero = () => {
           className="text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mb-10 sm:mb-12 font-light tracking-wide px-1"
           style={{ color: 'rgba(255,255,255,0.9)' }}
         >
-          {t('spirit.hero.body')}
+          <InlineRich
+            text={t('spirit.hero.body')}
+            strongClassName="font-semibold"
+            strongStyle={{ color: 'rgba(255,255,255,0.98)' }}
+          />
         </p>
 
         {/* Stats — number size / padding aligned with Record of Soul archival stats */}

@@ -47,7 +47,7 @@ const JoinSection = () => {
         <h2
           className="font-cinzel font-bold mb-6"
           style={{
-            fontSize: 'clamp(1.85rem, 5.2vw, 4.1rem)',
+            fontSize: 'clamp(1.32rem, 3.85vw, 2.88rem)',
             lineHeight: 1.15,
             background: 'linear-gradient(135deg, #F5EDE0 10%, #D4A853 52%, #F5EDE0 90%)',
             WebkitBackgroundClip: 'text',

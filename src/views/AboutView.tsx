@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { getAboutContent } from '../content/getAboutContent';
 import { ABOUT_PAGE_IMAGES } from '../constants/aboutImages';
 import { useI18n } from '../i18n/LocaleProvider';
+import { InlineRich } from '../components/common/InlineRich';
 
 /* ─── Reusable small helpers ─── */
 
@@ -130,7 +131,11 @@ const AboutHero = () => {
         className="font-serif text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-8 md:mb-10 px-2"
         style={{ color: '#3D2510' }}
       >
-        {about.tagline}
+        <InlineRich
+          text={about.tagline}
+          strongClassName="font-semibold"
+          strongStyle={{ color: '#8B5413' }}
+        />
       </p>
 
       {/* Domain pills */}
@@ -209,7 +214,13 @@ const DualDomain = () => {
               ASRA
             </p>
             <h3 className="font-cinzel font-bold text-base sm:text-lg mb-3 leading-snug" style={{ color: '#1F1208' }}>{about.asra.name}</h3>
-            <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3D2510' }}>{about.asra.description}</p>
+            <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3D2510' }}>
+              <InlineRich
+                text={about.asra.description}
+                strongClassName="font-semibold"
+                strongStyle={{ color: '#8B5413' }}
+              />
+            </p>
           </div>
         </motion.div>
 
@@ -240,7 +251,13 @@ const DualDomain = () => {
             <div className="h-0.5 mb-5" style={{ background: 'linear-gradient(to right, rgba(61,37,16,0.4), transparent)' }} />
             <p className="font-cinzel text-xs sm:text-sm uppercase tracking-[0.2em] mb-2" style={{ color: '#3D2510' }}>SMSC</p>
             <h3 className="font-cinzel font-bold text-base sm:text-lg mb-3 leading-snug" style={{ color: '#1F1208' }}>{about.smsc.name}</h3>
-            <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3D2510' }}>{about.smsc.description}</p>
+            <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3D2510' }}>
+              <InlineRich
+                text={about.smsc.description}
+                strongClassName="font-semibold"
+                strongStyle={{ color: '#8B5413' }}
+              />
+            </p>
           </div>
         </motion.div>
       </div>
@@ -253,7 +270,12 @@ const DualDomain = () => {
       >
         <span style={{ color: 'rgba(194,123,32,0.3)', fontSize: '2.5rem', lineHeight: 1 }}>"</span>
         <p className="font-serif text-lg md:text-xl leading-relaxed italic mt-1" style={{ color: '#3D2510' }}>
-          {about.partnership}
+          <InlineRich
+            text={about.partnership}
+            italic
+            strongClassName="font-semibold not-italic"
+            strongStyle={{ color: '#8B5413' }}
+          />
         </p>
       </motion.blockquote>
     </div>
@@ -325,7 +347,13 @@ const HowItWorks = () => {
               <div className="p-6 relative z-10">
                 <div className="h-0.5 mb-5" style={{ background: `linear-gradient(to right, ${s.color}80, transparent)` }} />
                 <h3 className="font-cinzel font-bold text-lg mb-3 tracking-wide" style={{ color: '#F5EDE0' }}>{s.title}</h3>
-                <p className="text-base leading-relaxed" style={{ color: 'rgba(245,237,224,0.72)' }}>{s.body}</p>
+                <p className="text-base leading-relaxed" style={{ color: 'rgba(245,237,224,0.72)' }}>
+                  <InlineRich
+                    text={s.body}
+                    strongClassName="font-semibold"
+                    strongStyle={{ color: '#E09A42' }}
+                  />
+                </p>
               </div>
             </motion.div>
           ))}
@@ -363,15 +391,21 @@ const Founders = () => {
         style={{ border: '1px solid rgba(194,123,32,0.2)' }}
       >
         {/* Image side */}
-        <div
-          className="relative h-72 md:h-auto bg-cover bg-center"
-          style={{ backgroundImage: `url(${ABOUT_PAGE_IMAGES.founders})`, background: '#D9C4A3' }}
-        >
-          <div className="absolute inset-0" style={{ background: 'rgba(245,237,224,0.3)' }} />
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-            <div className="w-20 h-20 rounded-full mb-4 flex items-center justify-center" style={{ background: 'rgba(194,123,32,0.1)', border: '2px solid rgba(194,123,32,0.35)' }}>
-              <span style={{ fontSize: '2rem' }}>✦</span>
-            </div>
+        <div className="relative" style={{ minHeight: '22rem' }}>
+          <img
+            src={ABOUT_PAGE_IMAGES.founders}
+            alt={t('about.founders.woos')}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Edge vignette — soften all 4 sides */}
+          <div className="absolute inset-0 pointer-events-none" style={{
+            boxShadow: 'inset 0 0 60px 30px rgba(245,237,224,0.55)',
+          }} />
+          {/* Name overlay at bottom */}
+          <div
+            className="absolute bottom-0 inset-x-0 flex flex-col items-center justify-end pb-5 pt-12 text-center"
+            style={{ background: 'linear-gradient(to top, rgba(245,237,224,0.88) 0%, rgba(245,237,224,0.45) 60%, transparent 100%)' }}
+          >
             <p className="font-cinzel font-bold text-xl tracking-wide" style={{ color: '#1F1208' }}>{t('about.founders.woos')}</p>
             <p className="font-cinzel text-sm uppercase tracking-[0.3em] mt-1" style={{ color: '#C27B20' }}>{t('about.founders.fatherSon')}</p>
           </div>
@@ -382,9 +416,19 @@ const Founders = () => {
           <div className="h-0.5 mb-7" style={{ background: 'linear-gradient(to right, rgba(194,123,32,0.5), transparent)' }} />
           <h3 className="font-cinzel font-bold text-xl md:text-2xl mb-2 leading-snug" style={{ color: '#1F1208' }}>{about.founders.title}</h3>
           <p className="font-cinzel text-sm uppercase tracking-widest mb-6" style={{ color: '#C27B20' }}>{about.founders.subtitle}</p>
-          <p className="text-base md:text-lg leading-relaxed" style={{ color: '#3D2510' }}>{about.founders.description}</p>
+          <p className="text-base md:text-lg leading-relaxed" style={{ color: '#3D2510' }}>
+            <InlineRich
+              text={about.founders.description}
+              strongClassName="font-semibold"
+              strongStyle={{ color: '#8B5413' }}
+            />
+          </p>
           <p className="mt-5 text-sm md:text-base leading-relaxed font-cinzel border-l-2 pl-4" style={{ color: '#9B8E80', borderColor: 'rgba(194,123,32,0.35)' }}>
-            {about.founders.storyTeaser}
+            <InlineRich
+              text={about.founders.storyTeaser}
+              strongClassName="font-semibold"
+              strongStyle={{ color: '#7A5C3A' }}
+            />
           </p>
           <Link
             to="/founder-story"
@@ -476,7 +520,11 @@ const Missions = () => {
               </h3>
               {m.description.split('\n\n').map((para, pi) => (
                 <p key={pi} className="text-base md:text-lg leading-relaxed mb-3 last:mb-0" style={{ color: '#3D2510' }}>
-                  {para}
+                  <InlineRich
+                    text={para}
+                    strongClassName="font-semibold"
+                    strongStyle={{ color: '#8B5413' }}
+                  />
                 </p>
               ))}
             </div>

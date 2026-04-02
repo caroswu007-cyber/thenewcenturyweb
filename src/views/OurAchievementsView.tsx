@@ -15,6 +15,7 @@ import {
 } from '../content/achievements2025Content';
 import { getLocalizedAchievementsAssets } from '../content/pageCopyRuntime';
 import { useI18n } from '../i18n/LocaleProvider';
+import { InlineRich } from '../components/common/InlineRich';
 
 const SPIRIT_ROWS = ['1', '2', '3', '4', '5'] as const;
 const INTERESTING_ROWS = ['1', '2', '3', '4', '5', '6', '7'] as const;
@@ -116,7 +117,13 @@ function ReportSection({
                 }}
               />
               {subtitle ? (
-                <p className="text-base lg:text-lg leading-relaxed max-w-4xl" style={{ color: REPORT_INK_SOFT }}>{subtitle}</p>
+                <p className="text-base lg:text-lg leading-relaxed max-w-4xl" style={{ color: REPORT_INK_SOFT }}>
+                  <InlineRich
+                    text={subtitle}
+                    strongClassName="font-semibold"
+                    strongStyle={{ color: '#6B4E2E' }}
+                  />
+                </p>
               ) : null}
             </div>
           </div>
@@ -155,7 +162,11 @@ const OurAchievementsView = () => {
               <h1 className="report-hero-title text-center lg:text-left">{t('achievementsReport.title')}</h1>
               {t('achievementsReport.termGloss') ? (
                 <p className="text-center lg:text-left text-sm sm:text-base max-w-3xl mx-auto lg:mx-0 mt-4 leading-relaxed" style={{ color: REPORT_INK_SOFT }}>
-                  {t('achievementsReport.termGloss')}
+                  <InlineRich
+                    text={t('achievementsReport.termGloss')}
+                    strongClassName="font-semibold"
+                    strongStyle={{ color: '#6B4E2E' }}
+                  />
                 </p>
               ) : null}
             </div>
@@ -485,7 +496,11 @@ const OurAchievementsView = () => {
             ◆
           </div>
           <p className="mb-8 max-w-4xl font-cinzel text-xs leading-relaxed lg:text-sm lg:leading-relaxed xl:max-w-5xl" style={{ color: REPORT_INK_SOFT }}>
-            {t('achievementsPage.disclaimer')}
+            <InlineRich
+              text={t('achievementsPage.disclaimer')}
+              strongClassName="font-semibold"
+              strongStyle={{ color: '#6B4E2E' }}
+            />
           </p>
           <div className="flex flex-wrap items-center gap-4 font-cinzel text-sm lg:text-base">
             <Link

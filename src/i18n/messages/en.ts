@@ -5,7 +5,7 @@ export const messagesEn: Record<string, string> = {
   'nav.about': 'About ASRA',
   'nav.truth': 'The Truth',
   'nav.record': 'Record of Soul',
-  'nav.spirit': 'Spirit Medicine',
+  'nav.spirit': 'Woos Spirit Medicine',
   'nav.join': 'Join',
   'nav.achievements': 'Achievements',
   'nav.back': '← Back to Home',
@@ -29,12 +29,12 @@ export const messagesEn: Record<string, string> = {
   'home.intro.asraName': 'ASRA',
   'home.intro.asraFull': 'Association of Spirit Realm\'s Ambassador',
   'home.intro.asraBody':
-    'Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits and improves human health.',
+    'Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits (ghosts) and improves human health.',
   'home.intro.spiritRealm': 'Spirit Realm',
   'home.intro.smscName': 'SMSC',
   'home.intro.smscFull': 'Society of Master Spirit Controllers',
   'home.intro.smscBody':
-    'Tens of thousands of Master Spirits — administrators in the Spirit Realm who govern ordinary spirits and human beings. Each Master Spirit is assigned 1:1 or 2:1 to an ASRA human member.',
+    'Tens of thousands of Master Spirits — administrators in the Spirit Realm who govern ordinary spirits (ghosts) and human beings. Each Master Spirit is assigned 1:1 or 2:1 to an ASRA human member.',
   'home.intro.learnMore': '✦   Full Organization Introduction   ✦',
   'home.truth.title': 'The Truth of Spirit',
   'home.truth.subtitle': 'And Its Governor',
@@ -48,12 +48,12 @@ export const messagesEn: Record<string, string> = {
   'home.truth.s1.season': 'SEASON 1',
   'home.truth.s1.title': 'Woos Record of Soul',
   'home.truth.s1.description':
-    'Collecting all true scientific research materials from East and West regarding spirits, PSI, NDE, past-life memories, and other topics related to spirits and the Ethereal Realm. With personal possession, supernatural and spirit-exorcism experiences.',
+    'Collecting all true scientific research materials from East and West regarding spirit (soul), PSI, NDE, past-life memories, and other topics related to spirit (soul) and the Ethereal Realm. With personal possession, supernatural and spirit-exorcism experiences.',
   'home.truth.s1.cta': 'Explore Season I',
   'home.truth.s2.season': 'SEASON 2',
   'home.truth.s2.title': 'Woos Spirit Medicine',
   'home.truth.s2.description':
-    'This documentary provides the evidence of spirits and ghosts existing while people are alive and after death from scientific perspective and causing illness to the physical body. The organs, physiological systems, and basic pathology of spirits.',
+    'This documentary provides the evidence of spirit (the in-body spirit) and spirits (ghosts) existing while people are alive and after death from a scientific perspective and causing illness to the physical body. The organs, physiological systems, and basic pathology of spirit (soul) and spirits (ghosts).',
   'home.truth.s2.cta': 'Explore Season II',
   'home.truth.s3.season': 'SEASON 3',
   'home.truth.s3.title': 'Universal Matrix of Meta Awareness--The creator',
@@ -66,15 +66,15 @@ export const messagesEn: Record<string, string> = {
     'This is a masterpiece of large-scale global teamwork by the many master members of SMSC.',
   'home.achievements.kickerMetrics': '',
   'home.achievements.lead':
-    'Coordinated with Master Spirit teams, the founder yielded descriptive statistics and qualitative observations on American attached spirits and rescued large-scale treatment-resistant mental-health cases.',
+    'Coordinated with Master Spirit teams, the founder yielded descriptive statistics and qualitative observations on American attached spirits (ghosts) and rescued large-scale treatment-resistant mental-health cases.',
   'home.achievements.card1Title': 'Data overview',
   'home.achievements.card1Body': `255+ recorded public welfare live broadcasts; 800+ broadcast hours; TikTok pushed to 70,000+ highly relevant visitors; 1,200+ in-depth interviews.
 
 Among them:
 
-In-depth communication with 400+ attached spirit ghosts.
+In-depth communication with 400+ attached spirits (ghosts).
 
-Helped 240+ patients with mental disorders quickly relieve the suffering caused by attached spirit ghosts on-site.`,
+Helped 240+ patients with mental disorders quickly relieve the suffering caused by attached spirits (ghosts) on-site.`,
   'home.achievements.card2Title': 'Content',
   'home.achievements.card2Body':
     'Here displays: American spirits (ghosts) Report,Notable spirits (ghosts),Master Spirit\'s Revelation ,Routine mental-disorder spirit (ghost) management report,Special spirit (ghost) management cases',
@@ -174,7 +174,7 @@ Helped 240+ patients with mental disorders quickly relieve the suffering caused 
   'spirit.hero.titleBefore': 'Woos',
   'spirit.hero.titleHighlight': 'Spirit Medicine',
   'spirit.hero.body':
-    'This documentary scientifically reveals the Human Spirit (Soul) Medicine — organs, physiological systems, and basic pathology of the Spirit (Soul), along with the evidence and pathogenesis of Spirit (Ghost) harm to the human host after death.',
+    '**Woos Spirit Medicine** is a documentary series on spirit healing from a scientific perspective—before and after death. Before death: physiology and basic pathology of organs and systems of the human **spirit (soul)**. Focus: evidence and pathogenesis of harm from **spirit (ghost)** attachment to hosts. After death: organs, physiological systems, and basic pathology of **spirits (ghosts)**.',
   'spirit.endSeries': 'End of Series II',
   'spirit.watchYoutube': 'Watch on YouTube',
   'spirit.openPlaylist': 'Open full YouTube playlist',
@@ -221,10 +221,10 @@ Helped 240+ patients with mental disorders quickly relieve the suffering caused 
     'Each ASRA human member is assigned 1 or 2 dedicated Master Spirits from the SMSC — forming a direct, ongoing partnership across both realms.',
   'about.how.step2.title': 'Empowerment',
   'about.how.step2.body':
-    'Through this partnership, human members acquire Class-C special abilities: the power to govern attached spirits and to actively improve human health.',
+    'Through this partnership, human members acquire Class-C special abilities: the power to govern attached spirits (ghosts) and to actively improve human health.',
   'about.how.step3.title': 'Mission',
   'about.how.step3.body':
-    'Empowered members serve as ambassadors — spreading the truth of the Spirit Realm and spirit life to the world, and leading humanity toward the New ERA.',
+    'Empowered members serve as ambassadors — spreading the truth of the Spirit Realm and spirit (soul) life to the world, and leading humanity toward the New ERA.',
   'about.founders.title': 'The Founders',
   'about.founders.label': 'Chief Ambassadors & Coordinators',
   'about.founders.woos': 'The Woos',
@@ -242,7 +242,7 @@ Helped 240+ patients with mental disorders quickly relieve the suffering caused 
   'about.cta.button': '✦   Visit: Apply to Join   ✦',
   'about.hero.pillASRA': 'Physical world has ASRA under its jurisdiction',
   'home.intro.ASRABody':
-    'Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits and improves human health.',
+    'Tens of thousands of human members distributed across all nations, ethnicities, and cultural communities worldwide. Empowered by Master Spirits, each member governs attached spirits (ghosts) and improves human health.',
   'home.intro.ASRAFull': 'Association of Spirit Realm\'s Ambassador',
   'home.intro.ASRAName': 'ASRA',
 };

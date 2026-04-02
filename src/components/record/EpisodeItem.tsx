@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Episode } from '../../content/siteContent';
 import { useI18n } from '../../i18n/LocaleProvider';
+import { InlineRich } from '../common/InlineRich';
 
 interface EpisodeItemProps extends Episode {
   index?: number;
@@ -124,7 +125,11 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
                 className="text-[1.05rem] md:text-[1.08rem] leading-relaxed mb-5"
                 style={{ color: c.inkSoft }}
               >
-                {abstract}
+                <InlineRich
+                  text={abstract}
+                  strongClassName="font-semibold"
+                  strongStyle={{ color: c.ink }}
+                />
               </p>
 
               {keyFeatures && (
@@ -143,7 +148,11 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({
                     className="text-[1.05rem] md:text-[1.08rem] leading-relaxed"
                     style={{ color: c.inkSoft }}
                   >
-                    {keyFeatures}
+                    <InlineRich
+                      text={keyFeatures}
+                      strongClassName="font-semibold"
+                      strongStyle={{ color: c.ink }}
+                    />
                   </p>
                 </>
               )}
